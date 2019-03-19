@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cclms" nsURI="http://www.ibm.com/cclms/1.0.0" nsPrefix="cclms">
+  <eAnnotations source="ExtendedMetaData">
+    <details key="odme.collector" value="CclmsCollector"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ZoneMst">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="ZONE_MST"/>
+      <details key="odme.table" value="ZONE_MST"/>
+      <details key="odme.primarykey" value="ZONE_ID"/>
+      <details key="odme.columns" value="ZONE_ID,ZONE_CODE,ZONE_DESC"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_STRING"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zoneId" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="ZONE_ID"/>
+        <details key="odme.column" value="ZONE_ID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zoneCode" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="ZONE_CODE"/>
+        <details key="odme.column" value="ZONE_CODE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zoneDesc">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="ZONE_DESC"/>
+        <details key="odme.column" value="ZONE_DESC"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StationMst">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="STATION_MST"/>
+      <details key="odme.table" value="STATION_MST"/>
+      <details key="odme.primarykey" value="STATION_ID"/>
+      <details key="odme.columns" value="STATION_ID,STATION_CODE,STATION_NAME,LOBBY_FLAG"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_STRING"/>
+    </eAnnotations>
+    <eOperations name="getTrainMstTrainEndStn">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return getRefTrainMstTrainEndStn();"/>
+      </eAnnotations>
+      <eGenericType eClassifier="//List">
+        <eTypeArguments eClassifier="//TrainMst"/>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getTrainMstTrainStartStn">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return getRefTrainMstTrainStartStn();"/>
+      </eAnnotations>
+      <eGenericType eClassifier="//List">
+        <eTypeArguments eClassifier="//TrainMst"/>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationId" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="STATION_ID"/>
+        <details key="odme.column" value="STATION_ID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationCode" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="STATION_CODE"/>
+        <details key="odme.column" value="STATION_CODE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stationName">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="STATION_NAME"/>
+        <details key="odme.column" value="STATION_NAME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lobbyFlag">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="LOBBY_FLAG"/>
+        <details key="odme.column" value="LOBBY_FLAG"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainMstTrainEndStn" upperBound="-1" eType="//TrainMst" resolveProxies="false" eOpposite="//TrainMst/RefTrainEndStn">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+        <details key="suppressedGetVisibility" value="true"/>
+        <details key="suppressedUnsetVisibility" value="true"/>
+        <details key="suppressedIsSetVisibility" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainMstTrainStartStn" upperBound="-1" eType="//TrainMst" resolveProxies="false" eOpposite="//TrainMst/RefTrainStartStn">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+        <details key="suppressedGetVisibility" value="true"/>
+        <details key="suppressedUnsetVisibility" value="true"/>
+        <details key="suppressedIsSetVisibility" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrainFrequencyMst">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="TRAIN_FREQUENCY_MST"/>
+      <details key="odme.table" value="TRAIN_FREQUENCY_MST"/>
+      <details key="odme.primarykey" value="TRAIN_FREQUENCY_CODE"/>
+      <details key="odme.columns" value="TRAIN_FREQUENCY_CODE,DESC"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING"/>
+    </eAnnotations>
+    <eOperations name="getTrainMstTrainFrequencyCd">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return getRefTrainMstTrainFrequencyCd();"/>
+      </eAnnotations>
+      <eGenericType eClassifier="//List">
+        <eTypeArguments eClassifier="//TrainMst"/>
+      </eGenericType>
+    </eOperations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainFrequencyCode" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAIN_FREQUENCY_CODE"/>
+        <details key="odme.column" value="TRAIN_FREQUENCY_CODE"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="desc" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DESC"/>
+        <details key="odme.column" value="DESC"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainMstTrainFrequencyCd" upperBound="-1" eType="//TrainMst" resolveProxies="false" eOpposite="//TrainMst/RefTrainFrequencyCd">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value=""/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+        <details key="suppressedGetVisibility" value="true"/>
+        <details key="suppressedUnsetVisibility" value="true"/>
+        <details key="suppressedIsSetVisibility" value="true"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TractionMst">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="TRACTION_MST"/>
+      <details key="odme.table" value="TRACTION_MST"/>
+      <details key="odme.primarykey" value="TRACTION_TYPE"/>
+      <details key="odme.columns" value="TRACTION_TYPE,TRACTION_DESC"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tractionType" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRACTION_TYPE"/>
+        <details key="odme.column" value="TRACTION_TYPE"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tractionDesc" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRACTION_DESC"/>
+        <details key="odme.column" value="TRACTION_DESC"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrainMst">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="TRAIN_MST"/>
+      <details key="odme.table" value="TRAIN_MST"/>
+      <details key="odme.primarykey" value="TRAIN_ID"/>
+      <details key="odme.columns" value="TRAIN_ID,TRAIN_NBR,TRAIN_NAME,TRAIN_START_STN,TRAIN_END_STN,TRAIN_FREQUENCY_CD,TRAIN_SUB_TYPE,TRAIN_RUN_TYPE,RAKE_ID,DAY_OF_SERVICE,VALID_FROM,VALID_TO,BASE_TRACTION"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_INT,FIELD_STRING,FIELD_DATE,FIELD_DATE,FIELD_STRING"/>
+    </eAnnotations>
+    <eOperations name="getTrainEndStn" eType="//StationMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="StationMst obj= getRefTrainEndStn();return isNullOrProxy(obj)?null:obj;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="setTrainEndStn">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="setRefTrainEndStn(obj);"/>
+      </eAnnotations>
+      <eParameters name="obj" eType="//StationMst"/>
+    </eOperations>
+    <eOperations name="getTrainStartStn" eType="//StationMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="StationMst obj= getRefTrainStartStn();return isNullOrProxy(obj)?null:obj;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="setTrainStartStn">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="setRefTrainStartStn(obj);"/>
+      </eAnnotations>
+      <eParameters name="obj" eType="//StationMst"/>
+    </eOperations>
+    <eOperations name="getTrainFrequencyCd" eType="//TrainFrequencyMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="TrainFrequencyMst obj= getRefTrainFrequencyCd();return isNullOrProxy(obj)?null:obj;"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="setTrainFrequencyCd">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="setRefTrainFrequencyCd(obj);"/>
+      </eAnnotations>
+      <eParameters name="obj" eType="//TrainFrequencyMst"/>
+    </eOperations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainId" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAIN_ID"/>
+        <details key="odme.column" value="TRAIN_ID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainNbr" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAIN_NBR"/>
+        <details key="odme.column" value="TRAIN_NBR"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainName" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAIN_NAME"/>
+        <details key="odme.column" value="TRAIN_NAME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainSubType">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAIN_SUB_TYPE"/>
+        <details key="odme.column" value="TRAIN_SUB_TYPE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainRunType">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAIN_RUN_TYPE"/>
+        <details key="odme.column" value="TRAIN_RUN_TYPE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rakeId" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="RAKE_ID"/>
+        <details key="odme.column" value="RAKE_ID"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dayOfService">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DAY_OF_SERVICE"/>
+        <details key="odme.column" value="DAY_OF_SERVICE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validFrom" eType="//java_sql_Date">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="VALID_FROM"/>
+        <details key="odme.column" value="VALID_FROM"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validTo" eType="//java_sql_Date">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="VALID_TO"/>
+        <details key="odme.column" value="VALID_TO"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baseTraction">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="BASE_TRACTION"/>
+        <details key="odme.column" value="BASE_TRACTION"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainEndStn" eType="//StationMst" resolveProxies="false" eOpposite="//StationMst/RefTrainMstTrainEndStn">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+        <details key="suppressedGetVisibility" value="true"/>
+        <details key="suppressedUnsetVisibility" value="true"/>
+        <details key="suppressedIsSetVisibility" value="true"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAIN_END_STN"/>
+        <details key="odme.columns" value="TRAIN_END_STN"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainStartStn" eType="//StationMst" resolveProxies="false" eOpposite="//StationMst/RefTrainMstTrainStartStn">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+        <details key="suppressedGetVisibility" value="true"/>
+        <details key="suppressedUnsetVisibility" value="true"/>
+        <details key="suppressedIsSetVisibility" value="true"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAIN_START_STN"/>
+        <details key="odme.columns" value="TRAIN_START_STN"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainFrequencyCd" eType="//TrainFrequencyMst" resolveProxies="false" eOpposite="//TrainFrequencyMst/RefTrainMstTrainFrequencyCd">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="suppressedSetVisibility" value="true"/>
+        <details key="suppressedGetVisibility" value="true"/>
+        <details key="suppressedUnsetVisibility" value="true"/>
+        <details key="suppressedIsSetVisibility" value="true"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAIN_FREQUENCY_CD"/>
+        <details key="odme.columns" value="TRAIN_FREQUENCY_CD"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="List" instanceClassName="java.util.List">
+    <eTypeParameters name="T"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="java_sql_Date" instanceClassName="java.sql.Date"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CclmsCollector" eSuperTypes="//ilog_odm_dom_IloDomCollector">
+    <eOperations name="createZoneMst" eType="//ZoneMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (ZoneMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(ZoneMst.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="ZoneMst"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createZoneMst" eType="//ZoneMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (ZoneMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(ZoneMst.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="ZoneMst"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromZoneMst" eType="//ZoneMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (ZoneMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(ZoneMst.class,new Object[]{zoneId});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="zoneId">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createStationMst" eType="//StationMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (StationMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(StationMst.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="StationMst"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createStationMst" eType="//StationMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (StationMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(StationMst.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="StationMst"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromStationMst" eType="//StationMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (StationMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(StationMst.class,new Object[]{stationId});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="stationId">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createTrainFrequencyMst" eType="//TrainFrequencyMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TrainFrequencyMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(TrainFrequencyMst.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TrainFrequencyMst"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createTrainFrequencyMst" eType="//TrainFrequencyMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TrainFrequencyMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(TrainFrequencyMst.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TrainFrequencyMst"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromTrainFrequencyMst" eType="//TrainFrequencyMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TrainFrequencyMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(TrainFrequencyMst.class,new Object[]{trainFrequencyCode});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="trainFrequencyCode">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createTractionMst" eType="//TractionMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TractionMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(TractionMst.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TractionMst"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createTractionMst" eType="//TractionMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TractionMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(TractionMst.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TractionMst"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromTractionMst" eType="//TractionMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TractionMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(TractionMst.class,new Object[]{tractionType});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="tractionType">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createTrainMst" eType="//TrainMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TrainMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(TrainMst.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TrainMst"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createTrainMst" eType="//TrainMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TrainMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(TrainMst.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TrainMst"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromTrainMst" eType="//TrainMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TrainMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(TrainMst.class,new Object[]{trainId});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="trainId">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="zoneMst" upperBound="-1" eType="//ZoneMst" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="ZoneMst"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stationMst" upperBound="-1" eType="//StationMst" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="StationMst"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainFrequencyMst" upperBound="-1" eType="//TrainFrequencyMst" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="TrainFrequencyMst"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tractionMst" upperBound="-1" eType="//TractionMst" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="TractionMst"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainMst" upperBound="-1" eType="//TrainMst" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="TrainMst"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ilog_odm_dom_IloDomCollector" instanceClassName="ilog.odm.dom.IloDomCollector" abstract="true" interface="true"/>
+</ecore:EPackage>

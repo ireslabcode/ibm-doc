@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odmdpc:IloDecisionProcessConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:odmdpc="http://www.ibm.com/odme/odmdpc.ecore/1.0.0" xmi:id="_SiA6QEl4EemcHKmXrzKoRQ">
+  <tasks xsi:type="odmdpc:IloRelationalJavaTaskConfig" xmi:id="_XiMPkEl4EemcHKmXrzKoRQ" name="TestTask" description="" controllerClass="ilog.odm.processingsvc.impl.IloScenarioCustomTaskControllerImpl" inputOutputClass="ilog.odm.processingsvc.impl.IloScenarioCustomInputOutputImpl" executionControllerClass="ilog.odm.processingsvc.impl.IloScenarioCustomTaskExecutionControllerImpl" runnable="true" implementationClass="cclms.datasourse.Test">
+    <inputTables>app.LOBBY_MST</inputTables>
+    <inputTables>app.TRACTION_MST</inputTables>
+    <inputTables>app.TRAIN_FREQUENCY_MST</inputTables>
+    <inputTables>app.TRAIN_TYPE_MST</inputTables>
+  </tasks>
+</odmdpc:IloDecisionProcessConfiguration>

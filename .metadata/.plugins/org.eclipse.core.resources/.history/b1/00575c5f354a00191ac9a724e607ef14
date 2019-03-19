@@ -1,0 +1,7 @@
+package cclms.aap.input.table.properties;
+
+public class TrainSegmentMst {
+	
+	public static String  TRAIN_SEG_ID = "";
+	
+}

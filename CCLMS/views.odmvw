@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odmViews xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odm-explorerconfig.xsd" odmVersion="3.9 Patch Level 0" appTitle="CCLMS">
+  <scenarioExplorer>
+    <folder id="ScenarioExplorerConfig">
+      <folder id="Analysis">
+        <view id="Goals">
+          <goalView/>
+        </view>
+        <view id="Requirements">
+          <requirementView/>
+        </view>
+      </folder>
+      <folder id="Input Data">
+        <view id="STATION MST" uuid="_fznkQEWIEem-r8R1JeZ1pQ">
+          <schemaView tableId="app.STATION_MST">
+            <columnOrder>
+              <column columnId="STATION_ID"/>
+              <column columnId="STATION_CODE"/>
+              <column columnId="STATION_NAME"/>
+              <column columnId="LOBBY_FLAG"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="TRACTION MST" uuid="_fz4C8EWIEem-r8R1JeZ1pQ">
+          <schemaView tableId="app.TRACTION_MST">
+            <columnOrder>
+              <column columnId="TRACTION_TYPE"/>
+              <column columnId="TRACTION_DESC"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="TRAIN FREQUENCY MST" uuid="_f0IhoEWIEem-r8R1JeZ1pQ">
+          <schemaView tableId="app.TRAIN_FREQUENCY_MST">
+            <columnOrder>
+              <column columnId="TRAIN_FREQUENCY_CODE"/>
+              <column columnId="DESC"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="TRAIN MST" uuid="_f0hjMEWIEem-r8R1JeZ1pQ">
+          <schemaView tableId="app.TRAIN_MST">
+            <columnDisplays>
+              <columnDisplay columnId="TRAIN_ID" display="TRAIN_ID"/>
+              <columnDisplay columnId="TRAIN_NBR" display="TRAIN_NBR"/>
+              <columnDisplay columnId="TRAIN_NAME" display="TRAIN_NAME"/>
+              <columnDisplay columnId="TRAIN_START_STN" display="TRAIN_START_STN"/>
+              <columnDisplay columnId="TRAIN_END_STN" display="TRAIN_END_STN"/>
+              <columnDisplay columnId="TRAIN_FREQUENCY_CD" display="TRAIN_FREQUENCY_CD"/>
+              <columnDisplay columnId="TRAIN_SUB_TYPE" display="TRAIN_SUB_TYPE"/>
+              <columnDisplay columnId="TRAIN_RUN_TYPE" display="TRAIN_RUN_TYPE"/>
+              <columnDisplay columnId="RAKE_ID" display="RAKE_ID"/>
+              <columnDisplay columnId="DAY_OF_SERVICE" display="DAY_OF_SERVICE"/>
+              <columnDisplay columnId="VALID_FROM" display="VALID_FROM"/>
+              <columnDisplay columnId="VALID_TO" display="VALID_TO"/>
+              <columnDisplay columnId="BASE_TRACTION" display="BASE_TRACTION"/>
+            </columnDisplays>
+            <columnOrder>
+              <column columnId="TRAIN_ID"/>
+              <column columnId="TRAIN_NBR"/>
+              <column columnId="TRAIN_NAME"/>
+              <column columnId="TRAIN_START_STN"/>
+              <column columnId="TRAIN_END_STN"/>
+              <column columnId="TRAIN_FREQUENCY_CD"/>
+              <column columnId="TRAIN_SUB_TYPE"/>
+              <column columnId="TRAIN_RUN_TYPE"/>
+              <column columnId="RAKE_ID"/>
+              <column columnId="DAY_OF_SERVICE"/>
+              <column columnId="VALID_FROM"/>
+              <column columnId="VALID_TO"/>
+              <column columnId="BASE_TRACTION"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="LOBBY MST" uuid="_m9O_4Ek5EemTqdnsDsubUQ">
+          <schemaView tableId="app.LOBBY_MST">
+            <columnDisplays>
+              <columnDisplay columnId="LOBBY_ID" display="LOBBY_ID"/>
+              <columnDisplay columnId="LOBBY_CODE" display="LOBBY_CODE"/>
+              <columnDisplay columnId="LOBBY_NAME" display="LOBBY_NAME"/>
+            </columnDisplays>
+            <columnOrder>
+              <column columnId="LOBBY_ID"/>
+              <column columnId="LOBBY_CODE"/>
+              <column columnId="LOBBY_NAME"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="PARAMETER MST" uuid="_K63NUEoVEem16JPRbjk15w">
+          <schemaView tableId="app.PARAMETER_MST">
+            <columnOrder>
+              <column columnId="PARAMETER_ID"/>
+              <column columnId="PARAMETER_DESC"/>
+              <column columnId="UOM"/>
+              <column columnId="GLOBAL_VALUE"/>
+              <column columnId="MIN_VALUE"/>
+              <column columnId="CREATED_BY"/>
+              <column columnId="MAX_VALUE"/>
+              <column columnId="LAST_MODIFIED_BY"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="SEGMENT MST" uuid="_K7dqQEoVEem16JPRbjk15w">
+          <schemaView tableId="app.SEGMENT_MST">
+            <columnOrder>
+              <column columnId="SEGMENT_ID"/>
+              <column columnId="START_STATION_ID"/>
+              <column columnId="STOP_STATION_ID"/>
+              <column columnId="CREATED_BY"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="TRAIN SEGMENT MST" uuid="_K8NRIEoVEem16JPRbjk15w">
+          <schemaView tableId="app.TRAIN_SEGMENT_MST">
+            <columnOrder>
+              <column columnId="TRAIN_SEG_ID"/>
+              <column columnId="TRAIN_ID"/>
+              <column columnId="SEGMENT_ID"/>
+              <column columnId="CCLMS_TRAIN_TYPE"/>
+              <column columnId="SIGN_ON_TIME"/>
+              <column columnId="START_TIME"/>
+              <column columnId="END_TIME"/>
+              <column columnId="SIGN_OFF_TIME"/>
+              <column columnId="RUNNING_DURATION"/>
+              <column columnId="CHRONIC_DELAY_TIME"/>
+              <column columnId="LOCO_CHANGE_STN"/>
+              <column columnId="TRACTION_TYPE"/>
+              <column columnId="ASSIGNED_LOBBY"/>
+              <column columnId="DEPT_TYPE"/>
+              <column columnId="SPARE_FLAG"/>
+              <column columnId="DAYOFSERVICE"/>
+              <column columnId="ACTUAL_KM"/>
+              <column columnId="CREATED_BY"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+      </folder>
+      <folder id="Output">
+        <view id="KPI MST" uuid="_OrrMgEoVEem16JPRbjk15w">
+          <schemaView tableId="app.KPI_MST">
+            <columnOrder>
+              <column columnId="KPI_ID"/>
+              <column columnId="KPI_DESC"/>
+              <column columnId="UOM"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="LINK DETAIL" uuid="_OstuUEoVEem16JPRbjk15w">
+          <schemaView tableId="app.LINK_DETAIL">
+            <columnOrder>
+              <column columnId="LINK_ID"/>
+              <column columnId="CREW_NO"/>
+              <column columnId="DAY"/>
+              <column columnId="TRAIN_ID"/>
+              <column columnId="FROM_STN"/>
+              <column columnId="TO_STN"/>
+              <column columnId="SIGN_ON_TIME"/>
+              <column columnId="DEPARTURE_TIME"/>
+              <column columnId="ARRIVAL_TIME"/>
+              <column columnId="SIGN_OFF_TIME"/>
+              <column columnId="OS_ALLOWANCE"/>
+              <column columnId="EARNED_KM"/>
+              <column columnId="PERIODIC_REST_FLAG"/>
+              <column columnId="SPARE_FLAG"/>
+              <column columnId="NIGHT_FLAG"/>
+              <column columnId="SORT_ORDER"/>
+              <column columnId="DUTY_DURATION"/>
+              <column columnId="RUNNING_DURATION"/>
+              <column columnId="HQ_REST"/>
+              <column columnId="OS_REST"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+      </folder>
+    </folder>
+  </scenarioExplorer>
+</odmViews>

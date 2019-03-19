@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<applicationDataModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" odmVersion="3.9 Patch Level 0" xsi:noNamespaceSchemaLocation="../../../doc/resources/odm-application-data-model.xsd" project="CCLMS_data" model="Physical Data Model.dbm" applicationId="CCLMS" applicationVersion="1.0.16"></applicationDataModel>

@@ -1,0 +1,5 @@
+package cclms.app.scenario.updater;
+
+public class InputTableUpdater {
+
+}

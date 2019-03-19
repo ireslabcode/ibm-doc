@@ -1,0 +1,527 @@
+/**
+ */
+package cclms.impl;
+
+import cclms.*;
+
+import ilog.odm.dom.IloDomCollector;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
+
+import org.eclipse.emf.ecore.util.Switch;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Switch</b> for the model's inheritance hierarchy.
+ * It supports the call {@link #doSwitch(EObject) doSwitch(object)}
+ * to invoke the <code>caseXXX</code> method for each class of the model,
+ * starting with the actual class of the object
+ * and proceeding up the inheritance hierarchy
+ * until a non-null result is returned,
+ * which is the result of the switch.
+ * <!-- end-user-doc -->
+ * @see cclms.impl.CclmsPackage
+ * @generated
+ */
+public class CclmsSwitch<T> extends Switch<T> {
+	/**
+	 * The cached model package
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static CclmsPackage modelPackage;
+
+	/**
+	 * Creates an instance of the switch.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CclmsSwitch() {
+		if (modelPackage == null) {
+			modelPackage = CclmsPackage.eINSTANCE;
+		}
+	}
+
+	/**
+	 * Checks whether this is a switch for the given package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @parameter ePackage the package in question.
+	 * @return whether this is a switch for the given package.
+	 * @generated
+	 */
+	@Override
+	protected boolean isSwitchFor(EPackage ePackage) {
+		return ePackage == modelPackage;
+	}
+
+	/**
+	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the first non-null result returned by a <code>caseXXX</code> call.
+	 * @generated
+	 */
+	@Override
+	protected T doSwitch(int classifierID, EObject theEObject) {
+		switch (classifierID) {
+		case CclmsPackage.ZONE_MST: {
+			ZoneMst zoneMst = (ZoneMst) theEObject;
+			T result = caseZoneMst(zoneMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.STATION_MST: {
+			StationMst stationMst = (StationMst) theEObject;
+			T result = caseStationMst(stationMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.TRAIN_FREQUENCY_MST: {
+			TrainFrequencyMst trainFrequencyMst = (TrainFrequencyMst) theEObject;
+			T result = caseTrainFrequencyMst(trainFrequencyMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.TRACTION_MST: {
+			TractionMst tractionMst = (TractionMst) theEObject;
+			T result = caseTractionMst(tractionMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.TRAIN_MST: {
+			TrainMst trainMst = (TrainMst) theEObject;
+			T result = caseTrainMst(trainMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.PARAMETER_VALUE: {
+			ParameterValue parameterValue = (ParameterValue) theEObject;
+			T result = caseParameterValue(parameterValue);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.DIVISION_MST: {
+			DivisionMst divisionMst = (DivisionMst) theEObject;
+			T result = caseDivisionMst(divisionMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.USER_ROLE_MST: {
+			UserRoleMst userRoleMst = (UserRoleMst) theEObject;
+			T result = caseUserRoleMst(userRoleMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.USER_MST: {
+			UserMst userMst = (UserMst) theEObject;
+			T result = caseUserMst(userMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.KPI_MST: {
+			KpiMst kpiMst = (KpiMst) theEObject;
+			T result = caseKpiMst(kpiMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.KPI_VALUE: {
+			KpiValue kpiValue = (KpiValue) theEObject;
+			T result = caseKpiValue(kpiValue);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.PARAMETER_MST: {
+			ParameterMst parameterMst = (ParameterMst) theEObject;
+			T result = caseParameterMst(parameterMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.TRAIN_TYPE_MST: {
+			TrainTypeMst trainTypeMst = (TrainTypeMst) theEObject;
+			T result = caseTrainTypeMst(trainTypeMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST: {
+			TrainTypeMappingMst trainTypeMappingMst = (TrainTypeMappingMst) theEObject;
+			T result = caseTrainTypeMappingMst(trainTypeMappingMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.LINK_DETAIL: {
+			LinkDetail linkDetail = (LinkDetail) theEObject;
+			T result = caseLinkDetail(linkDetail);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.SEGMENT_MST: {
+			SegmentMst segmentMst = (SegmentMst) theEObject;
+			T result = caseSegmentMst(segmentMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.TRAIN_SEGMENT_MST: {
+			TrainSegmentMst trainSegmentMst = (TrainSegmentMst) theEObject;
+			T result = caseTrainSegmentMst(trainSegmentMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.LINK_MST: {
+			LinkMst linkMst = (LinkMst) theEObject;
+			T result = caseLinkMst(linkMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.CCLMS_COLLECTOR: {
+			CclmsCollector cclmsCollector = (CclmsCollector) theEObject;
+			T result = caseCclmsCollector(cclmsCollector);
+			if (result == null)
+				result = caseilog_odm_dom_IloDomCollector(cclmsCollector);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		default:
+			return defaultCase(theEObject);
+		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Zone Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Zone Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseZoneMst(ZoneMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Station Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Station Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStationMst(StationMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Train Frequency Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Train Frequency Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrainFrequencyMst(TrainFrequencyMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Traction Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Traction Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTractionMst(TractionMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Train Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Train Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrainMst(TrainMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParameterValue(ParameterValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Division Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Division Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDivisionMst(DivisionMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>User Role Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>User Role Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUserRoleMst(UserRoleMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>User Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>User Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUserMst(UserMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kpi Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kpi Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKpiMst(KpiMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kpi Value</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kpi Value</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKpiValue(KpiValue object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Parameter Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Parameter Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseParameterMst(ParameterMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Train Type Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Train Type Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrainTypeMst(TrainTypeMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Train Type Mapping Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Train Type Mapping Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrainTypeMappingMst(TrainTypeMappingMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Detail</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Detail</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkDetail(LinkDetail object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Segment Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Segment Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSegmentMst(SegmentMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Train Segment Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Train Segment Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrainSegmentMst(TrainSegmentMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkMst(LinkMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Collector</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Collector</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCclmsCollector(CclmsCollector object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ilog odm dom Ilo Dom Collector</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ilog odm dom Ilo Dom Collector</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseilog_odm_dom_IloDomCollector(IloDomCollector object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch, but this is the last case anyway.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	@Override
+	public T defaultCase(EObject object) {
+		return null;
+	}
+
+} //CclmsSwitch

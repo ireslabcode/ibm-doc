@@ -1,0 +1,57 @@
+package cclms.app.scenario.updater;
+
+import ilog.odm.datasvc.IloRow;
+import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloTable;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import cclms.aap.input.table.properties.TractionMst;
+import cclms.aap.input.table.properties.TrainFrequencyMst;
+import cclms.app.query.QueryUtil;
+import cclms.common.util.TableConstant;
+
+public class InputTableUpdater {
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static  void prepareResultSetMap(IloScenario scenario) throws ClassNotFoundException, SQLException{
+		System.out.println("___________________________--");
+		
+		List<String> tableList = new ArrayList<>();
+		tableList.add("TRACTION_MST");
+		
+		Map<String, ResultSet> resultSetMap = new HashMap<>();
+		
+		for (String tabeName : tableList) {
+			
+			System.out.println(tabeName);
+			resultSetMap.put(tabeName,ScenarioUpdater.getTableBySqlQuery(tabeName));
+			
+		}
+		
+		//loadScenarioInputTables(resultSetMap, scenario);
+		
+	}
+	
+	
+	public static void main(String args[]){
+		
+	}
+
+}

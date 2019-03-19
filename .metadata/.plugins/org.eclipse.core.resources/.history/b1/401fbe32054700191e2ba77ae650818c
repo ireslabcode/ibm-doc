@@ -1,0 +1,9 @@
+package cclms.table.properties;
+
+public class TractionMst {
+	
+	
+	public static final String TRACTION_TYPE = "TRACTION_TYPE"; 
+	public static 
+
+}

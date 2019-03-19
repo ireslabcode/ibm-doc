@@ -1,0 +1,383 @@
+/*
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package cclms.impl;
+
+import cclms.CclmsCollector;
+import cclms.ZoneMst;
+
+import ilog.odm.dom.impl.IloDomObjectImpl;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link cclms.impl.ZoneMstImpl#getZoneId <em>Zone Id</em>}</li>
+ *   <li>{@link cclms.impl.ZoneMstImpl#getZoneCode <em>Zone Code</em>}</li>
+ *   <li>{@link cclms.impl.ZoneMstImpl#getZoneDesc <em>Zone Desc</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class ZoneMstImpl extends IloDomObjectImpl implements ZoneMst {
+	/**
+	 * A set of bit flags representing the values of boolean attributes and whether unsettable features have been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected int _booleanFlags = 0;
+
+	/**
+	 * The default value of the '{@link #getZoneId() <em>Zone Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZoneId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ZONE_ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getZoneId() <em>Zone Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZoneId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int zoneId = ZONE_ID_EDEFAULT;
+
+	/**
+	 * The flag representing whether the Zone Id attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ZONE_ID_ESETFLAG = 1 << 0;
+
+	/**
+	 * The default value of the '{@link #getZoneCode() <em>Zone Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZoneCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ZONE_CODE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getZoneCode() <em>Zone Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZoneCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected String zoneCode = ZONE_CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getZoneDesc() <em>Zone Desc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZoneDesc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ZONE_DESC_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getZoneDesc() <em>Zone Desc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getZoneDesc()
+	 * @generated
+	 * @ordered
+	 */
+	protected String zoneDesc = ZONE_DESC_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ZoneMstImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CclmsPackage.Literals.ZONE_MST;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getZoneId() {
+		return zoneId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setZoneId(int newZoneId) {
+		int oldZoneId = zoneId;
+		zoneId = newZoneId;
+		boolean oldZoneIdESet = (_booleanFlags & ZONE_ID_ESETFLAG) != 0;
+		_booleanFlags |= ZONE_ID_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.ZONE_MST__ZONE_ID, oldZoneId,
+								zoneId, !oldZoneIdESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.ZONE_MST__ZONE_ID, oldZoneId, zoneId,
+						!oldZoneIdESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetZoneId() {
+		int oldZoneId = zoneId;
+		boolean oldZoneIdESet = (_booleanFlags & ZONE_ID_ESETFLAG) != 0;
+		zoneId = ZONE_ID_EDEFAULT;
+		_booleanFlags &= ~ZONE_ID_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.UNSET,
+								CclmsPackage.ZONE_MST__ZONE_ID, oldZoneId,
+								ZONE_ID_EDEFAULT, oldZoneIdESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.UNSET,
+						CclmsPackage.ZONE_MST__ZONE_ID, oldZoneId,
+						ZONE_ID_EDEFAULT, oldZoneIdESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetZoneId() {
+		return (_booleanFlags & ZONE_ID_ESETFLAG) != 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getZoneCode() {
+		return zoneCode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setZoneCode(String newZoneCode) {
+		String oldZoneCode = zoneCode;
+		zoneCode = newZoneCode;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.ZONE_MST__ZONE_CODE, oldZoneCode,
+								zoneCode);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.ZONE_MST__ZONE_CODE, oldZoneCode, zoneCode));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getZoneDesc() {
+		return zoneDesc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setZoneDesc(String newZoneDesc) {
+		String oldZoneDesc = zoneDesc;
+		zoneDesc = newZoneDesc;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.ZONE_MST__ZONE_DESC, oldZoneDesc,
+								zoneDesc);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.ZONE_MST__ZONE_DESC, oldZoneDesc, zoneDesc));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CclmsCollector getCollector() {
+		return (CclmsCollector) eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case CclmsPackage.ZONE_MST__ZONE_ID:
+			return getZoneId();
+		case CclmsPackage.ZONE_MST__ZONE_CODE:
+			return getZoneCode();
+		case CclmsPackage.ZONE_MST__ZONE_DESC:
+			return getZoneDesc();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case CclmsPackage.ZONE_MST__ZONE_ID:
+			setZoneId((Integer) newValue);
+			return;
+		case CclmsPackage.ZONE_MST__ZONE_CODE:
+			setZoneCode((String) newValue);
+			return;
+		case CclmsPackage.ZONE_MST__ZONE_DESC:
+			setZoneDesc((String) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case CclmsPackage.ZONE_MST__ZONE_ID:
+			unsetZoneId();
+			return;
+		case CclmsPackage.ZONE_MST__ZONE_CODE:
+			setZoneCode(ZONE_CODE_EDEFAULT);
+			return;
+		case CclmsPackage.ZONE_MST__ZONE_DESC:
+			setZoneDesc(ZONE_DESC_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case CclmsPackage.ZONE_MST__ZONE_ID:
+			return isSetZoneId();
+		case CclmsPackage.ZONE_MST__ZONE_CODE:
+			return ZONE_CODE_EDEFAULT == null ? zoneCode != null
+					: !ZONE_CODE_EDEFAULT.equals(zoneCode);
+		case CclmsPackage.ZONE_MST__ZONE_DESC:
+			return ZONE_DESC_EDEFAULT == null ? zoneDesc != null
+					: !ZONE_DESC_EDEFAULT.equals(zoneDesc);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (zoneId: ");
+		if ((_booleanFlags & ZONE_ID_ESETFLAG) != 0)
+			result.append(zoneId);
+		else
+			result.append("<unset>");
+		result.append(", zoneCode: ");
+		result.append(zoneCode);
+		result.append(", zoneDesc: ");
+		result.append(zoneDesc);
+		result.append(')');
+		return result.toString();
+	}
+
+} //ZoneMstImpl

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="CCLMS_java/src" forceOverwrite="true" modelName="cclms" updateClasspath="false" rootExtendsInterface="ilog.odm.dom.IloDomObject" rootExtendsClass="ilog.odm.dom.impl.IloDomObjectImpl" suppressEMFTypes="true" suppressEMFModelTags="true" codeFormatting="true" booleanFlagsField="_booleanFlags" complianceLevel="6.0" suppressGenModelAnnotations="false" copyrightFields="false">
+  <genPackages prefix="Cclms" disposableProviderFactory="true" metaDataPackageSuffix="impl" utilityPackageSuffix="impl" fileExtensions="cclms">
+    <ecorePackage href="cclms.ecore#/"/>
+    <genDataTypes>
+      <genTypeParameters>
+        <ecoreTypeParameter href="cclms.ecore#//List/T"/>
+      </genTypeParameters>
+      <ecoreDataType href="cclms.ecore#//List"/>
+    </genDataTypes>
+    <genDataTypes>
+      <ecoreDataType href="cclms.ecore#//java_sql_Date"/>
+    </genDataTypes>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//ZoneMst"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//ZoneMst/zoneId"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//ZoneMst/zoneCode"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//ZoneMst/zoneDesc"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//ZoneMst/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//StationMst"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//StationMst/stationId"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//StationMst/stationCode"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//StationMst/stationName"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//StationMst/lobbyFlag"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//StationMst/RefTrainMstTrainEndStn"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//StationMst/RefTrainMstTrainStartStn"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//StationMst/getTrainMstTrainEndStn"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//StationMst/getTrainMstTrainStartStn"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//StationMst/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//TrainFrequencyMst"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainFrequencyMst/trainFrequencyCode"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainFrequencyMst/desc"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//TrainFrequencyMst/RefTrainMstTrainFrequencyCd"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainFrequencyMst/getTrainMstTrainFrequencyCd"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainFrequencyMst/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//TractionMst"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TractionMst/tractionType"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TractionMst/tractionDesc"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TractionMst/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//TrainMst"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/trainId"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/trainNbr"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/trainName"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/trainSubType"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/trainRunType"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/rakeId"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/dayOfService"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/validFrom"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/validTo"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainMst/baseTraction"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//TrainMst/RefTrainEndStn"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//TrainMst/RefTrainStartStn"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//TrainMst/RefTrainFrequencyCd"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainMst/getTrainEndStn"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainMst/setTrainEndStn"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//TrainMst/setTrainEndStn/obj"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainMst/getTrainStartStn"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainMst/setTrainStartStn"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//TrainMst/setTrainStartStn/obj"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainMst/getTrainFrequencyCd"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainMst/setTrainFrequencyCd"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//TrainMst/setTrainFrequencyCd/obj"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainMst/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//CclmsCollector"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/zoneMst"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/stationMst"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/trainFrequencyMst"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/tractionMst"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/trainMst"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createZoneMst"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createZoneMst.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createZoneMst.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromZoneMst"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromZoneMst/zoneId"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createStationMst"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createStationMst.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createStationMst.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromStationMst"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromStationMst/stationId"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTrainFrequencyMst"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTrainFrequencyMst.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createTrainFrequencyMst.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromTrainFrequencyMst"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTrainFrequencyMst/trainFrequencyCode"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTractionMst"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTractionMst.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createTractionMst.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromTractionMst"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTractionMst/tractionType"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTrainMst"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTrainMst.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createTrainMst.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromTrainMst"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTrainMst/trainId"/>
+        </genParameters>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="cclms.ecore#//ilog_odm_dom_IloDomCollector"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

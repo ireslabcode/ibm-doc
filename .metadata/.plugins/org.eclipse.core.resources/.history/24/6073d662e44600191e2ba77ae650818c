@@ -1,0 +1,6 @@
+package cclms.query;
+
+public class QueryUtil {
+	public static final String APP ="app";
+
+}

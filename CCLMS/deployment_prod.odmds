@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deploymentSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odm-deploymentsettings.xsd" odmVersion="3.9 Patch Level 0">
+  <repository multiUser="false" concurrencyMode="exclusive">
+    <connection>
+      <JDBCDriverClass name="org.apache.derby.jdbc.EmbeddedDriver"/>
+      <JDBCURL>jdbc:derby:directory:$USER_HOME_DIR/.</JDBCURL>
+    </connection>
+    <managerClass name="ilog.odm.datasvc.persist.derby.IloEmbeddedDerbyRepositoryManagerFactory"/>
+  </repository>
+  <deployment todir="deploy" filename="CCLMS_prod.odmapp"/>
+  <dbconnections/>
+  <scenarioSources/>
+  <scenarioExporters/>
+</deploymentSettings>

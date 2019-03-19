@@ -1,0 +1,7 @@
+package cclms.common.util;
+
+public class TableConstant {
+	public static final String SCHEMA ="DB2INST1";
+	public static final String ZONE_MST ="ZONE_MST";
+
+}

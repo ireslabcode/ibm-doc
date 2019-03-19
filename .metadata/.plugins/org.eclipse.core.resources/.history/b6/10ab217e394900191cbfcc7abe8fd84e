@@ -1,0 +1,62 @@
+/*
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package cclms.impl;
+
+import cclms.CclmsCollector;
+import cclms.LobbyMst;
+
+import ilog.odm.dom.impl.IloDomObjectImpl;
+
+import org.eclipse.emf.ecore.EClass;
+
+/**
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * <p>
+ * </p>
+ *
+ * @generated
+ */
+public class LobbyMstImpl extends IloDomObjectImpl implements LobbyMst {
+	/**
+	 * A set of bit flags representing the values of boolean attributes and whether unsettable features have been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected int _booleanFlags = 0;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LobbyMstImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CclmsPackage.Literals.LOBBY_MST;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CclmsCollector getCollector() {
+		return (CclmsCollector) eContainer();
+	}
+
+} //LobbyMstImpl

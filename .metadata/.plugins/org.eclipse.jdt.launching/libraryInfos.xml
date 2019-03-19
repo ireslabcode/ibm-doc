@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><libraryInfos>
+<libraryInfo home="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk" version="1.7.0">
+<bootpath>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\bin\compressedrefs\jclSC170\vm.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\se-service.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\math.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\jlm.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmorb.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmorbapi.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmcfw.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmpkcs.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmcertpathfw.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmjgssfw.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmjssefw.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmsaslfw.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmjcefw.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmjgssprovider.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmjsseprovider2.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmcertpathprovider.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\xmldsigfw.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\xml.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\resources.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\rt.jar"/>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ibmgpu.jar"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\IBM\ILOG\ODME39\Developer\sdk\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

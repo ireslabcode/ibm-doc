@@ -1,0 +1,5 @@
+package cclms.export;
+
+public class DB2Exporter implements IloScenarioExporter{
+
+}

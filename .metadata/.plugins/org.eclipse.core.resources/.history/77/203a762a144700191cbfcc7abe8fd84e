@@ -1,0 +1,5 @@
+package cclms.table.properties;
+
+class TrainTypeMst {
+
+}

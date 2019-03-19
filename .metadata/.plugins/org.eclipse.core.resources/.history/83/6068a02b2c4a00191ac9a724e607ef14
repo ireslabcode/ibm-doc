@@ -1,0 +1,9 @@
+package cclms.aap.input.table.properties;
+
+public class SegmentMst {
+
+	public static final String  SEGMENT_ID = "SEGMENT_ID"; 
+	public static final String  LOBBY_CODE = "LOBBY_CODE";
+	public static final String  LOBBY_NAME = "LOBBY_NAME";
+
+}

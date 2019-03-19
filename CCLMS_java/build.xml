@@ -1,0 +1,98 @@
+<project name="Project" default="compile" basedir=".">
+
+	<property name="odm.dir" value="c:/IBM/ILOG/ODME38/Developer" />
+	<property name="opl.dir" value="c:/IBM/ILOG/ODME38/Developer" />
+	<property name="jviews.dir" value="${odm.dir}/JViews" />
+	<property name="jframe.dir" value="${jviews.dir}/jviews-framework88" />
+	<property name="jdiag.dir" value="${jviews.dir}/jviews-diagrammer88" />
+	<property name="jmap.dir" value="${jviews.dir}/jviews-maps88" />
+	<property name="jgantt.dir" value="${jviews.dir}/jviews-gantt88" />
+	<property name="odm.jars.dir" value="${odm.dir}/lib" />
+	<property name="opl.jars.dir" value="${opl.dir}/lib" />
+	<property name="opl.bin.dir" value="${opl.dir}/bin/x86_win32" />
+
+	<property name="project.name" value="CCLMS" />
+	<property name="target.dir" value="../${project.name}" />
+
+	<property name="javaJar.name" value="${project.name}Java.jar" />
+
+
+	<!--
+   ==================================================================
+   JavaDoc
+   ==================================================================
+   -->
+	<target name="documentation" depends="compile" description="Documentation Generation">
+		<echo message="Documentation generation" />
+		<mkdir dir="docs" />
+		<javadoc sourcepath="src" destdir="docs/api" packagenames="*">
+			<classpath refid="basics.classpath" />
+		</javadoc>
+	</target>
+
+	<!--
+   ==================================================================
+   All
+   ==================================================================
+   -->
+	<target name="all">
+		<echo>  
+       compile : compile the Datasource example and make a jar file in the deploy directory 
+     </echo>
+	</target>
+
+	<!--
+   ==================================================================
+   Compile 
+   ==================================================================
+   -->
+
+	<target name="compile">
+		<mkdir dir="bin" />
+
+		<copy todir="bin">
+			<fileset dir="resources">
+			</fileset>
+		</copy>
+
+		<javac debug="true" destdir="bin" srcdir="src" fork="true">
+			<classpath>
+				<path refid="basics.classpath">
+				</path>
+			</classpath>
+		</javac>
+
+		<jar destfile="lib/${javaJar.name}">
+			<fileset dir="bin">
+			</fileset>
+		</jar>
+
+		<copy file="lib/${javaJar.name}" todir="${target.dir}/deploy/" />
+	</target>
+
+	<!--
+   ==================================================================
+   Basic classpath
+   ==================================================================
+   -->
+	<path id="basics.classpath">
+		<fileset dir="${odm.jars.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement path="${opl.jars.dir}/oplall.jar" />
+		<pathelement path="${jdiag.dir}/lib/jviews-diagrammer-all.jar" />
+		<pathelement path="${jgantt.dir}/lib/jviews-gantt-all.jar" />
+	</path>
+
+	<!--
+   ==================================================================
+   Custom classpath
+   ==================================================================
+   -->
+	<path id="custom.classpath">
+		<fileset dir="${basedir}">
+			<include name="${target.dir}/deploy/*.jar" />
+		</fileset>
+	</path>
+</project>
+

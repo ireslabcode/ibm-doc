@@ -1,0 +1,25 @@
+/*
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package cclms;
+
+import ilog.odm.dom.IloDomObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * @extends IloDomObject
+ * @generated
+ */
+public interface LobbyMst extends IloDomObject {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	CclmsCollector getCollector();
+
+} // LobbyMst

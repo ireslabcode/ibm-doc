@@ -1,0 +1,25 @@
+package cclms.common.util;
+
+public class TableConstant {
+	public static final String SCHEMA ="DB2INST1";
+	public static final String ZONE_MST ="ZONE_MST";
+	public static final String APP ="app";
+	
+	
+	// input table name information.
+	public static final String STATION_MST ="STATION_MST";
+	public static final String TRACTION_MST ="TRACTION_MST";
+	public static final String TRAIN_TYPE_MST="TRAIN_TYPE_MST";
+	public static final String TRAIN_FREQUENCY_MST="TRAIN_FREQUENCY_MST";
+	public static final String LOBBY_MST = "LOBBY_MST";
+	public static final String TRAIN_SEGMENT_MST = "TRAIN_SEGMENT_MST";
+	public static final String SEGMENT_MST = "SEGMENT_MST";
+	public static final String PARAMETER_MST = "PARAMETER_MST";
+	
+	// output table information.
+	public static final String KPI_MST ="KPI_MST";
+	
+	
+
+
+}

@@ -1,0 +1,801 @@
+/*
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package cclms.impl;
+
+import cclms.CclmsCollector;
+import cclms.DivisionMst;
+import cclms.StationMst;
+import cclms.UserMst;
+import cclms.ZoneMst;
+
+import ilog.odm.dom.impl.IloDomObjectImpl;
+
+import ilog.odm.dom.impl.resource.IloDomObjectContainmentEList;
+import ilog.odm.dom.impl.resource.IloDomObjectWithInverseEList;
+
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link cclms.impl.DivisionMstImpl#getDivisionId <em>Division Id</em>}</li>
+ *   <li>{@link cclms.impl.DivisionMstImpl#getDivisionCode <em>Division Code</em>}</li>
+ *   <li>{@link cclms.impl.DivisionMstImpl#getDivisionDesc <em>Division Desc</em>}</li>
+ *   <li>{@link cclms.impl.DivisionMstImpl#getCreateDateTs <em>Create Date Ts</em>}</li>
+ *   <li>{@link cclms.impl.DivisionMstImpl#getModifiedTs <em>Modified Ts</em>}</li>
+ *   <li>{@link cclms.impl.DivisionMstImpl#getRefStationMstDivisionId <em>Ref Station Mst Division Id</em>}</li>
+ *   <li>{@link cclms.impl.DivisionMstImpl#getRefZoneId <em>Ref Zone Id</em>}</li>
+ *   <li>{@link cclms.impl.DivisionMstImpl#getRefUserMstDivisionId <em>Ref User Mst Division Id</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class DivisionMstImpl extends IloDomObjectImpl implements DivisionMst {
+	/**
+	 * A set of bit flags representing the values of boolean attributes and whether unsettable features have been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected int _booleanFlags = 0;
+
+	/**
+	 * The default value of the '{@link #getDivisionId() <em>Division Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDivisionId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int DIVISION_ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getDivisionId() <em>Division Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDivisionId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int divisionId = DIVISION_ID_EDEFAULT;
+
+	/**
+	 * The flag representing whether the Division Id attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int DIVISION_ID_ESETFLAG = 1 << 0;
+
+	/**
+	 * The default value of the '{@link #getDivisionCode() <em>Division Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDivisionCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DIVISION_CODE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDivisionCode() <em>Division Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDivisionCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected String divisionCode = DIVISION_CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDivisionDesc() <em>Division Desc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDivisionDesc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DIVISION_DESC_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDivisionDesc() <em>Division Desc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDivisionDesc()
+	 * @generated
+	 * @ordered
+	 */
+	protected String divisionDesc = DIVISION_DESC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCreateDateTs() <em>Create Date Ts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreateDateTs()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date CREATE_DATE_TS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCreateDateTs() <em>Create Date Ts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreateDateTs()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date createDateTs = CREATE_DATE_TS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getModifiedTs() <em>Modified Ts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getModifiedTs()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date MODIFIED_TS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getModifiedTs() <em>Modified Ts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getModifiedTs()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date modifiedTs = MODIFIED_TS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRefStationMstDivisionId() <em>Ref Station Mst Division Id</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefStationMstDivisionId()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<StationMst> refStationMstDivisionId;
+
+	/**
+	 * The cached value of the '{@link #getRefZoneId() <em>Ref Zone Id</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefZoneId()
+	 * @generated
+	 * @ordered
+	 */
+	protected ZoneMst refZoneId;
+
+	/**
+	 * The cached value of the '{@link #getRefUserMstDivisionId() <em>Ref User Mst Division Id</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefUserMstDivisionId()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<UserMst> refUserMstDivisionId;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DivisionMstImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CclmsPackage.eINSTANCE.getDivisionMst();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getDivisionId() {
+		return divisionId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDivisionId(int newDivisionId) {
+		int oldDivisionId = divisionId;
+		divisionId = newDivisionId;
+		boolean oldDivisionIdESet = (_booleanFlags & DIVISION_ID_ESETFLAG) != 0;
+		_booleanFlags |= DIVISION_ID_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.DIVISION_MST__DIVISION_ID,
+								oldDivisionId, divisionId, !oldDivisionIdESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.DIVISION_MST__DIVISION_ID, oldDivisionId,
+						divisionId, !oldDivisionIdESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetDivisionId() {
+		int oldDivisionId = divisionId;
+		boolean oldDivisionIdESet = (_booleanFlags & DIVISION_ID_ESETFLAG) != 0;
+		divisionId = DIVISION_ID_EDEFAULT;
+		_booleanFlags &= ~DIVISION_ID_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.UNSET,
+								CclmsPackage.DIVISION_MST__DIVISION_ID,
+								oldDivisionId, DIVISION_ID_EDEFAULT,
+								oldDivisionIdESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.UNSET,
+						CclmsPackage.DIVISION_MST__DIVISION_ID, oldDivisionId,
+						DIVISION_ID_EDEFAULT, oldDivisionIdESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetDivisionId() {
+		return (_booleanFlags & DIVISION_ID_ESETFLAG) != 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDivisionCode() {
+		return divisionCode;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDivisionCode(String newDivisionCode) {
+		String oldDivisionCode = divisionCode;
+		divisionCode = newDivisionCode;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.DIVISION_MST__DIVISION_CODE,
+								oldDivisionCode, divisionCode);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.DIVISION_MST__DIVISION_CODE,
+						oldDivisionCode, divisionCode));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDivisionDesc() {
+		return divisionDesc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDivisionDesc(String newDivisionDesc) {
+		String oldDivisionDesc = divisionDesc;
+		divisionDesc = newDivisionDesc;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.DIVISION_MST__DIVISION_DESC,
+								oldDivisionDesc, divisionDesc);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.DIVISION_MST__DIVISION_DESC,
+						oldDivisionDesc, divisionDesc));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getCreateDateTs() {
+		return createDateTs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreateDateTs(Date newCreateDateTs) {
+		Date oldCreateDateTs = createDateTs;
+		createDateTs = newCreateDateTs;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.DIVISION_MST__CREATE_DATE_TS,
+								oldCreateDateTs, createDateTs);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.DIVISION_MST__CREATE_DATE_TS,
+						oldCreateDateTs, createDateTs));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getModifiedTs() {
+		return modifiedTs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setModifiedTs(Date newModifiedTs) {
+		Date oldModifiedTs = modifiedTs;
+		modifiedTs = newModifiedTs;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.DIVISION_MST__MODIFIED_TS,
+								oldModifiedTs, modifiedTs);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.DIVISION_MST__MODIFIED_TS, oldModifiedTs,
+						modifiedTs));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<StationMst> getRefStationMstDivisionId() {
+		if (refStationMstDivisionId == null) {
+			refStationMstDivisionId = new IloDomObjectWithInverseEList<StationMst>(
+					StationMst.class, this,
+					CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID,
+					CclmsPackage.STATION_MST__REF_DIVISION_ID);
+		}
+		return refStationMstDivisionId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ZoneMst getRefZoneId() {
+		return refZoneId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRefZoneId(ZoneMst newRefZoneId,
+			NotificationChain msgs) {
+		ZoneMst oldRefZoneId = refZoneId;
+		refZoneId = newRefZoneId;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification;
+			if (getDomResource() != null) {
+				notification = getDomResource().getNotificationFactory()
+						.createNotification(this, Notification.SET,
+								CclmsPackage.DIVISION_MST__REF_ZONE_ID,
+								oldRefZoneId, newRefZoneId);
+			} else {
+				notification = new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.DIVISION_MST__REF_ZONE_ID, oldRefZoneId,
+						newRefZoneId);
+			}
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRefZoneId(ZoneMst newRefZoneId) {
+		if (newRefZoneId != refZoneId) {
+			NotificationChain msgs = null;
+			if (refZoneId != null)
+				msgs = ((InternalEObject) refZoneId).eInverseRemove(this,
+						CclmsPackage.ZONE_MST__REF_DIVISION_MST_ZONE_ID,
+						ZoneMst.class, msgs);
+			if (newRefZoneId != null)
+				msgs = ((InternalEObject) newRefZoneId).eInverseAdd(this,
+						CclmsPackage.ZONE_MST__REF_DIVISION_MST_ZONE_ID,
+						ZoneMst.class, msgs);
+			msgs = basicSetRefZoneId(newRefZoneId, msgs);
+			if (msgs != null) {
+				msgs.dispatch();
+				if (getDomResource() != null)
+					getDomResource().getNotificationFactory().release(msgs);
+			}
+		} else if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.DIVISION_MST__REF_ZONE_ID,
+								newRefZoneId, newRefZoneId);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.DIVISION_MST__REF_ZONE_ID, newRefZoneId,
+						newRefZoneId));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<UserMst> getRefUserMstDivisionId() {
+		if (refUserMstDivisionId == null) {
+			refUserMstDivisionId = new IloDomObjectWithInverseEList<UserMst>(
+					UserMst.class, this,
+					CclmsPackage.DIVISION_MST__REF_USER_MST_DIVISION_ID,
+					CclmsPackage.USER_MST__REF_DIVISION_ID);
+		}
+		return refUserMstDivisionId;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<StationMst> getStationMstDivisionId() {
+		return getRefStationMstDivisionId();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ZoneMst getZoneId() {
+		ZoneMst obj = getRefZoneId();
+		return isNullOrProxy(obj) ? null : obj;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setZoneId(ZoneMst obj) {
+		setRefZoneId(obj);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<UserMst> getUserMstDivisionId() {
+		return getRefUserMstDivisionId();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CclmsCollector getCollector() {
+		return (CclmsCollector) eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefStationMstDivisionId())
+					.basicAdd(otherEnd, msgs);
+		case CclmsPackage.DIVISION_MST__REF_ZONE_ID:
+			if (refZoneId != null)
+				msgs = ((InternalEObject) refZoneId).eInverseRemove(this,
+						CclmsPackage.ZONE_MST__REF_DIVISION_MST_ZONE_ID,
+						ZoneMst.class, msgs);
+			return basicSetRefZoneId((ZoneMst) otherEnd, msgs);
+		case CclmsPackage.DIVISION_MST__REF_USER_MST_DIVISION_ID:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefUserMstDivisionId())
+					.basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID:
+			return ((InternalEList<?>) getRefStationMstDivisionId())
+					.basicRemove(otherEnd, msgs);
+		case CclmsPackage.DIVISION_MST__REF_ZONE_ID:
+			return basicSetRefZoneId(null, msgs);
+		case CclmsPackage.DIVISION_MST__REF_USER_MST_DIVISION_ID:
+			return ((InternalEList<?>) getRefUserMstDivisionId()).basicRemove(
+					otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case CclmsPackage.DIVISION_MST__DIVISION_ID:
+			return getDivisionId();
+		case CclmsPackage.DIVISION_MST__DIVISION_CODE:
+			return getDivisionCode();
+		case CclmsPackage.DIVISION_MST__DIVISION_DESC:
+			return getDivisionDesc();
+		case CclmsPackage.DIVISION_MST__CREATE_DATE_TS:
+			return getCreateDateTs();
+		case CclmsPackage.DIVISION_MST__MODIFIED_TS:
+			return getModifiedTs();
+		case CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID:
+			return getRefStationMstDivisionId();
+		case CclmsPackage.DIVISION_MST__REF_ZONE_ID:
+			return getRefZoneId();
+		case CclmsPackage.DIVISION_MST__REF_USER_MST_DIVISION_ID:
+			return getRefUserMstDivisionId();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case CclmsPackage.DIVISION_MST__DIVISION_ID:
+			setDivisionId((Integer) newValue);
+			return;
+		case CclmsPackage.DIVISION_MST__DIVISION_CODE:
+			setDivisionCode((String) newValue);
+			return;
+		case CclmsPackage.DIVISION_MST__DIVISION_DESC:
+			setDivisionDesc((String) newValue);
+			return;
+		case CclmsPackage.DIVISION_MST__CREATE_DATE_TS:
+			setCreateDateTs((Date) newValue);
+			return;
+		case CclmsPackage.DIVISION_MST__MODIFIED_TS:
+			setModifiedTs((Date) newValue);
+			return;
+		case CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID:
+			getRefStationMstDivisionId().clear();
+			getRefStationMstDivisionId().addAll(
+					(Collection<? extends StationMst>) newValue);
+			return;
+		case CclmsPackage.DIVISION_MST__REF_ZONE_ID:
+			setRefZoneId((ZoneMst) newValue);
+			return;
+		case CclmsPackage.DIVISION_MST__REF_USER_MST_DIVISION_ID:
+			getRefUserMstDivisionId().clear();
+			getRefUserMstDivisionId().addAll(
+					(Collection<? extends UserMst>) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case CclmsPackage.DIVISION_MST__DIVISION_ID:
+			unsetDivisionId();
+			return;
+		case CclmsPackage.DIVISION_MST__DIVISION_CODE:
+			setDivisionCode(DIVISION_CODE_EDEFAULT);
+			return;
+		case CclmsPackage.DIVISION_MST__DIVISION_DESC:
+			setDivisionDesc(DIVISION_DESC_EDEFAULT);
+			return;
+		case CclmsPackage.DIVISION_MST__CREATE_DATE_TS:
+			setCreateDateTs(CREATE_DATE_TS_EDEFAULT);
+			return;
+		case CclmsPackage.DIVISION_MST__MODIFIED_TS:
+			setModifiedTs(MODIFIED_TS_EDEFAULT);
+			return;
+		case CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID:
+			getRefStationMstDivisionId().clear();
+			return;
+		case CclmsPackage.DIVISION_MST__REF_ZONE_ID:
+			setRefZoneId((ZoneMst) null);
+			return;
+		case CclmsPackage.DIVISION_MST__REF_USER_MST_DIVISION_ID:
+			getRefUserMstDivisionId().clear();
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case CclmsPackage.DIVISION_MST__DIVISION_ID:
+			return isSetDivisionId();
+		case CclmsPackage.DIVISION_MST__DIVISION_CODE:
+			return DIVISION_CODE_EDEFAULT == null ? divisionCode != null
+					: !DIVISION_CODE_EDEFAULT.equals(divisionCode);
+		case CclmsPackage.DIVISION_MST__DIVISION_DESC:
+			return DIVISION_DESC_EDEFAULT == null ? divisionDesc != null
+					: !DIVISION_DESC_EDEFAULT.equals(divisionDesc);
+		case CclmsPackage.DIVISION_MST__CREATE_DATE_TS:
+			return CREATE_DATE_TS_EDEFAULT == null ? createDateTs != null
+					: !CREATE_DATE_TS_EDEFAULT.equals(createDateTs);
+		case CclmsPackage.DIVISION_MST__MODIFIED_TS:
+			return MODIFIED_TS_EDEFAULT == null ? modifiedTs != null
+					: !MODIFIED_TS_EDEFAULT.equals(modifiedTs);
+		case CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID:
+			return refStationMstDivisionId != null
+					&& !refStationMstDivisionId.isEmpty();
+		case CclmsPackage.DIVISION_MST__REF_ZONE_ID:
+			return refZoneId != null;
+		case CclmsPackage.DIVISION_MST__REF_USER_MST_DIVISION_ID:
+			return refUserMstDivisionId != null
+					&& !refUserMstDivisionId.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (divisionId: ");
+		if ((_booleanFlags & DIVISION_ID_ESETFLAG) != 0)
+			result.append(divisionId);
+		else
+			result.append("<unset>");
+		result.append(", divisionCode: ");
+		result.append(divisionCode);
+		result.append(", divisionDesc: ");
+		result.append(divisionDesc);
+		result.append(", createDateTs: ");
+		result.append(createDateTs);
+		result.append(", modifiedTs: ");
+		result.append(modifiedTs);
+		result.append(')');
+		return result.toString();
+	}
+
+} //DivisionMstImpl

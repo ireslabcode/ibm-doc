@@ -1,0 +1,930 @@
+/*
+ * <copyright>
+ * </copyright>
+ *
+ * $Id$
+ */
+package cclms.impl;
+
+import cclms.CclmsCollector;
+import cclms.TrainMst;
+import cclms.TrainTypeMappingMst;
+import cclms.TrainTypeMst;
+import cclms.UserMst;
+
+import ilog.odm.dom.impl.IloDomObjectImpl;
+
+import ilog.odm.dom.impl.resource.IloDomObjectContainmentEList;
+import ilog.odm.dom.impl.resource.IloDomObjectWithInverseEList;
+
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+/**
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link cclms.impl.TrainTypeMappingMstImpl#getTrainType <em>Train Type</em>}</li>
+ *   <li>{@link cclms.impl.TrainTypeMappingMstImpl#getTrainTypeDesc <em>Train Type Desc</em>}</li>
+ *   <li>{@link cclms.impl.TrainTypeMappingMstImpl#getCreateDate <em>Create Date</em>}</li>
+ *   <li>{@link cclms.impl.TrainTypeMappingMstImpl#getLastModifiedTs <em>Last Modified Ts</em>}</li>
+ *   <li>{@link cclms.impl.TrainTypeMappingMstImpl#getRefTrainMstTrainType <em>Ref Train Mst Train Type</em>}</li>
+ *   <li>{@link cclms.impl.TrainTypeMappingMstImpl#getRefCreatedBy <em>Ref Created By</em>}</li>
+ *   <li>{@link cclms.impl.TrainTypeMappingMstImpl#getRefLastModifiedBy <em>Ref Last Modified By</em>}</li>
+ *   <li>{@link cclms.impl.TrainTypeMappingMstImpl#getRefTrainTypeCclms <em>Ref Train Type Cclms</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class TrainTypeMappingMstImpl extends IloDomObjectImpl implements
+		TrainTypeMappingMst {
+	/**
+	 * A set of bit flags representing the values of boolean attributes and whether unsettable features have been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected int _booleanFlags = 0;
+
+	/**
+	 * The default value of the '{@link #getTrainType() <em>Train Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrainType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TRAIN_TYPE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTrainType() <em>Train Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrainType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String trainType = TRAIN_TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTrainTypeDesc() <em>Train Type Desc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrainTypeDesc()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TRAIN_TYPE_DESC_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTrainTypeDesc() <em>Train Type Desc</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrainTypeDesc()
+	 * @generated
+	 * @ordered
+	 */
+	protected String trainTypeDesc = TRAIN_TYPE_DESC_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCreateDate() <em>Create Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreateDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date CREATE_DATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCreateDate() <em>Create Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreateDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date createDate = CREATE_DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLastModifiedTs() <em>Last Modified Ts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastModifiedTs()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date LAST_MODIFIED_TS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLastModifiedTs() <em>Last Modified Ts</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastModifiedTs()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date lastModifiedTs = LAST_MODIFIED_TS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRefTrainMstTrainType() <em>Ref Train Mst Train Type</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefTrainMstTrainType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TrainMst> refTrainMstTrainType;
+
+	/**
+	 * The cached value of the '{@link #getRefCreatedBy() <em>Ref Created By</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefCreatedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected UserMst refCreatedBy;
+
+	/**
+	 * The cached value of the '{@link #getRefLastModifiedBy() <em>Ref Last Modified By</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefLastModifiedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected UserMst refLastModifiedBy;
+
+	/**
+	 * The cached value of the '{@link #getRefTrainTypeCclms() <em>Ref Train Type Cclms</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRefTrainTypeCclms()
+	 * @generated
+	 * @ordered
+	 */
+	protected TrainTypeMst refTrainTypeCclms;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TrainTypeMappingMstImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CclmsPackage.eINSTANCE.getTrainTypeMappingMst();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTrainType() {
+		return trainType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTrainType(String newTrainType) {
+		String oldTrainType = trainType;
+		trainType = newTrainType;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE,
+								oldTrainType, trainType);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE,
+						oldTrainType, trainType));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getTrainTypeDesc() {
+		return trainTypeDesc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTrainTypeDesc(String newTrainTypeDesc) {
+		String oldTrainTypeDesc = trainTypeDesc;
+		trainTypeDesc = newTrainTypeDesc;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE_DESC,
+								oldTrainTypeDesc, trainTypeDesc);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE_DESC,
+						oldTrainTypeDesc, trainTypeDesc));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreateDate(Date newCreateDate) {
+		Date oldCreateDate = createDate;
+		createDate = newCreateDate;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__CREATE_DATE,
+								oldCreateDate, createDate);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__CREATE_DATE,
+						oldCreateDate, createDate));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getLastModifiedTs() {
+		return lastModifiedTs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastModifiedTs(Date newLastModifiedTs) {
+		Date oldLastModifiedTs = lastModifiedTs;
+		lastModifiedTs = newLastModifiedTs;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__LAST_MODIFIED_TS,
+								oldLastModifiedTs, lastModifiedTs);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__LAST_MODIFIED_TS,
+						oldLastModifiedTs, lastModifiedTs));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<TrainMst> getRefTrainMstTrainType() {
+		if (refTrainMstTrainType == null) {
+			refTrainMstTrainType = new IloDomObjectWithInverseEList<TrainMst>(
+					TrainMst.class,
+					this,
+					CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_MST_TRAIN_TYPE,
+					CclmsPackage.TRAIN_MST__REF_TRAIN_TYPE);
+		}
+		return refTrainMstTrainType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserMst getRefCreatedBy() {
+		return refCreatedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRefCreatedBy(UserMst newRefCreatedBy,
+			NotificationChain msgs) {
+		UserMst oldRefCreatedBy = refCreatedBy;
+		refCreatedBy = newRefCreatedBy;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification;
+			if (getDomResource() != null) {
+				notification = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY,
+								oldRefCreatedBy, newRefCreatedBy);
+			} else {
+				notification = new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY,
+						oldRefCreatedBy, newRefCreatedBy);
+			}
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRefCreatedBy(UserMst newRefCreatedBy) {
+		if (newRefCreatedBy != refCreatedBy) {
+			NotificationChain msgs = null;
+			if (refCreatedBy != null)
+				msgs = ((InternalEObject) refCreatedBy)
+						.eInverseRemove(
+								this,
+								CclmsPackage.USER_MST__REF_TRAIN_TYPE_MAPPING_MST_CREATED_BY,
+								UserMst.class, msgs);
+			if (newRefCreatedBy != null)
+				msgs = ((InternalEObject) newRefCreatedBy)
+						.eInverseAdd(
+								this,
+								CclmsPackage.USER_MST__REF_TRAIN_TYPE_MAPPING_MST_CREATED_BY,
+								UserMst.class, msgs);
+			msgs = basicSetRefCreatedBy(newRefCreatedBy, msgs);
+			if (msgs != null) {
+				msgs.dispatch();
+				if (getDomResource() != null)
+					getDomResource().getNotificationFactory().release(msgs);
+			}
+		} else if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY,
+								newRefCreatedBy, newRefCreatedBy);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY,
+						newRefCreatedBy, newRefCreatedBy));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserMst getRefLastModifiedBy() {
+		return refLastModifiedBy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRefLastModifiedBy(
+			UserMst newRefLastModifiedBy, NotificationChain msgs) {
+		UserMst oldRefLastModifiedBy = refLastModifiedBy;
+		refLastModifiedBy = newRefLastModifiedBy;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification;
+			if (getDomResource() != null) {
+				notification = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY,
+								oldRefLastModifiedBy, newRefLastModifiedBy);
+			} else {
+				notification = new ENotificationImpl(
+						this,
+						Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY,
+						oldRefLastModifiedBy, newRefLastModifiedBy);
+			}
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRefLastModifiedBy(UserMst newRefLastModifiedBy) {
+		if (newRefLastModifiedBy != refLastModifiedBy) {
+			NotificationChain msgs = null;
+			if (refLastModifiedBy != null)
+				msgs = ((InternalEObject) refLastModifiedBy)
+						.eInverseRemove(
+								this,
+								CclmsPackage.USER_MST__REF_TRAIN_TYPE_MAPPING_MST_LAST_MODIFIED_BY,
+								UserMst.class, msgs);
+			if (newRefLastModifiedBy != null)
+				msgs = ((InternalEObject) newRefLastModifiedBy)
+						.eInverseAdd(
+								this,
+								CclmsPackage.USER_MST__REF_TRAIN_TYPE_MAPPING_MST_LAST_MODIFIED_BY,
+								UserMst.class, msgs);
+			msgs = basicSetRefLastModifiedBy(newRefLastModifiedBy, msgs);
+			if (msgs != null) {
+				msgs.dispatch();
+				if (getDomResource() != null)
+					getDomResource().getNotificationFactory().release(msgs);
+			}
+		} else if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY,
+								newRefLastModifiedBy, newRefLastModifiedBy);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(
+						this,
+						Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY,
+						newRefLastModifiedBy, newRefLastModifiedBy));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrainTypeMst getRefTrainTypeCclms() {
+		return refTrainTypeCclms;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRefTrainTypeCclms(
+			TrainTypeMst newRefTrainTypeCclms, NotificationChain msgs) {
+		TrainTypeMst oldRefTrainTypeCclms = refTrainTypeCclms;
+		refTrainTypeCclms = newRefTrainTypeCclms;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification;
+			if (getDomResource() != null) {
+				notification = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS,
+								oldRefTrainTypeCclms, newRefTrainTypeCclms);
+			} else {
+				notification = new ENotificationImpl(
+						this,
+						Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS,
+						oldRefTrainTypeCclms, newRefTrainTypeCclms);
+			}
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRefTrainTypeCclms(TrainTypeMst newRefTrainTypeCclms) {
+		if (newRefTrainTypeCclms != refTrainTypeCclms) {
+			NotificationChain msgs = null;
+			if (refTrainTypeCclms != null)
+				msgs = ((InternalEObject) refTrainTypeCclms)
+						.eInverseRemove(
+								this,
+								CclmsPackage.TRAIN_TYPE_MST__REF_TRAIN_TYPE_MAPPING_MST_TRAIN_TYPE_CCLMS,
+								TrainTypeMst.class, msgs);
+			if (newRefTrainTypeCclms != null)
+				msgs = ((InternalEObject) newRefTrainTypeCclms)
+						.eInverseAdd(
+								this,
+								CclmsPackage.TRAIN_TYPE_MST__REF_TRAIN_TYPE_MAPPING_MST_TRAIN_TYPE_CCLMS,
+								TrainTypeMst.class, msgs);
+			msgs = basicSetRefTrainTypeCclms(newRefTrainTypeCclms, msgs);
+			if (msgs != null) {
+				msgs.dispatch();
+				if (getDomResource() != null)
+					getDomResource().getNotificationFactory().release(msgs);
+			}
+		} else if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory()
+						.createNotification(
+								this,
+								Notification.SET,
+								CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS,
+								newRefTrainTypeCclms, newRefTrainTypeCclms);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(
+						this,
+						Notification.SET,
+						CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS,
+						newRefTrainTypeCclms, newRefTrainTypeCclms));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<TrainMst> getTrainMstTrainType() {
+		return getRefTrainMstTrainType();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserMst getCreatedBy() {
+		UserMst obj = getRefCreatedBy();
+		return isNullOrProxy(obj) ? null : obj;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreatedBy(UserMst obj) {
+		setRefCreatedBy(obj);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserMst getLastModifiedBy() {
+		UserMst obj = getRefLastModifiedBy();
+		return isNullOrProxy(obj) ? null : obj;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastModifiedBy(UserMst obj) {
+		setRefLastModifiedBy(obj);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrainTypeMst getTrainTypeCclms() {
+		TrainTypeMst obj = getRefTrainTypeCclms();
+		return isNullOrProxy(obj) ? null : obj;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTrainTypeCclms(TrainTypeMst obj) {
+		setRefTrainTypeCclms(obj);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CclmsCollector getCollector() {
+		return (CclmsCollector) eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_MST_TRAIN_TYPE:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefTrainMstTrainType())
+					.basicAdd(otherEnd, msgs);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY:
+			if (refCreatedBy != null)
+				msgs = ((InternalEObject) refCreatedBy)
+						.eInverseRemove(
+								this,
+								CclmsPackage.USER_MST__REF_TRAIN_TYPE_MAPPING_MST_CREATED_BY,
+								UserMst.class, msgs);
+			return basicSetRefCreatedBy((UserMst) otherEnd, msgs);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY:
+			if (refLastModifiedBy != null)
+				msgs = ((InternalEObject) refLastModifiedBy)
+						.eInverseRemove(
+								this,
+								CclmsPackage.USER_MST__REF_TRAIN_TYPE_MAPPING_MST_LAST_MODIFIED_BY,
+								UserMst.class, msgs);
+			return basicSetRefLastModifiedBy((UserMst) otherEnd, msgs);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS:
+			if (refTrainTypeCclms != null)
+				msgs = ((InternalEObject) refTrainTypeCclms)
+						.eInverseRemove(
+								this,
+								CclmsPackage.TRAIN_TYPE_MST__REF_TRAIN_TYPE_MAPPING_MST_TRAIN_TYPE_CCLMS,
+								TrainTypeMst.class, msgs);
+			return basicSetRefTrainTypeCclms((TrainTypeMst) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_MST_TRAIN_TYPE:
+			return ((InternalEList<?>) getRefTrainMstTrainType()).basicRemove(
+					otherEnd, msgs);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY:
+			return basicSetRefCreatedBy(null, msgs);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY:
+			return basicSetRefLastModifiedBy(null, msgs);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS:
+			return basicSetRefTrainTypeCclms(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE:
+			return getTrainType();
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE_DESC:
+			return getTrainTypeDesc();
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__CREATE_DATE:
+			return getCreateDate();
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__LAST_MODIFIED_TS:
+			return getLastModifiedTs();
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_MST_TRAIN_TYPE:
+			return getRefTrainMstTrainType();
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY:
+			return getRefCreatedBy();
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY:
+			return getRefLastModifiedBy();
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS:
+			return getRefTrainTypeCclms();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE:
+			setTrainType((String) newValue);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE_DESC:
+			setTrainTypeDesc((String) newValue);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__CREATE_DATE:
+			setCreateDate((Date) newValue);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__LAST_MODIFIED_TS:
+			setLastModifiedTs((Date) newValue);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_MST_TRAIN_TYPE:
+			getRefTrainMstTrainType().clear();
+			getRefTrainMstTrainType().addAll(
+					(Collection<? extends TrainMst>) newValue);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY:
+			setRefCreatedBy((UserMst) newValue);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY:
+			setRefLastModifiedBy((UserMst) newValue);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS:
+			setRefTrainTypeCclms((TrainTypeMst) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE:
+			setTrainType(TRAIN_TYPE_EDEFAULT);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE_DESC:
+			setTrainTypeDesc(TRAIN_TYPE_DESC_EDEFAULT);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__CREATE_DATE:
+			setCreateDate(CREATE_DATE_EDEFAULT);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__LAST_MODIFIED_TS:
+			setLastModifiedTs(LAST_MODIFIED_TS_EDEFAULT);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_MST_TRAIN_TYPE:
+			getRefTrainMstTrainType().clear();
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY:
+			setRefCreatedBy((UserMst) null);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY:
+			setRefLastModifiedBy((UserMst) null);
+			return;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS:
+			setRefTrainTypeCclms((TrainTypeMst) null);
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE:
+			return TRAIN_TYPE_EDEFAULT == null ? trainType != null
+					: !TRAIN_TYPE_EDEFAULT.equals(trainType);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__TRAIN_TYPE_DESC:
+			return TRAIN_TYPE_DESC_EDEFAULT == null ? trainTypeDesc != null
+					: !TRAIN_TYPE_DESC_EDEFAULT.equals(trainTypeDesc);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__CREATE_DATE:
+			return CREATE_DATE_EDEFAULT == null ? createDate != null
+					: !CREATE_DATE_EDEFAULT.equals(createDate);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__LAST_MODIFIED_TS:
+			return LAST_MODIFIED_TS_EDEFAULT == null ? lastModifiedTs != null
+					: !LAST_MODIFIED_TS_EDEFAULT.equals(lastModifiedTs);
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_MST_TRAIN_TYPE:
+			return refTrainMstTrainType != null
+					&& !refTrainMstTrainType.isEmpty();
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_CREATED_BY:
+			return refCreatedBy != null;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_LAST_MODIFIED_BY:
+			return refLastModifiedBy != null;
+		case CclmsPackage.TRAIN_TYPE_MAPPING_MST__REF_TRAIN_TYPE_CCLMS:
+			return refTrainTypeCclms != null;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (trainType: ");
+		result.append(trainType);
+		result.append(", trainTypeDesc: ");
+		result.append(trainTypeDesc);
+		result.append(", createDate: ");
+		result.append(createDate);
+		result.append(", lastModifiedTs: ");
+		result.append(lastModifiedTs);
+		result.append(')');
+		return result.toString();
+	}
+
+} //TrainTypeMappingMstImpl

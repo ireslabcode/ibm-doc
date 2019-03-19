@@ -1,0 +1,1292 @@
+/**
+ */
+package cclms.impl;
+
+import cclms.CclmsCollector;
+import cclms.StationMst;
+import cclms.TractionMst;
+import cclms.TrainFrequencyMst;
+import cclms.TrainMst;
+import cclms.ZoneMst;
+
+import ilog.odm.dom.IloDomCollector;
+
+import java.sql.Date;
+
+import java.util.List;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EGenericType;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class CclmsPackageImpl extends EPackageImpl implements CclmsPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass zoneMstEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stationMstEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass trainFrequencyMstEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tractionMstEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass trainMstEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass cclmsCollectorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ilog_odm_dom_IloDomCollectorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType listEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType java_sql_DateEDataType = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see cclms.impl.CclmsPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private CclmsPackageImpl() {
+		super(eNS_URI, CclmsFactory.eINSTANCE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 * 
+	 * <p>This method is used to initialize {@link CclmsPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static CclmsPackage init() {
+		if (isInited)
+			return (CclmsPackage) EPackage.Registry.INSTANCE
+					.getEPackage(CclmsPackage.eNS_URI);
+
+		// Obtain or create and register package
+		CclmsPackageImpl theCclmsPackage = (CclmsPackageImpl) (EPackage.Registry.INSTANCE
+				.get(eNS_URI) instanceof CclmsPackageImpl ? EPackage.Registry.INSTANCE
+				.get(eNS_URI) : new CclmsPackageImpl());
+
+		isInited = true;
+
+		// Create package meta-data objects
+		theCclmsPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theCclmsPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theCclmsPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(CclmsPackage.eNS_URI, theCclmsPackage);
+		return theCclmsPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getZoneMst() {
+		return zoneMstEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getZoneMst_ZoneId() {
+		return (EAttribute) zoneMstEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getZoneMst_ZoneCode() {
+		return (EAttribute) zoneMstEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getZoneMst_ZoneDesc() {
+		return (EAttribute) zoneMstEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStationMst() {
+		return stationMstEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStationMst_StationId() {
+		return (EAttribute) stationMstEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStationMst_StationCode() {
+		return (EAttribute) stationMstEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStationMst_StationName() {
+		return (EAttribute) stationMstEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStationMst_LobbyFlag() {
+		return (EAttribute) stationMstEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStationMst_RefTrainMstTrainEndStn() {
+		return (EReference) stationMstEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStationMst_RefTrainMstTrainStartStn() {
+		return (EReference) stationMstEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTrainFrequencyMst() {
+		return trainFrequencyMstEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainFrequencyMst_TrainFrequencyCode() {
+		return (EAttribute) trainFrequencyMstEClass.getEStructuralFeatures()
+				.get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainFrequencyMst_Desc() {
+		return (EAttribute) trainFrequencyMstEClass.getEStructuralFeatures()
+				.get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrainFrequencyMst_RefTrainMstTrainFrequencyCd() {
+		return (EReference) trainFrequencyMstEClass.getEStructuralFeatures()
+				.get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTractionMst() {
+		return tractionMstEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTractionMst_TractionType() {
+		return (EAttribute) tractionMstEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTractionMst_TractionDesc() {
+		return (EAttribute) tractionMstEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTrainMst() {
+		return trainMstEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_TrainId() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_TrainNbr() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_TrainName() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_TrainSubType() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_TrainRunType() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_RakeId() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_DayOfService() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_ValidFrom() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_ValidTo() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTrainMst_BaseTraction() {
+		return (EAttribute) trainMstEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrainMst_RefTrainEndStn() {
+		return (EReference) trainMstEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrainMst_RefTrainStartStn() {
+		return (EReference) trainMstEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrainMst_RefTrainFrequencyCd() {
+		return (EReference) trainMstEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCclmsCollector() {
+		return cclmsCollectorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCclmsCollector_ZoneMst() {
+		return (EReference) cclmsCollectorEClass.getEStructuralFeatures()
+				.get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCclmsCollector_StationMst() {
+		return (EReference) cclmsCollectorEClass.getEStructuralFeatures()
+				.get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCclmsCollector_TrainFrequencyMst() {
+		return (EReference) cclmsCollectorEClass.getEStructuralFeatures()
+				.get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCclmsCollector_TractionMst() {
+		return (EReference) cclmsCollectorEClass.getEStructuralFeatures()
+				.get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCclmsCollector_TrainMst() {
+		return (EReference) cclmsCollectorEClass.getEStructuralFeatures()
+				.get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getilog_odm_dom_IloDomCollector() {
+		return ilog_odm_dom_IloDomCollectorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getList() {
+		return listEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EDataType getjava_sql_Date() {
+		return java_sql_DateEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CclmsFactory getCclmsFactory() {
+		return (CclmsFactory) getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated)
+			return;
+		isCreated = true;
+
+		// Create classes and their features
+		zoneMstEClass = createEClass(ZONE_MST);
+		createEAttribute(zoneMstEClass, ZONE_MST__ZONE_ID);
+		createEAttribute(zoneMstEClass, ZONE_MST__ZONE_CODE);
+		createEAttribute(zoneMstEClass, ZONE_MST__ZONE_DESC);
+
+		stationMstEClass = createEClass(STATION_MST);
+		createEAttribute(stationMstEClass, STATION_MST__STATION_ID);
+		createEAttribute(stationMstEClass, STATION_MST__STATION_CODE);
+		createEAttribute(stationMstEClass, STATION_MST__STATION_NAME);
+		createEAttribute(stationMstEClass, STATION_MST__LOBBY_FLAG);
+		createEReference(stationMstEClass,
+				STATION_MST__REF_TRAIN_MST_TRAIN_END_STN);
+		createEReference(stationMstEClass,
+				STATION_MST__REF_TRAIN_MST_TRAIN_START_STN);
+
+		trainFrequencyMstEClass = createEClass(TRAIN_FREQUENCY_MST);
+		createEAttribute(trainFrequencyMstEClass,
+				TRAIN_FREQUENCY_MST__TRAIN_FREQUENCY_CODE);
+		createEAttribute(trainFrequencyMstEClass, TRAIN_FREQUENCY_MST__DESC);
+		createEReference(trainFrequencyMstEClass,
+				TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD);
+
+		tractionMstEClass = createEClass(TRACTION_MST);
+		createEAttribute(tractionMstEClass, TRACTION_MST__TRACTION_TYPE);
+		createEAttribute(tractionMstEClass, TRACTION_MST__TRACTION_DESC);
+
+		trainMstEClass = createEClass(TRAIN_MST);
+		createEAttribute(trainMstEClass, TRAIN_MST__TRAIN_ID);
+		createEAttribute(trainMstEClass, TRAIN_MST__TRAIN_NBR);
+		createEAttribute(trainMstEClass, TRAIN_MST__TRAIN_NAME);
+		createEAttribute(trainMstEClass, TRAIN_MST__TRAIN_SUB_TYPE);
+		createEAttribute(trainMstEClass, TRAIN_MST__TRAIN_RUN_TYPE);
+		createEAttribute(trainMstEClass, TRAIN_MST__RAKE_ID);
+		createEAttribute(trainMstEClass, TRAIN_MST__DAY_OF_SERVICE);
+		createEAttribute(trainMstEClass, TRAIN_MST__VALID_FROM);
+		createEAttribute(trainMstEClass, TRAIN_MST__VALID_TO);
+		createEAttribute(trainMstEClass, TRAIN_MST__BASE_TRACTION);
+		createEReference(trainMstEClass, TRAIN_MST__REF_TRAIN_END_STN);
+		createEReference(trainMstEClass, TRAIN_MST__REF_TRAIN_START_STN);
+		createEReference(trainMstEClass, TRAIN_MST__REF_TRAIN_FREQUENCY_CD);
+
+		cclmsCollectorEClass = createEClass(CCLMS_COLLECTOR);
+		createEReference(cclmsCollectorEClass, CCLMS_COLLECTOR__ZONE_MST);
+		createEReference(cclmsCollectorEClass, CCLMS_COLLECTOR__STATION_MST);
+		createEReference(cclmsCollectorEClass,
+				CCLMS_COLLECTOR__TRAIN_FREQUENCY_MST);
+		createEReference(cclmsCollectorEClass, CCLMS_COLLECTOR__TRACTION_MST);
+		createEReference(cclmsCollectorEClass, CCLMS_COLLECTOR__TRAIN_MST);
+
+		ilog_odm_dom_IloDomCollectorEClass = createEClass(ILOG_ODM_DOM_ILO_DOM_COLLECTOR);
+
+		// Create data types
+		listEDataType = createEDataType(LIST);
+		java_sql_DateEDataType = createEDataType(JAVA_SQL_DATE);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized)
+			return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Create type parameters
+		addETypeParameter(listEDataType, "T");
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		cclmsCollectorEClass.getESuperTypes().add(
+				this.getilog_odm_dom_IloDomCollector());
+
+		// Initialize classes and features; add operations and parameters
+		initEClass(zoneMstEClass, ZoneMst.class, "ZoneMst", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getZoneMst_ZoneId(), ecorePackage.getEInt(), "zoneId",
+				null, 1, 1, ZoneMst.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getZoneMst_ZoneCode(), ecorePackage.getEString(),
+				"zoneCode", null, 1, 1, ZoneMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getZoneMst_ZoneDesc(), ecorePackage.getEString(),
+				"zoneDesc", null, 0, 1, ZoneMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		addEOperation(zoneMstEClass, this.getCclmsCollector(), "getCollector",
+				0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(stationMstEClass, StationMst.class, "StationMst",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStationMst_StationId(), ecorePackage.getEInt(),
+				"stationId", null, 1, 1, StationMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStationMst_StationCode(), ecorePackage.getEString(),
+				"stationCode", null, 1, 1, StationMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStationMst_StationName(), ecorePackage.getEString(),
+				"stationName", null, 0, 1, StationMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStationMst_LobbyFlag(), ecorePackage.getEString(),
+				"lobbyFlag", null, 0, 1, StationMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getStationMst_RefTrainMstTrainEndStn(),
+				this.getTrainMst(), this.getTrainMst_RefTrainEndStn(),
+				"RefTrainMstTrainEndStn", null, 0, -1, StationMst.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getStationMst_RefTrainMstTrainStartStn(),
+				this.getTrainMst(), this.getTrainMst_RefTrainStartStn(),
+				"RefTrainMstTrainStartStn", null, 0, -1, StationMst.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		EOperation op = addEOperation(stationMstEClass, null,
+				"getTrainMstTrainEndStn", 0, 1, IS_UNIQUE, IS_ORDERED);
+		EGenericType g1 = createEGenericType(this.getList());
+		EGenericType g2 = createEGenericType(this.getTrainMst());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		op = addEOperation(stationMstEClass, null, "getTrainMstTrainStartStn",
+				0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getTrainMst());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		addEOperation(stationMstEClass, this.getCclmsCollector(),
+				"getCollector", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(trainFrequencyMstEClass, TrainFrequencyMst.class,
+				"TrainFrequencyMst", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTrainFrequencyMst_TrainFrequencyCode(),
+				ecorePackage.getEInt(), "trainFrequencyCode", null, 1, 1,
+				TrainFrequencyMst.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getTrainFrequencyMst_Desc(), ecorePackage.getEString(),
+				"desc", null, 1, 1, TrainFrequencyMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getTrainFrequencyMst_RefTrainMstTrainFrequencyCd(),
+				this.getTrainMst(), this.getTrainMst_RefTrainFrequencyCd(),
+				"RefTrainMstTrainFrequencyCd", null, 0, -1,
+				TrainFrequencyMst.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = addEOperation(trainFrequencyMstEClass, null,
+				"getTrainMstTrainFrequencyCd", 0, 1, IS_UNIQUE, IS_ORDERED);
+		g1 = createEGenericType(this.getList());
+		g2 = createEGenericType(this.getTrainMst());
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
+
+		addEOperation(trainFrequencyMstEClass, this.getCclmsCollector(),
+				"getCollector", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(tractionMstEClass, TractionMst.class, "TractionMst",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTractionMst_TractionType(), ecorePackage.getEInt(),
+				"tractionType", null, 1, 1, TractionMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTractionMst_TractionDesc(),
+				ecorePackage.getEString(), "tractionDesc", null, 1, 1,
+				TractionMst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(tractionMstEClass, this.getCclmsCollector(),
+				"getCollector", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(trainMstEClass, TrainMst.class, "TrainMst", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTrainMst_TrainId(), ecorePackage.getEInt(),
+				"trainId", null, 1, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrainMst_TrainNbr(), ecorePackage.getEString(),
+				"trainNbr", null, 1, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrainMst_TrainName(), ecorePackage.getEString(),
+				"trainName", null, 1, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrainMst_TrainSubType(), ecorePackage.getEString(),
+				"trainSubType", null, 0, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrainMst_TrainRunType(), ecorePackage.getEString(),
+				"trainRunType", null, 0, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrainMst_RakeId(), ecorePackage.getEInt(), "rakeId",
+				null, 0, 1, TrainMst.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getTrainMst_DayOfService(), ecorePackage.getEString(),
+				"dayOfService", null, 0, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrainMst_ValidFrom(), this.getjava_sql_Date(),
+				"validFrom", null, 0, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrainMst_ValidTo(), this.getjava_sql_Date(),
+				"validTo", null, 0, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTrainMst_BaseTraction(), ecorePackage.getEString(),
+				"baseTraction", null, 0, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getTrainMst_RefTrainEndStn(), this.getStationMst(),
+				this.getStationMst_RefTrainMstTrainEndStn(), "RefTrainEndStn",
+				null, 0, 1, TrainMst.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTrainMst_RefTrainStartStn(), this.getStationMst(),
+				this.getStationMst_RefTrainMstTrainStartStn(),
+				"RefTrainStartStn", null, 0, 1, TrainMst.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getTrainMst_RefTrainFrequencyCd(),
+				this.getTrainFrequencyMst(),
+				this.getTrainFrequencyMst_RefTrainMstTrainFrequencyCd(),
+				"RefTrainFrequencyCd", null, 0, 1, TrainMst.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		addEOperation(trainMstEClass, this.getStationMst(), "getTrainEndStn",
+				0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(trainMstEClass, null, "setTrainEndStn", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getStationMst(), "obj", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		addEOperation(trainMstEClass, this.getStationMst(), "getTrainStartStn",
+				0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(trainMstEClass, null, "setTrainStartStn", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getStationMst(), "obj", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		addEOperation(trainMstEClass, this.getTrainFrequencyMst(),
+				"getTrainFrequencyCd", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(trainMstEClass, null, "setTrainFrequencyCd", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getTrainFrequencyMst(), "obj", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		addEOperation(trainMstEClass, this.getCclmsCollector(), "getCollector",
+				0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(cclmsCollectorEClass, CclmsCollector.class,
+				"CclmsCollector", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCclmsCollector_ZoneMst(), this.getZoneMst(), null,
+				"zoneMst", null, 0, -1, CclmsCollector.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCclmsCollector_StationMst(), this.getStationMst(),
+				null, "stationMst", null, 0, -1, CclmsCollector.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getCclmsCollector_TrainFrequencyMst(),
+				this.getTrainFrequencyMst(), null, "trainFrequencyMst", null,
+				0, -1, CclmsCollector.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCclmsCollector_TractionMst(), this.getTractionMst(),
+				null, "tractionMst", null, 0, -1, CclmsCollector.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getCclmsCollector_TrainMst(), this.getTrainMst(), null,
+				"trainMst", null, 0, -1, CclmsCollector.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		addEOperation(cclmsCollectorEClass, this.getZoneMst(), "createZoneMst",
+				0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getZoneMst(),
+				"createZoneMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "index", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getZoneMst(),
+				"getFromZoneMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "zoneId", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		addEOperation(cclmsCollectorEClass, this.getStationMst(),
+				"createStationMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getStationMst(),
+				"createStationMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "index", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getStationMst(),
+				"getFromStationMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "stationId", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		addEOperation(cclmsCollectorEClass, this.getTrainFrequencyMst(),
+				"createTrainFrequencyMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getTrainFrequencyMst(),
+				"createTrainFrequencyMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "index", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getTrainFrequencyMst(),
+				"getFromTrainFrequencyMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "trainFrequencyCode", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(cclmsCollectorEClass, this.getTractionMst(),
+				"createTractionMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getTractionMst(),
+				"createTractionMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "index", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getTractionMst(),
+				"getFromTractionMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "tractionType", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
+		addEOperation(cclmsCollectorEClass, this.getTrainMst(),
+				"createTrainMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getTrainMst(),
+				"createTrainMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "index", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		op = addEOperation(cclmsCollectorEClass, this.getTrainMst(),
+				"getFromTrainMst", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEInt(), "trainId", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		initEClass(ilog_odm_dom_IloDomCollectorEClass, IloDomCollector.class,
+				"ilog_odm_dom_IloDomCollector", IS_ABSTRACT, IS_INTERFACE,
+				!IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize data types
+		initEDataType(listEDataType, List.class, "List", IS_SERIALIZABLE,
+				!IS_GENERATED_INSTANCE_CLASS);
+		initEDataType(java_sql_DateEDataType, Date.class, "java_sql_Date",
+				IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
+
+		// Create resource
+		createResource(eNS_URI);
+
+		// Create annotations
+		// ExtendedMetaData
+		createExtendedMetaDataAnnotations();
+		// http://www.eclipse.org/emf/2002/GenModel
+		createGenModelAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>ExtendedMetaData</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createExtendedMetaDataAnnotations() {
+		String source = "ExtendedMetaData";
+		addAnnotation(this, source, new String[] { "odme.collector",
+				"CclmsCollector" });
+		addAnnotation(zoneMstEClass, source, new String[] { "odme.displayName",
+				"ZONE_MST", "odme.table", "ZONE_MST", "odme.primarykey",
+				"ZONE_ID", "odme.columns", "ZONE_ID,ZONE_CODE,ZONE_DESC",
+				"odme.types", "FIELD_INT,FIELD_STRING,FIELD_STRING" });
+		addAnnotation(getZoneMst_ZoneId(), source, new String[] {
+				"odme.displayName", "ZONE_ID", "odme.column", "ZONE_ID",
+				"odme.keyPart", "true" });
+		addAnnotation(getZoneMst_ZoneCode(), source, new String[] {
+				"odme.displayName", "ZONE_CODE", "odme.column", "ZONE_CODE" });
+		addAnnotation(getZoneMst_ZoneDesc(), source, new String[] {
+				"odme.displayName", "ZONE_DESC", "odme.column", "ZONE_DESC" });
+		addAnnotation(stationMstEClass, source, new String[] {
+				"odme.displayName", "STATION_MST", "odme.table", "STATION_MST",
+				"odme.primarykey", "STATION_ID", "odme.columns",
+				"STATION_ID,STATION_CODE,STATION_NAME,LOBBY_FLAG",
+				"odme.types",
+				"FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_STRING" });
+		addAnnotation(getStationMst_StationId(), source, new String[] {
+				"odme.displayName", "STATION_ID", "odme.column", "STATION_ID",
+				"odme.keyPart", "true" });
+		addAnnotation(getStationMst_StationCode(), source, new String[] {
+				"odme.displayName", "STATION_CODE", "odme.column",
+				"STATION_CODE" });
+		addAnnotation(getStationMst_StationName(), source, new String[] {
+				"odme.displayName", "STATION_NAME", "odme.column",
+				"STATION_NAME" });
+		addAnnotation(getStationMst_LobbyFlag(), source, new String[] {
+				"odme.displayName", "LOBBY_FLAG", "odme.column", "LOBBY_FLAG" });
+		addAnnotation(getStationMst_RefTrainMstTrainEndStn(), source,
+				new String[] { "odme.displayName", "" });
+		addAnnotation(getStationMst_RefTrainMstTrainStartStn(), source,
+				new String[] { "odme.displayName", "" });
+		addAnnotation(trainFrequencyMstEClass, source, new String[] {
+				"odme.displayName", "TRAIN_FREQUENCY_MST", "odme.table",
+				"TRAIN_FREQUENCY_MST", "odme.primarykey",
+				"TRAIN_FREQUENCY_CODE", "odme.columns",
+				"TRAIN_FREQUENCY_CODE,DESC", "odme.types",
+				"FIELD_INT,FIELD_STRING" });
+		addAnnotation(getTrainFrequencyMst_TrainFrequencyCode(), source,
+				new String[] { "odme.displayName", "TRAIN_FREQUENCY_CODE",
+						"odme.column", "TRAIN_FREQUENCY_CODE", "odme.keyPart",
+						"true" });
+		addAnnotation(getTrainFrequencyMst_Desc(), source, new String[] {
+				"odme.displayName", "DESC", "odme.column", "DESC" });
+		addAnnotation(getTrainFrequencyMst_RefTrainMstTrainFrequencyCd(),
+				source, new String[] { "odme.displayName", "" });
+		addAnnotation(tractionMstEClass, source, new String[] {
+				"odme.displayName", "TRACTION_MST", "odme.table",
+				"TRACTION_MST", "odme.primarykey", "TRACTION_TYPE",
+				"odme.columns", "TRACTION_TYPE,TRACTION_DESC", "odme.types",
+				"FIELD_INT,FIELD_STRING" });
+		addAnnotation(getTractionMst_TractionType(), source, new String[] {
+				"odme.displayName", "TRACTION_TYPE", "odme.column",
+				"TRACTION_TYPE", "odme.keyPart", "true" });
+		addAnnotation(getTractionMst_TractionDesc(), source, new String[] {
+				"odme.displayName", "TRACTION_DESC", "odme.column",
+				"TRACTION_DESC" });
+		addAnnotation(
+				trainMstEClass,
+				source,
+				new String[] {
+						"odme.displayName",
+						"TRAIN_MST",
+						"odme.table",
+						"TRAIN_MST",
+						"odme.primarykey",
+						"TRAIN_ID",
+						"odme.columns",
+						"TRAIN_ID,TRAIN_NBR,TRAIN_NAME,TRAIN_START_STN,TRAIN_END_STN,TRAIN_FREQUENCY_CD,TRAIN_SUB_TYPE,TRAIN_RUN_TYPE,RAKE_ID,DAY_OF_SERVICE,VALID_FROM,VALID_TO,BASE_TRACTION",
+						"odme.types",
+						"FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_INT,FIELD_STRING,FIELD_DATE,FIELD_DATE,FIELD_STRING" });
+		addAnnotation(getTrainMst_TrainId(), source, new String[] {
+				"odme.displayName", "TRAIN_ID", "odme.column", "TRAIN_ID",
+				"odme.keyPart", "true" });
+		addAnnotation(getTrainMst_TrainNbr(), source, new String[] {
+				"odme.displayName", "TRAIN_NBR", "odme.column", "TRAIN_NBR" });
+		addAnnotation(getTrainMst_TrainName(), source, new String[] {
+				"odme.displayName", "TRAIN_NAME", "odme.column", "TRAIN_NAME" });
+		addAnnotation(getTrainMst_TrainSubType(), source, new String[] {
+				"odme.displayName", "TRAIN_SUB_TYPE", "odme.column",
+				"TRAIN_SUB_TYPE" });
+		addAnnotation(getTrainMst_TrainRunType(), source, new String[] {
+				"odme.displayName", "TRAIN_RUN_TYPE", "odme.column",
+				"TRAIN_RUN_TYPE" });
+		addAnnotation(getTrainMst_RakeId(), source, new String[] {
+				"odme.displayName", "RAKE_ID", "odme.column", "RAKE_ID" });
+		addAnnotation(getTrainMst_DayOfService(), source, new String[] {
+				"odme.displayName", "DAY_OF_SERVICE", "odme.column",
+				"DAY_OF_SERVICE" });
+		addAnnotation(getTrainMst_ValidFrom(), source, new String[] {
+				"odme.displayName", "VALID_FROM", "odme.column", "VALID_FROM" });
+		addAnnotation(getTrainMst_ValidTo(), source, new String[] {
+				"odme.displayName", "VALID_TO", "odme.column", "VALID_TO" });
+		addAnnotation(getTrainMst_BaseTraction(), source, new String[] {
+				"odme.displayName", "BASE_TRACTION", "odme.column",
+				"BASE_TRACTION" });
+		addAnnotation(getTrainMst_RefTrainEndStn(), source, new String[] {
+				"odme.displayName", "TRAIN_END_STN", "odme.columns",
+				"TRAIN_END_STN" });
+		addAnnotation(getTrainMst_RefTrainStartStn(), source, new String[] {
+				"odme.displayName", "TRAIN_START_STN", "odme.columns",
+				"TRAIN_START_STN" });
+		addAnnotation(getTrainMst_RefTrainFrequencyCd(), source, new String[] {
+				"odme.displayName", "TRAIN_FREQUENCY_CD", "odme.columns",
+				"TRAIN_FREQUENCY_CD" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(0), source,
+				new String[] { "odme.factory", "ZoneMst" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(1), source,
+				new String[] { "odme.factory", "ZoneMst" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(3), source,
+				new String[] { "odme.factory", "StationMst" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(4), source,
+				new String[] { "odme.factory", "StationMst" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(6), source,
+				new String[] { "odme.factory", "TrainFrequencyMst" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(7), source,
+				new String[] { "odme.factory", "TrainFrequencyMst" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(9), source,
+				new String[] { "odme.factory", "TractionMst" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(10), source,
+				new String[] { "odme.factory", "TractionMst" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(12), source,
+				new String[] { "odme.factory", "TrainMst" });
+		addAnnotation(cclmsCollectorEClass.getEOperations().get(13), source,
+				new String[] { "odme.factory", "TrainMst" });
+		addAnnotation(getCclmsCollector_ZoneMst(), source, new String[] {
+				"odme.collector", "ZoneMst" });
+		addAnnotation(getCclmsCollector_StationMst(), source, new String[] {
+				"odme.collector", "StationMst" });
+		addAnnotation(getCclmsCollector_TrainFrequencyMst(), source,
+				new String[] { "odme.collector", "TrainFrequencyMst" });
+		addAnnotation(getCclmsCollector_TractionMst(), source, new String[] {
+				"odme.collector", "TractionMst" });
+		addAnnotation(getCclmsCollector_TrainMst(), source, new String[] {
+				"odme.collector", "TrainMst" });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/GenModel</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGenModelAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/GenModel";
+		addAnnotation(
+				zoneMstEClass.getEOperations().get(0),
+				source,
+				new String[] { "body", "return (CclmsCollector) eContainer();" });
+		addAnnotation(stationMstEClass.getEOperations().get(0), source,
+				new String[] { "body", "return getRefTrainMstTrainEndStn();" });
+		addAnnotation(
+				stationMstEClass.getEOperations().get(1),
+				source,
+				new String[] { "body", "return getRefTrainMstTrainStartStn();" });
+		addAnnotation(
+				stationMstEClass.getEOperations().get(2),
+				source,
+				new String[] { "body", "return (CclmsCollector) eContainer();" });
+		addAnnotation(getStationMst_RefTrainMstTrainEndStn(), source,
+				new String[] { "suppressedSetVisibility", "true",
+						"suppressedGetVisibility", "true",
+						"suppressedUnsetVisibility", "true",
+						"suppressedIsSetVisibility", "true" });
+		addAnnotation(getStationMst_RefTrainMstTrainStartStn(), source,
+				new String[] { "suppressedSetVisibility", "true",
+						"suppressedGetVisibility", "true",
+						"suppressedUnsetVisibility", "true",
+						"suppressedIsSetVisibility", "true" });
+		addAnnotation(trainFrequencyMstEClass.getEOperations().get(0), source,
+				new String[] { "body",
+						"return getRefTrainMstTrainFrequencyCd();" });
+		addAnnotation(
+				trainFrequencyMstEClass.getEOperations().get(1),
+				source,
+				new String[] { "body", "return (CclmsCollector) eContainer();" });
+		addAnnotation(getTrainFrequencyMst_RefTrainMstTrainFrequencyCd(),
+				source, new String[] { "suppressedSetVisibility", "true",
+						"suppressedGetVisibility", "true",
+						"suppressedUnsetVisibility", "true",
+						"suppressedIsSetVisibility", "true" });
+		addAnnotation(
+				tractionMstEClass.getEOperations().get(0),
+				source,
+				new String[] { "body", "return (CclmsCollector) eContainer();" });
+		addAnnotation(
+				trainMstEClass.getEOperations().get(0),
+				source,
+				new String[] { "body",
+						"StationMst obj= getRefTrainEndStn();return isNullOrProxy(obj)?null:obj;" });
+		addAnnotation(trainMstEClass.getEOperations().get(1), source,
+				new String[] { "body", "setRefTrainEndStn(obj);" });
+		addAnnotation(
+				trainMstEClass.getEOperations().get(2),
+				source,
+				new String[] { "body",
+						"StationMst obj= getRefTrainStartStn();return isNullOrProxy(obj)?null:obj;" });
+		addAnnotation(trainMstEClass.getEOperations().get(3), source,
+				new String[] { "body", "setRefTrainStartStn(obj);" });
+		addAnnotation(
+				trainMstEClass.getEOperations().get(4),
+				source,
+				new String[] {
+						"body",
+						"TrainFrequencyMst obj= getRefTrainFrequencyCd();return isNullOrProxy(obj)?null:obj;" });
+		addAnnotation(trainMstEClass.getEOperations().get(5), source,
+				new String[] { "body", "setRefTrainFrequencyCd(obj);" });
+		addAnnotation(
+				trainMstEClass.getEOperations().get(6),
+				source,
+				new String[] { "body", "return (CclmsCollector) eContainer();" });
+		addAnnotation(getTrainMst_RefTrainEndStn(), source, new String[] {
+				"suppressedSetVisibility", "true", "suppressedGetVisibility",
+				"true", "suppressedUnsetVisibility", "true",
+				"suppressedIsSetVisibility", "true" });
+		addAnnotation(getTrainMst_RefTrainStartStn(), source, new String[] {
+				"suppressedSetVisibility", "true", "suppressedGetVisibility",
+				"true", "suppressedUnsetVisibility", "true",
+				"suppressedIsSetVisibility", "true" });
+		addAnnotation(getTrainMst_RefTrainFrequencyCd(), source, new String[] {
+				"suppressedSetVisibility", "true", "suppressedGetVisibility",
+				"true", "suppressedUnsetVisibility", "true",
+				"suppressedIsSetVisibility", "true" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(0),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (ZoneMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(ZoneMst.class);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(1),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (ZoneMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(ZoneMst.class,index);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(2),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (ZoneMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(ZoneMst.class,new Object[]{zoneId});\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(3),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (StationMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(StationMst.class);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(4),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (StationMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(StationMst.class,index);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(5),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (StationMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(StationMst.class,new Object[]{stationId});\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(6),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (TrainFrequencyMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(TrainFrequencyMst.class);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(7),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (TrainFrequencyMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(TrainFrequencyMst.class,index);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(8),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (TrainFrequencyMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(TrainFrequencyMst.class,new Object[]{trainFrequencyCode});\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(9),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (TractionMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(TractionMst.class);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(10),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (TractionMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(TractionMst.class,index);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(11),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (TractionMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(TractionMst.class,new Object[]{tractionType});\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(12),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (TrainMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(TrainMst.class);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(13),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (TrainMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(TrainMst.class,index);\n}\nreturn null;" });
+		addAnnotation(
+				cclmsCollectorEClass.getEOperations().get(14),
+				source,
+				new String[] {
+						"body",
+						"if (eResource()!=null && eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {\nreturn (TrainMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(TrainMst.class,new Object[]{trainId});\n}\nreturn null;" });
+	}
+
+} //CclmsPackageImpl

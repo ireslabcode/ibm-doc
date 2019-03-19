@@ -1,0 +1,8 @@
+package cclms.common.util;
+
+public class ConnectionProperties {
+	
+	public static final String DATA_BASE_URL= "com.ibm.db2.jcc.DB2Driver";
+	public static final String DATA_BASE_USER= "com.ibm.db2.jcc.DB2Driver";
+
+}

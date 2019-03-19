@@ -1,0 +1,5 @@
+package cclms.aap.input.table.properties;
+
+public class TrainSegmentMst {
+
+}

@@ -1,0 +1,1335 @@
+/**
+ */
+package cclms.impl;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+/**
+ * <!-- begin-user-doc -->
+ * The <b>Package</b> for the model.
+ * It contains accessors for the meta objects to represent
+ * <ul>
+ *   <li>each class,</li>
+ *   <li>each feature of each class,</li>
+ *   <li>each enum,</li>
+ *   <li>and each data type</li>
+ * </ul>
+ * <!-- end-user-doc -->
+ * @see cclms.impl.CclmsFactory
+ * @generated
+ */
+public interface CclmsPackage extends EPackage {
+	/**
+	 * The package name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNAME = "cclms";
+
+	/**
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_URI = "http://www.ibm.com/cclms/1.0.0";
+
+	/**
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	String eNS_PREFIX = "cclms";
+
+	/**
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	CclmsPackage eINSTANCE = cclms.impl.CclmsPackageImpl.init();
+
+	/**
+	 * The meta object id for the '{@link cclms.impl.ZoneMstImpl <em>Zone Mst</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cclms.impl.ZoneMstImpl
+	 * @see cclms.impl.CclmsPackageImpl#getZoneMst()
+	 * @generated
+	 */
+	int ZONE_MST = 0;
+
+	/**
+	 * The feature id for the '<em><b>Zone Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZONE_MST__ZONE_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Zone Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZONE_MST__ZONE_CODE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Zone Desc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZONE_MST__ZONE_DESC = 2;
+
+	/**
+	 * The number of structural features of the '<em>Zone Mst</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ZONE_MST_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link cclms.impl.StationMstImpl <em>Station Mst</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cclms.impl.StationMstImpl
+	 * @see cclms.impl.CclmsPackageImpl#getStationMst()
+	 * @generated
+	 */
+	int STATION_MST = 1;
+
+	/**
+	 * The feature id for the '<em><b>Station Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATION_MST__STATION_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Station Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATION_MST__STATION_CODE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Station Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATION_MST__STATION_NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Lobby Flag</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATION_MST__LOBBY_FLAG = 3;
+
+	/**
+	 * The feature id for the '<em><b>Ref Train Mst Train End Stn</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATION_MST__REF_TRAIN_MST_TRAIN_END_STN = 4;
+
+	/**
+	 * The feature id for the '<em><b>Ref Train Mst Train Start Stn</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATION_MST__REF_TRAIN_MST_TRAIN_START_STN = 5;
+
+	/**
+	 * The number of structural features of the '<em>Station Mst</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATION_MST_FEATURE_COUNT = 6;
+
+	/**
+	 * The meta object id for the '{@link cclms.impl.TrainFrequencyMstImpl <em>Train Frequency Mst</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cclms.impl.TrainFrequencyMstImpl
+	 * @see cclms.impl.CclmsPackageImpl#getTrainFrequencyMst()
+	 * @generated
+	 */
+	int TRAIN_FREQUENCY_MST = 2;
+
+	/**
+	 * The feature id for the '<em><b>Train Frequency Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_FREQUENCY_MST__TRAIN_FREQUENCY_CODE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Desc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_FREQUENCY_MST__DESC = 1;
+
+	/**
+	 * The feature id for the '<em><b>Ref Train Mst Train Frequency Cd</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD = 2;
+
+	/**
+	 * The number of structural features of the '<em>Train Frequency Mst</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_FREQUENCY_MST_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link cclms.impl.TractionMstImpl <em>Traction Mst</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cclms.impl.TractionMstImpl
+	 * @see cclms.impl.CclmsPackageImpl#getTractionMst()
+	 * @generated
+	 */
+	int TRACTION_MST = 3;
+
+	/**
+	 * The feature id for the '<em><b>Traction Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACTION_MST__TRACTION_TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Traction Desc</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACTION_MST__TRACTION_DESC = 1;
+
+	/**
+	 * The number of structural features of the '<em>Traction Mst</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRACTION_MST_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link cclms.impl.TrainMstImpl <em>Train Mst</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cclms.impl.TrainMstImpl
+	 * @see cclms.impl.CclmsPackageImpl#getTrainMst()
+	 * @generated
+	 */
+	int TRAIN_MST = 4;
+
+	/**
+	 * The feature id for the '<em><b>Train Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__TRAIN_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Train Nbr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__TRAIN_NBR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Train Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__TRAIN_NAME = 2;
+
+	/**
+	 * The feature id for the '<em><b>Train Sub Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__TRAIN_SUB_TYPE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Train Run Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__TRAIN_RUN_TYPE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Rake Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__RAKE_ID = 5;
+
+	/**
+	 * The feature id for the '<em><b>Day Of Service</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__DAY_OF_SERVICE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Valid From</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__VALID_FROM = 7;
+
+	/**
+	 * The feature id for the '<em><b>Valid To</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__VALID_TO = 8;
+
+	/**
+	 * The feature id for the '<em><b>Base Traction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__BASE_TRACTION = 9;
+
+	/**
+	 * The feature id for the '<em><b>Ref Train End Stn</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__REF_TRAIN_END_STN = 10;
+
+	/**
+	 * The feature id for the '<em><b>Ref Train Start Stn</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__REF_TRAIN_START_STN = 11;
+
+	/**
+	 * The feature id for the '<em><b>Ref Train Frequency Cd</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST__REF_TRAIN_FREQUENCY_CD = 12;
+
+	/**
+	 * The number of structural features of the '<em>Train Mst</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAIN_MST_FEATURE_COUNT = 13;
+
+	/**
+	 * The meta object id for the '{@link ilog.odm.dom.IloDomCollector <em>ilog odm dom Ilo Dom Collector</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ilog.odm.dom.IloDomCollector
+	 * @see cclms.impl.CclmsPackageImpl#getilog_odm_dom_IloDomCollector()
+	 * @generated
+	 */
+	int ILOG_ODM_DOM_ILO_DOM_COLLECTOR = 6;
+
+	/**
+	 * The number of structural features of the '<em>ilog odm dom Ilo Dom Collector</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ILOG_ODM_DOM_ILO_DOM_COLLECTOR_FEATURE_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link cclms.impl.CclmsCollectorImpl <em>Collector</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see cclms.impl.CclmsCollectorImpl
+	 * @see cclms.impl.CclmsPackageImpl#getCclmsCollector()
+	 * @generated
+	 */
+	int CCLMS_COLLECTOR = 5;
+
+	/**
+	 * The feature id for the '<em><b>Zone Mst</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCLMS_COLLECTOR__ZONE_MST = ILOG_ODM_DOM_ILO_DOM_COLLECTOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Station Mst</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCLMS_COLLECTOR__STATION_MST = ILOG_ODM_DOM_ILO_DOM_COLLECTOR_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Train Frequency Mst</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCLMS_COLLECTOR__TRAIN_FREQUENCY_MST = ILOG_ODM_DOM_ILO_DOM_COLLECTOR_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Traction Mst</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCLMS_COLLECTOR__TRACTION_MST = ILOG_ODM_DOM_ILO_DOM_COLLECTOR_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Train Mst</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCLMS_COLLECTOR__TRAIN_MST = ILOG_ODM_DOM_ILO_DOM_COLLECTOR_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Collector</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CCLMS_COLLECTOR_FEATURE_COUNT = ILOG_ODM_DOM_ILO_DOM_COLLECTOR_FEATURE_COUNT + 5;
+
+	/**
+	 * The meta object id for the '<em>List</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.util.List
+	 * @see cclms.impl.CclmsPackageImpl#getList()
+	 * @generated
+	 */
+	int LIST = 7;
+
+	/**
+	 * The meta object id for the '<em>java sql Date</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.sql.Date
+	 * @see cclms.impl.CclmsPackageImpl#getjava_sql_Date()
+	 * @generated
+	 */
+	int JAVA_SQL_DATE = 8;
+
+	/**
+	 * Returns the meta object for class '{@link cclms.ZoneMst <em>Zone Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Zone Mst</em>'.
+	 * @see cclms.ZoneMst
+	 * @generated
+	 */
+	EClass getZoneMst();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.ZoneMst#getZoneId <em>Zone Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Zone Id</em>'.
+	 * @see cclms.ZoneMst#getZoneId()
+	 * @see #getZoneMst()
+	 * @generated
+	 */
+	EAttribute getZoneMst_ZoneId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.ZoneMst#getZoneCode <em>Zone Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Zone Code</em>'.
+	 * @see cclms.ZoneMst#getZoneCode()
+	 * @see #getZoneMst()
+	 * @generated
+	 */
+	EAttribute getZoneMst_ZoneCode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.ZoneMst#getZoneDesc <em>Zone Desc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Zone Desc</em>'.
+	 * @see cclms.ZoneMst#getZoneDesc()
+	 * @see #getZoneMst()
+	 * @generated
+	 */
+	EAttribute getZoneMst_ZoneDesc();
+
+	/**
+	 * Returns the meta object for class '{@link cclms.StationMst <em>Station Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Station Mst</em>'.
+	 * @see cclms.StationMst
+	 * @generated
+	 */
+	EClass getStationMst();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.StationMst#getStationId <em>Station Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Station Id</em>'.
+	 * @see cclms.StationMst#getStationId()
+	 * @see #getStationMst()
+	 * @generated
+	 */
+	EAttribute getStationMst_StationId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.StationMst#getStationCode <em>Station Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Station Code</em>'.
+	 * @see cclms.StationMst#getStationCode()
+	 * @see #getStationMst()
+	 * @generated
+	 */
+	EAttribute getStationMst_StationCode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.StationMst#getStationName <em>Station Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Station Name</em>'.
+	 * @see cclms.StationMst#getStationName()
+	 * @see #getStationMst()
+	 * @generated
+	 */
+	EAttribute getStationMst_StationName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.StationMst#getLobbyFlag <em>Lobby Flag</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Lobby Flag</em>'.
+	 * @see cclms.StationMst#getLobbyFlag()
+	 * @see #getStationMst()
+	 * @generated
+	 */
+	EAttribute getStationMst_LobbyFlag();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cclms.StationMst <em>Ref Train Mst Train End Stn</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Ref Train Mst Train End Stn</em>'.
+	 * @see cclms.StationMst
+	 * @see #getStationMst()
+	 * @generated
+	 */
+	EReference getStationMst_RefTrainMstTrainEndStn();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cclms.StationMst <em>Ref Train Mst Train Start Stn</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Ref Train Mst Train Start Stn</em>'.
+	 * @see cclms.StationMst
+	 * @see #getStationMst()
+	 * @generated
+	 */
+	EReference getStationMst_RefTrainMstTrainStartStn();
+
+	/**
+	 * Returns the meta object for class '{@link cclms.TrainFrequencyMst <em>Train Frequency Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Train Frequency Mst</em>'.
+	 * @see cclms.TrainFrequencyMst
+	 * @generated
+	 */
+	EClass getTrainFrequencyMst();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainFrequencyMst#getTrainFrequencyCode <em>Train Frequency Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Train Frequency Code</em>'.
+	 * @see cclms.TrainFrequencyMst#getTrainFrequencyCode()
+	 * @see #getTrainFrequencyMst()
+	 * @generated
+	 */
+	EAttribute getTrainFrequencyMst_TrainFrequencyCode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainFrequencyMst#getDesc <em>Desc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Desc</em>'.
+	 * @see cclms.TrainFrequencyMst#getDesc()
+	 * @see #getTrainFrequencyMst()
+	 * @generated
+	 */
+	EAttribute getTrainFrequencyMst_Desc();
+
+	/**
+	 * Returns the meta object for the reference list '{@link cclms.TrainFrequencyMst <em>Ref Train Mst Train Frequency Cd</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Ref Train Mst Train Frequency Cd</em>'.
+	 * @see cclms.TrainFrequencyMst
+	 * @see #getTrainFrequencyMst()
+	 * @generated
+	 */
+	EReference getTrainFrequencyMst_RefTrainMstTrainFrequencyCd();
+
+	/**
+	 * Returns the meta object for class '{@link cclms.TractionMst <em>Traction Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Traction Mst</em>'.
+	 * @see cclms.TractionMst
+	 * @generated
+	 */
+	EClass getTractionMst();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TractionMst#getTractionType <em>Traction Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Traction Type</em>'.
+	 * @see cclms.TractionMst#getTractionType()
+	 * @see #getTractionMst()
+	 * @generated
+	 */
+	EAttribute getTractionMst_TractionType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TractionMst#getTractionDesc <em>Traction Desc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Traction Desc</em>'.
+	 * @see cclms.TractionMst#getTractionDesc()
+	 * @see #getTractionMst()
+	 * @generated
+	 */
+	EAttribute getTractionMst_TractionDesc();
+
+	/**
+	 * Returns the meta object for class '{@link cclms.TrainMst <em>Train Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Train Mst</em>'.
+	 * @see cclms.TrainMst
+	 * @generated
+	 */
+	EClass getTrainMst();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getTrainId <em>Train Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Train Id</em>'.
+	 * @see cclms.TrainMst#getTrainId()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_TrainId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getTrainNbr <em>Train Nbr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Train Nbr</em>'.
+	 * @see cclms.TrainMst#getTrainNbr()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_TrainNbr();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getTrainName <em>Train Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Train Name</em>'.
+	 * @see cclms.TrainMst#getTrainName()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_TrainName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getTrainSubType <em>Train Sub Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Train Sub Type</em>'.
+	 * @see cclms.TrainMst#getTrainSubType()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_TrainSubType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getTrainRunType <em>Train Run Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Train Run Type</em>'.
+	 * @see cclms.TrainMst#getTrainRunType()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_TrainRunType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getRakeId <em>Rake Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rake Id</em>'.
+	 * @see cclms.TrainMst#getRakeId()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_RakeId();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getDayOfService <em>Day Of Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Day Of Service</em>'.
+	 * @see cclms.TrainMst#getDayOfService()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_DayOfService();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getValidFrom <em>Valid From</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valid From</em>'.
+	 * @see cclms.TrainMst#getValidFrom()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_ValidFrom();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getValidTo <em>Valid To</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valid To</em>'.
+	 * @see cclms.TrainMst#getValidTo()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_ValidTo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link cclms.TrainMst#getBaseTraction <em>Base Traction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Base Traction</em>'.
+	 * @see cclms.TrainMst#getBaseTraction()
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EAttribute getTrainMst_BaseTraction();
+
+	/**
+	 * Returns the meta object for the reference '{@link cclms.TrainMst <em>Ref Train End Stn</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Ref Train End Stn</em>'.
+	 * @see cclms.TrainMst
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EReference getTrainMst_RefTrainEndStn();
+
+	/**
+	 * Returns the meta object for the reference '{@link cclms.TrainMst <em>Ref Train Start Stn</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Ref Train Start Stn</em>'.
+	 * @see cclms.TrainMst
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EReference getTrainMst_RefTrainStartStn();
+
+	/**
+	 * Returns the meta object for the reference '{@link cclms.TrainMst <em>Ref Train Frequency Cd</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Ref Train Frequency Cd</em>'.
+	 * @see cclms.TrainMst
+	 * @see #getTrainMst()
+	 * @generated
+	 */
+	EReference getTrainMst_RefTrainFrequencyCd();
+
+	/**
+	 * Returns the meta object for class '{@link cclms.CclmsCollector <em>Collector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Collector</em>'.
+	 * @see cclms.CclmsCollector
+	 * @generated
+	 */
+	EClass getCclmsCollector();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cclms.CclmsCollector#getZoneMst <em>Zone Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Zone Mst</em>'.
+	 * @see cclms.CclmsCollector#getZoneMst()
+	 * @see #getCclmsCollector()
+	 * @generated
+	 */
+	EReference getCclmsCollector_ZoneMst();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cclms.CclmsCollector#getStationMst <em>Station Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Station Mst</em>'.
+	 * @see cclms.CclmsCollector#getStationMst()
+	 * @see #getCclmsCollector()
+	 * @generated
+	 */
+	EReference getCclmsCollector_StationMst();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cclms.CclmsCollector#getTrainFrequencyMst <em>Train Frequency Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Train Frequency Mst</em>'.
+	 * @see cclms.CclmsCollector#getTrainFrequencyMst()
+	 * @see #getCclmsCollector()
+	 * @generated
+	 */
+	EReference getCclmsCollector_TrainFrequencyMst();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cclms.CclmsCollector#getTractionMst <em>Traction Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Traction Mst</em>'.
+	 * @see cclms.CclmsCollector#getTractionMst()
+	 * @see #getCclmsCollector()
+	 * @generated
+	 */
+	EReference getCclmsCollector_TractionMst();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link cclms.CclmsCollector#getTrainMst <em>Train Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Train Mst</em>'.
+	 * @see cclms.CclmsCollector#getTrainMst()
+	 * @see #getCclmsCollector()
+	 * @generated
+	 */
+	EReference getCclmsCollector_TrainMst();
+
+	/**
+	 * Returns the meta object for class '{@link ilog.odm.dom.IloDomCollector <em>ilog odm dom Ilo Dom Collector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ilog odm dom Ilo Dom Collector</em>'.
+	 * @see ilog.odm.dom.IloDomCollector
+	 * @generated
+	 */
+	EClass getilog_odm_dom_IloDomCollector();
+
+	/**
+	 * Returns the meta object for data type '{@link java.util.List <em>List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>List</em>'.
+	 * @see java.util.List
+	 * @generated
+	 */
+	EDataType getList();
+
+	/**
+	 * Returns the meta object for data type '{@link java.sql.Date <em>java sql Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>java sql Date</em>'.
+	 * @see java.sql.Date
+	 * @generated
+	 */
+	EDataType getjava_sql_Date();
+
+	/**
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
+	CclmsFactory getCclmsFactory();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * Defines literals for the meta objects that represent
+	 * <ul>
+	 *   <li>each class,</li>
+	 *   <li>each feature of each class,</li>
+	 *   <li>each enum,</li>
+	 *   <li>and each data type</li>
+	 * </ul>
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	interface Literals {
+		/**
+		 * The meta object literal for the '{@link cclms.impl.ZoneMstImpl <em>Zone Mst</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cclms.impl.ZoneMstImpl
+		 * @see cclms.impl.CclmsPackageImpl#getZoneMst()
+		 * @generated
+		 */
+		EClass ZONE_MST = eINSTANCE.getZoneMst();
+
+		/**
+		 * The meta object literal for the '<em><b>Zone Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ZONE_MST__ZONE_ID = eINSTANCE.getZoneMst_ZoneId();
+
+		/**
+		 * The meta object literal for the '<em><b>Zone Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ZONE_MST__ZONE_CODE = eINSTANCE.getZoneMst_ZoneCode();
+
+		/**
+		 * The meta object literal for the '<em><b>Zone Desc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ZONE_MST__ZONE_DESC = eINSTANCE.getZoneMst_ZoneDesc();
+
+		/**
+		 * The meta object literal for the '{@link cclms.impl.StationMstImpl <em>Station Mst</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cclms.impl.StationMstImpl
+		 * @see cclms.impl.CclmsPackageImpl#getStationMst()
+		 * @generated
+		 */
+		EClass STATION_MST = eINSTANCE.getStationMst();
+
+		/**
+		 * The meta object literal for the '<em><b>Station Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATION_MST__STATION_ID = eINSTANCE
+				.getStationMst_StationId();
+
+		/**
+		 * The meta object literal for the '<em><b>Station Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATION_MST__STATION_CODE = eINSTANCE
+				.getStationMst_StationCode();
+
+		/**
+		 * The meta object literal for the '<em><b>Station Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATION_MST__STATION_NAME = eINSTANCE
+				.getStationMst_StationName();
+
+		/**
+		 * The meta object literal for the '<em><b>Lobby Flag</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATION_MST__LOBBY_FLAG = eINSTANCE
+				.getStationMst_LobbyFlag();
+
+		/**
+		 * The meta object literal for the '<em><b>Ref Train Mst Train End Stn</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATION_MST__REF_TRAIN_MST_TRAIN_END_STN = eINSTANCE
+				.getStationMst_RefTrainMstTrainEndStn();
+
+		/**
+		 * The meta object literal for the '<em><b>Ref Train Mst Train Start Stn</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATION_MST__REF_TRAIN_MST_TRAIN_START_STN = eINSTANCE
+				.getStationMst_RefTrainMstTrainStartStn();
+
+		/**
+		 * The meta object literal for the '{@link cclms.impl.TrainFrequencyMstImpl <em>Train Frequency Mst</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cclms.impl.TrainFrequencyMstImpl
+		 * @see cclms.impl.CclmsPackageImpl#getTrainFrequencyMst()
+		 * @generated
+		 */
+		EClass TRAIN_FREQUENCY_MST = eINSTANCE.getTrainFrequencyMst();
+
+		/**
+		 * The meta object literal for the '<em><b>Train Frequency Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_FREQUENCY_MST__TRAIN_FREQUENCY_CODE = eINSTANCE
+				.getTrainFrequencyMst_TrainFrequencyCode();
+
+		/**
+		 * The meta object literal for the '<em><b>Desc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_FREQUENCY_MST__DESC = eINSTANCE
+				.getTrainFrequencyMst_Desc();
+
+		/**
+		 * The meta object literal for the '<em><b>Ref Train Mst Train Frequency Cd</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD = eINSTANCE
+				.getTrainFrequencyMst_RefTrainMstTrainFrequencyCd();
+
+		/**
+		 * The meta object literal for the '{@link cclms.impl.TractionMstImpl <em>Traction Mst</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cclms.impl.TractionMstImpl
+		 * @see cclms.impl.CclmsPackageImpl#getTractionMst()
+		 * @generated
+		 */
+		EClass TRACTION_MST = eINSTANCE.getTractionMst();
+
+		/**
+		 * The meta object literal for the '<em><b>Traction Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRACTION_MST__TRACTION_TYPE = eINSTANCE
+				.getTractionMst_TractionType();
+
+		/**
+		 * The meta object literal for the '<em><b>Traction Desc</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRACTION_MST__TRACTION_DESC = eINSTANCE
+				.getTractionMst_TractionDesc();
+
+		/**
+		 * The meta object literal for the '{@link cclms.impl.TrainMstImpl <em>Train Mst</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cclms.impl.TrainMstImpl
+		 * @see cclms.impl.CclmsPackageImpl#getTrainMst()
+		 * @generated
+		 */
+		EClass TRAIN_MST = eINSTANCE.getTrainMst();
+
+		/**
+		 * The meta object literal for the '<em><b>Train Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__TRAIN_ID = eINSTANCE.getTrainMst_TrainId();
+
+		/**
+		 * The meta object literal for the '<em><b>Train Nbr</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__TRAIN_NBR = eINSTANCE.getTrainMst_TrainNbr();
+
+		/**
+		 * The meta object literal for the '<em><b>Train Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__TRAIN_NAME = eINSTANCE.getTrainMst_TrainName();
+
+		/**
+		 * The meta object literal for the '<em><b>Train Sub Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__TRAIN_SUB_TYPE = eINSTANCE
+				.getTrainMst_TrainSubType();
+
+		/**
+		 * The meta object literal for the '<em><b>Train Run Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__TRAIN_RUN_TYPE = eINSTANCE
+				.getTrainMst_TrainRunType();
+
+		/**
+		 * The meta object literal for the '<em><b>Rake Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__RAKE_ID = eINSTANCE.getTrainMst_RakeId();
+
+		/**
+		 * The meta object literal for the '<em><b>Day Of Service</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__DAY_OF_SERVICE = eINSTANCE
+				.getTrainMst_DayOfService();
+
+		/**
+		 * The meta object literal for the '<em><b>Valid From</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__VALID_FROM = eINSTANCE.getTrainMst_ValidFrom();
+
+		/**
+		 * The meta object literal for the '<em><b>Valid To</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__VALID_TO = eINSTANCE.getTrainMst_ValidTo();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Traction</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TRAIN_MST__BASE_TRACTION = eINSTANCE
+				.getTrainMst_BaseTraction();
+
+		/**
+		 * The meta object literal for the '<em><b>Ref Train End Stn</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAIN_MST__REF_TRAIN_END_STN = eINSTANCE
+				.getTrainMst_RefTrainEndStn();
+
+		/**
+		 * The meta object literal for the '<em><b>Ref Train Start Stn</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAIN_MST__REF_TRAIN_START_STN = eINSTANCE
+				.getTrainMst_RefTrainStartStn();
+
+		/**
+		 * The meta object literal for the '<em><b>Ref Train Frequency Cd</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAIN_MST__REF_TRAIN_FREQUENCY_CD = eINSTANCE
+				.getTrainMst_RefTrainFrequencyCd();
+
+		/**
+		 * The meta object literal for the '{@link cclms.impl.CclmsCollectorImpl <em>Collector</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see cclms.impl.CclmsCollectorImpl
+		 * @see cclms.impl.CclmsPackageImpl#getCclmsCollector()
+		 * @generated
+		 */
+		EClass CCLMS_COLLECTOR = eINSTANCE.getCclmsCollector();
+
+		/**
+		 * The meta object literal for the '<em><b>Zone Mst</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CCLMS_COLLECTOR__ZONE_MST = eINSTANCE
+				.getCclmsCollector_ZoneMst();
+
+		/**
+		 * The meta object literal for the '<em><b>Station Mst</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CCLMS_COLLECTOR__STATION_MST = eINSTANCE
+				.getCclmsCollector_StationMst();
+
+		/**
+		 * The meta object literal for the '<em><b>Train Frequency Mst</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CCLMS_COLLECTOR__TRAIN_FREQUENCY_MST = eINSTANCE
+				.getCclmsCollector_TrainFrequencyMst();
+
+		/**
+		 * The meta object literal for the '<em><b>Traction Mst</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CCLMS_COLLECTOR__TRACTION_MST = eINSTANCE
+				.getCclmsCollector_TractionMst();
+
+		/**
+		 * The meta object literal for the '<em><b>Train Mst</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CCLMS_COLLECTOR__TRAIN_MST = eINSTANCE
+				.getCclmsCollector_TrainMst();
+
+		/**
+		 * The meta object literal for the '{@link ilog.odm.dom.IloDomCollector <em>ilog odm dom Ilo Dom Collector</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ilog.odm.dom.IloDomCollector
+		 * @see cclms.impl.CclmsPackageImpl#getilog_odm_dom_IloDomCollector()
+		 * @generated
+		 */
+		EClass ILOG_ODM_DOM_ILO_DOM_COLLECTOR = eINSTANCE
+				.getilog_odm_dom_IloDomCollector();
+
+		/**
+		 * The meta object literal for the '<em>List</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.util.List
+		 * @see cclms.impl.CclmsPackageImpl#getList()
+		 * @generated
+		 */
+		EDataType LIST = eINSTANCE.getList();
+
+		/**
+		 * The meta object literal for the '<em>java sql Date</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.sql.Date
+		 * @see cclms.impl.CclmsPackageImpl#getjava_sql_Date()
+		 * @generated
+		 */
+		EDataType JAVA_SQL_DATE = eINSTANCE.getjava_sql_Date();
+
+	}
+
+} //CclmsPackage

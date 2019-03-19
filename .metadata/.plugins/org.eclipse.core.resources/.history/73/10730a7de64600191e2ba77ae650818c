@@ -1,0 +1,7 @@
+package cclms.query;
+
+public class QueryUtil {
+	public static final String LOBBY ="select * from STATION_MST where LOBBY_FLAG = 'N'";
+	public static final String Traction ="";
+
+}

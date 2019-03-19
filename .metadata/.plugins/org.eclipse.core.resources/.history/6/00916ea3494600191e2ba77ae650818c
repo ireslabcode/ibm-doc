@@ -1,0 +1,28 @@
+package cclms.datasourse;
+
+import ilog.odm.datasvc.IloDataServiceContext;
+import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloScenarioUpdater;
+import ilog.odm.datasvc.IloTemplateInstance;
+
+public class TestLoadSource implements IloScenarioUpdater{
+
+	@Override
+	public void updateScenario(IloScenario scenario,
+			IloTemplateInstance templateInstance,
+			IloDataServiceContext dataService) throws Exception {
+		updateScenario(scenario, zone, tractiontype,station,trainfrequency);
+	
+	}
+
+	public void updateScenarioZoneMst(IloScenario scenario, String zone,
+			String tractiontype, String station, String trainfrequency) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	
+
+}

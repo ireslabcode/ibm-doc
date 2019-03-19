@@ -1,0 +1,7 @@
+package cclms.export;
+
+import ilog.odm.datasvc.IloScenarioExporter;
+
+public class DB2Exporter implements IloScenarioExporter{
+
+}

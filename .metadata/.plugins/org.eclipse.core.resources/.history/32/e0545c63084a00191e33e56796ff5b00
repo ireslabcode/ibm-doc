@@ -1,0 +1,7 @@
+package cclms.datavalidation;
+
+import ilog.odm.datasvc.IloScenarioDataChecker;
+
+public class RulesChecker implements IloScenarioDataChecker{
+
+}

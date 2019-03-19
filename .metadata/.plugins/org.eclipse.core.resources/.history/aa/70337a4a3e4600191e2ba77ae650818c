@@ -1,0 +1,5 @@
+package cclms.connection;
+
+public class ConnectionProvider {
+
+}

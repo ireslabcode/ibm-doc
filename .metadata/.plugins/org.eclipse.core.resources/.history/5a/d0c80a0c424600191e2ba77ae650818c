@@ -1,0 +1,60 @@
+package com.loaddata;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+public class LoadData {
+	
+	
+	public static Connection getConnection() throws ClassNotFoundException, SQLException{
+		
+		
+		Class.forName("com.ibm.db2.jcc.DB2Driver");
+		
+		Connection  con = DriverManager.getConnection("jdbc:db2://192.168.1.20:50000/CCLMS","db2inst1","db@inst");
+		return con;
+	}
+	
+	
+	public static ResultSet getAllData() throws ClassNotFoundException, SQLException{
+		
+		Connection connection = getConnection();
+		PreparedStatement prepareStatement = connection.prepareStatement("select * from DB2INST1.ZONE_MST");
+		ResultSet resultSet = prepareStatement.executeQuery();
+		
+		return resultSet;
+		
+	}
+	
+	
+	public static void main(String args[]){
+		
+		
+		try {
+			System.out.println("Connected to database : "+getConnection());
+			
+			
+			
+			ResultSet resultSet = getAllData();
+			
+			while (resultSet.next()) {
+				//System.out.println(resultSet.next());
+				
+				System.out.println("TRAIN_NO :"+resultSet.getString(2));
+				
+			}
+			
+			
+			
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

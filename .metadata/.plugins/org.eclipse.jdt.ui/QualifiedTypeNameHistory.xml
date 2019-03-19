@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="cclms.common.util.ConnectionProperties"/>
+<fullyQualifiedTypeName name="ilog.odm.datasvc.IloTable"/>
+<fullyQualifiedTypeName name="ilog.odm.datasvc.IloRow"/>
+<fullyQualifiedTypeName name="cclms.datasourse.TestLoadSource"/>
+<fullyQualifiedTypeName name="cclms.connection.ConnectionProvider"/>
+<fullyQualifiedTypeName name="cclms.datasourse.LoadSourseTables"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.bind.v2.schemagen.xmlschema.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="cclms.query.QueryUtil"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="cclms.common.util.TableConstant"/>
+<fullyQualifiedTypeName name="cclms.table.properties.TractionMst"/>
+<fullyQualifiedTypeName name="cclms.table.properties.TrainFrequencyMst"/>
+<fullyQualifiedTypeName name="cclms.TrainTypeMst"/>
+<fullyQualifiedTypeName name="cclms.table.properties.TrainTypeMst"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="cclms.scenario.updater.ScenarioUpdater"/>
+<fullyQualifiedTypeName name="cclms.table.properties.Lobby"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="ilog.odm.processingsvc.IloCustomTaskImplementation"/>
+<fullyQualifiedTypeName name="ilog.odm.datasvc.IloScenarioExporter"/>
+</qualifiedTypeNameHistroy>

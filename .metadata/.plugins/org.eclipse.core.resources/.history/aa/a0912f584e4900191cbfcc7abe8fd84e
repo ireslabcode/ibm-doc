@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.7.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLAccessControl="http:///org/eclipse/datatools/modelbase/sql/accesscontrol.ecore" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore" xmlns:datanotation="http:///datanotation.ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <LUW:LUWDatabase xmi:id="_OBw3wECcEemTC6FOa1yTbA" name="Database" vendor="DB2 UDB" version="V9.1" schemas="_9u3h8EWGEem-r8R1JeZ1pQ" authorizationIds="_9vNgMEWGEem-r8R1JeZ1pQ">
+    <eAnnotations xmi:id="_QayhIElOEemTqdnsDsubUQ" source="ConnectionURI">
+      <details xmi:id="_Qa8SIElOEemTqdnsDsubUQ" key="ConnectionKey" value="CCLMS"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_9u3h8EWGEem-r8R1JeZ1pQ" name="CCLMS" tables="_9vAE1kWGEem-r8R1JeZ1pQ _9vB6AEWGEem-r8R1JeZ1pQ _9vInsEWGEem-r8R1JeZ1pQ _9vInt0WGEem-r8R1JeZ1pQ _9vDvMEWGEem-r8R1JeZ1pQ _JVyQo0cREemk28-sn57p-Q _JVCo0EcREemk28-sn57p-Q _JV8AsEcREemk28-sn57p-Q _JVfUwEcREemk28-sn57p-Q _JWFLAEcREemk28-sn57p-Q _JVyQgkcREemk28-sn57p-Q _JVyQXUcREemk28-sn57p-Q _JVyQS0cREemk28-sn57p-Q _JVyQJkcREemk28-sn57p-Q _JVfU-kcREemk28-sn57p-Q _JVoey0cREemk28-sn57p-Q _JVoe7kcREemk28-sn57p-Q _JVyPsEcREemk28-sn57p-Q _IfCMNElOEemTqdnsDsubUQ" database="_OBw3wECcEemTC6FOa1yTbA" owner="_9vNgMEWGEem-r8R1JeZ1pQ">
+    <eAnnotations xmi:id="_lYNDoEWHEem-r8R1JeZ1pQ" source="diagram">
+      <contents xsi:type="datanotation:DataDiagram" xmi:id="_lYQG8EWHEem-r8R1JeZ1pQ" type="IE_CrowFoot" name="Input" viewKind="ProjectExplorer" notation="IE_CrowFoot" kind="Physical">
+        <children xmi:id="_vLPrAEWHEem-r8R1JeZ1pQ" element="_9vInsEWGEem-r8R1JeZ1pQ">
+          <children xsi:type="notation:Shape" xmi:id="_vLW_wUWHEem-r8R1JeZ1pQ" type="TableName" fontName="Segoe UI">
+            <layoutConstraint xsi:type="notation:Bounds" xmi:id="_vLW_wkWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_vLYN4EWHEem-r8R1JeZ1pQ" type="Key.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_vLdtcEWHEem-r8R1JeZ1pQ" type="Key" element="_9vInsUWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_vLdtcUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_vLYN4UWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_vLY08EWHEem-r8R1JeZ1pQ" type="Column.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_vLfioEWHEem-r8R1JeZ1pQ" type="Column" element="_9vIntEWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_vLfioUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_vLY08UWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_vLY08kWHEem-r8R1JeZ1pQ" visible="false" type="Index.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_vLY080WHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_vLY09EWHEem-r8R1JeZ1pQ" visible="false" type="Trigger.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_vLY09UWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_vLPrAUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          <styles xsi:type="datanotation:TableStyle" xmi:id="_vLW_wEWHEem-r8R1JeZ1pQ" fontName="Segoe UI" lineWidth="1"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_vLPrAkWHEem-r8R1JeZ1pQ" x="14128" y="1508"/>
+        </children>
+        <children xmi:id="_wWfWIEWHEem-r8R1JeZ1pQ" element="_9vInt0WGEem-r8R1JeZ1pQ">
+          <children xsi:type="notation:Shape" xmi:id="_wWf9MEWHEem-r8R1JeZ1pQ" type="TableName" fontName="Segoe UI">
+            <layoutConstraint xsi:type="notation:Bounds" xmi:id="_wWf9MUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_wWhLUEWHEem-r8R1JeZ1pQ" type="Key.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_wWogEEWHEem-r8R1JeZ1pQ" type="Key" element="_9vInuEWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_wWogEUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_wWhLUUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_wWhyYEWHEem-r8R1JeZ1pQ" type="Column.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_wWq8UEWHEem-r8R1JeZ1pQ" type="Column" element="_9vInu0WGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_wWq8UUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_wWhyYUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_wWiZcEWHEem-r8R1JeZ1pQ" visible="false" type="Index.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_wWiZcUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_wWiZckWHEem-r8R1JeZ1pQ" visible="false" type="Trigger.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_wWiZc0WHEem-r8R1JeZ1pQ"/>
+          </children>
+          <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_wWfWIUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          <styles xsi:type="datanotation:TableStyle" xmi:id="_wWfWI0WHEem-r8R1JeZ1pQ" fontName="Segoe UI" lineWidth="1"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_wWfWIkWHEem-r8R1JeZ1pQ" x="2778" y="1693"/>
+        </children>
+        <children xmi:id="_xxeGYEWHEem-r8R1JeZ1pQ" element="_9vAE1kWGEem-r8R1JeZ1pQ">
+          <children xsi:type="notation:Shape" xmi:id="_xxetcEWHEem-r8R1JeZ1pQ" type="TableName" fontName="Segoe UI">
+            <layoutConstraint xsi:type="notation:Bounds" xmi:id="_xxetcUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_xxfUgEWHEem-r8R1JeZ1pQ" type="Key.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_xxn3YEWHEem-r8R1JeZ1pQ" type="Key" element="_9vAE10WGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_xxn3YUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_xxf7kEWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_xxf7kUWHEem-r8R1JeZ1pQ" type="Column.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_xxqToEWHEem-r8R1JeZ1pQ" type="Column" element="_9vAE2kWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_xxqToUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_xxqTokWHEem-r8R1JeZ1pQ" type="Column" element="_9vAr4UWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_xxqTo0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_xxf7kkWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_xxhJsEWHEem-r8R1JeZ1pQ" visible="false" type="Index.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_xxhJsUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_xxhwwEWHEem-r8R1JeZ1pQ" visible="false" type="Trigger.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_xxhwwUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_xxeGYUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          <styles xsi:type="datanotation:TableStyle" xmi:id="_xxeGY0WHEem-r8R1JeZ1pQ" fontName="Segoe UI" lineWidth="1"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_xxeGYkWHEem-r8R1JeZ1pQ" x="3280" y="5529"/>
+        </children>
+        <children xmi:id="_0td9cEWHEem-r8R1JeZ1pQ" element="_9vB6AEWGEem-r8R1JeZ1pQ">
+          <children xsi:type="notation:Shape" xmi:id="_0tekgEWHEem-r8R1JeZ1pQ" type="TableName" fontName="Segoe UI">
+            <layoutConstraint xsi:type="notation:Bounds" xmi:id="_0tekgUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_0tfLkEWHEem-r8R1JeZ1pQ" type="Key.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_0tkrIEWHEem-r8R1JeZ1pQ" type="Key" element="_9vB6AUWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_0tkrIUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_0tfLkUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_0tfyoEWHEem-r8R1JeZ1pQ" type="Column.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_0tnHYEWHEem-r8R1JeZ1pQ" type="Column" element="_9vB6BEWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_0tnHYUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_0tnucEWHEem-r8R1JeZ1pQ" type="Column" element="_9vB6BkWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_0tnucUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_0toVgEWHEem-r8R1JeZ1pQ" type="Column" element="_9vB6CkWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_0toVgUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_Z5WIoEcREemk28-sn57p-Q" type="Column" element="_IuXDUUcREemk28-sn57p-Q" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_Z5WIoUcREemk28-sn57p-Q"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_0tfyoUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_0tfyokWHEem-r8R1JeZ1pQ" visible="false" type="Index.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_0tfyo0WHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_0tfypEWHEem-r8R1JeZ1pQ" visible="false" type="Trigger.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_0tfypUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_0td9cUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          <styles xsi:type="datanotation:TableStyle" xmi:id="_0td9c0WHEem-r8R1JeZ1pQ" fontName="Segoe UI" lineWidth="1"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_0td9ckWHEem-r8R1JeZ1pQ" x="7223" y="1164"/>
+        </children>
+        <children xmi:id="_6Zo2EEWHEem-r8R1JeZ1pQ" element="_9vDvMEWGEem-r8R1JeZ1pQ">
+          <children xsi:type="notation:Shape" xmi:id="_6ZrSUEWHEem-r8R1JeZ1pQ" type="TableName" fontName="Segoe UI">
+            <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6ZrSUUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_6ZsgcEWHEem-r8R1JeZ1pQ" type="Key.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_6ZynEEWHEem-r8R1JeZ1pQ" type="Key" element="_9vDvMUWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6ZynEUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_6ZsgcUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_6ZsgckWHEem-r8R1JeZ1pQ" type="Column.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_6Z4GoEWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvNEWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z4GoUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z4tsEWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvNkWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z4tsUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z5UwEWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvOkWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z5UwUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z570EWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvPEWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z570UWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z6i4EWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvPkWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z6i4UWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z7J8EWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvREWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z7J8UWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z7J8kWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvRkWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z7J80WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z7J9EWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvSEWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z7J9UWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z7xAEWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvSkWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z7xAUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z7xAkWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvTEWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z7xA0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z7xBEWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvTkWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z7xBUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_6Z8YEEWHEem-r8R1JeZ1pQ" type="Column" element="_9vDvUEWGEem-r8R1JeZ1pQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Z8YEUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_Z5WIpkcREemk28-sn57p-Q" type="Column" element="_Iwl38UcREemk28-sn57p-Q" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_Z5WIp0cREemk28-sn57p-Q"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_6Zsgc0WHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_6ZsgdEWHEem-r8R1JeZ1pQ" visible="false" type="Index.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_6ZsgdUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <children xmi:id="_6ZtHgEWHEem-r8R1JeZ1pQ" visible="false" type="Trigger.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_6ZtHgUWHEem-r8R1JeZ1pQ"/>
+          </children>
+          <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_6Zo2EUWHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+          <styles xsi:type="datanotation:TableStyle" xmi:id="_6ZqrQEWHEem-r8R1JeZ1pQ" fontName="Segoe UI" lineWidth="1"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6Zo2EkWHEem-r8R1JeZ1pQ" x="13784" y="6720"/>
+        </children>
+        <children xmi:id="_Uq5rcElOEemTqdnsDsubUQ" element="_IfCMNElOEemTqdnsDsubUQ">
+          <children xsi:type="notation:Shape" xmi:id="_Uq5rdElOEemTqdnsDsubUQ" type="TableName" fontName="Segoe UI">
+            <layoutConstraint xsi:type="notation:Bounds" xmi:id="_Uq5rdUlOEemTqdnsDsubUQ"/>
+          </children>
+          <children xmi:id="_Uq5rdklOEemTqdnsDsubUQ" type="Key.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_Uq5rd0lOEemTqdnsDsubUQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_Uq5reElOEemTqdnsDsubUQ" type="Column.Compartment">
+            <children xsi:type="notation:Shape" xmi:id="_UrC1YElOEemTqdnsDsubUQ" type="Column" element="_IfCMNUlOEemTqdnsDsubUQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_UrC1YUlOEemTqdnsDsubUQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_UrC1YklOEemTqdnsDsubUQ" type="Column" element="_IfCMN0lOEemTqdnsDsubUQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_UrC1Y0lOEemTqdnsDsubUQ"/>
+            </children>
+            <children xsi:type="notation:Shape" xmi:id="_UrC1ZElOEemTqdnsDsubUQ" type="Column" element="_IfCMOUlOEemTqdnsDsubUQ" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_UrC1ZUlOEemTqdnsDsubUQ"/>
+            </children>
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_Uq5reUlOEemTqdnsDsubUQ" sortingKeys="Natural:Ascending"/>
+          </children>
+          <children xmi:id="_Uq5reklOEemTqdnsDsubUQ" visible="false" type="Index.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_Uq5re0lOEemTqdnsDsubUQ"/>
+          </children>
+          <children xmi:id="_Uq5rfElOEemTqdnsDsubUQ" visible="false" type="Trigger.Compartment">
+            <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_Uq5rfUlOEemTqdnsDsubUQ"/>
+          </children>
+          <styles xsi:type="datanotation:DataListCompartmentStyle" xmi:id="_Uq5rcUlOEemTqdnsDsubUQ" sortingKeys="Natural:Ascending"/>
+          <styles xsi:type="datanotation:TableStyle" xmi:id="_Uq5rc0lOEemTqdnsDsubUQ" fontName="Segoe UI" lineWidth="1"/>
+          <layoutConstraint xsi:type="notation:Bounds" xmi:id="_Uq5rcklOEemTqdnsDsubUQ" x="370" y="3333"/>
+        </children>
+        <styles xsi:type="datanotation:DataAttributeStyle" xmi:id="_lYQG8UWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataCompartmentStyle" xmi:id="_lYQG8kWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataDisplayStyle" xmi:id="_lYQG80WHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataDiagramRelationshipStyle" xmi:id="_lYQG9EWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataShapeNameStyle" xmi:id="_lYQG9UWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataDiagramFormattingStyle" xmi:id="_lYQG9kWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="notation:SortingStyle" xmi:id="_lYQG90WHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+        <styles xsi:type="notation:FilteringStyle" xmi:id="_lYQG-EWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:ConnectionLayerStyle" xmi:id="_lYQG-UWHEem-r8R1JeZ1pQ"/>
+        <element xsi:nil="true"/>
+        <edges xmi:id="_6a72kEWHEem-r8R1JeZ1pQ" element="_9vDvU0WGEem-r8R1JeZ1pQ" source="_0td9cEWHEem-r8R1JeZ1pQ" target="_6Zo2EEWHEem-r8R1JeZ1pQ">
+          <children xmi:id="_6a-S0EWHEem-r8R1JeZ1pQ" type="ForeignKey.Name.Label">
+            <children xsi:type="notation:Shape" xmi:id="_6bf3QEWHEem-r8R1JeZ1pQ" type="FKRelationshipName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6bf3QUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6a-S0UWHEem-r8R1JeZ1pQ" y="-186"/>
+          </children>
+          <children xmi:id="_6bf3QkWHEem-r8R1JeZ1pQ" type="Child.RoleName">
+            <children xsi:type="notation:Shape" xmi:id="_6bf3REWHEem-r8R1JeZ1pQ" type="ChildRoleName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6bf3RUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6bf3Q0WHEem-r8R1JeZ1pQ" x="-265" y="-662"/>
+          </children>
+          <children xmi:id="_6bgeUEWHEem-r8R1JeZ1pQ" type="Parent.RoleName">
+            <children xsi:type="notation:Shape" xmi:id="_6bhFYEWHEem-r8R1JeZ1pQ" type="ParentRoleName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6bhFYUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6bgeUUWHEem-r8R1JeZ1pQ" y="-397"/>
+          </children>
+          <children xmi:id="_6bhFYkWHEem-r8R1JeZ1pQ" type="Child.ReferentialIntegrity">
+            <children xsi:type="notation:Shape" xmi:id="_6bhFZEWHEem-r8R1JeZ1pQ" type="ChildRiName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6bhFZUWHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6bhFY0WHEem-r8R1JeZ1pQ" x="264" y="661"/>
+          </children>
+          <styles xsi:type="datanotation:DataLineStyle" xmi:id="_6a72kUWHEem-r8R1JeZ1pQ" fontName="Segoe UI" routing="Rectilinear" lineWidth="1"/>
+          <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_6a72kkWHEem-r8R1JeZ1pQ" points="[1787, 1746, -5369, -5713]$[5438, 1746, -1718, -5713]$[5438, 3730, -1718, -3729]"/>
+        </edges>
+        <edges xmi:id="_6cTIgEWHEem-r8R1JeZ1pQ" element="_9vDvWkWGEem-r8R1JeZ1pQ" source="_0td9cEWHEem-r8R1JeZ1pQ" target="_6Zo2EEWHEem-r8R1JeZ1pQ">
+          <children xmi:id="_6cU9sEWHEem-r8R1JeZ1pQ" type="ForeignKey.Name.Label">
+            <children xsi:type="notation:Shape" xmi:id="_6cU9skWHEem-r8R1JeZ1pQ" type="FKRelationshipName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6cU9s0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6cU9sUWHEem-r8R1JeZ1pQ" y="-186"/>
+          </children>
+          <children xmi:id="_6cU9tEWHEem-r8R1JeZ1pQ" type="Child.RoleName">
+            <children xsi:type="notation:Shape" xmi:id="_6cU9tkWHEem-r8R1JeZ1pQ" type="ChildRoleName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6cU9t0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6cU9tUWHEem-r8R1JeZ1pQ" x="-265" y="-662"/>
+          </children>
+          <children xmi:id="_6cVkwEWHEem-r8R1JeZ1pQ" type="Parent.RoleName">
+            <children xsi:type="notation:Shape" xmi:id="_6cVkwkWHEem-r8R1JeZ1pQ" type="ParentRoleName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6cVkw0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6cVkwUWHEem-r8R1JeZ1pQ" y="-397"/>
+          </children>
+          <children xmi:id="_6cVkxEWHEem-r8R1JeZ1pQ" type="Child.ReferentialIntegrity">
+            <children xsi:type="notation:Shape" xmi:id="_6cVkxkWHEem-r8R1JeZ1pQ" type="ChildRiName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6cVkx0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6cVkxUWHEem-r8R1JeZ1pQ" x="264" y="661"/>
+          </children>
+          <styles xsi:type="datanotation:DataLineStyle" xmi:id="_6cTIgUWHEem-r8R1JeZ1pQ" fontName="Segoe UI" routing="Rectilinear" lineWidth="1"/>
+          <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_6cTIgkWHEem-r8R1JeZ1pQ" points="[52, 1826, -7104, -5633]$[52, 6005, -7104, -1454]$[4750, 6005, -2406, -1454]"/>
+        </edges>
+        <edges xmi:id="_6cbrYEWHEem-r8R1JeZ1pQ" element="_9vDvYUWGEem-r8R1JeZ1pQ" source="_vLPrAEWHEem-r8R1JeZ1pQ" target="_6Zo2EEWHEem-r8R1JeZ1pQ">
+          <children xmi:id="_6ceHoEWHEem-r8R1JeZ1pQ" type="ForeignKey.Name.Label">
+            <children xsi:type="notation:Shape" xmi:id="_6ceHokWHEem-r8R1JeZ1pQ" type="FKRelationshipName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6ceHo0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6ceHoUWHEem-r8R1JeZ1pQ" y="-186"/>
+          </children>
+          <children xmi:id="_6ceHpEWHEem-r8R1JeZ1pQ" type="Child.RoleName">
+            <children xsi:type="notation:Shape" xmi:id="_6ceHpkWHEem-r8R1JeZ1pQ" type="ChildRoleName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6ceHp0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6ceHpUWHEem-r8R1JeZ1pQ" x="-265" y="-662"/>
+          </children>
+          <children xmi:id="_6ceusEWHEem-r8R1JeZ1pQ" type="Parent.RoleName">
+            <children xsi:type="notation:Shape" xmi:id="_6ceuskWHEem-r8R1JeZ1pQ" type="ParentRoleName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6ceus0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6ceusUWHEem-r8R1JeZ1pQ" y="-397"/>
+          </children>
+          <children xmi:id="_6ceutEWHEem-r8R1JeZ1pQ" type="Child.ReferentialIntegrity">
+            <children xsi:type="notation:Shape" xmi:id="_6ceutkWHEem-r8R1JeZ1pQ" type="ChildRiName" fontName="Segoe UI">
+              <layoutConstraint xsi:type="notation:Bounds" xmi:id="_6ceut0WHEem-r8R1JeZ1pQ"/>
+            </children>
+            <layoutConstraint xsi:type="notation:Location" xmi:id="_6ceutUWHEem-r8R1JeZ1pQ" x="264" y="661"/>
+          </children>
+          <styles xsi:type="datanotation:DataLineStyle" xmi:id="_6cbrYUWHEem-r8R1JeZ1pQ" fontName="Segoe UI" routing="Rectilinear" lineWidth="1"/>
+          <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_6cbrYkWHEem-r8R1JeZ1pQ" points="[570, 766, 822, -7407]$[570, 2724, 822, -5449]$[-806, 2724, -554, -5449]$[-806, 4444, -554, -3729]"/>
+        </edges>
+      </contents>
+    </eAnnotations>
+    <eAnnotations xmi:id="_oyW2UEWHEem-r8R1JeZ1pQ" source="diagram">
+      <contents xsi:type="datanotation:DataDiagram" xmi:id="_oyYEcEWHEem-r8R1JeZ1pQ" type="IE_CrowFoot" name="Output" viewKind="ProjectExplorer" notation="IE_CrowFoot" kind="Physical">
+        <styles xsi:type="datanotation:DataAttributeStyle" xmi:id="_oyYEcUWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataCompartmentStyle" xmi:id="_oyYEckWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataDisplayStyle" xmi:id="_oyYEc0WHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataDiagramRelationshipStyle" xmi:id="_oyYEdEWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataShapeNameStyle" xmi:id="_oyYEdUWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:DataDiagramFormattingStyle" xmi:id="_oyYEdkWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="notation:SortingStyle" xmi:id="_oyYEd0WHEem-r8R1JeZ1pQ" sortingKeys="Natural:Ascending"/>
+        <styles xsi:type="notation:FilteringStyle" xmi:id="_oyYEeEWHEem-r8R1JeZ1pQ"/>
+        <styles xsi:type="datanotation:ConnectionLayerStyle" xmi:id="_oyYEeUWHEem-r8R1JeZ1pQ"/>
+        <element xsi:nil="true"/>
+      </contents>
+    </eAnnotations>
+    <eAnnotations xmi:id="_MWsxMEWLEem-r8R1JeZ1pQ" source="IBM_ILOG_ODM_DOM_PROPERTIES">
+      <details xmi:id="_MXtd0EWLEem-r8R1JeZ1pQ" key="odme.project" value="CCLMS_java"/>
+    </eAnnotations>
+  </DB2Model:DB2Schema>
+  <LUW:LUWTable xmi:id="_9vAE1kWGEem-r8R1JeZ1pQ" name="ZONE_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVCo4EcREemk28-sn57p-Q _JVfU80cREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vAE10WGEem-r8R1JeZ1pQ" name="ZONE_ID" nullable="false" generationType="BY_DEFAULT">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_9vAE2EWGEem-r8R1JeZ1pQ" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_IqWGAEcREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vAE2kWGEem-r8R1JeZ1pQ" name="ZONE_CODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vAr4EWGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="4"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vAr4UWGEem-r8R1JeZ1pQ" name="ZONE_DESC">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vAr4kWGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_9vAr50WGEem-r8R1JeZ1pQ" name="ZONE_ID_PK" members="_9vAE10WGEem-r8R1JeZ1pQ" ForeignKey="_JVCo4EcREemk28-sn57p-Q _JVfU80cREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_IuEIYkcREemk28-sn57p-Q" name="ZONE_CODE_UNIQ" members="_9vAE2kWGEem-r8R1JeZ1pQ"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_9vB6AEWGEem-r8R1JeZ1pQ" name="STATION_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_9vDvU0WGEem-r8R1JeZ1pQ _9vDvWkWGEem-r8R1JeZ1pQ _JVfVMUcREemk28-sn57p-Q _JVoe50cREemk28-sn57p-Q _JVofIkcREemk28-sn57p-Q _JVyP1kcREemk28-sn57p-Q _JVofN0cREemk28-sn57p-Q _JVfU5UcREemk28-sn57p-Q _JVoe4EcREemk28-sn57p-Q _JVfVI0cREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vB6AUWGEem-r8R1JeZ1pQ" name="STATION_ID" nullable="false" generationType="BY_DEFAULT">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_9vB6AkWGEem-r8R1JeZ1pQ" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_IuXDUEcREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vB6BEWGEem-r8R1JeZ1pQ" name="STATION_CODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vB6BUWGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vB6BkWGEem-r8R1JeZ1pQ" name="STATION_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vB6B0WGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="150"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vB6CkWGEem-r8R1JeZ1pQ" name="LOBBY_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vB6C0WGEem-r8R1JeZ1pQ" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_IuXDUUcREemk28-sn57p-Q" name="DIVISION_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_IuXDUkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_9vB6EEWGEem-r8R1JeZ1pQ" name="STATION_PK" members="_9vB6AUWGEem-r8R1JeZ1pQ" ForeignKey="_9vDvU0WGEem-r8R1JeZ1pQ _9vDvWkWGEem-r8R1JeZ1pQ _JVfVMUcREemk28-sn57p-Q _JVoe50cREemk28-sn57p-Q _JVofIkcREemk28-sn57p-Q _JVyP1kcREemk28-sn57p-Q _JVofN0cREemk28-sn57p-Q _JVfU5UcREemk28-sn57p-Q _JVoe4EcREemk28-sn57p-Q _JVfVI0cREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_IuXDV0cREemk28-sn57p-Q" name="STN_CODE_UNIQ" members="_9vB6BEWGEem-r8R1JeZ1pQ"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_IuXDWEcREemk28-sn57p-Q" name="DIVISION_FK" members="_IuXDUUcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVCo30cREemk28-sn57p-Q" referencedTable="_JVCo0EcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_IuXDWUcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_IuXDWkcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_IuXDW0cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_IuXDXEcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_IuXDXUcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_IuXDXkcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_9vDvMEWGEem-r8R1JeZ1pQ" name="TRAIN_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVfVOEcREemk28-sn57p-Q _JVofRUcREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvMUWGEem-r8R1JeZ1pQ" name="TRAIN_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_9vDvMkWGEem-r8R1JeZ1pQ" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_Iwl38EcREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvNEWGEem-r8R1JeZ1pQ" name="TRAIN_NBR" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vDvNUWGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvNkWGEem-r8R1JeZ1pQ" name="TRAIN_NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vDvN0WGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvOkWGEem-r8R1JeZ1pQ" name="TRAIN_START_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_9vDvO0WGEem-r8R1JeZ1pQ" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvPEWGEem-r8R1JeZ1pQ" name="TRAIN_END_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_9vDvPUWGEem-r8R1JeZ1pQ" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvPkWGEem-r8R1JeZ1pQ" name="TRAIN_FREQUENCY_CD" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_9vDvP0WGEem-r8R1JeZ1pQ" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvREWGEem-r8R1JeZ1pQ" name="TRAIN_SUB_TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vDvRUWGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvRkWGEem-r8R1JeZ1pQ" name="TRAIN_RUN_TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vDvR0WGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvSEWGEem-r8R1JeZ1pQ" name="RAKE_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_9vDvSUWGEem-r8R1JeZ1pQ" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvSkWGEem-r8R1JeZ1pQ" name="DAY_OF_SERVICE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vDvS0WGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvTEWGEem-r8R1JeZ1pQ" name="VALID_FROM">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_9vDvTUWGEem-r8R1JeZ1pQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvTkWGEem-r8R1JeZ1pQ" name="VALID_TO">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_9vDvT0WGEem-r8R1JeZ1pQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vDvUEWGEem-r8R1JeZ1pQ" name="BASE_TRACTION">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vDvUUWGEem-r8R1JeZ1pQ" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_Iwl38UcREemk28-sn57p-Q" name="TRAIN_TYPE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_Iwl38kcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_9vDvUkWGEem-r8R1JeZ1pQ" name="TRAIN_ID_PK" members="_9vDvMUWGEem-r8R1JeZ1pQ" ForeignKey="_JVfVOEcREemk28-sn57p-Q _JVofRUcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_9vDvU0WGEem-r8R1JeZ1pQ" name="DEST_STN_FK" members="_9vDvPEWGEem-r8R1JeZ1pQ" onDelete="RESTRICT" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_9vDvVEWGEem-r8R1JeZ1pQ" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_9vDvVUWGEem-r8R1JeZ1pQ" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_9vDvVkWGEem-r8R1JeZ1pQ" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_9vDvV0WGEem-r8R1JeZ1pQ" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_9vDvWEWGEem-r8R1JeZ1pQ" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_9vDvWUWGEem-r8R1JeZ1pQ" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_9vDvWkWGEem-r8R1JeZ1pQ" name="ORIG_STN_FK" members="_9vDvOkWGEem-r8R1JeZ1pQ" onDelete="RESTRICT" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_9vDvW0WGEem-r8R1JeZ1pQ" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_9vDvXEWGEem-r8R1JeZ1pQ" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_9vDvXUWGEem-r8R1JeZ1pQ" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_9vDvXkWGEem-r8R1JeZ1pQ" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_9vDvX0WGEem-r8R1JeZ1pQ" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_9vDvYEWGEem-r8R1JeZ1pQ" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_9vDvYUWGEem-r8R1JeZ1pQ" name="TRAIN_FREQ_FK" members="_9vDvPkWGEem-r8R1JeZ1pQ" onDelete="RESTRICT" uniqueConstraint="_9vIntkWGEem-r8R1JeZ1pQ" referencedTable="_9vInsEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_9vDvYkWGEem-r8R1JeZ1pQ" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_9vDvY0WGEem-r8R1JeZ1pQ" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_9vDvZEWGEem-r8R1JeZ1pQ" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_9vDvZUWGEem-r8R1JeZ1pQ" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_9vDvZkWGEem-r8R1JeZ1pQ" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_9vDvZ0WGEem-r8R1JeZ1pQ" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_Iwl390cREemk28-sn57p-Q" name="TRAIN_TYPE_FK" members="_Iwl38UcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVyQNUcREemk28-sn57p-Q" referencedTable="_JVyQJkcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_Iwl3-EcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_Iwl3-UcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_Iwl3-kcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_Iwl3-0cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_Iwl3_EcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_Iwl3_UcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_9vInsEWGEem-r8R1JeZ1pQ" name="TRAIN_FREQUENCY_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_9vDvYUWGEem-r8R1JeZ1pQ _JVyP60cREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vInsUWGEem-r8R1JeZ1pQ" name="TRAIN_FREQUENCY_CODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_9vInskWGEem-r8R1JeZ1pQ" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_IvsgEEcREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vIntEWGEem-r8R1JeZ1pQ" name="DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vIntUWGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_9vIntkWGEem-r8R1JeZ1pQ" name="TRAIN_FREQ_CD_PK" members="_9vInsUWGEem-r8R1JeZ1pQ" ForeignKey="_9vDvYUWGEem-r8R1JeZ1pQ _JVyP60cREemk28-sn57p-Q"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_9vInt0WGEem-r8R1JeZ1pQ" name="TRACTION_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVofPkcREemk28-sn57p-Q _JVyP5EcREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vInuEWGEem-r8R1JeZ1pQ" name="TRACTION_TYPE" nullable="false" generationType="BY_DEFAULT">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_9vInuUWGEem-r8R1JeZ1pQ" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_IvsgEUcREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_9vInu0WGEem-r8R1JeZ1pQ" name="TRACTION_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_9vInvEWGEem-r8R1JeZ1pQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="15"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_9vInvUWGEem-r8R1JeZ1pQ" name="PK_TRACTION_MST" members="_9vInuEWGEem-r8R1JeZ1pQ" ForeignKey="_JVofPkcREemk28-sn57p-Q _JVyP5EcREemk28-sn57p-Q"/>
+  </LUW:LUWTable>
+  <SQLAccessControl:User xmi:id="_9vNgMEWGEem-r8R1JeZ1pQ" name="SYSIBM" ownedSchema="_9u3h8EWGEem-r8R1JeZ1pQ" Database="_OBw3wECcEemTC6FOa1yTbA"/>
+  <LUW:LUWTable xmi:id="_JVCo0EcREemk28-sn57p-Q" name="DIVISION_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVfU3kcREemk28-sn57p-Q _IuXDWEcREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVCo0UcREemk28-sn57p-Q" name="DIVISION_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVCo0kcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_JVCo00cREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVCo1EcREemk28-sn57p-Q" name="DIVISION_CODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVCo1UcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="4"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVCo1kcREemk28-sn57p-Q" name="DIVISION_DESC">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVCo10cREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVCo2EcREemk28-sn57p-Q" name="ZONE_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVCo2UcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_JVCo3kcREemk28-sn57p-Q" name="DIV_CODE_UNIQ" members="_JVCo1EcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVCo30cREemk28-sn57p-Q" name="DIVISION_PK" members="_JVCo0UcREemk28-sn57p-Q" ForeignKey="_JVfU3kcREemk28-sn57p-Q _IuXDWEcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVCo4EcREemk28-sn57p-Q" name="ZONE_FK" members="_JVCo2EcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vAr50WGEem-r8R1JeZ1pQ" referencedTable="_9vAE1kWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVCo4UcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVCo4kcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVCo40cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVCo5EcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVCo5UcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVCo5kcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVfUwEcREemk28-sn57p-Q" name="USER_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVyQVkcREemk28-sn57p-Q _JVyP3UcREemk28-sn57p-Q _JVyQPUcREemk28-sn57p-Q _JVyQdEcREemk28-sn57p-Q _JVyQNkcREemk28-sn57p-Q _JVyPz0cREemk28-sn57p-Q _JVyQe0cREemk28-sn57p-Q _JVofG0cREemk28-sn57p-Q _JVoe2UcREemk28-sn57p-Q _JVyQnEcREemk28-sn57p-Q _JVyQr0cREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfUwUcREemk28-sn57p-Q" name="USER_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfUwkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_JVfUw0cREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfUxEcREemk28-sn57p-Q" name="USER" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVfUxUcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfUxkcREemk28-sn57p-Q" name="USER_PWD">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVfUx0cREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfUyEcREemk28-sn57p-Q" name="FIRST_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVfUyUcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="25"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfUykcREemk28-sn57p-Q" name="LAST_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVfUy0cREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="25"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfU0EcREemk28-sn57p-Q" name="ACTIVE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVfU0UcREemk28-sn57p-Q" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfU0kcREemk28-sn57p-Q" name="USER_ROLE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfU00cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfU1EcREemk28-sn57p-Q" name="DIVISION_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfU1UcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfU1kcREemk28-sn57p-Q" name="ZONE_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfU10cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfU2EcREemk28-sn57p-Q" name="EMAIL">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVfU2UcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="25"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfU2kcREemk28-sn57p-Q" name="LOBBY_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfU20cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_JVfU3EcREemk28-sn57p-Q" name="USERNAME_UNIQ" members="_JVfUxEcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVfU3UcREemk28-sn57p-Q" name="USER_ID_PK" members="_JVfUwUcREemk28-sn57p-Q" ForeignKey="_JVyQVkcREemk28-sn57p-Q _JVyP3UcREemk28-sn57p-Q _JVyQPUcREemk28-sn57p-Q _JVyQdEcREemk28-sn57p-Q _JVyQNkcREemk28-sn57p-Q _JVyPz0cREemk28-sn57p-Q _JVyQe0cREemk28-sn57p-Q _JVofG0cREemk28-sn57p-Q _JVoe2UcREemk28-sn57p-Q _JVyQnEcREemk28-sn57p-Q _JVyQr0cREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVfU3kcREemk28-sn57p-Q" name="DIVISION_FK" members="_JVfU1EcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVCo30cREemk28-sn57p-Q" referencedTable="_JVCo0EcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVfU30cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVfU4EcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVfU4UcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVfU4kcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVfU40cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVfU5EcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVfU5UcREemk28-sn57p-Q" name="STATION_FK" members="_JVfU2kcREemk28-sn57p-Q" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVfU5kcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVfU50cREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVfU6EcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVfU6UcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVfU6kcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVfU60cREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVfU7EcREemk28-sn57p-Q" name="USER_ROLE_FK" members="_JVfU0kcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JV8AtkcREemk28-sn57p-Q" referencedTable="_JV8AsEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVfU7UcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVfU7kcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVfU70cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVfU8EcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVfU8UcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVfU8kcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVfU80cREemk28-sn57p-Q" name="ZONE_FK" members="_JVfU1kcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vAr50WGEem-r8R1JeZ1pQ" referencedTable="_9vAE1kWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVfU9EcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVfU9UcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVfU9kcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVfU90cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVfU-EcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVfU-UcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVfU-kcREemk28-sn57p-Q" name="LINK_DETAIL" schema="_9u3h8EWGEem-r8R1JeZ1pQ" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfU-0cREemk28-sn57p-Q" name="LINK_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfU_EcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfU_UcREemk28-sn57p-Q" name="CREW_NO">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfU_kcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfU_0cREemk28-sn57p-Q" name="DAY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVAEcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVAUcREemk28-sn57p-Q" name="TRAIN_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVAkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVA0cREemk28-sn57p-Q" name="FROM_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVBEcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVBUcREemk28-sn57p-Q" name="TO_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVBkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVB0cREemk28-sn57p-Q" name="SIGN_ON_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_JVfVCEcREemk28-sn57p-Q" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVCUcREemk28-sn57p-Q" name="DEPARTURE_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_JVfVCkcREemk28-sn57p-Q" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVC0cREemk28-sn57p-Q" name="ARRIVAL_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_JVfVDEcREemk28-sn57p-Q" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVDUcREemk28-sn57p-Q" name="SIGN_OFF_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_JVfVDkcREemk28-sn57p-Q" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVD0cREemk28-sn57p-Q" name="OS_ALLOWANCE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVEEcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVEUcREemk28-sn57p-Q" name="EARNED_KM">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_JVfVEkcREemk28-sn57p-Q" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVE0cREemk28-sn57p-Q" name="PERIODIC_REST_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVfVFEcREemk28-sn57p-Q" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVFUcREemk28-sn57p-Q" name="SPARE_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVfVFkcREemk28-sn57p-Q" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVF0cREemk28-sn57p-Q" name="NIGHT_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVfVGEcREemk28-sn57p-Q" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVGUcREemk28-sn57p-Q" name="SORT_ORDER">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVGkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVG0cREemk28-sn57p-Q" name="DUTY_DURATION">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVHEcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVHUcREemk28-sn57p-Q" name="RUNNING_DURATION">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVHkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVH0cREemk28-sn57p-Q" name="HQ_REST">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVIEcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVfVIUcREemk28-sn57p-Q" name="OS_REST">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVfVIkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVfVI0cREemk28-sn57p-Q" name="FROM_STN_FK" members="_JVfVA0cREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVfVJEcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVfVJUcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVfVJkcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVfVJ0cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVfVKEcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVfVKUcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVfVKkcREemk28-sn57p-Q" name="LINK_ID_FK" members="_JVfU-0cREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVyPzkcREemk28-sn57p-Q" referencedTable="_JVyPsEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVfVK0cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVfVLEcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVfVLUcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVfVLkcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVfVL0cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVfVMEcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVfVMUcREemk28-sn57p-Q" name="TO_STN_FK" members="_JVfVBUcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVfVMkcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVfVM0cREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVfVNEcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVfVNUcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVfVNkcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVfVN0cREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVfVOEcREemk28-sn57p-Q" name="TRAIN_ID_FK" members="_JVfVAUcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vDvUkWGEem-r8R1JeZ1pQ" referencedTable="_9vDvMEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVfVOUcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVfVOkcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVfVO0cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVfVPEcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVfVPUcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVfVPkcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVoey0cREemk28-sn57p-Q" name="SEGMENT_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVofMEcREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoezEcREemk28-sn57p-Q" name="SEGMENT_ID" nullable="false" generationType="BY_DEFAULT">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoezUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_JVoezkcREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoez0cREemk28-sn57p-Q" name="START_STATION_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe0EcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe0UcREemk28-sn57p-Q" name="STOP_STATION_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe0kcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe1UcREemk28-sn57p-Q" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe1kcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_JVoe10cREemk28-sn57p-Q" name="UNIQUE_SEGMENT" members="_JVoez0cREemk28-sn57p-Q _JVoe0UcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVoe2EcREemk28-sn57p-Q" name="PK_SEGMENT_ID" members="_JVoezEcREemk28-sn57p-Q" ForeignKey="_JVofMEcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVoe2UcREemk28-sn57p-Q" name="CREATE_USR_FK" members="_JVoe1UcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVoe2kcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVoe20cREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVoe3EcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVoe3UcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVoe3kcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVoe30cREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVoe4EcREemk28-sn57p-Q" name="START_STN_FK" members="_JVoez0cREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVoe4UcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVoe4kcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVoe40cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVoe5EcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVoe5UcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVoe5kcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVoe50cREemk28-sn57p-Q" name="STOP_STN_FK" members="_JVoe0UcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVoe6EcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVoe6UcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVoe6kcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVoe60cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVoe7EcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVoe7UcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVoe7kcREemk28-sn57p-Q" name="TRAIN_SEGMENT_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe70cREemk28-sn57p-Q" name="TRAIN_SEG_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe8EcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_JVoe8UcREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe8kcREemk28-sn57p-Q" name="TRAIN_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe80cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe9EcREemk28-sn57p-Q" name="SEGMENT_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe9UcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe9kcREemk28-sn57p-Q" name="CCLMS_TRAIN_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe90cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe-EcREemk28-sn57p-Q" name="SIGN_ON_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe-UcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe-kcREemk28-sn57p-Q" name="START_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe-0cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe_EcREemk28-sn57p-Q" name="END_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe_UcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVoe_kcREemk28-sn57p-Q" name="SIGN_OFF_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVoe_0cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofAEcREemk28-sn57p-Q" name="RUNNING_DURATION">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVofAUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofAkcREemk28-sn57p-Q" name="CHRONIC_DELAY_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVofA0cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofBEcREemk28-sn57p-Q" name="LOCO_CHANGE_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVofBUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofBkcREemk28-sn57p-Q" name="TRACTION_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVofB0cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofCEcREemk28-sn57p-Q" name="ASSIGNED_LOBBY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVofCUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofCkcREemk28-sn57p-Q" name="DEPT_TYPE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVofC0cREemk28-sn57p-Q" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofDEcREemk28-sn57p-Q" name="SPARE_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVofDUcREemk28-sn57p-Q" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofDkcREemk28-sn57p-Q" name="DAYOFSERVICE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVofD0cREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofEEcREemk28-sn57p-Q" name="ACTUAL_KM">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_JVofEUcREemk28-sn57p-Q" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVofFEcREemk28-sn57p-Q" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVofFUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVofGkcREemk28-sn57p-Q" name="TRAIN_SEG__ID_PK" members="_JVoe70cREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVofG0cREemk28-sn57p-Q" name="CREATE_USR_FK" members="_JVofFEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVofHEcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVofHUcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVofHkcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVofH0cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVofIEcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVofIUcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVofIkcREemk28-sn57p-Q" name="LOCO_CHG_STN_FK" members="_JVofBEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVofI0cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVofJEcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVofJUcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVofJkcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVofJ0cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVofKEcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVofMEcREemk28-sn57p-Q" name="SEGMENT_ID_FK" members="_JVoe9EcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVoe2EcREemk28-sn57p-Q" referencedTable="_JVoey0cREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVofMUcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVofMkcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVofM0cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVofNEcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVofNUcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVofNkcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVofN0cREemk28-sn57p-Q" name="STATION_FK" members="_JVofCEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVofOEcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVofOUcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVofOkcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVofO0cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVofPEcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVofPUcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVofPkcREemk28-sn57p-Q" name="TRACTION_FK" members="_JVofBkcREemk28-sn57p-Q" uniqueConstraint="_9vInvUWGEem-r8R1JeZ1pQ" referencedTable="_9vInt0WGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVofP0cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVofQEcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVofQUcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVofQkcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVofQ0cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVofREcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVofRUcREemk28-sn57p-Q" name="TRAIN_ID_FK" members="_JVoe8kcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vDvUkWGEem-r8R1JeZ1pQ" referencedTable="_9vDvMEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVofRkcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVofR0cREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVofSEcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVofSUcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVofSkcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVofS0cREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVyPsEcREemk28-sn57p-Q" name="LINK_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVyQtkcREemk28-sn57p-Q _JVyQlUcREemk28-sn57p-Q _JVfVKkcREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPsUcREemk28-sn57p-Q" name="LINK_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyPskcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_JVyPs0cREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPtEcREemk28-sn57p-Q" name="SCENARIO_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyPtUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPtkcREemk28-sn57p-Q" name="LINK_NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVyPt0cREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPuEcREemk28-sn57p-Q" name="LOBBY_STN_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyPuUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPukcREemk28-sn57p-Q" name="LOBBY_TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVyPu0cREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPvEcREemk28-sn57p-Q" name="TRACTION_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyPvUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPvkcREemk28-sn57p-Q" name="TRAIN_TYPE_CD">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyPv0cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPwEcREemk28-sn57p-Q" name="TRAIN_FREQUENCY_CD" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyPwUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPxEcREemk28-sn57p-Q" name="CREATED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyPxUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPyEcREemk28-sn57p-Q" name="LAST_MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyPyUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyPykcREemk28-sn57p-Q" name="LINK_STATUS">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVyPy0cREemk28-sn57p-Q" name="CHAR"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVyPzkcREemk28-sn57p-Q" name="LINK_ID_PK" members="_JVyPsUcREemk28-sn57p-Q" ForeignKey="_JVyQtkcREemk28-sn57p-Q _JVyQlUcREemk28-sn57p-Q _JVfVKkcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyPz0cREemk28-sn57p-Q" name="CREATE_USR_FK" members="_JVyPxEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyP0EcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyP0UcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyP0kcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyP00cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyP1EcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyP1UcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyP1kcREemk28-sn57p-Q" name="LOBBY_FK" members="_JVyPuEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vB6EEWGEem-r8R1JeZ1pQ" referencedTable="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVyP10cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyP2EcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyP2UcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyP2kcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyP20cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyP3EcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyP3UcREemk28-sn57p-Q" name="MOD_USR_FK" members="_JVyPyEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyP3kcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyP30cREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyP4EcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyP4UcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyP4kcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyP40cREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyP5EcREemk28-sn57p-Q" name="TRACTION_FK" members="_JVyPvEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vInvUWGEem-r8R1JeZ1pQ" referencedTable="_9vInt0WGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVyP5UcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyP5kcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyP50cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyP6EcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyP6UcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyP6kcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyP60cREemk28-sn57p-Q" name="TRAIN_FREQ_FK" members="_JVyPwEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_9vIntkWGEem-r8R1JeZ1pQ" referencedTable="_9vInsEWGEem-r8R1JeZ1pQ">
+      <eAnnotations xmi:id="_JVyP7EcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyP7UcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyP7kcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyP70cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyP8EcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyP8UcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyP8kcREemk28-sn57p-Q" name="TRAIN_TYPE_FK" members="_JVyPvkcREemk28-sn57p-Q" uniqueConstraint="_JVyQVUcREemk28-sn57p-Q" referencedTable="_JVyQS0cREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyP80cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyP9EcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyP9UcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyP9kcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyP90cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyP-EcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVyQJkcREemk28-sn57p-Q" name="TRAIN_TYPE_MAPPING_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_Iwl390cREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQJ0cREemk28-sn57p-Q" name="TRAIN_TYPE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVyQKEcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQKUcREemk28-sn57p-Q" name="TRAIN_TYPE_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVyQKkcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQK0cREemk28-sn57p-Q" name="TRAIN_TYPE_CCLMS">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQLEcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQMUcREemk28-sn57p-Q" name="LAST_MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQMkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQM0cREemk28-sn57p-Q" name="CREATED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQNEcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVyQNUcREemk28-sn57p-Q" name="TRAIN_TYPE_PK" members="_JVyQJ0cREemk28-sn57p-Q" ForeignKey="_Iwl390cREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQNkcREemk28-sn57p-Q" name="CREATE_USR_FK" members="_JVyQM0cREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQN0cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQOEcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyQOUcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQOkcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQO0cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQPEcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQPUcREemk28-sn57p-Q" name="MOD_USR_FK" members="_JVyQMUcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQPkcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQP0cREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyQQEcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQQUcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQQkcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQQ0cREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQREcREemk28-sn57p-Q" name="TRAIN_TYPE_CCLMS_FK" members="_JVyQK0cREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVyQVUcREemk28-sn57p-Q" referencedTable="_JVyQS0cREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQRUcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQRkcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyQR0cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQSEcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQSUcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQSkcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVyQS0cREemk28-sn57p-Q" name="TRAIN_TYPE_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVyQREcREemk28-sn57p-Q _JVyP8kcREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQTEcREemk28-sn57p-Q" name="TRAIN_TYPE_CCLMS_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQTUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_JVyQTkcREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQT0cREemk28-sn57p-Q" name="TRAIN_TYPE_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVyQUEcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQUUcREemk28-sn57p-Q" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQUkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVyQVUcREemk28-sn57p-Q" name="TRAIN_TYPE_CCLMS_PK" members="_JVyQTEcREemk28-sn57p-Q" ForeignKey="_JVyQREcREemk28-sn57p-Q _JVyP8kcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQVkcREemk28-sn57p-Q" name="CREATE_USR_FK" members="_JVyQUUcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQV0cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQWEcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyQWUcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQWkcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQW0cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQXEcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVyQXUcREemk28-sn57p-Q" name="PARAMETER_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVyQvUcREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQXkcREemk28-sn57p-Q" name="PARAMETER_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQX0cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_JVyQYEcREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQYUcREemk28-sn57p-Q" name="PARAMETER_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVyQYkcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQY0cREemk28-sn57p-Q" name="UOM" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JVyQZEcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQZUcREemk28-sn57p-Q" name="GLOBAL_VALUE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_JVyQZkcREemk28-sn57p-Q" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQZ0cREemk28-sn57p-Q" name="MIN_VALUE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_JVyQaEcREemk28-sn57p-Q" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQbUcREemk28-sn57p-Q" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQbkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQaUcREemk28-sn57p-Q" name="MAX_VALUE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_JVyQakcREemk28-sn57p-Q" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQcUcREemk28-sn57p-Q" name="LAST_MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQckcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVyQc0cREemk28-sn57p-Q" name="PARAMETER_ID_PK" members="_JVyQXkcREemk28-sn57p-Q" ForeignKey="_JVyQvUcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQdEcREemk28-sn57p-Q" name="CREATE_USR_FK" members="_JVyQbUcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQdUcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQdkcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyQd0cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQeEcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQeUcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQekcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQe0cREemk28-sn57p-Q" name="MOD_USR_FK" members="_JVyQcUcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQfEcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQfUcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyQfkcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQf0cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQgEcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQgUcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVyQgkcREemk28-sn57p-Q" name="KPI_VALUE" schema="_9u3h8EWGEem-r8R1JeZ1pQ" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQg0cREemk28-sn57p-Q" name="KPI_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQhEcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQhUcREemk28-sn57p-Q" name="LINK_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQhkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQh0cREemk28-sn57p-Q" name="VALUE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_JVyQiEcREemk28-sn57p-Q" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQi0cREemk28-sn57p-Q" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQjEcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVyQjUcREemk28-sn57p-Q" name="COMPOSITE_KPI_VAL" members="_JVyQg0cREemk28-sn57p-Q _JVyQhUcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQjkcREemk28-sn57p-Q" name="KPI_FK" members="_JVyQg0cREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JWFLCEcREemk28-sn57p-Q" referencedTable="_JWFLAEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQj0cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQkEcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
+        <details xmi:id="_JVyQkUcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQkkcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQk0cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQlEcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQlUcREemk28-sn57p-Q" name="LINK_ID_FK" members="_JVyQhUcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVyPzkcREemk28-sn57p-Q" referencedTable="_JVyPsEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQlkcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQl0cREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
+        <details xmi:id="_JVyQmEcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQmUcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQmkcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQm0cREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQnEcREemk28-sn57p-Q" name="USER_FK" members="_JVyQi0cREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQnUcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQnkcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyQn0cREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQoEcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQoUcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQokcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JVyQo0cREemk28-sn57p-Q" name="PARAMETER_VALUE" schema="_9u3h8EWGEem-r8R1JeZ1pQ" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQpEcREemk28-sn57p-Q" name="PARAMETER_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQpUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQpkcREemk28-sn57p-Q" name="LINK_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQp0cREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQqEcREemk28-sn57p-Q" name="VALUE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_JVyQqUcREemk28-sn57p-Q" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JVyQrEcREemk28-sn57p-Q" name="CREATED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JVyQrUcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JVyQrkcREemk28-sn57p-Q" name="PARAMETER_VAL_CPK" members="_JVyQpEcREemk28-sn57p-Q _JVyQpkcREemk28-sn57p-Q"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQr0cREemk28-sn57p-Q" name="CREATE_USR_FK" members="_JVyQrEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVfU3UcREemk28-sn57p-Q" referencedTable="_JVfUwEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQsEcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQsUcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_JVyQskcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQs0cREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQtEcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQtUcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQtkcREemk28-sn57p-Q" name="LINK_ID_FK" members="_JVyQpkcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVyPzkcREemk28-sn57p-Q" referencedTable="_JVyPsEcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQt0cREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQuEcREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
+        <details xmi:id="_JVyQuUcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQukcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQu0cREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQvEcREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_JVyQvUcREemk28-sn57p-Q" name="PARAMETER_ID_FK" members="_JVyQpEcREemk28-sn57p-Q" onDelete="RESTRICT" uniqueConstraint="_JVyQc0cREemk28-sn57p-Q" referencedTable="_JVyQXUcREemk28-sn57p-Q">
+      <eAnnotations xmi:id="_JVyQvkcREemk28-sn57p-Q" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_JVyQv0cREemk28-sn57p-Q" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
+        <details xmi:id="_JVyQwEcREemk28-sn57p-Q" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_JVyQwUcREemk28-sn57p-Q" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_JVyQwkcREemk28-sn57p-Q" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_JVyQw0cREemk28-sn57p-Q" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JV8AsEcREemk28-sn57p-Q" name="USER_ROLE_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVfU7EcREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JV8AsUcREemk28-sn57p-Q" name="USER_ROLE_CD" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JV8AskcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_JV8As0cREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JV8AtEcREemk28-sn57p-Q" name="USER_ROLE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JV8AtUcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JV8AtkcREemk28-sn57p-Q" name="USER_ROLE_FK" members="_JV8AsUcREemk28-sn57p-Q" ForeignKey="_JVfU7EcREemk28-sn57p-Q"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_JWFLAEcREemk28-sn57p-Q" name="KPI_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" referencingForeignKeys="_JVyQjkcREemk28-sn57p-Q" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JWFLAUcREemk28-sn57p-Q" name="KPI_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_JWFLAkcREemk28-sn57p-Q" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_JWFLA0cREemk28-sn57p-Q" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JWFLBEcREemk28-sn57p-Q" name="KPI_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JWFLBUcREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_JWFLBkcREemk28-sn57p-Q" name="UOM" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_JWFLB0cREemk28-sn57p-Q" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_JWFLCEcREemk28-sn57p-Q" name="KPI_PK" members="_JWFLAUcREemk28-sn57p-Q" ForeignKey="_JVyQjkcREemk28-sn57p-Q"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_IfCMNElOEemTqdnsDsubUQ" name="LOBBY_MST" schema="_9u3h8EWGEem-r8R1JeZ1pQ" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_IfCMNUlOEemTqdnsDsubUQ" name="LOBBY_CODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_IfCMNklOEemTqdnsDsubUQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_IfCMN0lOEemTqdnsDsubUQ" name="LOBBY_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_IfCMOElOEemTqdnsDsubUQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="150"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_IfCMOUlOEemTqdnsDsubUQ" name="LOBBY_ID">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_IfCMOklOEemTqdnsDsubUQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+  </LUW:LUWTable>
+</xmi:XMI>

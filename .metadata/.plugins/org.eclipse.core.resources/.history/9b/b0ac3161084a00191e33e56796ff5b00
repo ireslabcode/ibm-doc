@@ -1,0 +1,5 @@
+package cclms.datavalidation;
+
+public class RulesChecker implements IloScenarioDataChecker{
+
+}

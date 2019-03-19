@@ -1,0 +1,7 @@
+package cclms.table.properties;
+
+class TrainTypeMst {
+	
+	public static String TRAIN_TYPE_CCLMS_ID ="TRAIN_TYPE_CCLMS_ID";
+
+}
