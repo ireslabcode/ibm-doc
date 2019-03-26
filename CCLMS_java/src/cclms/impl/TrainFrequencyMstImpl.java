@@ -144,7 +144,7 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.TRAIN_FREQUENCY_MST;
+		return CclmsPackage.eINSTANCE.getTrainFrequencyMst();
 	}
 
 	/**

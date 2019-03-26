@@ -1,0 +1,37 @@
+package cclms.common.util;
+
+public class DayOfServiceResponse {
+	
+	public  String MON = "1";
+	private String TUE ="2";
+	private String WED = "3";
+	private String THU = "4";
+	private String FRI = "5";
+	private String SAT = "6";
+	private String SUN = "7";
+	private String ALL = "99";
+
+	private Integer dayId;
+	
+	//----------------------------------- response --------------
+	public static  Integer  TRAINID ; 
+	public static  Integer  LEGID ;
+	public static  Integer  STARTLOC; 
+	public static  Integer ENDLOC;
+	public static  Integer SIGNON;
+	public static  Integer START;
+	public static  Integer END;
+	public static  Integer SIGNOFF;
+	public static  Integer DURATION;
+	public static  Integer DISTANCE;
+	public static  Integer NIGHTFLAG;
+	public static  Integer DAYID;
+	public static  Integer SPAREFLAG;
+	 
+	
+	
+	
+	
+	
+	
+}

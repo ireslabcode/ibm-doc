@@ -161,7 +161,7 @@ public class ZoneMstImpl extends IloDomObjectImpl implements ZoneMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.ZONE_MST;
+		return CclmsPackage.eINSTANCE.getZoneMst();
 	}
 
 	/**

@@ -1,0 +1,101 @@
+package cclms.common.util;
+
+public class TrainSegmentEngineDto {
+
+	public static  Integer  TRAINID ; 
+	public static  Integer  LEGID ;
+	public static  Integer  STARTLOC; 
+	public static  Integer ENDLOC;
+	public static  Integer SIGNON;
+	public static  Integer START;
+	public static  Integer END;
+	public static  Integer SIGNOFF;
+	public static  Integer DURATION;
+	public static  Integer DISTANCE;
+	public static  Integer NIGHTFLAG;
+	public static  Integer DAYID;
+	public static  Integer SPAREFLAG;
+	
+	public static Integer getTRAINID() {
+		return TRAINID;
+	}
+	public static void setTRAINID(Integer tRAINID) {
+		TRAINID = tRAINID;
+	}
+	public static Integer getLEGID() {
+		return LEGID;
+	}
+	public static void setLEGID(Integer lEGID) {
+		LEGID = lEGID;
+	}
+	public static Integer getSTARTLOC() {
+		return STARTLOC;
+	}
+	public static void setSTARTLOC(Integer sTARTLOC) {
+		STARTLOC = sTARTLOC;
+	}
+	public static Integer getENDLOC() {
+		return ENDLOC;
+	}
+	public static void setENDLOC(Integer eNDLOC) {
+		ENDLOC = eNDLOC;
+	}
+	public static Integer getSIGNON() {
+		return SIGNON;
+	}
+	public static void setSIGNON(Integer sIGNON) {
+		SIGNON = sIGNON;
+	}
+	public static Integer getSTART() {
+		return START;
+	}
+	public static void setSTART(Integer sTART) {
+		START = sTART;
+	}
+	public static Integer getEND() {
+		return END;
+	}
+	public static void setEND(Integer eND) {
+		END = eND;
+	}
+	public static Integer getSIGNOFF() {
+		return SIGNOFF;
+	}
+	public static void setSIGNOFF(Integer sIGNOFF) {
+		SIGNOFF = sIGNOFF;
+	}
+	public static Integer getDURATION() {
+		return DURATION;
+	}
+	public static void setDURATION(Integer dURATION) {
+		DURATION = dURATION;
+	}
+	public static Integer getDISTANCE() {
+		return DISTANCE;
+	}
+	public static void setDISTANCE(Integer dISTANCE) {
+		DISTANCE = dISTANCE;
+	}
+	public static Integer getNIGHTFLAG() {
+		return NIGHTFLAG;
+	}
+	public static void setNIGHTFLAG(Integer nIGHTFLAG) {
+		NIGHTFLAG = nIGHTFLAG;
+	}
+	public static Integer getDAYID() {
+		return DAYID;
+	}
+	public static void setDAYID(Integer dAYID) {
+		DAYID = dAYID;
+	}
+	public static Integer getSPAREFLAG() {
+		return SPAREFLAG;
+	}
+	public static void setSPAREFLAG(Integer sPAREFLAG) {
+		SPAREFLAG = sPAREFLAG;
+	}
+	
+	
+	
+	
+}

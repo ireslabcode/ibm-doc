@@ -7,19 +7,27 @@
 package cclms.impl;
 
 import cclms.CclmsCollector;
+import cclms.DayMstEngine;
 import cclms.DivisionMst;
+import cclms.KpiLinkEngine;
 import cclms.KpiMst;
 import cclms.KpiValue;
 import cclms.LinkDetail;
+import cclms.LinkDetailEngine;
 import cclms.LinkMst;
 import cclms.LobbyMst;
+import cclms.LobbyMstEngine;
+import cclms.OutlinkEngine;
 import cclms.ParameterMst;
 import cclms.ParameterValue;
 import cclms.SegmentMst;
+import cclms.SegmentMstEngine;
 import cclms.StationMst;
+import cclms.TimeToMinEngine;
 import cclms.TractionMst;
 import cclms.TrainFrequencyMst;
 import cclms.TrainMst;
+import cclms.TrainSegmentEngine;
 import cclms.TrainSegmentMst;
 import cclms.TrainTypeMappingMst;
 import cclms.TrainTypeMst;
@@ -73,6 +81,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getTrainSegmentMst <em>Train Segment Mst</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getLinkMst <em>Link Mst</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getLobbyMst <em>Lobby Mst</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getTrainSegmentEngine <em>Train Segment Engine</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getSegmentMstEngine <em>Segment Mst Engine</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getTimeToMinEngine <em>Time To Min Engine</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getDayMstEngine <em>Day Mst Engine</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getKpiLinkEngine <em>Kpi Link Engine</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getLinkDetailEngine <em>Link Detail Engine</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getOutlinkEngine <em>Outlink Engine</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getLobbyMstEngine <em>Lobby Mst Engine</em>}</li>
  * </ul>
  * </p>
  *
@@ -280,6 +296,86 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	protected EList<LobbyMst> lobbyMst;
 
 	/**
+	 * The cached value of the '{@link #getTrainSegmentEngine() <em>Train Segment Engine</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTrainSegmentEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TrainSegmentEngine> trainSegmentEngine;
+
+	/**
+	 * The cached value of the '{@link #getSegmentMstEngine() <em>Segment Mst Engine</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSegmentMstEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SegmentMstEngine> segmentMstEngine;
+
+	/**
+	 * The cached value of the '{@link #getTimeToMinEngine() <em>Time To Min Engine</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTimeToMinEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TimeToMinEngine> timeToMinEngine;
+
+	/**
+	 * The cached value of the '{@link #getDayMstEngine() <em>Day Mst Engine</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDayMstEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DayMstEngine> dayMstEngine;
+
+	/**
+	 * The cached value of the '{@link #getKpiLinkEngine() <em>Kpi Link Engine</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getKpiLinkEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<KpiLinkEngine> kpiLinkEngine;
+
+	/**
+	 * The cached value of the '{@link #getLinkDetailEngine() <em>Link Detail Engine</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLinkDetailEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<LinkDetailEngine> linkDetailEngine;
+
+	/**
+	 * The cached value of the '{@link #getOutlinkEngine() <em>Outlink Engine</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutlinkEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<OutlinkEngine> outlinkEngine;
+
+	/**
+	 * The cached value of the '{@link #getLobbyMstEngine() <em>Lobby Mst Engine</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLobbyMstEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<LobbyMstEngine> lobbyMstEngine;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -295,7 +391,7 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.CCLMS_COLLECTOR;
+		return CclmsPackage.eINSTANCE.getCclmsCollector();
 	}
 
 	/**
@@ -558,6 +654,118 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 					CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST);
 		}
 		return lobbyMst;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<TrainSegmentEngine> getTrainSegmentEngine() {
+		if (trainSegmentEngine == null) {
+			trainSegmentEngine = new IloDomObjectContainmentEList<TrainSegmentEngine>(
+					TrainSegmentEngine.class, this,
+					CclmsPackage.CCLMS_COLLECTOR__TRAIN_SEGMENT_ENGINE);
+		}
+		return trainSegmentEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<SegmentMstEngine> getSegmentMstEngine() {
+		if (segmentMstEngine == null) {
+			segmentMstEngine = new IloDomObjectContainmentEList<SegmentMstEngine>(
+					SegmentMstEngine.class, this,
+					CclmsPackage.CCLMS_COLLECTOR__SEGMENT_MST_ENGINE);
+		}
+		return segmentMstEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<TimeToMinEngine> getTimeToMinEngine() {
+		if (timeToMinEngine == null) {
+			timeToMinEngine = new IloDomObjectContainmentEList<TimeToMinEngine>(
+					TimeToMinEngine.class, this,
+					CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE);
+		}
+		return timeToMinEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<DayMstEngine> getDayMstEngine() {
+		if (dayMstEngine == null) {
+			dayMstEngine = new IloDomObjectContainmentEList<DayMstEngine>(
+					DayMstEngine.class, this,
+					CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE);
+		}
+		return dayMstEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<KpiLinkEngine> getKpiLinkEngine() {
+		if (kpiLinkEngine == null) {
+			kpiLinkEngine = new IloDomObjectContainmentEList<KpiLinkEngine>(
+					KpiLinkEngine.class, this,
+					CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE);
+		}
+		return kpiLinkEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<LinkDetailEngine> getLinkDetailEngine() {
+		if (linkDetailEngine == null) {
+			linkDetailEngine = new IloDomObjectContainmentEList<LinkDetailEngine>(
+					LinkDetailEngine.class, this,
+					CclmsPackage.CCLMS_COLLECTOR__LINK_DETAIL_ENGINE);
+		}
+		return linkDetailEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<OutlinkEngine> getOutlinkEngine() {
+		if (outlinkEngine == null) {
+			outlinkEngine = new IloDomObjectContainmentEList<OutlinkEngine>(
+					OutlinkEngine.class, this,
+					CclmsPackage.CCLMS_COLLECTOR__OUTLINK_ENGINE);
+		}
+		return outlinkEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public List<LobbyMstEngine> getLobbyMstEngine() {
+		if (lobbyMstEngine == null) {
+			lobbyMstEngine = new IloDomObjectContainmentEList<LobbyMstEngine>(
+					LobbyMstEngine.class, this,
+					CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE);
+		}
+		return lobbyMstEngine;
 	}
 
 	/**
@@ -1347,6 +1555,338 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TrainSegmentEngine createTrainSegmentEngine() {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (TrainSegmentEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObject(TrainSegmentEngine.class);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrainSegmentEngine createTrainSegmentEngine(int index) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (TrainSegmentEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObjectAt(TrainSegmentEngine.class, index);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrainSegmentEngine getFromTrainSegmentEngine(int trainid, int legid,
+			int dayid, int spareflag) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (TrainSegmentEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.getObjectByKey(TrainSegmentEngine.class, new Object[] {
+							trainid, legid, dayid, spareflag });
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SegmentMstEngine createSegmentMstEngine() {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (SegmentMstEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObject(SegmentMstEngine.class);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SegmentMstEngine createSegmentMstEngine(int index) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (SegmentMstEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObjectAt(SegmentMstEngine.class, index);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SegmentMstEngine getFromSegmentMstEngine(int segmentid) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (SegmentMstEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.getObjectByKey(SegmentMstEngine.class,
+							new Object[] { segmentid });
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeToMinEngine createTimeToMinEngine() {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (TimeToMinEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObject(TimeToMinEngine.class);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeToMinEngine createTimeToMinEngine(int index) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (TimeToMinEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObjectAt(TimeToMinEngine.class, index);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeToMinEngine getFromTimeToMinEngine(int trainid, int segmentid,
+			int dayid, int spareflag) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (TimeToMinEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.getObjectByKey(TimeToMinEngine.class, new Object[] {
+							trainid, segmentid, dayid, spareflag });
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DayMstEngine createDayMstEngine() {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (DayMstEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObject(DayMstEngine.class);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DayMstEngine createDayMstEngine(int index) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (DayMstEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObjectAt(DayMstEngine.class, index);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KpiLinkEngine createKpiLinkEngine() {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (KpiLinkEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObject(KpiLinkEngine.class);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KpiLinkEngine createKpiLinkEngine(int index) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (KpiLinkEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObjectAt(KpiLinkEngine.class, index);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KpiLinkEngine getFromKpiLinkEngine(int kpiId) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (KpiLinkEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.getObjectByKey(KpiLinkEngine.class, new Object[] { kpiId });
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkDetailEngine createLinkDetailEngine() {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (LinkDetailEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObject(LinkDetailEngine.class);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkDetailEngine createLinkDetailEngine(int index) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (LinkDetailEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObjectAt(LinkDetailEngine.class, index);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkDetailEngine getFromLinkDetailEngine(String trainno,
+			String fromstation, String tostation, int dayid, int spareflag) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (LinkDetailEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.getObjectByKey(LinkDetailEngine.class, new Object[] {
+							trainno, fromstation, tostation, dayid, spareflag });
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutlinkEngine createOutlinkEngine() {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (OutlinkEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObject(OutlinkEngine.class);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutlinkEngine createOutlinkEngine(int index) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (OutlinkEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObjectAt(OutlinkEngine.class, index);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutlinkEngine getFromOutlinkEngine(int dayid, int seqid,
+			int pairingid, int dutyid, int trainid, int legid) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (OutlinkEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.getObjectByKey(OutlinkEngine.class, new Object[] { dayid,
+							seqid, pairingid, dutyid, trainid, legid });
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LobbyMstEngine createLobbyMstEngine() {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (LobbyMstEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObject(LobbyMstEngine.class);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LobbyMstEngine createLobbyMstEngine(int index) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (LobbyMstEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObjectAt(LobbyMstEngine.class, index);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LobbyMstEngine getFromLobbyMstEngine(int lobbyId) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (LobbyMstEngine) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.getObjectByKey(LobbyMstEngine.class,
+							new Object[] { lobbyId });
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
@@ -1407,6 +1947,30 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST:
 			return ((InternalEList<?>) getLobbyMst()).basicRemove(otherEnd,
 					msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__TRAIN_SEGMENT_ENGINE:
+			return ((InternalEList<?>) getTrainSegmentEngine()).basicRemove(
+					otherEnd, msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__SEGMENT_MST_ENGINE:
+			return ((InternalEList<?>) getSegmentMstEngine()).basicRemove(
+					otherEnd, msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE:
+			return ((InternalEList<?>) getTimeToMinEngine()).basicRemove(
+					otherEnd, msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			return ((InternalEList<?>) getDayMstEngine()).basicRemove(otherEnd,
+					msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
+			return ((InternalEList<?>) getKpiLinkEngine()).basicRemove(
+					otherEnd, msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__LINK_DETAIL_ENGINE:
+			return ((InternalEList<?>) getLinkDetailEngine()).basicRemove(
+					otherEnd, msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__OUTLINK_ENGINE:
+			return ((InternalEList<?>) getOutlinkEngine()).basicRemove(
+					otherEnd, msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE:
+			return ((InternalEList<?>) getLobbyMstEngine()).basicRemove(
+					otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1457,6 +2021,22 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return getLinkMst();
 		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST:
 			return getLobbyMst();
+		case CclmsPackage.CCLMS_COLLECTOR__TRAIN_SEGMENT_ENGINE:
+			return getTrainSegmentEngine();
+		case CclmsPackage.CCLMS_COLLECTOR__SEGMENT_MST_ENGINE:
+			return getSegmentMstEngine();
+		case CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE:
+			return getTimeToMinEngine();
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			return getDayMstEngine();
+		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
+			return getKpiLinkEngine();
+		case CclmsPackage.CCLMS_COLLECTOR__LINK_DETAIL_ENGINE:
+			return getLinkDetailEngine();
+		case CclmsPackage.CCLMS_COLLECTOR__OUTLINK_ENGINE:
+			return getOutlinkEngine();
+		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE:
+			return getLobbyMstEngine();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1555,6 +2135,46 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			getLobbyMst().clear();
 			getLobbyMst().addAll((Collection<? extends LobbyMst>) newValue);
 			return;
+		case CclmsPackage.CCLMS_COLLECTOR__TRAIN_SEGMENT_ENGINE:
+			getTrainSegmentEngine().clear();
+			getTrainSegmentEngine().addAll(
+					(Collection<? extends TrainSegmentEngine>) newValue);
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__SEGMENT_MST_ENGINE:
+			getSegmentMstEngine().clear();
+			getSegmentMstEngine().addAll(
+					(Collection<? extends SegmentMstEngine>) newValue);
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE:
+			getTimeToMinEngine().clear();
+			getTimeToMinEngine().addAll(
+					(Collection<? extends TimeToMinEngine>) newValue);
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			getDayMstEngine().clear();
+			getDayMstEngine().addAll(
+					(Collection<? extends DayMstEngine>) newValue);
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
+			getKpiLinkEngine().clear();
+			getKpiLinkEngine().addAll(
+					(Collection<? extends KpiLinkEngine>) newValue);
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__LINK_DETAIL_ENGINE:
+			getLinkDetailEngine().clear();
+			getLinkDetailEngine().addAll(
+					(Collection<? extends LinkDetailEngine>) newValue);
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__OUTLINK_ENGINE:
+			getOutlinkEngine().clear();
+			getOutlinkEngine().addAll(
+					(Collection<? extends OutlinkEngine>) newValue);
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE:
+			getLobbyMstEngine().clear();
+			getLobbyMstEngine().addAll(
+					(Collection<? extends LobbyMstEngine>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1624,6 +2244,30 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST:
 			getLobbyMst().clear();
 			return;
+		case CclmsPackage.CCLMS_COLLECTOR__TRAIN_SEGMENT_ENGINE:
+			getTrainSegmentEngine().clear();
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__SEGMENT_MST_ENGINE:
+			getSegmentMstEngine().clear();
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE:
+			getTimeToMinEngine().clear();
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			getDayMstEngine().clear();
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
+			getKpiLinkEngine().clear();
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__LINK_DETAIL_ENGINE:
+			getLinkDetailEngine().clear();
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__OUTLINK_ENGINE:
+			getOutlinkEngine().clear();
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE:
+			getLobbyMstEngine().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1675,6 +2319,22 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return linkMst != null && !linkMst.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST:
 			return lobbyMst != null && !lobbyMst.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__TRAIN_SEGMENT_ENGINE:
+			return trainSegmentEngine != null && !trainSegmentEngine.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__SEGMENT_MST_ENGINE:
+			return segmentMstEngine != null && !segmentMstEngine.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE:
+			return timeToMinEngine != null && !timeToMinEngine.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			return dayMstEngine != null && !dayMstEngine.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
+			return kpiLinkEngine != null && !kpiLinkEngine.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__LINK_DETAIL_ENGINE:
+			return linkDetailEngine != null && !linkDetailEngine.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__OUTLINK_ENGINE:
+			return outlinkEngine != null && !outlinkEngine.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE:
+			return lobbyMstEngine != null && !lobbyMstEngine.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

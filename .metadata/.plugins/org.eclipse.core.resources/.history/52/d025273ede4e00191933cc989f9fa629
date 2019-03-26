@@ -1,0 +1,13 @@
+package cclms.common.util;
+
+public class DayOfServiceResponse {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

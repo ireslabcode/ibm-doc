@@ -177,7 +177,7 @@ public class DivisionMstImpl extends IloDomObjectImpl implements DivisionMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.DIVISION_MST;
+		return CclmsPackage.eINSTANCE.getDivisionMst();
 	}
 
 	/**

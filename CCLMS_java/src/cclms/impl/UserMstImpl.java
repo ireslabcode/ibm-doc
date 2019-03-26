@@ -402,7 +402,7 @@ public class UserMstImpl extends IloDomObjectImpl implements UserMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.USER_MST;
+		return CclmsPackage.eINSTANCE.getUserMst();
 	}
 
 	/**

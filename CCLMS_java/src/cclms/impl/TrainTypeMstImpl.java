@@ -156,7 +156,7 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.TRAIN_TYPE_MST;
+		return CclmsPackage.eINSTANCE.getTrainTypeMst();
 	}
 
 	/**

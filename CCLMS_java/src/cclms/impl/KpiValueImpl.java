@@ -124,7 +124,7 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.KPI_VALUE;
+		return CclmsPackage.eINSTANCE.getKpiValue();
 	}
 
 	/**

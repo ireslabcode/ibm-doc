@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.7.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLAccessControl="http:///org/eclipse/datatools/modelbase/sql/accesscontrol.ecore" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_3QYC4EyJEemi64MgO_SJDA" name="CCLMS" vendor="DB2 UDB" version="V9.1" schemas="_3SwogEyJEemi64MgO_SJDA" authorizationIds="_3SwozEyJEemi64MgO_SJDA" federated="true">
+    <eAnnotations xmi:id="_3QYC4UyJEemi64MgO_SJDA" source="ConnectionURI">
+      <details xmi:id="_3QYC4kyJEemi64MgO_SJDA" key="ConnectionKey" value="CCLMS"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_3SwogEyJEemi64MgO_SJDA" name="CCLMS" tables="_3SwogUyJEemi64MgO_SJDA _3SwogkyJEemi64MgO_SJDA _3Swog0yJEemi64MgO_SJDA _3SwohEyJEemi64MgO_SJDA _3SwohUyJEemi64MgO_SJDA _3SwohkyJEemi64MgO_SJDA _3Swoh0yJEemi64MgO_SJDA _3SwoiEyJEemi64MgO_SJDA _3SwoiUyJEemi64MgO_SJDA _3SwokUyJEemi64MgO_SJDA _3SwokkyJEemi64MgO_SJDA _3SworEyJEemi64MgO_SJDA _3SworUyJEemi64MgO_SJDA _3SworkyJEemi64MgO_SJDA _3Swor0yJEemi64MgO_SJDA _3SwosEyJEemi64MgO_SJDA _3SwosUyJEemi64MgO_SJDA _3SwoskyJEemi64MgO_SJDA _3Swos0yJEemi64MgO_SJDA _3SwotEyJEemi64MgO_SJDA _3SwotUyJEemi64MgO_SJDA _3SwotkyJEemi64MgO_SJDA _3Swot0yJEemi64MgO_SJDA _3SwouEyJEemi64MgO_SJDA _3SwouUyJEemi64MgO_SJDA _3SwoukyJEemi64MgO_SJDA _3Swou0yJEemi64MgO_SJDA _3SwovEyJEemi64MgO_SJDA _3SwovUyJEemi64MgO_SJDA _3SwovkyJEemi64MgO_SJDA _3Swov0yJEemi64MgO_SJDA _3SwowEyJEemi64MgO_SJDA _3SwowUyJEemi64MgO_SJDA _3SwowkyJEemi64MgO_SJDA _3Swow0yJEemi64MgO_SJDA _3SwoxEyJEemi64MgO_SJDA _3SwoxUyJEemi64MgO_SJDA _3SwoxkyJEemi64MgO_SJDA _3Swox0yJEemi64MgO_SJDA _3SwoyEyJEemi64MgO_SJDA _3SwoyUyJEemi64MgO_SJDA _3SwoykyJEemi64MgO_SJDA _3Swoy0yJEemi64MgO_SJDA" database="_3QYC4EyJEemi64MgO_SJDA" owner="_3SwozEyJEemi64MgO_SJDA"/>
+  <LUW:LUWTable xmi:id="_3SwogUyJEemi64MgO_SJDA" name="IN_DIV_LINK_KPI" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwogkyJEemi64MgO_SJDA" name="PLANNING_DATA" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swog0yJEemi64MgO_SJDA" name="PARAMETER_VALUE" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwohEyJEemi64MgO_SJDA" name="LOBBY_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwohUyJEemi64MgO_SJDA" name="IN_CMS_ZONE_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwohkyJEemi64MgO_SJDA" name="TRAIN_SEGMENT_ENGINE" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swoh0yJEemi64MgO_SJDA" name="IN_CMS_DIVISION_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoiEyJEemi64MgO_SJDA" name="IN_CMS_LOBBY_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoiUyJEemi64MgO_SJDA" name="SEGMENT_MST_ENGINE" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3SwoikyJEemi64MgO_SJDA" name="FROMSTATION" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_3Swoi0yJEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3SwojEyJEemi64MgO_SJDA" name="TOSTATION" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_3SwojUyJEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3SwojkyJEemi64MgO_SJDA" name="SEGMENTID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_3Swoj0yJEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_3SwokEyJEemi64MgO_SJDA" name="SEGMENT_MST_ENG_PK" enforced="false" members="_3SwojkyJEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_3SwokUyJEemi64MgO_SJDA" name="CLIENT_CREDENTIALS" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwokkyJEemi64MgO_SJDA" name="TIME_TO_MIN_ENGINE" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3Swok0yJEemi64MgO_SJDA" name="TRAINID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_3SwolEyJEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3SwolUyJEemi64MgO_SJDA" name="SEGMENTID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_3SwolkyJEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3Swol0yJEemi64MgO_SJDA" name="SIGNONTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_3SwomEyJEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3SwomUyJEemi64MgO_SJDA" name="SIGNOMINUTE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_3SwomkyJEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3Swom0yJEemi64MgO_SJDA" name="STARTTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_3SwonEyJEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3SwonUyJEemi64MgO_SJDA" name="STARTMINUTE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_3SwonkyJEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3Swon0yJEemi64MgO_SJDA" name="ENDTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_3SwooEyJEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3SwooUyJEemi64MgO_SJDA" name="ENDMINUTE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_3SwookyJEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3Swoo0yJEemi64MgO_SJDA" name="SIGNOFFTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_3SwopEyJEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3SwopUyJEemi64MgO_SJDA" name="SIGNOFFMINUTE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_3SwopkyJEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3Swop0yJEemi64MgO_SJDA" name="DAYID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_3SwoqEyJEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_3SwoqUyJEemi64MgO_SJDA" name="SPAREFLAG" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_3SwoqkyJEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_3Swoq0yJEemi64MgO_SJDA" name="TIME_TO_MIN_ENGINE_PK" enforced="false" members="_3Swok0yJEemi64MgO_SJDA _3SwolUyJEemi64MgO_SJDA _3Swop0yJEemi64MgO_SJDA _3SwoqUyJEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_3SworEyJEemi64MgO_SJDA" name="OAUTH_REFRESH_TOKEN" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SworUyJEemi64MgO_SJDA" name="IN_CMS_SISTER_LOBBY" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SworkyJEemi64MgO_SJDA" name="OAUTH_ACCESS_TOKEN" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swor0yJEemi64MgO_SJDA" name="IN_CMS_STATION_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwosEyJEemi64MgO_SJDA" name="IN_DIV_CREW_POINTS" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwosUyJEemi64MgO_SJDA" name="IN_DIV_GUARD_CHG_PTS" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoskyJEemi64MgO_SJDA" name="IN_SAT_TRAIN_MASTER" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swos0yJEemi64MgO_SJDA" name="IN_SAT_TRAIN_TIMETABLE" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwotEyJEemi64MgO_SJDA" name="IN_SAT_TRAIN_TYPE" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwotUyJEemi64MgO_SJDA" name="ZONE_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwotkyJEemi64MgO_SJDA" name="DIVISION_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swot0yJEemi64MgO_SJDA" name="STATION_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwouEyJEemi64MgO_SJDA" name="SIS_LOBBY_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwouUyJEemi64MgO_SJDA" name="USER_ROLE_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoukyJEemi64MgO_SJDA" name="USER_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swou0yJEemi64MgO_SJDA" name="BLK_STN_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwovEyJEemi64MgO_SJDA" name="IN_SAT_BLOCKSTN" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwovUyJEemi64MgO_SJDA" name="KPI_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwovkyJEemi64MgO_SJDA" name="KPI_VALUE" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swov0yJEemi64MgO_SJDA" name="PARAMETER_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwowEyJEemi64MgO_SJDA" name="TRAIN_FREQUENCY_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwowUyJEemi64MgO_SJDA" name="TRACTION_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwowkyJEemi64MgO_SJDA" name="TRAIN_TYPE_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swow0yJEemi64MgO_SJDA" name="TRAIN_TYPE_MAPPING_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoxEyJEemi64MgO_SJDA" name="LINK_DETAIL" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoxUyJEemi64MgO_SJDA" name="TRAIN_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoxkyJEemi64MgO_SJDA" name="SEGMENT_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swox0yJEemi64MgO_SJDA" name="TRAIN_SEGMENT_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoyEyJEemi64MgO_SJDA" name="LINK_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoyUyJEemi64MgO_SJDA" name="TRAIN_TIMETABLE_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3SwoykyJEemi64MgO_SJDA" name="IN_DIV_CREW_LINK" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <LUW:LUWTable xmi:id="_3Swoy0yJEemi64MgO_SJDA" name="IN_DIV_LINK_MST" schema="_3SwogEyJEemi64MgO_SJDA" partitionMode=" "/>
+  <SQLAccessControl:User xmi:id="_3SwozEyJEemi64MgO_SJDA" name="SYSIBM" ownedSchema="_3SwogEyJEemi64MgO_SJDA" Database="_3QYC4EyJEemi64MgO_SJDA"/>
+</xmi:XMI>

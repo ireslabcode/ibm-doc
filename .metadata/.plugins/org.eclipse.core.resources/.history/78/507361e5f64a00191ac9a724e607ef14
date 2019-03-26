@@ -1,0 +1,6 @@
+package cclms.aap.input.table.properties;
+
+public class ParameterMst {
+
+	public static String PARAMETER_ID = "PARAMETER_ID";
+}

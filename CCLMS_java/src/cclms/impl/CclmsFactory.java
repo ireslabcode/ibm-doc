@@ -7,19 +7,27 @@
 package cclms.impl;
 
 import cclms.CclmsCollector;
+import cclms.DayMstEngine;
 import cclms.DivisionMst;
+import cclms.KpiLinkEngine;
 import cclms.KpiMst;
 import cclms.KpiValue;
 import cclms.LinkDetail;
+import cclms.LinkDetailEngine;
 import cclms.LinkMst;
 import cclms.LobbyMst;
+import cclms.LobbyMstEngine;
+import cclms.OutlinkEngine;
 import cclms.ParameterMst;
 import cclms.ParameterValue;
 import cclms.SegmentMst;
+import cclms.SegmentMstEngine;
 import cclms.StationMst;
+import cclms.TimeToMinEngine;
 import cclms.TractionMst;
 import cclms.TrainFrequencyMst;
 import cclms.TrainMst;
+import cclms.TrainSegmentEngine;
 import cclms.TrainSegmentMst;
 import cclms.TrainTypeMappingMst;
 import cclms.TrainTypeMst;
@@ -216,6 +224,78 @@ public interface CclmsFactory extends EFactory {
 	 * @generated
 	 */
 	LobbyMst createLobbyMst();
+
+	/**
+	 * Returns a new object of class '<em>Train Segment Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Train Segment Engine</em>'.
+	 * @generated
+	 */
+	TrainSegmentEngine createTrainSegmentEngine();
+
+	/**
+	 * Returns a new object of class '<em>Segment Mst Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Segment Mst Engine</em>'.
+	 * @generated
+	 */
+	SegmentMstEngine createSegmentMstEngine();
+
+	/**
+	 * Returns a new object of class '<em>Time To Min Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time To Min Engine</em>'.
+	 * @generated
+	 */
+	TimeToMinEngine createTimeToMinEngine();
+
+	/**
+	 * Returns a new object of class '<em>Day Mst Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Day Mst Engine</em>'.
+	 * @generated
+	 */
+	DayMstEngine createDayMstEngine();
+
+	/**
+	 * Returns a new object of class '<em>Kpi Link Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Kpi Link Engine</em>'.
+	 * @generated
+	 */
+	KpiLinkEngine createKpiLinkEngine();
+
+	/**
+	 * Returns a new object of class '<em>Link Detail Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Link Detail Engine</em>'.
+	 * @generated
+	 */
+	LinkDetailEngine createLinkDetailEngine();
+
+	/**
+	 * Returns a new object of class '<em>Outlink Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Outlink Engine</em>'.
+	 * @generated
+	 */
+	OutlinkEngine createOutlinkEngine();
+
+	/**
+	 * Returns a new object of class '<em>Lobby Mst Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Lobby Mst Engine</em>'.
+	 * @generated
+	 */
+	LobbyMstEngine createLobbyMstEngine();
 
 	/**
 	 * Returns a new object of class '<em>Collector</em>'.

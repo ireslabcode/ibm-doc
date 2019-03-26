@@ -1,0 +1,18 @@
+package cclms.aap.input.table.properties;
+
+public class TimeToMinEngine {
+
+	public static final String  TRAINID = "TRAINID"; 
+	public static final String  LEGID = "LEGID";
+	public static final String  SIGNONTIME = "SIGNONTIME"; 
+	public static final String SIGNONMINUTE ="SIGNONMINUTE";
+	public static final String STARTTIME ="STARTTIME";
+	public static final String STARTMINUTE ="STARTMINUTE";
+	public static final String SIGNOFF ="SIGNOFF";
+	public static final String DURATION ="DURATION";
+	public static final String ENDTIME ="ENDTIME";
+	public static final String NIGHTFLAG ="NIGHTFLAG";
+	public static final String DAYID ="DAYID";
+	public static final String SPAREFLAG ="SPAREFLAG";
+	
+}

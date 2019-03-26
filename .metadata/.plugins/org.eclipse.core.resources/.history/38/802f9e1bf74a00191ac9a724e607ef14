@@ -1,0 +1,12 @@
+package cclms.aap.input.table.properties;
+
+public class ParameterMst {
+
+	public static String PARAMETER_ID = "PARAMETER_ID";
+	public static String PARAMETER_DESC = "PARAMETER_DESC";
+	public static String UOM = "UOM";
+	public static String GLOBAL_VALUE = "GLOBAL_VALUE";
+	public static String MIN_VALUE = "MIN_VALUE";
+	public static String MAX_VALUE = "MAX_VALUE";
+	public static String PARAMETER_ID = "PARAMETER_ID";
+}

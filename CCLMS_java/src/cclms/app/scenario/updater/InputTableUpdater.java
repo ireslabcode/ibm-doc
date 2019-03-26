@@ -12,9 +12,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import cclms.aap.input.table.properties.ParameterMst;
 import cclms.aap.input.table.properties.SegmentMst;
 import cclms.aap.input.table.properties.TractionMst;
 import cclms.aap.input.table.properties.TrainFrequencyMst;
+import cclms.aap.input.table.properties.TrainMst;
 import cclms.app.query.QueryUtil;
 import cclms.common.util.TableConstant;
 
@@ -46,7 +48,7 @@ public class InputTableUpdater {
 		        				  row.setStringValue("STATION_NAME",resultSet.getString(3));
 		        				  row.setStringValue("LOBBY_FLAG",resultSet.getString(5));
 		        			      loadTable.addRow(row);
-		        				  System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3)+" "+resultSet.getString(4)+" "+resultSet.getString(5) );
+		        				 // System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3)+" "+resultSet.getString(4)+" "+resultSet.getString(5) );
 		        			 }
 		        		 }
 		        	} catch (SQLException e) {
@@ -67,7 +69,7 @@ public class InputTableUpdater {
 		        				  row.setIntValue(TractionMst.TRACTION_TYPE, resultSet.getInt(1));
 		        				  row.setStringValue(TractionMst.TRACTION_DESC, resultSet.getString(2));
 		        				  loadTable.addRow(row);
-		        				  System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2));
+		        				//  System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2));
 		        			 }
 		        		 }
 		        	} catch (SQLException e) {
@@ -89,7 +91,7 @@ public class InputTableUpdater {
 		        				  row.setIntValue(TrainFrequencyMst.TRAIN_FREQUENCY_CODE, resultSet.getInt(1));
 		        				  row.setStringValue(TrainFrequencyMst.DESC, resultSet.getString(2));
 		        				  loadTable.addRow(row);
-		        				  System.out.println("-->"+resultSet.getInt(1)+" "+resultSet.getString(2));
+		        				//  System.out.println("-->"+resultSet.getInt(1)+" "+resultSet.getString(2));
 		        			 }
 		        		 }
 		        	} catch (SQLException e) {
@@ -120,23 +122,50 @@ public class InputTableUpdater {
 						e.printStackTrace();
 					}
 		        	 
-		         }else if(entry.getKey().equals(TableConstant.TRAIN_SEGMENT_MST)){
-		        	 //TRAIN_SEGMENT_MST
+		         }else if(entry.getKey().equals(TableConstant.TRAIN_MST)){
+		        	 //TRAIN_MST
 		        	 
 		        	 try {
 		        		 ResultSet resultSet = entry.getValue();
 		        		 if(resultSet!=null){
-		        			 IloTable loadTable = scenario.getTable(TableConstant.APP+"."+TableConstant.TRAIN_SEGMENT_MST);
+		        			 IloTable loadTable = scenario.getTable(TableConstant.APP+"."+TableConstant.TRAIN_MST);
 	        				 loadTable.removeAllRows();
 		        			 while (resultSet.next()) {
 		        				 	        				 
-		        				 /*IloRow row = loadTable.makeNewRow();
-		        				  row.setIntValue(SegmentMst.SEGMENT_ID, resultSet.getInt(1));
-		        				  row.setIntValue(SegmentMst.START_STATION_ID, resultSet.getInt(2));
-		        				  row.setIntValue(SegmentMst.STOP_STATION_ID, resultSet.getInt(3));
+		        				 IloRow row = loadTable.makeNewRow();
+		        				  row.setIntValue(TrainMst.TRAIN_ID, resultSet.getInt(1));
+		        				  row.setStringValue(TrainMst.TRAIN_NBR, resultSet.getString(2));
+		        				  row.setStringValue(TrainMst.TRAIN_NAME, resultSet.getString(3));
 		        				  loadTable.addRow(row);
-		        				 */ 
-		        				 System.out.println("-->"+resultSet.getInt(1)+" "+resultSet.getInt(2)+" "+resultSet.getInt(3)+" -"+resultSet.getInt(4));
+		        				 
+		        				 //System.out.println("-->>"+resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
+		        			 }
+		        		 }
+		        	} catch (SQLException e) {
+						// TODO Handel the error 
+						e.printStackTrace();
+					}
+		        	 
+		         }else if(entry.getKey().equals(TableConstant.PARAMETER_MST)){
+		        	 //TRAIN_MST
+		        	 
+		        	 try {
+		        		 ResultSet resultSet = entry.getValue();
+		        		 if(resultSet!=null){
+		        			 IloTable loadTable = scenario.getTable(TableConstant.APP+"."+TableConstant.PARAMETER_MST);
+	        				 loadTable.removeAllRows();
+		        			 while (resultSet.next()) {
+		        				 	        				 
+		        				 IloRow row = loadTable.makeNewRow();
+		        				  row.setIntValue(ParameterMst.PARAMETER_ID, resultSet.getInt(1));
+		        				  row.setStringValue(ParameterMst.PARAMETER_DESC, resultSet.getString(2));
+		        				  row.setStringValue(ParameterMst.UOM, resultSet.getString(3));
+		        				  row.setDoubleValue(ParameterMst.GLOBAL_VALUE, resultSet.getDouble(4));
+		        				  row.setDoubleValue(ParameterMst.MIN_VALUE, resultSet.getDouble(5));
+		        				  row.setDoubleValue(ParameterMst.MAX_VALUE, resultSet.getDouble(6));
+		        				  loadTable.addRow(row);
+		        				 
+		        				// System.out.println("p-->>"+resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
 		        			 }
 		        		 }
 		        	} catch (SQLException e) {

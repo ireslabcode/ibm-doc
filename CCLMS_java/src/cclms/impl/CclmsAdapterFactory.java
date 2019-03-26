@@ -164,6 +164,46 @@ public class CclmsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseTrainSegmentEngine(TrainSegmentEngine object) {
+			return createTrainSegmentEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseSegmentMstEngine(SegmentMstEngine object) {
+			return createSegmentMstEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseTimeToMinEngine(TimeToMinEngine object) {
+			return createTimeToMinEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseDayMstEngine(DayMstEngine object) {
+			return createDayMstEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseKpiLinkEngine(KpiLinkEngine object) {
+			return createKpiLinkEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseLinkDetailEngine(LinkDetailEngine object) {
+			return createLinkDetailEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseOutlinkEngine(OutlinkEngine object) {
+			return createOutlinkEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseLobbyMstEngine(LobbyMstEngine object) {
+			return createLobbyMstEngineAdapter();
+		}
+
+		@Override
 		public Adapter caseCclmsCollector(CclmsCollector object) {
 			return createCclmsCollectorAdapter();
 		}
@@ -455,6 +495,118 @@ public class CclmsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLobbyMstAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cclms.TrainSegmentEngine <em>Train Segment Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cclms.TrainSegmentEngine
+	 * @generated
+	 */
+	public Adapter createTrainSegmentEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cclms.SegmentMstEngine <em>Segment Mst Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cclms.SegmentMstEngine
+	 * @generated
+	 */
+	public Adapter createSegmentMstEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cclms.TimeToMinEngine <em>Time To Min Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cclms.TimeToMinEngine
+	 * @generated
+	 */
+	public Adapter createTimeToMinEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cclms.DayMstEngine <em>Day Mst Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cclms.DayMstEngine
+	 * @generated
+	 */
+	public Adapter createDayMstEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cclms.KpiLinkEngine <em>Kpi Link Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cclms.KpiLinkEngine
+	 * @generated
+	 */
+	public Adapter createKpiLinkEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cclms.LinkDetailEngine <em>Link Detail Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cclms.LinkDetailEngine
+	 * @generated
+	 */
+	public Adapter createLinkDetailEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cclms.OutlinkEngine <em>Outlink Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cclms.OutlinkEngine
+	 * @generated
+	 */
+	public Adapter createOutlinkEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cclms.LobbyMstEngine <em>Lobby Mst Engine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cclms.LobbyMstEngine
+	 * @generated
+	 */
+	public Adapter createLobbyMstEngineAdapter() {
 		return null;
 	}
 

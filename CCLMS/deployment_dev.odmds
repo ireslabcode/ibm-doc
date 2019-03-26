@@ -10,7 +10,6 @@
 
 
 
-
   
   
   
@@ -31,11 +30,8 @@
   <scenarioSources>
     <scenarioSource id="JavaSource" inAdd="true" inReplace="true">
       <template>
-        <message>Select Zone {0} Traction {1} Station {2} Train Frequency {3}</message>
+        <message>Select Traction {0} Station {1} Train Frequency {2}</message>
         <args>
-          <arg type="string" id="zone" defaultValue="none" display="zone" nullable="true">
-            <possibleValues tableColId="ZONE_CODE" tableId="app.ZONE_MST"/>
-          </arg>
           <arg type="string" id="tractiontype" defaultValue="none" display="traction type" nullable="true">
             <possibleValues tableColId="TRACTION_DESC" tableId="app.TRACTION_MST"/>
           </arg>
@@ -47,10 +43,9 @@
           </arg>
         </args>
       </template>
-      <customSource javaClass="datasource.RandomLoadSourceDOM"/>
+      <customSource javaClass="cclms.datasourse.LoadSourseTables"/>
     </scenarioSource>
   </scenarioSources>
-  
   
   
 
@@ -63,8 +58,10 @@
      </scenarioExporter>
   </scenarioExporters> 
   
-    <scenarioCheckers>
+     <scenarioCheckers>
     <scenarioChecker javaClass="cclms.app.datavalidation.RulesChecker"/> 
   </scenarioCheckers>
+ 
+   
   
 </deploymentSettings>

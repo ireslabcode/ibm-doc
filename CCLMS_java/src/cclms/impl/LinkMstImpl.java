@@ -299,7 +299,7 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.LINK_MST;
+		return CclmsPackage.eINSTANCE.getLinkMst();
 	}
 
 	/**

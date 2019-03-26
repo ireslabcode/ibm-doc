@@ -139,7 +139,7 @@ public class TractionMstImpl extends IloDomObjectImpl implements TractionMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.TRACTION_MST;
+		return CclmsPackage.eINSTANCE.getTractionMst();
 	}
 
 	/**

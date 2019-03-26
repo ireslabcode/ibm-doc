@@ -1,0 +1,28 @@
+package cclms.app.query;
+
+public class QueryUtil {
+	public static final String STATION_MST ="select * from STATION_MST where LOBBY_FLAG = 'N'";
+	public static final String TRACTION_MST ="select * from TRACTION_MST";
+	public static final String TRAIN_TYPE_MST="select * from TRAIN_TYPE_MST";
+	public static final String TRAIN_FREQUENCY_MST="select * from TRAIN_FREQUENCY_MST";
+	public static final String LOBBY_MST ="select * from STATION_MST where LOBBY_FLAG = 'N'";
+	public static final String SEGMENT_MST ="select * from SEGMENT_MST";
+	public static final String TRAIN_SEGMENT_MST ="select * from TRAIN_SEGMENT_MST";
+	public static final String TRAIN_MST = "select * from TRAIN_MST";
+	
+	
+	
+	
+	public static String getQueryByTableName(String tableName){
+		//System.out.println(tableName);
+        //System.out.println(tableName.equals("TRACTION_MST"));
+		if(tableName.equals("TRACTION_MST")){
+			return TRACTION_MST;
+		}else if(tableName.equals("TRAIN_SEGMENT_MST")){
+			return TRAIN_SEGMENT_MST;	
+		}else if(tableName.equals("TRAIN_MST")){
+			return TRAIN_SEGMENT_MST;	
+		}
+		return "";
+	}
+	}

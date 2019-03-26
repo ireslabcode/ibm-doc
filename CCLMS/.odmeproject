@@ -18,6 +18,20 @@
 		<odmdecisionprocessconfig path="tasks.odmdpc">
 		</odmdecisionprocessconfig>
 		<solveprocessconfig>
+			<odmoptim path="CCLMS_opl_optimmodel.odmom">
+			</odmoptim>
+			<oplmodel project="CCLMS_opl">
+				<odmmodel path="CCLMS_odm.mod">
+				</odmmodel>
+				<model path="CCLMS.mod">
+				</model>
+				<settings path="CCLMS_odm.ops">
+				</settings>
+			</oplmodel>
+			<odmmapping path="CCLMS_opl_mapping.dat">
+			</odmmapping>
+			<odmoplmapping path="CCLMS_opl_mapping.odmopl">
+			</odmoplmapping>
 			<javaproject project="CCLMS_java">
 			</javaproject>
 		</solveprocessconfig>

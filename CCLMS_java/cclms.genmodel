@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="CCLMS_java/src" forceOverwrite="true" modelName="cclms" updateClasspath="false" rootExtendsInterface="ilog.odm.dom.IloDomObject" rootExtendsClass="ilog.odm.dom.impl.IloDomObjectImpl" suppressEMFTypes="true" suppressEMFModelTags="true" codeFormatting="true" booleanFlagsField="_booleanFlags" complianceLevel="6.0" suppressGenModelAnnotations="false" copyrightFields="false">
-  <genPackages prefix="Cclms" disposableProviderFactory="true" metaDataPackageSuffix="impl" utilityPackageSuffix="impl" fileExtensions="cclms">
+  <genPackages prefix="Cclms" disposableProviderFactory="true" loadInitialization="true" metaDataPackageSuffix="impl" utilityPackageSuffix="impl" literalsInterface="false" fileExtensions="cclms">
     <ecorePackage href="cclms.ecore#/"/>
     <genDataTypes>
       <genTypeParameters>
@@ -1122,6 +1122,261 @@
       </genOperations>
     </genClasses>
     <genClasses>
+      <ecoreClass href="cclms.ecore#//TrainSegmentEngine"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/trainid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/legid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/startloc"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/endloc"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/signon"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/start"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/end"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/signoff"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/duration"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/distance"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/nightflag"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/dayid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TrainSegmentEngine/spareflag"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TrainSegmentEngine/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//SegmentMstEngine"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//SegmentMstEngine/fromstation"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//SegmentMstEngine/tostation"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//SegmentMstEngine/segmentid"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//SegmentMstEngine/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//TimeToMinEngine"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/trainid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/segmentid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/signontime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/signominute"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/starttime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/startminute"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/endtime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/endminute"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/signofftime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/signoffminute"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/dayid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//TimeToMinEngine/spareflag"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//TimeToMinEngine/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//DayMstEngine"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//DayMstEngine/dayId"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//DayMstEngine/dayDesc"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//DayMstEngine/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//KpiLinkEngine"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//KpiLinkEngine/kpiId"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//KpiLinkEngine/kpiDesc"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//KpiLinkEngine/kpiValue"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//KpiLinkEngine/uom"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//KpiLinkEngine/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//LinkDetailEngine"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/dayname"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/seqid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/trainno"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/fromstation"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/tostation"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/signontime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/departuretime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/arrivaltime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/signofftime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/dutydurtion"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/dutyminutes"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/distance"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/nib"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/sortorder"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/dayid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LinkDetailEngine/spareflag"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//LinkDetailEngine/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//OutlinkEngine"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/dayid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/seqid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/pairingid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/dutyid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/trainid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/legid"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/startloc"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/endloc"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/dutysignon"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/starttime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/endtime"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/dutysignoff"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/duration"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/nib"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/spareflag"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//OutlinkEngine/sortorder"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//OutlinkEngine/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="cclms.ecore#//LobbyMstEngine"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LobbyMstEngine/lobbyCode"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LobbyMstEngine/lobbyName"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="cclms.ecore#//LobbyMstEngine/lobbyId"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//LobbyMstEngine/getCollector"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
       <ecoreClass href="cclms.ecore#//CclmsCollector"/>
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/zoneMst"/>
@@ -1179,6 +1434,30 @@
       </genFeatures>
       <genFeatures property="None" children="true" createChild="true">
         <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/lobbyMst"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/trainSegmentEngine"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/segmentMstEngine"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/timeToMinEngine"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/dayMstEngine"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/kpiLinkEngine"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/linkDetailEngine"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/outlinkEngine"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="cclms.ecore#//CclmsCollector/lobbyMstEngine"/>
       </genFeatures>
       <genOperations>
         <ecoreOperation href="cclms.ecore#//CclmsCollector/createZoneMst"/>
@@ -1457,6 +1736,165 @@
         <ecoreOperation href="cclms.ecore#//CclmsCollector/createLobbyMst.1"/>
         <genParameters>
           <ecoreParameter href="cclms.ecore#//CclmsCollector/createLobbyMst.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTrainSegmentEngine"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTrainSegmentEngine.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createTrainSegmentEngine.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromTrainSegmentEngine"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTrainSegmentEngine/trainid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTrainSegmentEngine/legid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTrainSegmentEngine/dayid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTrainSegmentEngine/spareflag"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createSegmentMstEngine"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createSegmentMstEngine.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createSegmentMstEngine.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromSegmentMstEngine"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromSegmentMstEngine/segmentid"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTimeToMinEngine"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createTimeToMinEngine.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createTimeToMinEngine.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromTimeToMinEngine"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTimeToMinEngine/trainid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTimeToMinEngine/segmentid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTimeToMinEngine/dayid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromTimeToMinEngine/spareflag"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createDayMstEngine"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createDayMstEngine.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createDayMstEngine.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createKpiLinkEngine"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createKpiLinkEngine.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createKpiLinkEngine.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromKpiLinkEngine"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromKpiLinkEngine/kpiId"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createLinkDetailEngine"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createLinkDetailEngine.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createLinkDetailEngine.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromLinkDetailEngine"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromLinkDetailEngine/trainno"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromLinkDetailEngine/fromstation"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromLinkDetailEngine/tostation"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromLinkDetailEngine/dayid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromLinkDetailEngine/spareflag"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createOutlinkEngine"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createOutlinkEngine.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createOutlinkEngine.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromOutlinkEngine"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromOutlinkEngine/dayid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromOutlinkEngine/seqid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromOutlinkEngine/pairingid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromOutlinkEngine/dutyid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromOutlinkEngine/trainid"/>
+        </genParameters>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromOutlinkEngine/legid"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createLobbyMstEngine"/>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/createLobbyMstEngine.1"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/createLobbyMstEngine.1/index"/>
+        </genParameters>
+      </genOperations>
+      <genOperations>
+        <ecoreOperation href="cclms.ecore#//CclmsCollector/getFromLobbyMstEngine"/>
+        <genParameters>
+          <ecoreParameter href="cclms.ecore#//CclmsCollector/getFromLobbyMstEngine/lobbyId"/>
         </genParameters>
       </genOperations>
     </genClasses>

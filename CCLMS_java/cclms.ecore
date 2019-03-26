@@ -2597,6 +2597,622 @@
       <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrainSegmentEngine">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="TRAIN_SEGMENT_ENGINE"/>
+      <details key="odme.table" value="TRAIN_SEGMENT_ENGINE"/>
+      <details key="odme.primarykey" value="TRAINID,LEGID,DAYID,SPAREFLAG"/>
+      <details key="odme.columns" value="TRAINID,LEGID,STARTLOC,ENDLOC,SIGNON,START,END,SIGNOFF,DURATION,DISTANCE,NIGHTFLAG,DAYID,SPAREFLAG"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAINID"/>
+        <details key="odme.column" value="TRAINID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="legid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="LEGID"/>
+        <details key="odme.column" value="LEGID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startloc" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="STARTLOC"/>
+        <details key="odme.column" value="STARTLOC"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endloc" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="ENDLOC"/>
+        <details key="odme.column" value="ENDLOC"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signon" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SIGNON"/>
+        <details key="odme.column" value="SIGNON"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="START"/>
+        <details key="odme.column" value="START"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="end" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="END"/>
+        <details key="odme.column" value="END"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signoff" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SIGNOFF"/>
+        <details key="odme.column" value="SIGNOFF"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DURATION"/>
+        <details key="odme.column" value="DURATION"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DISTANCE"/>
+        <details key="odme.column" value="DISTANCE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nightflag" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="NIGHTFLAG"/>
+        <details key="odme.column" value="NIGHTFLAG"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dayid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DAYID"/>
+        <details key="odme.column" value="DAYID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spareflag" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SPAREFLAG"/>
+        <details key="odme.column" value="SPAREFLAG"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SegmentMstEngine">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="SEGMENT_MST_ENGINE"/>
+      <details key="odme.table" value="SEGMENT_MST_ENGINE"/>
+      <details key="odme.primarykey" value="SEGMENTID"/>
+      <details key="odme.columns" value="FROMSTATION,TOSTATION,SEGMENTID"/>
+      <details key="odme.types" value="FIELD_STRING,FIELD_STRING,FIELD_INT"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromstation" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="FROMSTATION"/>
+        <details key="odme.column" value="FROMSTATION"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tostation" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TOSTATION"/>
+        <details key="odme.column" value="TOSTATION"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="segmentid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SEGMENTID"/>
+        <details key="odme.column" value="SEGMENTID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeToMinEngine">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="TIME_TO_MIN_ENGINE"/>
+      <details key="odme.table" value="TIME_TO_MIN_ENGINE"/>
+      <details key="odme.primarykey" value="TRAINID,SEGMENTID,DAYID,SPAREFLAG"/>
+      <details key="odme.columns" value="TRAINID,SEGMENTID,SIGNONTIME,SIGNOMINUTE,STARTTIME,STARTMINUTE,ENDTIME,ENDMINUTE,SIGNOFFTIME,SIGNOFFMINUTE,DAYID,SPAREFLAG"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_INT,FIELD_STRING,FIELD_INT,FIELD_STRING,FIELD_INT,FIELD_STRING,FIELD_INT,FIELD_STRING,FIELD_INT,FIELD_INT,FIELD_INT"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAINID"/>
+        <details key="odme.column" value="TRAINID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="segmentid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SEGMENTID"/>
+        <details key="odme.column" value="SEGMENTID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signontime" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SIGNONTIME"/>
+        <details key="odme.column" value="SIGNONTIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signominute" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SIGNOMINUTE"/>
+        <details key="odme.column" value="SIGNOMINUTE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="starttime" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="STARTTIME"/>
+        <details key="odme.column" value="STARTTIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startminute" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="STARTMINUTE"/>
+        <details key="odme.column" value="STARTMINUTE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endtime" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="ENDTIME"/>
+        <details key="odme.column" value="ENDTIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endminute" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="ENDMINUTE"/>
+        <details key="odme.column" value="ENDMINUTE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signofftime" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SIGNOFFTIME"/>
+        <details key="odme.column" value="SIGNOFFTIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signoffminute" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SIGNOFFMINUTE"/>
+        <details key="odme.column" value="SIGNOFFMINUTE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dayid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DAYID"/>
+        <details key="odme.column" value="DAYID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spareflag" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SPAREFLAG"/>
+        <details key="odme.column" value="SPAREFLAG"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DayMstEngine">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="DAY_MST_ENGINE"/>
+      <details key="odme.table" value="DAY_MST_ENGINE"/>
+      <details key="odme.columns" value="DAY_ID,DAY_DESC"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dayId" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DAY_ID"/>
+        <details key="odme.column" value="DAY_ID"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dayDesc" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DAY_DESC"/>
+        <details key="odme.column" value="DAY_DESC"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KpiLinkEngine">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="KPI_LINK_ENGINE"/>
+      <details key="odme.table" value="KPI_LINK_ENGINE"/>
+      <details key="odme.primarykey" value="KPI_ID"/>
+      <details key="odme.columns" value="KPI_ID,KPI_DESC,KPI_VALUE,UOM"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_DOUBLE,FIELD_STRING"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kpiId" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="KPI_ID"/>
+        <details key="odme.column" value="KPI_ID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kpiDesc" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="KPI_DESC"/>
+        <details key="odme.column" value="KPI_DESC"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kpiValue" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="KPI_VALUE"/>
+        <details key="odme.column" value="KPI_VALUE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uom">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="UOM"/>
+        <details key="odme.column" value="UOM"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkDetailEngine">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="LINK_DETAIL_ENGINE"/>
+      <details key="odme.table" value="LINK_DETAIL_ENGINE"/>
+      <details key="odme.primarykey" value="TRAINNO,FROMSTATION,TOSTATION,DAYID,SPAREFLAG"/>
+      <details key="odme.columns" value="DAYNAME,SEQID,TRAINNO,FROMSTATION,TOSTATION,SIGNONTIME,DEPARTURETIME,ARRIVALTIME,SIGNOFFTIME,DUTYDURTION,DUTYMINUTES,DISTANCE,NIB,SORTORDER,DAYID,SPAREFLAG"/>
+      <details key="odme.types" value="FIELD_STRING,FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dayname" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DAYNAME"/>
+        <details key="odme.column" value="DAYNAME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="seqid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SEQID"/>
+        <details key="odme.column" value="SEQID"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainno" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAINNO"/>
+        <details key="odme.column" value="TRAINNO"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fromstation" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="FROMSTATION"/>
+        <details key="odme.column" value="FROMSTATION"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tostation" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TOSTATION"/>
+        <details key="odme.column" value="TOSTATION"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signontime">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SIGNONTIME"/>
+        <details key="odme.column" value="SIGNONTIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="departuretime" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DEPARTURETIME"/>
+        <details key="odme.column" value="DEPARTURETIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrivaltime" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="ARRIVALTIME"/>
+        <details key="odme.column" value="ARRIVALTIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="signofftime">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SIGNOFFTIME"/>
+        <details key="odme.column" value="SIGNOFFTIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dutydurtion" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DUTYDURTION"/>
+        <details key="odme.column" value="DUTYDURTION"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dutyminutes" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DUTYMINUTES"/>
+        <details key="odme.column" value="DUTYMINUTES"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DISTANCE"/>
+        <details key="odme.column" value="DISTANCE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nib" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="NIB"/>
+        <details key="odme.column" value="NIB"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sortorder" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SORTORDER"/>
+        <details key="odme.column" value="SORTORDER"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dayid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DAYID"/>
+        <details key="odme.column" value="DAYID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spareflag" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SPAREFLAG"/>
+        <details key="odme.column" value="SPAREFLAG"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutlinkEngine">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="OUTLINK_ENGINE"/>
+      <details key="odme.table" value="OUTLINK_ENGINE"/>
+      <details key="odme.primarykey" value="DAYID,SEQID,PAIRINGID,DUTYID,TRAINID,LEGID"/>
+      <details key="odme.columns" value="DAYID,SEQID,PAIRINGID,DUTYID,TRAINID,LEGID,STARTLOC,ENDLOC,DUTYSIGNON,STARTTIME,ENDTIME,DUTYSIGNOFF,DURATION,NIB,SPAREFLAG,SORTORDER"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dayid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DAYID"/>
+        <details key="odme.column" value="DAYID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="seqid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SEQID"/>
+        <details key="odme.column" value="SEQID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pairingid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="PAIRINGID"/>
+        <details key="odme.column" value="PAIRINGID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dutyid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DUTYID"/>
+        <details key="odme.column" value="DUTYID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="trainid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="TRAINID"/>
+        <details key="odme.column" value="TRAINID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="legid" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="LEGID"/>
+        <details key="odme.column" value="LEGID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startloc" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="STARTLOC"/>
+        <details key="odme.column" value="STARTLOC"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endloc" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="ENDLOC"/>
+        <details key="odme.column" value="ENDLOC"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dutysignon" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DUTYSIGNON"/>
+        <details key="odme.column" value="DUTYSIGNON"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="starttime" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="STARTTIME"/>
+        <details key="odme.column" value="STARTTIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endtime" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="ENDTIME"/>
+        <details key="odme.column" value="ENDTIME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dutysignoff" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DUTYSIGNOFF"/>
+        <details key="odme.column" value="DUTYSIGNOFF"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DURATION"/>
+        <details key="odme.column" value="DURATION"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nib" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="NIB"/>
+        <details key="odme.column" value="NIB"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="spareflag" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SPAREFLAG"/>
+        <details key="odme.column" value="SPAREFLAG"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sortorder" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="SORTORDER"/>
+        <details key="odme.column" value="SORTORDER"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LobbyMstEngine">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="LOBBY_MST_ENGINE"/>
+      <details key="odme.table" value="LOBBY_MST_ENGINE"/>
+      <details key="odme.primarykey" value="LOBBY_ID"/>
+      <details key="odme.columns" value="LOBBY_CODE,LOBBY_NAME,LOBBY_ID"/>
+      <details key="odme.types" value="FIELD_STRING,FIELD_STRING,FIELD_INT"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lobbyCode" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="LOBBY_CODE"/>
+        <details key="odme.column" value="LOBBY_CODE"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lobbyName" lowerBound="1">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="LOBBY_NAME"/>
+        <details key="odme.column" value="LOBBY_NAME"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lobbyId" lowerBound="1" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="LOBBY_ID"/>
+        <details key="odme.column" value="LOBBY_ID"/>
+        <details key="odme.keyPart" value="true"/>
+      </eAnnotations>
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="List" instanceClassName="java.util.List">
     <eTypeParameters name="T"/>
   </eClassifiers>
@@ -3106,6 +3722,259 @@
         <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       </eParameters>
     </eOperations>
+    <eOperations name="createTrainSegmentEngine" eType="//TrainSegmentEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TrainSegmentEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(TrainSegmentEngine.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TrainSegmentEngine"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createTrainSegmentEngine" eType="//TrainSegmentEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TrainSegmentEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(TrainSegmentEngine.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TrainSegmentEngine"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromTrainSegmentEngine" eType="//TrainSegmentEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TrainSegmentEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(TrainSegmentEngine.class,new Object[]{trainid,legid,dayid,spareflag});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="trainid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="legid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="dayid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="spareflag">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createSegmentMstEngine" eType="//SegmentMstEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (SegmentMstEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(SegmentMstEngine.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="SegmentMstEngine"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createSegmentMstEngine" eType="//SegmentMstEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (SegmentMstEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(SegmentMstEngine.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="SegmentMstEngine"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromSegmentMstEngine" eType="//SegmentMstEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (SegmentMstEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(SegmentMstEngine.class,new Object[]{segmentid});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="segmentid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createTimeToMinEngine" eType="//TimeToMinEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TimeToMinEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(TimeToMinEngine.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TimeToMinEngine"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createTimeToMinEngine" eType="//TimeToMinEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TimeToMinEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(TimeToMinEngine.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="TimeToMinEngine"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromTimeToMinEngine" eType="//TimeToMinEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (TimeToMinEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(TimeToMinEngine.class,new Object[]{trainid,segmentid,dayid,spareflag});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="trainid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="segmentid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="dayid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="spareflag">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createDayMstEngine" eType="//DayMstEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (DayMstEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(DayMstEngine.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="DayMstEngine"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createDayMstEngine" eType="//DayMstEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (DayMstEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(DayMstEngine.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="DayMstEngine"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createKpiLinkEngine" eType="//KpiLinkEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (KpiLinkEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(KpiLinkEngine.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="KpiLinkEngine"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createKpiLinkEngine" eType="//KpiLinkEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (KpiLinkEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(KpiLinkEngine.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="KpiLinkEngine"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromKpiLinkEngine" eType="//KpiLinkEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (KpiLinkEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(KpiLinkEngine.class,new Object[]{kpiId});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="kpiId">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createLinkDetailEngine" eType="//LinkDetailEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (LinkDetailEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(LinkDetailEngine.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="LinkDetailEngine"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createLinkDetailEngine" eType="//LinkDetailEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (LinkDetailEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(LinkDetailEngine.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="LinkDetailEngine"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromLinkDetailEngine" eType="//LinkDetailEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (LinkDetailEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(LinkDetailEngine.class,new Object[]{trainno,fromstation,tostation,dayid,spareflag});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="trainno">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+      <eParameters name="fromstation">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+      <eParameters name="tostation">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eParameters>
+      <eParameters name="dayid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="spareflag">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createOutlinkEngine" eType="//OutlinkEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (OutlinkEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(OutlinkEngine.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="OutlinkEngine"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createOutlinkEngine" eType="//OutlinkEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (OutlinkEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(OutlinkEngine.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="OutlinkEngine"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromOutlinkEngine" eType="//OutlinkEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (OutlinkEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(OutlinkEngine.class,new Object[]{dayid,seqid,pairingid,dutyid,trainid,legid});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="dayid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="seqid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="pairingid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="dutyid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="trainid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+      <eParameters name="legid">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="createLobbyMstEngine" eType="//LobbyMstEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (LobbyMstEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(LobbyMstEngine.class);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="LobbyMstEngine"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createLobbyMstEngine" eType="//LobbyMstEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (LobbyMstEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(LobbyMstEngine.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="LobbyMstEngine"/>
+      </eAnnotations>
+      <eParameters name="index">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
+    <eOperations name="getFromLobbyMstEngine" eType="//LobbyMstEngine">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (LobbyMstEngine)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(LobbyMstEngine.class,new Object[]{lobbyId});&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eParameters name="lobbyId">
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      </eParameters>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="zoneMst" upperBound="-1" eType="//ZoneMst" containment="true">
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.collector" value="ZoneMst"/>
@@ -3199,6 +4068,46 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="lobbyMst" upperBound="-1" eType="//LobbyMst" containment="true">
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.collector" value="LobbyMst"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainSegmentEngine" upperBound="-1" eType="//TrainSegmentEngine" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="TrainSegmentEngine"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="segmentMstEngine" upperBound="-1" eType="//SegmentMstEngine" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="SegmentMstEngine"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeToMinEngine" upperBound="-1" eType="//TimeToMinEngine" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="TimeToMinEngine"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dayMstEngine" upperBound="-1" eType="//DayMstEngine" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="DayMstEngine"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="kpiLinkEngine" upperBound="-1" eType="//KpiLinkEngine" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="KpiLinkEngine"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkDetailEngine" upperBound="-1" eType="//LinkDetailEngine" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="LinkDetailEngine"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outlinkEngine" upperBound="-1" eType="//OutlinkEngine" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="OutlinkEngine"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lobbyMstEngine" upperBound="-1" eType="//LobbyMstEngine" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="LobbyMstEngine"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

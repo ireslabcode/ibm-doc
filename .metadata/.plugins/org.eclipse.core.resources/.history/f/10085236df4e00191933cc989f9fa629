@@ -1,0 +1,180 @@
+package cclms.app.scenario.updater;
+
+import ilog.odm.datasvc.IloRow;
+import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloTable;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import cclms.aap.input.table.properties.TrainSegmentEngine;
+import cclms.app.query.QueryUtil;
+import cclms.common.util.TableConstant;
+
+public class PreProcessingInputTableUpdater {
+
+
+	public static void loadScenarioInputTables(Map<String, ResultSet> resultSetMap, IloScenario scenario){
+		
+	    
+		//for(int i = 0 ; i <resultSetMap.size();i++){
+			
+			Iterator<Map.Entry<String, ResultSet>> itr = resultSetMap.entrySet().iterator(); 
+		    
+		    while(itr.hasNext()) 
+		    { 
+		         Map.Entry<String, ResultSet> entry = itr.next(); 
+		         if(entry.getKey().equals(TableConstant.TRAIN_SEGMENT_ENGINE)){
+		        	 try {
+		        		 System.out.println("1");
+		        		 ResultSet resultSet = entry.getValue();
+		        		 if(resultSet!=null){
+		        			 IloTable loadTable = scenario.getTable(TableConstant.APP+"."+TableConstant.TRAIN_SEGMENT_ENGINE);
+	        				 loadTable.removeAllRows();
+		        			 while (entry.getValue().next()) {
+		        				 	        				 
+		        				 IloRow row = loadTable.makeNewRow();
+		        				  row.setIntValue(TrainSegmentEngine.TRAINID, resultSet.getInt(1));
+		        				  row.setIntValue(TrainSegmentEngine.LEGID, Integer.parseInt(resultSet.getString(2)));
+		        				  row.setIntValue(TrainSegmentEngine.STARTLOC,Integer.parseInt(resultSet.getString(3)));
+		        				  row.setIntValue(TrainSegmentEngine.ENDLOC,Integer.parseInt(resultSet.getString(4)));
+		        				  row.setIntValue(TrainSegmentEngine.SIGNON, resultSet.getInt(5));
+		        				  
+		        				  int startTimeValue = 0 ;
+		        				  int endTimeValue = 0 ;
+		        				  
+		        				  if(checkTime(resultSet.getInt(5), resultSet.getInt(6))){
+		        					  startTimeValue = resultSet.getInt(6)+1440;
+		        					  
+		        					  row.setIntValue(TrainSegmentEngine.START, startTimeValue);
+		        					 
+		        				  }else{
+		        					  startTimeValue = resultSet.getInt(6);
+		        					  row.setIntValue(TrainSegmentEngine.START,startTimeValue );
+		        				  }
+		        				  
+		        				  
+		        				  
+		        				  
+                                  if(checkTime(startTimeValue, resultSet.getInt(7))){
+                                	  endTimeValue =resultSet.getInt(7)+1440;
+		        					  
+		        					  row.setIntValue(TrainSegmentEngine.END,endTimeValue );
+		        				  }else{
+		        					  endTimeValue =  resultSet.getInt(7);
+		        					  row.setIntValue(TrainSegmentEngine.END,endTimeValue);
+		        				  }
+                                  
+                                  
+                                  if(checkTime(endTimeValue, resultSet.getInt(8))){
+                                	//  endTimeValue =resultSet.getInt(7)+1440;
+		        					  
+		        					  row.setIntValue(TrainSegmentEngine.SIGNOFF,resultSet.getInt(8)+1440 );
+		        				  }else{
+		        					  //endTimeValue =  resultSet.getInt(7);
+		        					  row.setIntValue(TrainSegmentEngine.SIGNOFF,resultSet.getInt(8));
+		        				  }
+
+
+                                  row.setIntValue(TrainSegmentEngine.DURATION, resultSet.getInt(9));
+                                  row.setIntValue(TrainSegmentEngine.DISTANCE, resultSet.getInt(10));
+                                  row.setIntValue(TrainSegmentEngine.NIGHTFLAG, resultSet.getInt(11));
+                                  
+                                  
+                                  int dayId =findDayId("dayOfService");
+                                  
+                                  
+                                  
+                                  row.setIntValue(TrainSegmentEngine.DAYID, resultSet.getInt(12));
+                                  
+                                  
+                                  
+		        				  
+		        				  
+		        				  
+		        				  
+		        				  
+		        				  
+		        				  
+		        			      loadTable.addRow(row);
+		        				// System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3)+" "+resultSet.getString(4)+" "+resultSet.getString(5) );
+		        			
+		        			 
+		        			 
+		        			 }
+		        		 }
+		        	} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+		        	 
+		         }
+		         
+		         
+		    } 
+			
+		}
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	private static int findDayId(String string) {
+		
+		
+		
+		
+		
+		return 0;
+	}
+
+
+
+
+
+
+
+
+
+
+	public static  void prepareResultSetMap(List<String> inputTableList, IloScenario scenario) throws ClassNotFoundException, SQLException{
+		
+		
+		
+		Map<String, ResultSet> resultSetMap = new HashMap<>();
+		
+		for (String tabeName : inputTableList) {
+			
+			System.out.println(tabeName);
+			resultSetMap.put(tabeName,ScenarioUpdater.getTableBySqlQuery(QueryUtil.getQueryByTableName(tabeName)));
+			
+		}
+		
+		loadScenarioInputTables(resultSetMap, scenario);
+		
+	}
+	
+	
+	private static boolean checkTime(int firstVal, int secondVal){
+		
+		if(firstVal>secondVal){
+			return true;
+		}
+		return false;
+	}
+	
+	
+	public static void main(String args[]){
+System.out.println("-->"+QueryUtil.getQueryByTableName("TRACTION_MST"));
+	}
+
+}

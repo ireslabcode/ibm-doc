@@ -1,0 +1,21 @@
+package cclms.common.util;
+
+public class DayOfServiceResponse {
+	
+	public  String MON = "1";
+	private String TUE ="2";
+	private String WED = "3";
+	private String THU = "4";
+	private String FRI = "5";
+	private String SAT = "6";
+	private String SUN = "7";
+	private String ALL = "99";
+
+	private Integer dayId;
+	
+	
+	
+	
+	
+	
+}

@@ -463,7 +463,7 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.TRAIN_SEGMENT_MST;
+		return CclmsPackage.eINSTANCE.getTrainSegmentMst();
 	}
 
 	/**

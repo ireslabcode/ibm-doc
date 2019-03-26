@@ -131,7 +131,7 @@ public class UserRoleMstImpl extends IloDomObjectImpl implements UserRoleMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.USER_ROLE_MST;
+		return CclmsPackage.eINSTANCE.getUserRoleMst();
 	}
 
 	/**

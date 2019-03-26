@@ -266,7 +266,7 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.PARAMETER_MST;
+		return CclmsPackage.eINSTANCE.getParameterMst();
 	}
 
 	/**

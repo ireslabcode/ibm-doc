@@ -134,6 +134,58 @@
             </columnOrder>
           </schemaView>
         </view>
+        <view id="TRAIN SEGMENT ENGINE" uuid="_1SNs4E7VEemi64MgO_SJDA" disableEditing="true">
+          <schemaView tableId="app.TRAIN_SEGMENT_ENGINE">
+            <columnDisplays>
+              <columnDisplay columnId="TRAINID" display="TRAINID"/>
+              <columnDisplay columnId="LEGID" display="LEGID"/>
+              <columnDisplay columnId="STARTLOC" display="STARTLOC"/>
+              <columnDisplay columnId="ENDLOC" display="ENDLOC"/>
+              <columnDisplay columnId="SIGNON" display="SIGNON"/>
+              <columnDisplay columnId="START" display="START"/>
+              <columnDisplay columnId="END" display="END"/>
+              <columnDisplay columnId="SIGNOFF" display="SIGNOFF"/>
+              <columnDisplay columnId="DURATION" display="DURATION"/>
+              <columnDisplay columnId="DISTANCE" display="DISTANCE"/>
+              <columnDisplay columnId="NIGHTFLAG" display="NIGHTFLAG"/>
+              <columnDisplay columnId="DAYID" display="DAYID"/>
+              <columnDisplay columnId="SPAREFLAG" display="SPAREFLAG"/>
+            </columnDisplays>
+            <columnOrder>
+              <column columnId="TRAINID"/>
+              <column columnId="LEGID"/>
+              <column columnId="STARTLOC"/>
+              <column columnId="ENDLOC"/>
+              <column columnId="SIGNON"/>
+              <column columnId="START"/>
+              <column columnId="END"/>
+              <column columnId="SIGNOFF"/>
+              <column columnId="DURATION"/>
+              <column columnId="DISTANCE"/>
+              <column columnId="NIGHTFLAG"/>
+              <column columnId="DAYID"/>
+              <column columnId="SPAREFLAG"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="TIME TO MIN ENGINE" uuid="_c0ergE79Eemi64MgO_SJDA">
+          <schemaView tableId="app.TIME_TO_MIN_ENGINE">
+            <columnOrder>
+              <column columnId="TRAINID"/>
+              <column columnId="SEGMENTID"/>
+              <column columnId="SIGNONTIME"/>
+              <column columnId="SIGNOMINUTE"/>
+              <column columnId="STARTTIME"/>
+              <column columnId="STARTMINUTE"/>
+              <column columnId="ENDTIME"/>
+              <column columnId="ENDMINUTE"/>
+              <column columnId="SIGNOFFTIME"/>
+              <column columnId="SIGNOFFMINUTE"/>
+              <column columnId="DAYID"/>
+              <column columnId="SPAREFLAG"/>
+            </columnOrder>
+          </schemaView>
+        </view>
       </folder>
       <folder id="Output">
         <view id="KPI MST" uuid="_OrrMgEoVEem16JPRbjk15w">

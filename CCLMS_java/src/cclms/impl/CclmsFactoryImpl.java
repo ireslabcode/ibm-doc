@@ -127,6 +127,22 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 			return (EObject) createLinkMst();
 		case CclmsPackage.LOBBY_MST:
 			return (EObject) createLobbyMst();
+		case CclmsPackage.TRAIN_SEGMENT_ENGINE:
+			return (EObject) createTrainSegmentEngine();
+		case CclmsPackage.SEGMENT_MST_ENGINE:
+			return (EObject) createSegmentMstEngine();
+		case CclmsPackage.TIME_TO_MIN_ENGINE:
+			return (EObject) createTimeToMinEngine();
+		case CclmsPackage.DAY_MST_ENGINE:
+			return (EObject) createDayMstEngine();
+		case CclmsPackage.KPI_LINK_ENGINE:
+			return (EObject) createKpiLinkEngine();
+		case CclmsPackage.LINK_DETAIL_ENGINE:
+			return (EObject) createLinkDetailEngine();
+		case CclmsPackage.OUTLINK_ENGINE:
+			return (EObject) createOutlinkEngine();
+		case CclmsPackage.LOBBY_MST_ENGINE:
+			return (EObject) createLobbyMstEngine();
 		case CclmsPackage.CCLMS_COLLECTOR:
 			return (EObject) createCclmsCollector();
 		case CclmsPackage.ILOG_ODM_DOM_ILO_DOM_COLLECTOR:
@@ -384,6 +400,94 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 
 		LobbyMstImpl lobbyMst = new LobbyMstImpl();
 		return lobbyMst;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TrainSegmentEngine createTrainSegmentEngine() {
+
+		TrainSegmentEngineImpl trainSegmentEngine = new TrainSegmentEngineImpl();
+		return trainSegmentEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SegmentMstEngine createSegmentMstEngine() {
+
+		SegmentMstEngineImpl segmentMstEngine = new SegmentMstEngineImpl();
+		return segmentMstEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeToMinEngine createTimeToMinEngine() {
+
+		TimeToMinEngineImpl timeToMinEngine = new TimeToMinEngineImpl();
+		return timeToMinEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DayMstEngine createDayMstEngine() {
+
+		DayMstEngineImpl dayMstEngine = new DayMstEngineImpl();
+		return dayMstEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public KpiLinkEngine createKpiLinkEngine() {
+
+		KpiLinkEngineImpl kpiLinkEngine = new KpiLinkEngineImpl();
+		return kpiLinkEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkDetailEngine createLinkDetailEngine() {
+
+		LinkDetailEngineImpl linkDetailEngine = new LinkDetailEngineImpl();
+		return linkDetailEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OutlinkEngine createOutlinkEngine() {
+
+		OutlinkEngineImpl outlinkEngine = new OutlinkEngineImpl();
+		return outlinkEngine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LobbyMstEngine createLobbyMstEngine() {
+
+		LobbyMstEngineImpl lobbyMstEngine = new LobbyMstEngineImpl();
+		return lobbyMstEngine;
 	}
 
 	/**

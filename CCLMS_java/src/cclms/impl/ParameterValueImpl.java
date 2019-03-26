@@ -125,7 +125,7 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.PARAMETER_VALUE;
+		return CclmsPackage.eINSTANCE.getParameterValue();
 	}
 
 	/**

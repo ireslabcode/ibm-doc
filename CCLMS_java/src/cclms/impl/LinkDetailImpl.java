@@ -522,7 +522,7 @@ public class LinkDetailImpl extends IloDomObjectImpl implements LinkDetail {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.LINK_DETAIL;
+		return CclmsPackage.eINSTANCE.getLinkDetail();
 	}
 
 	/**

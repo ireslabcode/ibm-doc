@@ -1,0 +1,518 @@
+package cclms.app.scenario.updater;
+
+import ilog.odm.datasvc.IloRow;
+import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloTable;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import cclms.aap.input.table.properties.TrainSegmentEngine;
+import cclms.app.query.QueryUtil;
+import cclms.common.util.TableConstant;
+import cclms.common.util.TrainSegmentEngineDto;
+
+public class PreProcessingInputTableUpdater {
+
+
+	public static void loadScenarioInputTables(Map<String, ResultSet> resultSetMap, IloScenario scenario){
+		
+	    
+		//for(int i = 0 ; i <resultSetMap.size();i++){
+			
+			Iterator<Map.Entry<String, ResultSet>> itr = resultSetMap.entrySet().iterator(); 
+			 List<TrainSegmentEngineDto> trainSegmentEngineDtos = new ArrayList<>();
+		    while(itr.hasNext()) 
+		    { 
+		         Map.Entry<String, ResultSet> entry = itr.next(); 
+		         if(entry.getKey().equals(TableConstant.TRAIN_SEGMENT_ENGINE)){
+		        	 
+		        	 
+		        	
+		        	 
+		        	 try {
+		        		 System.out.println("1");
+		        		 ResultSet resultSet = entry.getValue();
+		        		 if(resultSet!=null){
+		        			/* IloTable loadTable = scenario.getTable(TableConstant.APP+"."+TableConstant.TRAIN_SEGMENT_ENGINE);
+	        				 loadTable.removeAllRows();*/
+		        			 while (entry.getValue().next()) {
+		        				 	        				 
+		        				 
+		        				 String dayOfService = resultSet.getString(12);
+		        				 List<Integer> dayIdList = getDayIdList(dayOfService);
+		        				
+		        				 
+		        				 if(dayOfService.contains("0")){
+		        					 System.out.println("if dayOfService.contains 0"+dayOfService.contains("0"));
+		        					 
+		        				for (int i = 0; i < dayIdList.size(); i++) {
+		        					
+		        					 TrainSegmentEngineDto trainSegmentEngineDto = new TrainSegmentEngineDto();
+		        					 trainSegmentEngineDto.setTRAINID(resultSet.getInt(1));
+			        				 trainSegmentEngineDto.setLEGID(Integer.parseInt(resultSet.getString(2)));
+			        				 trainSegmentEngineDto.setSTARTLOC(Integer.parseInt(resultSet.getString(3)));
+			        				 trainSegmentEngineDto.setENDLOC(Integer.parseInt(resultSet.getString(4)));
+			        				 trainSegmentEngineDto.setSIGNON(resultSet.getInt(5));
+			        				 
+			        				 
+			        				  int startTimeValue = 0 ;
+			        				  int endTimeValue = 0 ;
+			        				  int signOff = 0;
+			        				  
+			        				  if(checkTime(resultSet.getInt(5), resultSet.getInt(6))){
+			        					  startTimeValue = resultSet.getInt(6)+1440;
+			        					  
+			        					//  row.setIntValue(TrainSegmentEngine.START, startTimeValue);
+			        					 
+			        				  }else{
+			        					  startTimeValue = resultSet.getInt(6);
+			        					//  row.setIntValue(TrainSegmentEngine.START,startTimeValue );
+			        				  }
+			        				  
+			        				  
+			        				  
+			        				  
+	                                  if(checkTime(startTimeValue, resultSet.getInt(7))){
+	                                	  endTimeValue =resultSet.getInt(7)+1440;
+			        					  
+			        					 // row.setIntValue(TrainSegmentEngine.END,endTimeValue );
+			        				  }else{
+			        					  endTimeValue =  resultSet.getInt(7);
+			        					 // row.setIntValue(TrainSegmentEngine.END,endTimeValue);
+			        				  }
+	                                  
+	                                  
+	                                  if(checkTime(endTimeValue, resultSet.getInt(8))){
+	                                	//  endTimeValue =resultSet.getInt(7)+1440;
+			        					  signOff =resultSet.getInt(8)+1440;
+			        					//  row.setIntValue(TrainSegmentEngine.SIGNOFF,resultSet.getInt(8)+1440 );
+			        				  }else{
+			        					  signOff =resultSet.getInt(8);
+			        					  //endTimeValue =  resultSet.getInt(7);
+			        					 // row.setIntValue(TrainSegmentEngine.SIGNOFF,resultSet.getInt(8));
+			        				  }
+
+			        				 
+			        				 
+			        				 trainSegmentEngineDto.setSTART(startTimeValue);
+			        				 trainSegmentEngineDto.setEND(endTimeValue);
+			        				 trainSegmentEngineDto.setSIGNOFF(signOff);
+			        				 trainSegmentEngineDto.setDURATION(resultSet.getInt(9));
+			        				 trainSegmentEngineDto.setDISTANCE(resultSet.getInt(10));
+			        				 
+			        				 if(resultSet.getString(11)!=null){
+			        				 
+			        				 if(resultSet.getString(11).equals("Y")){
+			        					 trainSegmentEngineDto.setNIGHTFLAG(1);
+			        					 
+			        				 }else{
+			        					 trainSegmentEngineDto.setNIGHTFLAG(0);
+			        					 
+			        				 }
+			        				 
+			        				 }else{
+			        					 trainSegmentEngineDto.setNIGHTFLAG(0);
+			        					 
+			        				 }
+			        				 
+			        				 
+			        				 
+			        				 trainSegmentEngineDto.setDAYID(dayIdList.get(i));
+			        				 trainSegmentEngineDto.setSPAREFLAG(resultSet.getInt(13));
+			        				
+			        				 trainSegmentEngineDtos.add(trainSegmentEngineDto);
+
+									
+								}	 
+		        					
+		        					 
+		        				}else{
+		        					 TrainSegmentEngineDto trainSegmentEngineDto = new TrainSegmentEngineDto();
+		        					System.out.println("else dayOfService.contains 0"+dayOfService.contains("0"));
+		        					
+			        				 
+			        				 trainSegmentEngineDto.setTRAINID(resultSet.getInt(1));
+			        				 trainSegmentEngineDto.setLEGID(Integer.parseInt(resultSet.getString(2)));
+			        				 trainSegmentEngineDto.setSTARTLOC(Integer.parseInt(resultSet.getString(3)));
+			        				 trainSegmentEngineDto.setENDLOC(Integer.parseInt(resultSet.getString(4)));
+			        				 trainSegmentEngineDto.setSIGNON(resultSet.getInt(5));
+			        				 
+			        				 
+			        				  int startTimeValue = 0 ;
+			        				  int endTimeValue = 0 ;
+			        				  int signOff = 0;
+			        				  
+			        				  if(checkTime(resultSet.getInt(5), resultSet.getInt(6))){
+			        					  startTimeValue = resultSet.getInt(6)+1440;
+			        					  
+			        					//  row.setIntValue(TrainSegmentEngine.START, startTimeValue);
+			        					 
+			        				  }else{
+			        					  startTimeValue = resultSet.getInt(6);
+			        					//  row.setIntValue(TrainSegmentEngine.START,startTimeValue );
+			        				  }
+			        				  
+			        				  
+			        				  
+			        				  
+	                                  if(checkTime(startTimeValue, resultSet.getInt(7))){
+	                                	  endTimeValue =resultSet.getInt(7)+1440;
+			        					  
+			        					 // row.setIntValue(TrainSegmentEngine.END,endTimeValue );
+			        				  }else{
+			        					  endTimeValue =  resultSet.getInt(7);
+			        					 // row.setIntValue(TrainSegmentEngine.END,endTimeValue);
+			        				  }
+	                                  
+	                                  
+	                                  if(checkTime(endTimeValue, resultSet.getInt(8))){
+	                                	//  endTimeValue =resultSet.getInt(7)+1440;
+			        					  signOff =resultSet.getInt(8)+1440;
+			        					//  row.setIntValue(TrainSegmentEngine.SIGNOFF,resultSet.getInt(8)+1440 );
+			        				  }else{
+			        					  signOff =resultSet.getInt(8);
+			        					  //endTimeValue =  resultSet.getInt(7);
+			        					 // row.setIntValue(TrainSegmentEngine.SIGNOFF,resultSet.getInt(8));
+			        				  }
+
+			        				 
+			        				 
+			        				 trainSegmentEngineDto.setSTART(startTimeValue);
+			        				 trainSegmentEngineDto.setEND(endTimeValue);
+			        				 trainSegmentEngineDto.setSIGNOFF(signOff);
+			        				 trainSegmentEngineDto.setDURATION(resultSet.getInt(9));
+			        				 trainSegmentEngineDto.setDISTANCE(resultSet.getInt(10));
+			        				
+			        				 
+			        				 if(resultSet.getString(11)!=null){
+				        				 
+				        				 if(resultSet.getString(11).equals("Y")){
+				        					 trainSegmentEngineDto.setNIGHTFLAG(1);
+				        					 
+				        				 }else{
+				        					 trainSegmentEngineDto.setNIGHTFLAG(0);
+				        					 
+				        				 }
+				        				 
+				        				 }else{
+				        					 trainSegmentEngineDto.setNIGHTFLAG(0);
+				        					 
+				        				 }
+
+			        				 
+			        				 trainSegmentEngineDto.setDAYID(99);
+			        				 trainSegmentEngineDto.setSPAREFLAG(resultSet.getInt(13));
+			        				
+			        				 trainSegmentEngineDtos.add(trainSegmentEngineDto);
+ 
+		        				 }
+		        				 
+		        				
+		        				
+		        				 
+		        				 
+		        				 
+		        				
+		        				 
+		        				 
+		        				 
+		        				/* IloRow row = loadTable.makeNewRow();
+		        				  row.setIntValue(TrainSegmentEngine.TRAINID, resultSet.getInt(1));
+		        				  row.setIntValue(TrainSegmentEngine.LEGID, Integer.parseInt(resultSet.getString(2)));
+		        				  row.setIntValue(TrainSegmentEngine.STARTLOC,Integer.parseInt(resultSet.getString(3)));
+		        				  row.setIntValue(TrainSegmentEngine.ENDLOC,Integer.parseInt(resultSet.getString(4)));
+		        				  row.setIntValue(TrainSegmentEngine.SIGNON, resultSet.getInt(5));
+		        				  
+		        				  int startTimeValue = 0 ;
+		        				  int endTimeValue = 0 ;
+		        				  
+		        				  if(checkTime(resultSet.getInt(5), resultSet.getInt(6))){
+		        					  startTimeValue = resultSet.getInt(6)+1440;
+		        					  
+		        					  row.setIntValue(TrainSegmentEngine.START, startTimeValue);
+		        					 
+		        				  }else{
+		        					  startTimeValue = resultSet.getInt(6);
+		        					  row.setIntValue(TrainSegmentEngine.START,startTimeValue );
+		        				  }
+		        				  
+		        				  
+		        				  
+		        				  
+                                  if(checkTime(startTimeValue, resultSet.getInt(7))){
+                                	  endTimeValue =resultSet.getInt(7)+1440;
+		        					  
+		        					  row.setIntValue(TrainSegmentEngine.END,endTimeValue );
+		        				  }else{
+		        					  endTimeValue =  resultSet.getInt(7);
+		        					  row.setIntValue(TrainSegmentEngine.END,endTimeValue);
+		        				  }
+                                  
+                                  
+                                  if(checkTime(endTimeValue, resultSet.getInt(8))){
+                                	//  endTimeValue =resultSet.getInt(7)+1440;
+		        					  
+		        					  row.setIntValue(TrainSegmentEngine.SIGNOFF,resultSet.getInt(8)+1440 );
+		        				  }else{
+		        					  //endTimeValue =  resultSet.getInt(7);
+		        					  row.setIntValue(TrainSegmentEngine.SIGNOFF,resultSet.getInt(8));
+		        				  }
+
+
+                                  row.setIntValue(TrainSegmentEngine.DURATION, resultSet.getInt(9));
+                                  row.setIntValue(TrainSegmentEngine.DISTANCE, resultSet.getInt(10));
+                                  row.setIntValue(TrainSegmentEngine.NIGHTFLAG, resultSet.getInt(11));
+*/                                  
+                                  
+                                 // int dayId =findDayId("dayOfService");
+                                  
+                                 // row.setIntValue(TrainSegmentEngine.DAYID, resultSet.getInt(12));
+                                  
+                                  // loadTable.addRow(row);
+		        				// System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3)+" "+resultSet.getString(4)+" "+resultSet.getString(5) );
+		        			
+		        			 System.out.println("SIZE : "+trainSegmentEngineDtos.size());
+		        			 
+		        			 }
+		        		 }
+		        	} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+		        	 
+		         }else if (entry.getKey().equals(TableConstant.TIME_TO_MIN_ENGINE)) {
+		        	 
+		        	 System.out.println("TIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINE");
+					
+				}
+		         
+		         
+		    } 
+		    
+		    
+		    
+		  /*  for (TrainSegmentEngineDto t:trainSegmentEngineDtos) {
+				
+			}*/
+		    IloTable loadTable = scenario.getTable(TableConstant.APP+"."+TableConstant.TRAIN_SEGMENT_ENGINE);
+			 loadTable.removeAllRows();
+
+		    for (TrainSegmentEngineDto trainSegmentEngineDto : trainSegmentEngineDtos) {
+		    	 		    	
+		    	
+		    	
+		    	
+		    	IloRow row = loadTable.makeNewRow();
+				  row.setIntValue(TrainSegmentEngine.TRAINID, trainSegmentEngineDto.getTRAINID());
+				  row.setIntValue(TrainSegmentEngine.LEGID, trainSegmentEngineDto.getLEGID());
+				  row.setIntValue(TrainSegmentEngine.STARTLOC,trainSegmentEngineDto.getSTARTLOC());
+				  row.setIntValue(TrainSegmentEngine.ENDLOC,trainSegmentEngineDto.getENDLOC());
+				  row.setIntValue(TrainSegmentEngine.SIGNON, trainSegmentEngineDto.getSIGNON());
+				  row.setIntValue(TrainSegmentEngine.START, trainSegmentEngineDto.getSTART());
+				  row.setIntValue(TrainSegmentEngine.END,trainSegmentEngineDto.getEND() );
+				  row.setIntValue(TrainSegmentEngine.SIGNOFF,trainSegmentEngineDto.getSIGNOFF() );
+				  row.setIntValue(TrainSegmentEngine.DURATION, trainSegmentEngineDto.getDURATION());
+                  row.setIntValue(TrainSegmentEngine.DISTANCE, trainSegmentEngineDto.getDISTANCE());
+                  row.setIntValue(TrainSegmentEngine.NIGHTFLAG, trainSegmentEngineDto.getNIGHTFLAG());
+                  row.setIntValue(TrainSegmentEngine.DAYID, trainSegmentEngineDto.getDAYID());            
+                  loadTable.addRow(row);
+		    	
+		    	
+		    	
+		    	
+		    	
+		    	
+			}
+		    
+		    System.out.println("DDDDDDDDDDDDDDDOOOOOOOOOOOOOOOONNNNNNNNNNNNNNNNNNNEEEEEEEEEEEEEE");
+			
+		}
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	/*private static int[] findDayId(String string) {
+		
+		
+		
+		for (int i = 0; i < string.length(); i++) {
+			
+			
+			
+		}
+		
+		
+		
+		return ;
+	}*/
+
+
+
+
+
+
+
+
+
+
+	public static  void prepareResultSetMap(List<String> inputTableList, IloScenario scenario) throws ClassNotFoundException, SQLException{
+		
+		
+		
+		Map<String, ResultSet> resultSetMap = new HashMap<>();
+		
+		for (String tabeName : inputTableList) {
+			
+			System.out.println(tabeName);
+			resultSetMap.put(tabeName,ScenarioUpdater.getTableBySqlQuery(QueryUtil.getQueryByTableName(tabeName)));
+			
+		}
+		
+		loadScenarioInputTables(resultSetMap, scenario);
+		
+	}
+	
+	
+	private static boolean checkTime(int firstVal, int secondVal){
+		
+		if(firstVal>secondVal){
+			return true;
+		}
+		return false;
+	}
+	
+	
+	
+	private static String convertMinToHrs(int min){
+		int hours = min / 60; 
+		int minutes = min % 60;
+		return String.format("%01d:%02d:%02d", hours, minutes, 00);
+	}
+	
+	
+	
+	public static void main(String args[]){
+
+		
+		System.out.println(convertMinToHrs(1440));
+		
+		
+		
+		/*Connection con = null;
+        String url = "jdbc:db2://192.168.1.20:50000/CCLMS";
+        String dbName = "Arun";
+        String driverName = "com.ibm.db2.jcc.DB2Driver";
+        String userName = "CCLMS";
+        String password = "pass@12345";
+        try {
+            Class.forName(driverName).newInstance();
+            con = DriverManager.getConnection(url, userName, password);
+            try {
+                Statement st = con.createStatement();
+                String code = " select * from TRAIN_PLANNING_VIEW";
+ 
+                ResultSet executeQuery = st.executeQuery(code);
+                
+                while (executeQuery.next()) {
+System.out.println(executeQuery.getInt(1));					
+				}
+ 
+                System.out.println(" process successfully created!");
+            } catch (SQLException s) {
+                System.out.println("Table already exists!");
+            }
+            con.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }*/
+		
+		
+    }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//System.out.println("-->"+QueryUtil.getQueryByTableName("TRACTION_MST"));
+		
+		
+		/*String test ="1,0,1,1,1,1,1";
+		
+		String[] split = test.split(",");
+		
+		for (int i = 0; i < split.length; i++) {
+			
+			
+			if(!split[i].equals("0")){
+				System.out.println("id : "+(i+1));
+			}
+			
+			
+		}
+*/		
+		
+		
+		//System.out.println(test.contains("1"));
+	//	getDayIdList("1,0,1,1,1,1,1");
+		
+	
+	
+	private static List<Integer> getDayIdList(String data){
+		
+		List< Integer> dayIdList = new ArrayList<Integer>();
+		
+		System.out.println("data : "+data);
+		String[] split = data.split(",");
+		
+		for (int i = 0; i < split.length; i++) {
+			
+			
+			if(!split[i].equals("0")){
+				System.out.println("id : "+(i+1));
+				
+				dayIdList.add((i+1));
+			}
+			
+			
+		}
+	//	System.out.println("dayIdList.size() "+dayIdList.size());
+		return dayIdList;
+	}
+	
+
+}

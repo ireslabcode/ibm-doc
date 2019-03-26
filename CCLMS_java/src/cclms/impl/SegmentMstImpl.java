@@ -146,7 +146,7 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.SEGMENT_MST;
+		return CclmsPackage.eINSTANCE.getSegmentMst();
 	}
 
 	/**

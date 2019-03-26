@@ -290,7 +290,7 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.Literals.STATION_MST;
+		return CclmsPackage.eINSTANCE.getStationMst();
 	}
 
 	/**

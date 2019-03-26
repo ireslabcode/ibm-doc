@@ -226,6 +226,86 @@ public interface CclmsCollector extends IloDomObject, IloDomCollector {
 	List<LobbyMst> getLobbyMst();
 
 	/**
+	 * Returns the value of the '<em><b>Train Segment Engine</b></em>' containment reference list.
+	 * The list contents are of type {@link cclms.TrainSegmentEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Train Segment Engine</em>' containment reference list.
+	 * @generated
+	 */
+	List<TrainSegmentEngine> getTrainSegmentEngine();
+
+	/**
+	 * Returns the value of the '<em><b>Segment Mst Engine</b></em>' containment reference list.
+	 * The list contents are of type {@link cclms.SegmentMstEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Segment Mst Engine</em>' containment reference list.
+	 * @generated
+	 */
+	List<SegmentMstEngine> getSegmentMstEngine();
+
+	/**
+	 * Returns the value of the '<em><b>Time To Min Engine</b></em>' containment reference list.
+	 * The list contents are of type {@link cclms.TimeToMinEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Time To Min Engine</em>' containment reference list.
+	 * @generated
+	 */
+	List<TimeToMinEngine> getTimeToMinEngine();
+
+	/**
+	 * Returns the value of the '<em><b>Day Mst Engine</b></em>' containment reference list.
+	 * The list contents are of type {@link cclms.DayMstEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Day Mst Engine</em>' containment reference list.
+	 * @generated
+	 */
+	List<DayMstEngine> getDayMstEngine();
+
+	/**
+	 * Returns the value of the '<em><b>Kpi Link Engine</b></em>' containment reference list.
+	 * The list contents are of type {@link cclms.KpiLinkEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Kpi Link Engine</em>' containment reference list.
+	 * @generated
+	 */
+	List<KpiLinkEngine> getKpiLinkEngine();
+
+	/**
+	 * Returns the value of the '<em><b>Link Detail Engine</b></em>' containment reference list.
+	 * The list contents are of type {@link cclms.LinkDetailEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Link Detail Engine</em>' containment reference list.
+	 * @generated
+	 */
+	List<LinkDetailEngine> getLinkDetailEngine();
+
+	/**
+	 * Returns the value of the '<em><b>Outlink Engine</b></em>' containment reference list.
+	 * The list contents are of type {@link cclms.OutlinkEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Outlink Engine</em>' containment reference list.
+	 * @generated
+	 */
+	List<OutlinkEngine> getOutlinkEngine();
+
+	/**
+	 * Returns the value of the '<em><b>Lobby Mst Engine</b></em>' containment reference list.
+	 * The list contents are of type {@link cclms.LobbyMstEngine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lobby Mst Engine</em>' containment reference list.
+	 * @generated
+	 */
+	List<LobbyMstEngine> getLobbyMstEngine();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -609,5 +689,170 @@ public interface CclmsCollector extends IloDomObject, IloDomCollector {
 	 * @generated
 	 */
 	LobbyMst createLobbyMst(int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	TrainSegmentEngine createTrainSegmentEngine();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	TrainSegmentEngine createTrainSegmentEngine(int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	TrainSegmentEngine getFromTrainSegmentEngine(int trainid, int legid,
+			int dayid, int spareflag);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	SegmentMstEngine createSegmentMstEngine();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	SegmentMstEngine createSegmentMstEngine(int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	SegmentMstEngine getFromSegmentMstEngine(int segmentid);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	TimeToMinEngine createTimeToMinEngine();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	TimeToMinEngine createTimeToMinEngine(int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	TimeToMinEngine getFromTimeToMinEngine(int trainid, int segmentid,
+			int dayid, int spareflag);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	DayMstEngine createDayMstEngine();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	DayMstEngine createDayMstEngine(int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	KpiLinkEngine createKpiLinkEngine();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	KpiLinkEngine createKpiLinkEngine(int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	KpiLinkEngine getFromKpiLinkEngine(int kpiId);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	LinkDetailEngine createLinkDetailEngine();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	LinkDetailEngine createLinkDetailEngine(int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	LinkDetailEngine getFromLinkDetailEngine(String trainno,
+			String fromstation, String tostation, int dayid, int spareflag);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	OutlinkEngine createOutlinkEngine();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	OutlinkEngine createOutlinkEngine(int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	OutlinkEngine getFromOutlinkEngine(int dayid, int seqid, int pairingid,
+			int dutyid, int trainid, int legid);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	LobbyMstEngine createLobbyMstEngine();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	LobbyMstEngine createLobbyMstEngine(int index);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	LobbyMstEngine getFromLobbyMstEngine(int lobbyId);
 
 } // CclmsCollector

@@ -201,6 +201,62 @@ public class CclmsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case CclmsPackage.TRAIN_SEGMENT_ENGINE: {
+			TrainSegmentEngine trainSegmentEngine = (TrainSegmentEngine) theEObject;
+			T result = caseTrainSegmentEngine(trainSegmentEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.SEGMENT_MST_ENGINE: {
+			SegmentMstEngine segmentMstEngine = (SegmentMstEngine) theEObject;
+			T result = caseSegmentMstEngine(segmentMstEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.TIME_TO_MIN_ENGINE: {
+			TimeToMinEngine timeToMinEngine = (TimeToMinEngine) theEObject;
+			T result = caseTimeToMinEngine(timeToMinEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.DAY_MST_ENGINE: {
+			DayMstEngine dayMstEngine = (DayMstEngine) theEObject;
+			T result = caseDayMstEngine(dayMstEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.KPI_LINK_ENGINE: {
+			KpiLinkEngine kpiLinkEngine = (KpiLinkEngine) theEObject;
+			T result = caseKpiLinkEngine(kpiLinkEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.LINK_DETAIL_ENGINE: {
+			LinkDetailEngine linkDetailEngine = (LinkDetailEngine) theEObject;
+			T result = caseLinkDetailEngine(linkDetailEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.OUTLINK_ENGINE: {
+			OutlinkEngine outlinkEngine = (OutlinkEngine) theEObject;
+			T result = caseOutlinkEngine(outlinkEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.LOBBY_MST_ENGINE: {
+			LobbyMstEngine lobbyMstEngine = (LobbyMstEngine) theEObject;
+			T result = caseLobbyMstEngine(lobbyMstEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case CclmsPackage.CCLMS_COLLECTOR: {
 			CclmsCollector cclmsCollector = (CclmsCollector) theEObject;
 			T result = caseCclmsCollector(cclmsCollector);
@@ -497,6 +553,126 @@ public class CclmsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLobbyMst(LobbyMst object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Train Segment Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Train Segment Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTrainSegmentEngine(TrainSegmentEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Segment Mst Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Segment Mst Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSegmentMstEngine(SegmentMstEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Time To Min Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Time To Min Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTimeToMinEngine(TimeToMinEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Day Mst Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Day Mst Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDayMstEngine(DayMstEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Kpi Link Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Kpi Link Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseKpiLinkEngine(KpiLinkEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Detail Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Detail Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkDetailEngine(LinkDetailEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Outlink Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Outlink Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOutlinkEngine(OutlinkEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Lobby Mst Engine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Lobby Mst Engine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLobbyMstEngine(LobbyMstEngine object) {
 		return null;
 	}
 

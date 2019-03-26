@@ -18,12 +18,13 @@ import java.util.Map;
 
 import cclms.app.query.QueryUtil;
 import cclms.app.scenario.updater.InputTableUpdater;
+import cclms.app.scenario.updater.PreProcessingInputTableUpdater;
 import cclms.app.scenario.updater.ScenarioUpdater;
 import cclms.common.util.TableConstant;
 import cclms.connection.ConnectionProvider;
 
 public class LoadSourseTables implements IloScenarioUpdater {
-	
+	private static int count = 0;
 
 
 @Override
@@ -31,11 +32,18 @@ public void updateScenario(IloScenario scenario,
 		IloTemplateInstance templateInstance, IloDataServiceContext dataService)
 		throws Exception {
 	
-			String zone = templateInstance.getStringValue("zone");
+			/*String zone = templateInstance.getStringValue("zone");*/
 			String tractiontype = templateInstance.getStringValue("tractiontype");
 			String station = templateInstance.getStringValue("station");
 			String trainfrequency = templateInstance.getStringValue("trainfrequency");
-			updateScenario(scenario, zone, tractiontype,station,trainfrequency);
+			
+			
+			
+		    System.out.println("coount :"+count);
+			System.out.println(""+tractiontype+" "+station+" "+" "+trainfrequency);
+			
+			
+			updateScenario(scenario, null, tractiontype,station,trainfrequency);
 			
 }
 	
@@ -51,21 +59,21 @@ public static void updateScenario(IloScenario scenario, String zone,
 	
 	
 	
-	
+	/* open this
 	
 	// --- scenario updater code----------
 	
-				/*Map<String, ResultSet> resultSetMapTractionMst = new HashMap<>();
+				Map<String, ResultSet> resultSetMapTractionMst = new HashMap<>();
 				Map<String, ResultSet> resultSetMapTrainFrequencyMst = new HashMap<>();
 				Map<String, ResultSet> resultSetMapTrainTypeMst = new HashMap<>();
-				Map<String, ResultSet> resultSetMapStationMst = new HashMap<>();*/
+				Map<String, ResultSet> resultSetMapStationMst = new HashMap<>();
                 	
 	// -------- *************** ----------
 	
 	
 	
 	
-	/*try {
+	try {
 		
 		//resultSet = getTableData("tableName");
 		resultSetMap.put(TableConstant.STATION_MST,getTableBySqlQuery(QueryUtil.STATION_MST));
@@ -85,27 +93,30 @@ public static void updateScenario(IloScenario scenario, String zone,
 	} catch (ClassNotFoundException | SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
-	}*/
+	}
 	//loadZoneMst(resultSet,scenario);
 	
 	
 	// --- scenario updater code----------
-	/*ScenarioUpdater.loadScenarioTablesTractionMst(resultSetMapTractionMst, scenario);
+	ScenarioUpdater.loadScenarioTablesTractionMst(resultSetMapTractionMst, scenario);
 	ScenarioUpdater.loadScenarioTablesTrainFrequencyMst(resultSetMapTrainFrequencyMst, scenario);
 	ScenarioUpdater.loadScenarioTablesTrainTypeMst(resultSetMapTrainTypeMst, scenario);
 	ScenarioUpdater.loadScenarioTablesLobbyMst(resultSetMapStationMst, scenario);
-*/	// -------- *************** ----------
+	// -------- *************** ----------
 	
 	//ScenarioUpdater.loadScenarioInputTables(resultSetMap, scenario);
 	
 	//InputTableUpdater.loadScenarioInputTables(resultSetMap, scenario);
 	
 	
+	open this */
 	
 	
+	// open this for input table updater.
+	/*
 	
 	// Inutput table updater
-	
+
 	
 	try {
 		List<String> inputTableList = TableConstant.getInputTableNameList();
@@ -115,10 +126,16 @@ public static void updateScenario(IloScenario scenario, String zone,
 		e.printStackTrace();
 	}
 	
+	*/
 	
 	
-	
-	
+	try {
+		List<String> inputTableList = TableConstant.getPreProcessingInputTableNameList();
+		PreProcessingInputTableUpdater.prepareResultSetMap(inputTableList,scenario);
+	} catch (ClassNotFoundException | SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	
 	
 	
