@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oplm:IloOdmOplMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oplm="http://www.ibm.com/odme/oplmapping.ecore/1.0.0" xmi:id="_4KPKcEyGEemi64MgO_SJDA">
+  <appDataModel xmi:id="_4KYUYEyGEemi64MgO_SJDA">
+    <tables xmi:id="_4aJ1wEyGEemi64MgO_SJDA" name="ZONE_MST" appId="_9vAE1kWGEem-r8R1JeZ1pQ"/>
+    <tables xmi:id="_4aS_sEyGEemi64MgO_SJDA" name="STATION_MST" appId="_9vB6AEWGEem-r8R1JeZ1pQ">
+      <columns xmi:id="_U0LfAEyKEemi64MgO_SJDA" name="STATION_ID" appId="_9vB6AUWGEem-r8R1JeZ1pQ"/>
+      <columns xmi:id="_U0VQAEyKEemi64MgO_SJDA" name="STATION_CODE" appId="_9vB6BEWGEem-r8R1JeZ1pQ"/>
+    </tables>
+    <tables xmi:id="_4aS_sUyGEemi64MgO_SJDA" name="TRAIN_FREQUENCY_MST" appId="_9vInsEWGEem-r8R1JeZ1pQ"/>
+    <tables xmi:id="_4aS_skyGEemi64MgO_SJDA" name="TRACTION_MST" appId="_9vInt0WGEem-r8R1JeZ1pQ"/>
+    <tables xmi:id="_4aS_tEyGEemi64MgO_SJDA" name="PARAMETER_VALUE" appId="_JVyQo0cREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_tUyGEemi64MgO_SJDA" name="DIVISION_MST" appId="_JVCo0EcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_tkyGEemi64MgO_SJDA" name="USER_ROLE_MST" appId="_JV8AsEcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_t0yGEemi64MgO_SJDA" name="USER_MST" appId="_JVfUwEcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_uEyGEemi64MgO_SJDA" name="KPI_MST" appId="_JWFLAEcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_uUyGEemi64MgO_SJDA" name="KPI_VALUE" appId="_JVyQgkcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_ukyGEemi64MgO_SJDA" name="PARAMETER_MST" appId="_JVyQXUcREemk28-sn57p-Q">
+      <columns xmi:id="_Shxe4EyHEemi64MgO_SJDA" name="PARAMETER_ID" appId="_JVyQXkcREemk28-sn57p-Q"/>
+      <columns xmi:id="_SiEZ0EyHEemi64MgO_SJDA" name="PARAMETER_DESC" appId="_JVyQYUcREemk28-sn57p-Q"/>
+      <columns xmi:id="_SiEZ00yHEemi64MgO_SJDA" name="UOM" appId="_JVyQY0cREemk28-sn57p-Q"/>
+      <columns xmi:id="_SiEZ1kyHEemi64MgO_SJDA" name="GLOBAL_VALUE" appId="_JVyQZUcREemk28-sn57p-Q"/>
+    </tables>
+    <tables xmi:id="_4aS_u0yGEemi64MgO_SJDA" name="TRAIN_TYPE_MST" appId="_JVyQS0cREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_vEyGEemi64MgO_SJDA" name="TRAIN_TYPE_MAPPING_MST" appId="_JVyQJkcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_vUyGEemi64MgO_SJDA" name="LINK_DETAIL" appId="_JVfU-kcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_v0yGEemi64MgO_SJDA" name="TRAIN_SEGMENT_MST" appId="_JVoe7kcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_wEyGEemi64MgO_SJDA" name="LINK_MST" appId="_JVyPsEcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_wkyGEemi64MgO_SJDA" name="TRAIN_SEGMENT_ENGINE" appId="_ISqcIUyGEemi64MgO_SJDA">
+      <columns xmi:id="_2JYPgEySEemi64MgO_SJDA" name="TRAINID" appId="_ISqcIkyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2JrKcEySEemi64MgO_SJDA" name="LEGID" appId="_ISqcJEyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2JrKc0ySEemi64MgO_SJDA" name="STARTLOC" appId="_ISqcJkyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2JrKdkySEemi64MgO_SJDA" name="ENDLOC" appId="_ISqcKEyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2J07cEySEemi64MgO_SJDA" name="SIGNON" appId="_ISqcKkyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2J07c0ySEemi64MgO_SJDA" name="START" appId="_ISqcLEyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2J07dkySEemi64MgO_SJDA" name="END" appId="_ISqcLkyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2J07eUySEemi64MgO_SJDA" name="SIGNOFF" appId="_ISqcMEyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2J07fEySEemi64MgO_SJDA" name="DURATION" appId="_ISqcMkyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2J07f0ySEemi64MgO_SJDA" name="DISTANCE" appId="_ISqcNEyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2J07gkySEemi64MgO_SJDA" name="NIGHTFLAG" appId="_ISqcNkyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2J07hUySEemi64MgO_SJDA" name="DAYID" appId="_ISqcOEyGEemi64MgO_SJDA"/>
+      <columns xmi:id="_2J-FYEySEemi64MgO_SJDA" name="SPAREFLAG" appId="_ISqcOkyGEemi64MgO_SJDA"/>
+    </tables>
+    <tables xmi:id="_wgPBQEyIEemi64MgO_SJDA" name="SEGMENT_MST" appId="_JVoey0cREemk28-sn57p-Q"/>
+    <tables xmi:id="_G1dhYEyKEemi64MgO_SJDA" name="SEGMENT_MST_ENGINE" appId="_3SwoiUyJEemi64MgO_SJDA">
+      <columns xmi:id="_KTlOEEyKEemi64MgO_SJDA" name="FROMSTATION" appId="_3SwoikyJEemi64MgO_SJDA"/>
+      <columns xmi:id="_KT4JAEyKEemi64MgO_SJDA" name="TOSTATION" appId="_3SwojEyJEemi64MgO_SJDA"/>
+      <columns xmi:id="_KT4JA0yKEemi64MgO_SJDA" name="SEGMENTID" appId="_3SwojkyJEemi64MgO_SJDA"/>
+    </tables>
+    <tables xmi:id="_G1dhYUyKEemi64MgO_SJDA" name="TIME_TO_MIN_ENGINE" appId="_3SwokkyJEemi64MgO_SJDA">
+      <columns xmi:id="_gicc8EyKEemi64MgO_SJDA" name="TRAINID" appId="_3Swok0yJEemi64MgO_SJDA"/>
+      <columns xmi:id="_giv-8EyKEemi64MgO_SJDA" name="SEGMENTID" appId="_3SwolUyJEemi64MgO_SJDA"/>
+      <columns xmi:id="_giv-80yKEemi64MgO_SJDA" name="SIGNONTIME" appId="_3Swol0yJEemi64MgO_SJDA"/>
+      <columns xmi:id="_giv-9kyKEemi64MgO_SJDA" name="SIGNOMINUTE" appId="_3SwomUyJEemi64MgO_SJDA"/>
+      <columns xmi:id="_giv--UyKEemi64MgO_SJDA" name="STARTTIME" appId="_3Swom0yJEemi64MgO_SJDA"/>
+      <columns xmi:id="_giv-_EyKEemi64MgO_SJDA" name="STARTMINUTE" appId="_3SwonUyJEemi64MgO_SJDA"/>
+      <columns xmi:id="_giv-_0yKEemi64MgO_SJDA" name="ENDTIME" appId="_3Swon0yJEemi64MgO_SJDA"/>
+      <columns xmi:id="_giv_AkyKEemi64MgO_SJDA" name="ENDMINUTE" appId="_3SwooUyJEemi64MgO_SJDA"/>
+      <columns xmi:id="_giv_BUyKEemi64MgO_SJDA" name="SIGNOFFTIME" appId="_3Swoo0yJEemi64MgO_SJDA"/>
+      <columns xmi:id="_gi5I4EyKEemi64MgO_SJDA" name="SIGNOFFMINUTE" appId="_3SwopUyJEemi64MgO_SJDA"/>
+      <columns xmi:id="_gi5I40yKEemi64MgO_SJDA" name="DAYID" appId="_3Swop0yJEemi64MgO_SJDA"/>
+      <columns xmi:id="_gi5I5kyKEemi64MgO_SJDA" name="SPAREFLAG" appId="_3SwoqUyJEemi64MgO_SJDA"/>
+    </tables>
+    <tables xmi:id="_yuuYcEyQEemi64MgO_SJDA" name="DAY_MST_ENGINE" appId="_Y7o1FkyQEemi64MgO_SJDA">
+      <columns xmi:id="_2cUrkEyQEemi64MgO_SJDA" name="DAY_ID" appId="_Y7o1F0yQEemi64MgO_SJDA"/>
+      <columns xmi:id="_2cnmgEyQEemi64MgO_SJDA" name="DAY_DESC" appId="_Y7o1GUyQEemi64MgO_SJDA"/>
+    </tables>
+    <tables xmi:id="_yuuYcUyQEemi64MgO_SJDA" name="KPI_LINK_ENGINE" appId="_Y7o1s0yQEemi64MgO_SJDA">
+      <columns xmi:id="_4Y2CoEyQEemi64MgO_SJDA" name="KPI_ID" appId="_Y7o1tEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_4ZI9kEyQEemi64MgO_SJDA" name="KPI_DESC" appId="_Y7o1tkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_4ZI9k0yQEemi64MgO_SJDA" name="KPI_VALUE" appId="_Y7o1uEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_4ZI9lkyQEemi64MgO_SJDA" name="UOM" appId="_Y7o1ukyQEemi64MgO_SJDA"/>
+    </tables>
+    <tables xmi:id="_yuuYckyQEemi64MgO_SJDA" name="LINK_DETAIL_ENGINE" appId="_Y7o1kUyQEemi64MgO_SJDA">
+      <columns xmi:id="_5A3E40yQEemi64MgO_SJDA" name="DAYNAME" appId="_Y7o1kkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5BmrwEyQEemi64MgO_SJDA" name="SEQID" appId="_Y7o1lEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5Bmrw0yQEemi64MgO_SJDA" name="TRAINNO" appId="_Y7o1lkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5BwcwEyQEemi64MgO_SJDA" name="FROMSTATION" appId="_Y7o1mEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5Bwcw0yQEemi64MgO_SJDA" name="TOSTATION" appId="_Y7o1mkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5B5msEyQEemi64MgO_SJDA" name="SIGNONTIME" appId="_Y7o1nEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5B5ms0yQEemi64MgO_SJDA" name="DEPARTURETIME" appId="_Y7o1nkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5CDXsEyQEemi64MgO_SJDA" name="ARRIVALTIME" appId="_Y7o1oEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5CDXs0yQEemi64MgO_SJDA" name="SIGNOFFTIME" appId="_Y7o1okyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5CNIsEyQEemi64MgO_SJDA" name="DUTYDURTION" appId="_Y7o1pEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5CNIs0yQEemi64MgO_SJDA" name="DUTYMINUTES" appId="_Y7o1pkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5CNItkyQEemi64MgO_SJDA" name="DISTANCE" appId="_Y7o1qEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5CWSoEyQEemi64MgO_SJDA" name="NIB" appId="_Y7o1qkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5CWSo0yQEemi64MgO_SJDA" name="SORTORDER" appId="_Y7o1rEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5CgDoEyQEemi64MgO_SJDA" name="DAYID" appId="_Y7o1rkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_5CgDo0yQEemi64MgO_SJDA" name="SPAREFLAG" appId="_Y7o1sEyQEemi64MgO_SJDA"/>
+    </tables>
+    <tables xmi:id="_COmm0EyREemi64MgO_SJDA" name="OUTLINK_ENGINE" appId="_Y7o1G0yQEemi64MgO_SJDA">
+      <columns xmi:id="_D4rjA0yREemi64MgO_SJDA" name="DAYID" appId="_Y7o1HEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5Hn4EyREemi64MgO_SJDA" name="SEQID" appId="_Y7o1HkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5RY4UyREemi64MgO_SJDA" name="PAIRINGID" appId="_Y7o1IEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5RY5EyREemi64MgO_SJDA" name="DUTYID" appId="_Y7o1IkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5RY50yREemi64MgO_SJDA" name="TRAINID" appId="_Y7o1JEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5RY6kyREemi64MgO_SJDA" name="LEGID" appId="_Y7o1JkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5RY7UyREemi64MgO_SJDA" name="STARTLOC" appId="_Y7o1KEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5bJ4EyREemi64MgO_SJDA" name="ENDLOC" appId="_Y7o1KkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5bJ40yREemi64MgO_SJDA" name="DUTYSIGNON" appId="_Y7o1LEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5bJ5kyREemi64MgO_SJDA" name="STARTTIME" appId="_Y7o1LkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5bJ6UyREemi64MgO_SJDA" name="ENDTIME" appId="_Y7o1MEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5bJ7EyREemi64MgO_SJDA" name="DUTYSIGNOFF" appId="_Y7o1MkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5bJ70yREemi64MgO_SJDA" name="DURATION" appId="_Y7o1NEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5kT0EyREemi64MgO_SJDA" name="NIB" appId="_Y7o1NkyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5kT00yREemi64MgO_SJDA" name="SPAREFLAG" appId="_Y7o1OEyQEemi64MgO_SJDA"/>
+      <columns xmi:id="_D5kT1kyREemi64MgO_SJDA" name="SORTORDER" appId="_Y7o1OkyQEemi64MgO_SJDA"/>
+    </tables>
+    <tables xmi:id="_REWywEyUEemi64MgO_SJDA" name="LOBBY_MST_ENGINE" appId="_HA6YFEyUEemi64MgO_SJDA">
+      <columns xmi:id="_SlpmY0yUEemi64MgO_SJDA" name="LOBBY_CODE" appId="_HA6YFUyUEemi64MgO_SJDA"/>
+      <columns xmi:id="_Sl9IYEyUEemi64MgO_SJDA" name="LOBBY_NAME" appId="_HA6YF0yUEemi64MgO_SJDA"/>
+      <columns xmi:id="_SmGSUEyUEemi64MgO_SJDA" name="LOBBY_ID" appId="_HA6YGUyUEemi64MgO_SJDA"/>
+    </tables>
+    <tables xmi:id="_YuaUYEyUEemi64MgO_SJDA" name="LOBBY_MST" appId="_IfCMNElOEemTqdnsDsubUQ"/>
+    <tables xmi:id="_1xo08E-zEemr2-kFk8XenA" name="USER_MST" appId="_N4Dhq0-tEemi64MgO_SJDA"/>
+    <tables xmi:id="_6BSFME-zEemr2-kFk8XenA" name="TRAIN_MST" appId="_9vDvMEWGEem-r8R1JeZ1pQ">
+      <columns xmi:id="_6jjr0E-zEemr2-kFk8XenA" name="TRAIN_ID" appId="_9vDvMUWGEem-r8R1JeZ1pQ"/>
+      <columns xmi:id="_6kAXwE-zEemr2-kFk8XenA" name="TRAIN_NBR" appId="_9vDvNEWGEem-r8R1JeZ1pQ"/>
+      <columns xmi:id="_6kAXw0-zEemr2-kFk8XenA" name="TRAIN_NAME" appId="_9vDvNkWGEem-r8R1JeZ1pQ"/>
+    </tables>
+  </appDataModel>
+  <mappingDefinition xmi:id="_4KiFYEyGEemi64MgO_SJDA">
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_Shnt4kyHEemi64MgO_SJDA" direction="IN" table="_4aS_ukyGEemi64MgO_SJDA" tupleSet="_Shnt4UyHEemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_Shxe4kyHEemi64MgO_SJDA" field="_Shxe4UyHEemi64MgO_SJDA" column="_Shxe4EyHEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_SiEZ0kyHEemi64MgO_SJDA" field="_SiEZ0UyHEemi64MgO_SJDA" column="_SiEZ0EyHEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_SiEZ1UyHEemi64MgO_SJDA" field="_SiEZ1EyHEemi64MgO_SJDA" column="_SiEZ00yHEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_SiEZ2EyHEemi64MgO_SJDA" field="_SiEZ10yHEemi64MgO_SJDA" column="_SiEZ1kyHEemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_KTbdEkyKEemi64MgO_SJDA" direction="IN" table="_G1dhYEyKEemi64MgO_SJDA" tupleSet="_KTbdEUyKEemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_KTlOEkyKEemi64MgO_SJDA" field="_KTlOEUyKEemi64MgO_SJDA" column="_KTlOEEyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_KT4JAkyKEemi64MgO_SJDA" field="_KT4JAUyKEemi64MgO_SJDA" column="_KT4JAEyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_KT4JBUyKEemi64MgO_SJDA" field="_KT4JBEyKEemi64MgO_SJDA" column="_KT4JA0yKEemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_U0CVEkyKEemi64MgO_SJDA" direction="IN" table="_4aS_sEyGEemi64MgO_SJDA" tupleSet="_U0CVEUyKEemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_U0LfAkyKEemi64MgO_SJDA" field="_U0LfAUyKEemi64MgO_SJDA" column="_U0LfAEyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_U0VQAkyKEemi64MgO_SJDA" field="_U0VQAUyKEemi64MgO_SJDA" column="_U0VQAEyKEemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_giTTAkyKEemi64MgO_SJDA" direction="IN" table="_G1dhYUyKEemi64MgO_SJDA" tupleSet="_giTTAUyKEemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_gicc8kyKEemi64MgO_SJDA" field="_gicc8UyKEemi64MgO_SJDA" column="_gicc8EyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_giv-8kyKEemi64MgO_SJDA" field="_giv-8UyKEemi64MgO_SJDA" column="_giv-8EyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_giv-9UyKEemi64MgO_SJDA" field="_giv-9EyKEemi64MgO_SJDA" column="_giv-80yKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_giv--EyKEemi64MgO_SJDA" field="_giv-90yKEemi64MgO_SJDA" column="_giv-9kyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_giv--0yKEemi64MgO_SJDA" field="_giv--kyKEemi64MgO_SJDA" column="_giv--UyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_giv-_kyKEemi64MgO_SJDA" field="_giv-_UyKEemi64MgO_SJDA" column="_giv-_EyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_giv_AUyKEemi64MgO_SJDA" field="_giv_AEyKEemi64MgO_SJDA" column="_giv-_0yKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_giv_BEyKEemi64MgO_SJDA" field="_giv_A0yKEemi64MgO_SJDA" column="_giv_AkyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_giv_B0yKEemi64MgO_SJDA" field="_giv_BkyKEemi64MgO_SJDA" column="_giv_BUyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_gi5I4kyKEemi64MgO_SJDA" field="_gi5I4UyKEemi64MgO_SJDA" column="_gi5I4EyKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_gi5I5UyKEemi64MgO_SJDA" field="_gi5I5EyKEemi64MgO_SJDA" column="_gi5I40yKEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_gi5I6EyKEemi64MgO_SJDA" field="_gi5I50yKEemi64MgO_SJDA" column="_gi5I5kyKEemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_2cK6kkyQEemi64MgO_SJDA" direction="IN" table="_yuuYcEyQEemi64MgO_SJDA" tupleSet="_2cK6kUyQEemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2cUrkkyQEemi64MgO_SJDA" field="_2cUrkUyQEemi64MgO_SJDA" column="_2cUrkEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2cnmgkyQEemi64MgO_SJDA" field="_2cnmgUyQEemi64MgO_SJDA" column="_2cnmgEyQEemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_4YjHskyQEemi64MgO_SJDA" direction="OUT" table="_yuuYcUyQEemi64MgO_SJDA" tupleSet="_4YjHsUyQEemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_4Y2CokyQEemi64MgO_SJDA" field="_4Y2CoUyQEemi64MgO_SJDA" column="_4Y2CoEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_4ZI9kkyQEemi64MgO_SJDA" field="_4ZI9kUyQEemi64MgO_SJDA" column="_4ZI9kEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_4ZI9lUyQEemi64MgO_SJDA" field="_4ZI9lEyQEemi64MgO_SJDA" column="_4ZI9k0yQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_4ZI9mEyQEemi64MgO_SJDA" field="_4ZI9l0yQEemi64MgO_SJDA" column="_4ZI9lkyQEemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_5A3E4kyQEemi64MgO_SJDA" direction="OUT" table="_yuuYckyQEemi64MgO_SJDA" tupleSet="_5A3E4UyQEemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5A3E5UyQEemi64MgO_SJDA" field="_5A3E5EyQEemi64MgO_SJDA" column="_5A3E40yQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5BmrwkyQEemi64MgO_SJDA" field="_5BmrwUyQEemi64MgO_SJDA" column="_5BmrwEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5BmrxUyQEemi64MgO_SJDA" field="_5BmrxEyQEemi64MgO_SJDA" column="_5Bmrw0yQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5BwcwkyQEemi64MgO_SJDA" field="_5BwcwUyQEemi64MgO_SJDA" column="_5BwcwEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5BwcxUyQEemi64MgO_SJDA" field="_5BwcxEyQEemi64MgO_SJDA" column="_5Bwcw0yQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5B5mskyQEemi64MgO_SJDA" field="_5B5msUyQEemi64MgO_SJDA" column="_5B5msEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5B5mtUyQEemi64MgO_SJDA" field="_5B5mtEyQEemi64MgO_SJDA" column="_5B5ms0yQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5CDXskyQEemi64MgO_SJDA" field="_5CDXsUyQEemi64MgO_SJDA" column="_5CDXsEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5CDXtUyQEemi64MgO_SJDA" field="_5CDXtEyQEemi64MgO_SJDA" column="_5CDXs0yQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5CNIskyQEemi64MgO_SJDA" field="_5CNIsUyQEemi64MgO_SJDA" column="_5CNIsEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5CNItUyQEemi64MgO_SJDA" field="_5CNItEyQEemi64MgO_SJDA" column="_5CNIs0yQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5CNIuEyQEemi64MgO_SJDA" field="_5CNIt0yQEemi64MgO_SJDA" column="_5CNItkyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5CWSokyQEemi64MgO_SJDA" field="_5CWSoUyQEemi64MgO_SJDA" column="_5CWSoEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5CWSpUyQEemi64MgO_SJDA" field="_5CWSpEyQEemi64MgO_SJDA" column="_5CWSo0yQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5CgDokyQEemi64MgO_SJDA" field="_5CgDoUyQEemi64MgO_SJDA" column="_5CgDoEyQEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_5CgDpUyQEemi64MgO_SJDA" field="_5CgDpEyQEemi64MgO_SJDA" column="_5CgDo0yQEemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_D4rjAkyREemi64MgO_SJDA" direction="OUT" table="_COmm0EyREemi64MgO_SJDA" tupleSet="_D4rjAUyREemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D40s8EyREemi64MgO_SJDA" field="_D4rjBEyREemi64MgO_SJDA" column="_D4rjA0yREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5RY4EyREemi64MgO_SJDA" field="_D5Hn4UyREemi64MgO_SJDA" column="_D5Hn4EyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5RY40yREemi64MgO_SJDA" field="_D5RY4kyREemi64MgO_SJDA" column="_D5RY4UyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5RY5kyREemi64MgO_SJDA" field="_D5RY5UyREemi64MgO_SJDA" column="_D5RY5EyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5RY6UyREemi64MgO_SJDA" field="_D5RY6EyREemi64MgO_SJDA" column="_D5RY50yREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5RY7EyREemi64MgO_SJDA" field="_D5RY60yREemi64MgO_SJDA" column="_D5RY6kyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5RY70yREemi64MgO_SJDA" field="_D5RY7kyREemi64MgO_SJDA" column="_D5RY7UyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5bJ4kyREemi64MgO_SJDA" field="_D5bJ4UyREemi64MgO_SJDA" column="_D5bJ4EyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5bJ5UyREemi64MgO_SJDA" field="_D5bJ5EyREemi64MgO_SJDA" column="_D5bJ40yREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5bJ6EyREemi64MgO_SJDA" field="_D5bJ50yREemi64MgO_SJDA" column="_D5bJ5kyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5bJ60yREemi64MgO_SJDA" field="_D5bJ6kyREemi64MgO_SJDA" column="_D5bJ6UyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5bJ7kyREemi64MgO_SJDA" field="_D5bJ7UyREemi64MgO_SJDA" column="_D5bJ7EyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5bJ8UyREemi64MgO_SJDA" field="_D5bJ8EyREemi64MgO_SJDA" column="_D5bJ70yREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5kT0kyREemi64MgO_SJDA" field="_D5kT0UyREemi64MgO_SJDA" column="_D5kT0EyREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5kT1UyREemi64MgO_SJDA" field="_D5kT1EyREemi64MgO_SJDA" column="_D5kT00yREemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_D5kT2EyREemi64MgO_SJDA" field="_D5kT10yREemi64MgO_SJDA" column="_D5kT1kyREemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_2JOegkySEemi64MgO_SJDA" direction="IN" table="_4aS_wkyGEemi64MgO_SJDA" tupleSet="_2JOegUySEemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2JYPgkySEemi64MgO_SJDA" field="_2JYPgUySEemi64MgO_SJDA" column="_2JYPgEySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2JrKckySEemi64MgO_SJDA" field="_2JrKcUySEemi64MgO_SJDA" column="_2JrKcEySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2JrKdUySEemi64MgO_SJDA" field="_2JrKdEySEemi64MgO_SJDA" column="_2JrKc0ySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2JrKeEySEemi64MgO_SJDA" field="_2JrKd0ySEemi64MgO_SJDA" column="_2JrKdkySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2J07ckySEemi64MgO_SJDA" field="_2J07cUySEemi64MgO_SJDA" column="_2J07cEySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2J07dUySEemi64MgO_SJDA" field="_2J07dEySEemi64MgO_SJDA" column="_2J07c0ySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2J07eEySEemi64MgO_SJDA" field="_2J07d0ySEemi64MgO_SJDA" column="_2J07dkySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2J07e0ySEemi64MgO_SJDA" field="_2J07ekySEemi64MgO_SJDA" column="_2J07eUySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2J07fkySEemi64MgO_SJDA" field="_2J07fUySEemi64MgO_SJDA" column="_2J07fEySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2J07gUySEemi64MgO_SJDA" field="_2J07gEySEemi64MgO_SJDA" column="_2J07f0ySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2J07hEySEemi64MgO_SJDA" field="_2J07g0ySEemi64MgO_SJDA" column="_2J07gkySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2J07h0ySEemi64MgO_SJDA" field="_2J07hkySEemi64MgO_SJDA" column="_2J07hUySEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_2J-FYkySEemi64MgO_SJDA" field="_2J-FYUySEemi64MgO_SJDA" column="_2J-FYEySEemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_SlpmYkyUEemi64MgO_SJDA" direction="IN" table="_REWywEyUEemi64MgO_SJDA" tupleSet="_SlpmYUyUEemi64MgO_SJDA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_SlpmZUyUEemi64MgO_SJDA" field="_SlpmZEyUEemi64MgO_SJDA" column="_SlpmY0yUEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_Sl9IYkyUEemi64MgO_SJDA" field="_Sl9IYUyUEemi64MgO_SJDA" column="_Sl9IYEyUEemi64MgO_SJDA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_SmGSUkyUEemi64MgO_SJDA" field="_SmGSUUyUEemi64MgO_SJDA" column="_SmGSUEyUEemi64MgO_SJDA"/>
+    </mappers>
+    <mappers xsi:type="oplm:IloTupleSetMapper" xmi:id="_6jah4k-zEemr2-kFk8XenA" direction="IN" table="_6BSFME-zEemr2-kFk8XenA" tupleSet="_6jah4U-zEemr2-kFk8XenA">
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_6jjr0k-zEemr2-kFk8XenA" field="_6jjr0U-zEemr2-kFk8XenA" column="_6jjr0E-zEemr2-kFk8XenA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_6kAXwk-zEemr2-kFk8XenA" field="_6kAXwU-zEemr2-kFk8XenA" column="_6kAXwE-zEemr2-kFk8XenA"/>
+      <fields xsi:type="oplm:IloBasicFieldMapper" xmi:id="_6kAXxU-zEemr2-kFk8XenA" field="_6kAXxE-zEemr2-kFk8XenA" column="_6kAXw0-zEemr2-kFk8XenA"/>
+    </mappers>
+  </mappingDefinition>
+  <oplDataModel xmi:id="_4KYUYUyGEemi64MgO_SJDA">
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_2cK6kEyQEemi64MgO_SJDA" name="TDayMstEngine">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2cUrkUyQEemi64MgO_SJDA" name="dayId" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2cnmgUyQEemi64MgO_SJDA" name="dayDesc" type="STRING"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_SlpmYEyUEemi64MgO_SJDA" name="TLobbyMaster">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_SlpmZEyUEemi64MgO_SJDA" name="lobbyCode" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_Sl9IYUyUEemi64MgO_SJDA" name="lobbyName" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_SmGSUUyUEemi64MgO_SJDA" name="lobbyid" keyPart="true" type="INTEGER"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_Shnt4EyHEemi64MgO_SJDA" name="TParameters">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_Shxe4UyHEemi64MgO_SJDA" name="parameterId" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_SiEZ0UyHEemi64MgO_SJDA" name="description" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_SiEZ10yHEemi64MgO_SJDA" name="value" type="FLOAT"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_SiEZ1EyHEemi64MgO_SJDA" name="uoM" type="STRING"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_KTbdEEyKEemi64MgO_SJDA" name="TSegmentMaster">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_KTlOEUyKEemi64MgO_SJDA" name="fromStation" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_KT4JAUyKEemi64MgO_SJDA" name="toStation" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_KT4JBEyKEemi64MgO_SJDA" name="segmentid" keyPart="true" type="INTEGER"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_U0CVEEyKEemi64MgO_SJDA" name="TStationMaster">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_U0VQAUyKEemi64MgO_SJDA" name="stationCode" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_U0LfAUyKEemi64MgO_SJDA" name="stationId" keyPart="true" type="INTEGER"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_giTTAEyKEemi64MgO_SJDA" name="TTimetoMinutes">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_gicc8UyKEemi64MgO_SJDA" name="trainid" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_giv-8UyKEemi64MgO_SJDA" name="segmentid" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_giv-9EyKEemi64MgO_SJDA" name="signontime" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_giv-90yKEemi64MgO_SJDA" name="signoMinute" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_giv--kyKEemi64MgO_SJDA" name="startTime" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_giv-_UyKEemi64MgO_SJDA" name="startMinute" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_giv_AEyKEemi64MgO_SJDA" name="endTime" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_giv_A0yKEemi64MgO_SJDA" name="endMinute" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_giv_BkyKEemi64MgO_SJDA" name="signoffTime" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_gi5I4UyKEemi64MgO_SJDA" name="signoffMinute" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_gi5I5EyKEemi64MgO_SJDA" name="dayid" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_gi5I50yKEemi64MgO_SJDA" name="spareflag" keyPart="true" type="INTEGER"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_6jah4E-zEemr2-kFk8XenA" name="TTrainMaster">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_6kAXwU-zEemr2-kFk8XenA" name="trainNo" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_6jjr0U-zEemr2-kFk8XenA" name="trainId" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_6kAXxE-zEemr2-kFk8XenA" name="trainName" type="STRING"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_2JOegEySEemi64MgO_SJDA" name="TTrainSegments">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2JYPgUySEemi64MgO_SJDA" name="trainid" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2JrKcUySEemi64MgO_SJDA" name="legid" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2JrKdEySEemi64MgO_SJDA" name="startLoc" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2JrKd0ySEemi64MgO_SJDA" name="endLoc" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2J07cUySEemi64MgO_SJDA" name="signon" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2J07dEySEemi64MgO_SJDA" name="start" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2J07d0ySEemi64MgO_SJDA" name="end" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2J07ekySEemi64MgO_SJDA" name="signoff" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2J07fUySEemi64MgO_SJDA" name="duration" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2J07gEySEemi64MgO_SJDA" name="distance" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2J07g0ySEemi64MgO_SJDA" name="nightflag" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2J07hkySEemi64MgO_SJDA" name="dayid" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_2J-FYUySEemi64MgO_SJDA" name="spareflag" keyPart="true" type="INTEGER"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_2cK6kUyQEemi64MgO_SJDA" name="dayMstEngine" type="_2cK6kEyQEemi64MgO_SJDA"/>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_SlpmYUyUEemi64MgO_SJDA" name="lobbyMaster" type="_SlpmYEyUEemi64MgO_SJDA"/>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_Shnt4UyHEemi64MgO_SJDA" name="parameters" type="_Shnt4EyHEemi64MgO_SJDA"/>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_KTbdEUyKEemi64MgO_SJDA" name="segmentMaster" type="_KTbdEEyKEemi64MgO_SJDA"/>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_U0CVEUyKEemi64MgO_SJDA" name="stationMaster" type="_U0CVEEyKEemi64MgO_SJDA"/>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_giTTAUyKEemi64MgO_SJDA" name="timetoMinutes" type="_giTTAEyKEemi64MgO_SJDA"/>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_6jah4U-zEemr2-kFk8XenA" name="trainMaster" type="_6jah4E-zEemr2-kFk8XenA"/>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_2JOegUySEemi64MgO_SJDA" name="trainSegments" type="_2JOegEySEemi64MgO_SJDA"/>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_4YjHsEyQEemi64MgO_SJDA" name="TKpiLinkEngine">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_4Y2CoUyQEemi64MgO_SJDA" name="kpiId" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_4ZI9kUyQEemi64MgO_SJDA" name="kpiDesc" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_4ZI9lEyQEemi64MgO_SJDA" name="kpiValue" type="FLOAT"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_4ZI9l0yQEemi64MgO_SJDA" name="uom" type="STRING"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_D4rjAEyREemi64MgO_SJDA" name="TOutlink">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D4rjBEyREemi64MgO_SJDA" name="dayid" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5Hn4UyREemi64MgO_SJDA" name="seqId" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5RY4kyREemi64MgO_SJDA" name="pairingId" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5RY5UyREemi64MgO_SJDA" name="dutyId" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5RY6EyREemi64MgO_SJDA" name="trainId" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5RY60yREemi64MgO_SJDA" name="legId" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5RY7kyREemi64MgO_SJDA" name="startLoc" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5bJ4UyREemi64MgO_SJDA" name="endLoc" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5bJ5EyREemi64MgO_SJDA" name="dutySignOn" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5bJ50yREemi64MgO_SJDA" name="startTime" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5bJ6kyREemi64MgO_SJDA" name="endTime" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5bJ7UyREemi64MgO_SJDA" name="dutySignOff" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5bJ8EyREemi64MgO_SJDA" name="duration" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5kT0UyREemi64MgO_SJDA" name="nib" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5kT1EyREemi64MgO_SJDA" name="spareflag" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_D5kT10yREemi64MgO_SJDA" name="sortOrder" type="INTEGER"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTuple" xmi:id="_5A3E4EyQEemi64MgO_SJDA" name="TOutputLink">
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5A3E5EyQEemi64MgO_SJDA" name="dayname" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5BmrwUyQEemi64MgO_SJDA" name="crewNo" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5BmrxEyQEemi64MgO_SJDA" name="trainNo" keyPart="true" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5BwcwUyQEemi64MgO_SJDA" name="fromStation" keyPart="true" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5BwcxEyQEemi64MgO_SJDA" name="toStation" keyPart="true" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5B5msUyQEemi64MgO_SJDA" name="signOnTime" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5B5mtEyQEemi64MgO_SJDA" name="departureTime" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5CDXsUyQEemi64MgO_SJDA" name="arrivalTime" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5CDXtEyQEemi64MgO_SJDA" name="signOffTime" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5CNIsUyQEemi64MgO_SJDA" name="dutyTime" type="STRING"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5CNItEyQEemi64MgO_SJDA" name="dutyDuration" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5CNIt0yQEemi64MgO_SJDA" name="distance" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5CWSoUyQEemi64MgO_SJDA" name="nib" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5CWSpEyQEemi64MgO_SJDA" name="sortOrder" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5CgDoUyQEemi64MgO_SJDA" name="dayid" keyPart="true" type="INTEGER"/>
+      <fields xsi:type="oplm:IloOplBasicField" xmi:id="_5CgDpEyQEemi64MgO_SJDA" name="spareflag" keyPart="true" type="INTEGER"/>
+    </declarations>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_4YjHsUyQEemi64MgO_SJDA" name="kpiLinkEngine" type="_4YjHsEyQEemi64MgO_SJDA"/>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_D4rjAUyREemi64MgO_SJDA" name="outlink" type="_D4rjAEyREemi64MgO_SJDA"/>
+    <declarations xsi:type="oplm:IloOplTupleSet" xmi:id="_5A3E4UyQEemi64MgO_SJDA" name="outputLink" type="_5A3E4EyQEemi64MgO_SJDA"/>
+  </oplDataModel>
+</oplm:IloOdmOplMapping>

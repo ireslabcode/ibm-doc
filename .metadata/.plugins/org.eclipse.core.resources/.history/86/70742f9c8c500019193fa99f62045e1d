@@ -1,0 +1,186 @@
+package test;
+
+import ilog.odm.datasvc.IloDataException;
+import ilog.odm.datasvc.IloLock;
+import ilog.odm.datasvc.IloLockable;
+import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloScenarioLink;
+import ilog.odm.datasvc.IloWorkspace;
+import ilog.odm.datasvc.IloWorkspaceFolder;
+import ilog.odm.datasvc.IloWorkspaceItem;
+import ilog.odm.datasvc.internal.IloDataService;
+
+import java.util.ArrayList;
+
+public class ScenarioUtil {
+
+	
+	
+	 public static IloScenarioLink createScenario(IloDataService dataService, IloWorkspaceFolder folder, String name) {
+		    // Create a scenario
+		    IloScenarioLink link = null;
+		    IloScenario scenario = null;
+		    IloLock scLock = null;
+		    try {
+		      // duplicate reference
+		      link = folder.createChildScenario(-1);
+		      scenario = link.getScenario();
+		      scLock = scenario.addLock(IloLockable.EXCLUSIVE_WRITE_LOCK);
+		      // name scenario
+		      scenario.setName(name);
+		      scenario.save();
+		      scenario.removeLock(scLock);
+		      scLock = null;
+		    } catch (IloDataException e) {
+		      e.printStackTrace();
+		    } finally {
+		      if (scLock != null) scenario.removeLock(scLock);
+		    }
+		    return link;
+		  }
+	 public static IloScenarioLink getScenario(IloWorkspaceFolder folder, String name) {
+		    for (IloWorkspaceItem item : folder.getChildren()) {
+
+		  //--------------------
+		  // Folder management
+		  //--------------------
+
+		  public static void collectScenarioLinks(IloWorkspaceFolder folder, ArrayList<IloScenarioLink> links, boolean recursive) {
+		    for (IloWorkspaceItem item : folder.getChildren()) {
+		      if (item instanceof IloScenarioLink) {
+		        IloScenarioLink link = (IloScenarioLink) item;
+		        links.add(link);
+		      }
+		      if (item instanceof IloWorkspaceFolder) {
+		        if (recursive) {
+		          IloWorkspaceFolder subFolder = (IloWorkspaceFolder) item;
+		          collectScenarioLinks(subFolder, links, recursive);
+		        }
+		      }
+		    }
+		  }
+
+		  // create a workspace folder in the given parent folder
+		  public static IloWorkspaceFolder createSubFolder(IloDataService dataService, IloWorkspaceFolder parent,
+		      String folderName) {
+		    IloLock referenceLock = null;
+		    IloWorkspace workspace = parent.getWorkspace();
+		    try {
+		      referenceLock = workspace.addLock(IloLockable.USE_LOCK);
+		      // get or create folder      
+		      IloWorkspaceFolder folder = getSubFolder(parent, folderName);
+		      if (folder == null) {
+		        folder = parent.createChildFolder(0);
+		        folder.setName(folderName);
+		      }
+		      return folder;
+		    } catch (IloDataException e) {
+		      e.printStackTrace();
+		      if (referenceLock != null) workspace.removeLock(referenceLock);
+		      return null;
+		    }
+		  }
+
+		  // create a workspace folder in the given workspace
+		  public static IloWorkspaceFolder createWorkspaceFolder(IloDataService dataService, String workspaceName,
+		      String folderName) {
+		    IloLock referenceLock = null;
+		    IloWorkspace workspace = null;
+		    try {
+		      // get current workspace
+		      workspace = getWorkspace(dataService, workspaceName);
+		      if (workspace == null) {
+		        workspace = dataService.createWorkspace();
+		        referenceLock = workspace.addLock(IloLockable.USE_LOCK);
+		        workspace.setName(workspaceName);
+		      } else {
+		        referenceLock = workspace.addLock(IloLockable.USE_LOCK);
+		      }
+
+		      // get or create folder      
+		      IloWorkspaceFolder folder = getSubFolder(workspace, folderName);
+		      if (folder == null) {
+		        folder = workspace.createChildFolder(0);
+		        folder.setName(folderName);
+		      }
+		      return folder;
+		    } catch (IloDataException e) {
+		      e.printStackTrace();
+		      if (referenceLock != null) workspace.removeLock(referenceLock);
+		      return null;
+		    }
+		  }
+
+		  // returns the named workspace
+		  public static IloWorkspace getWorkspace(IloDataService service, String name) {
+		    for (IloWorkspace work : service.getWorkspaces()) {
+		      if (work.getName().equals(name)) return work;
+		    }
+		    return null;
+		  }
+
+		  public static IloWorkspaceFolder getRootWorkspaceFolder(IloDataService data, String name) {
+		    for (IloWorkspace work : data.getWorkspaces()) {
+		      IloWorkspaceFolder folder = getSubFolder(work, name);
+		      if (folder != null) return folder;
+		    }
+		    return null;
+		  }
+
+		  public static IloWorkspaceFolder getSubFolder(IloWorkspaceFolder parent, String name) {
+		    for (IloWorkspaceItem item : parent.getChildren()) {
+		      if (item instanceof IloWorkspaceFolder) {
+		        IloWorkspaceFolder folder = (IloWorkspaceFolder) item;
+		        if (folder.getName().equals(name)) return folder;
+		      }
+		    }
+		    return null;
+		  }
+
+		  // returns the scenario's folder
+		  public static IloWorkspaceFolder getWorkspaceFolder(IloDataService service, IloScenario sc) {
+		    for (IloWorkspace work : service.getWorkspaces()) {
+		      IloWorkspaceFolder found = getWorkspaceFolder(work, sc);
+		      if (found != null) return found;
+		    }
+		    return null;
+		  }
+
+		  // return the workspace containing the given scenario
+		  public static IloWorkspaceFolder getWorkspaceFolder(IloWorkspaceFolder parent, IloScenario sc) {
+		    for (IloWorkspaceItem item : parent.getChildren()) {
+		      if (item instanceof IloScenarioLink) {
+		        IloScenarioLink link = (IloScenarioLink) item;
+		        if (link.getScenario() == sc) return parent;
+		      }
+		      if (item instanceof IloWorkspaceFolder) {
+		        IloWorkspaceFolder folder = (IloWorkspaceFolder) item;
+		        IloWorkspaceFolder found = getWorkspaceFolder(folder, sc);
+		        if (found != null) return found;
+		      }
+		    }
+		    return null;
+		  }
+
+		  // name must be unique in the given folder
+		  public static String getUniqueName(IloWorkspaceFolder folder, String originalName) {
+		    int count = 0;
+		    String name = originalName;
+		    IloScenarioLink link = getScenario(folder, name);
+		    while (link != null) {
+		      count++;
+		      name = originalName + " (" + count + ")";
+		      link = getScenario(folder, name);
+		    }
+		    return name;
+		  }
+		  
+		  
+		    }
+		  
+		  
+		  
+
+
+	
+

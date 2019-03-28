@@ -1,0 +1,17 @@
+package cclms.datasourse;
+
+import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloScenarioEvent;
+
+public class LoadSourseTables1 implements IloScenarioEvent{
+
+	@Override
+	public IloScenario getSource() {
+		System.out.println("get sourse.....!!!");
+		return null;
+	}
+	
+	
+	
+
+}

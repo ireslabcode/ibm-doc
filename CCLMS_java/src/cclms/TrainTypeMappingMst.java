@@ -63,41 +63,6 @@ public interface TrainTypeMappingMst extends IloDomObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	List<TrainMst> getTrainMstTrainType();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	UserMst getCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	void setCreatedBy(UserMst obj);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	UserMst getLastModifiedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	void setLastModifiedBy(UserMst obj);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	TrainTypeMst getTrainTypeCclms();
 
 	/**

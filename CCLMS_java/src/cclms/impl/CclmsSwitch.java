@@ -68,13 +68,6 @@ public class CclmsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case CclmsPackage.ZONE_MST: {
-			ZoneMst zoneMst = (ZoneMst) theEObject;
-			T result = caseZoneMst(zoneMst);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case CclmsPackage.STATION_MST: {
 			StationMst stationMst = (StationMst) theEObject;
 			T result = caseStationMst(stationMst);
@@ -106,27 +99,6 @@ public class CclmsSwitch<T> extends Switch<T> {
 		case CclmsPackage.PARAMETER_VALUE: {
 			ParameterValue parameterValue = (ParameterValue) theEObject;
 			T result = caseParameterValue(parameterValue);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case CclmsPackage.DIVISION_MST: {
-			DivisionMst divisionMst = (DivisionMst) theEObject;
-			T result = caseDivisionMst(divisionMst);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case CclmsPackage.USER_ROLE_MST: {
-			UserRoleMst userRoleMst = (UserRoleMst) theEObject;
-			T result = caseUserRoleMst(userRoleMst);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case CclmsPackage.USER_MST: {
-			UserMst userMst = (UserMst) theEObject;
-			T result = caseUserMst(userMst);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -222,13 +194,6 @@ public class CclmsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case CclmsPackage.DAY_MST_ENGINE: {
-			DayMstEngine dayMstEngine = (DayMstEngine) theEObject;
-			T result = caseDayMstEngine(dayMstEngine);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case CclmsPackage.KPI_LINK_ENGINE: {
 			KpiLinkEngine kpiLinkEngine = (KpiLinkEngine) theEObject;
 			T result = caseKpiLinkEngine(kpiLinkEngine);
@@ -257,6 +222,20 @@ public class CclmsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case CclmsPackage.USER_MST: {
+			UserMst userMst = (UserMst) theEObject;
+			T result = caseUserMst(userMst);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case CclmsPackage.DAY_MST_ENGINE: {
+			DayMstEngine dayMstEngine = (DayMstEngine) theEObject;
+			T result = caseDayMstEngine(dayMstEngine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case CclmsPackage.CCLMS_COLLECTOR: {
 			CclmsCollector cclmsCollector = (CclmsCollector) theEObject;
 			T result = caseCclmsCollector(cclmsCollector);
@@ -269,21 +248,6 @@ public class CclmsSwitch<T> extends Switch<T> {
 		default:
 			return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Zone Mst</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Zone Mst</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseZoneMst(ZoneMst object) {
-		return null;
 	}
 
 	/**
@@ -358,51 +322,6 @@ public class CclmsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseParameterValue(ParameterValue object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Division Mst</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Division Mst</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDivisionMst(DivisionMst object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>User Role Mst</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>User Role Mst</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUserRoleMst(UserRoleMst object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>User Mst</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>User Mst</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUserMst(UserMst object) {
 		return null;
 	}
 
@@ -673,6 +592,21 @@ public class CclmsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLobbyMstEngine(LobbyMstEngine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>User Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>User Mst</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUserMst(UserMst object) {
 		return null;
 	}
 

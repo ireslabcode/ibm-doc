@@ -86,237 +86,51 @@ public interface UserMst extends IloDomObject {
 	void setUser(String value);
 
 	/**
-	 * Returns the value of the '<em><b>User Pwd</b></em>' attribute.
+	 * Returns the value of the '<em><b>Division Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Pwd</em>' attribute.
-	 * @see #setUserPwd(String)
+	 * @return the value of the '<em>Division Id</em>' attribute.
+	 * @see #isSetDivisionId()
+	 * @see #unsetDivisionId()
+	 * @see #setDivisionId(int)
 	 * @generated
 	 */
-	String getUserPwd();
+	int getDivisionId();
 
 	/**
-	 * Sets the value of the '{@link cclms.UserMst#getUserPwd <em>User Pwd</em>}' attribute.
+	 * Sets the value of the '{@link cclms.UserMst#getDivisionId <em>Division Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>User Pwd</em>' attribute.
-	 * @see #getUserPwd()
+	 * @param value the new value of the '<em>Division Id</em>' attribute.
+	 * @see #isSetDivisionId()
+	 * @see #unsetDivisionId()
+	 * @see #getDivisionId()
 	 * @generated
 	 */
-	void setUserPwd(String value);
+	void setDivisionId(int value);
 
 	/**
-	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
+	 * Unsets the value of the '{@link cclms.UserMst#getDivisionId <em>Division Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>First Name</em>' attribute.
-	 * @see #setFirstName(String)
+	 * @see #isSetDivisionId()
+	 * @see #getDivisionId()
+	 * @see #setDivisionId(int)
 	 * @generated
 	 */
-	String getFirstName();
+	void unsetDivisionId();
 
 	/**
-	 * Sets the value of the '{@link cclms.UserMst#getFirstName <em>First Name</em>}' attribute.
+	 * Returns whether the value of the '{@link cclms.UserMst#getDivisionId <em>Division Id</em>}' attribute is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>First Name</em>' attribute.
-	 * @see #getFirstName()
+	 * @return whether the value of the '<em>Division Id</em>' attribute is set.
+	 * @see #unsetDivisionId()
+	 * @see #getDivisionId()
+	 * @see #setDivisionId(int)
 	 * @generated
 	 */
-	void setFirstName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Last Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Last Name</em>' attribute.
-	 * @see #setLastName(String)
-	 * @generated
-	 */
-	String getLastName();
-
-	/**
-	 * Sets the value of the '{@link cclms.UserMst#getLastName <em>Last Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Last Name</em>' attribute.
-	 * @see #getLastName()
-	 * @generated
-	 */
-	void setLastName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Active</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Active</em>' attribute.
-	 * @see #setActive(String)
-	 * @generated
-	 */
-	String getActive();
-
-	/**
-	 * Sets the value of the '{@link cclms.UserMst#getActive <em>Active</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Active</em>' attribute.
-	 * @see #getActive()
-	 * @generated
-	 */
-	void setActive(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Email</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Email</em>' attribute.
-	 * @see #setEmail(String)
-	 * @generated
-	 */
-	String getEmail();
-
-	/**
-	 * Sets the value of the '{@link cclms.UserMst#getEmail <em>Email</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Email</em>' attribute.
-	 * @see #getEmail()
-	 * @generated
-	 */
-	void setEmail(String value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<ParameterValue> getParameterValueCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	DivisionMst getDivisionId();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	void setDivisionId(DivisionMst obj);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	StationMst getLobbyId();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	void setLobbyId(StationMst obj);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	UserRoleMst getUserRole();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	void setUserRole(UserRoleMst obj);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	ZoneMst getZoneId();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	void setZoneId(ZoneMst obj);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<KpiValue> getKpiValueCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<ParameterMst> getParameterMstCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<ParameterMst> getParameterMstLastModifiedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<TrainTypeMst> getTrainTypeMstCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<TrainTypeMappingMst> getTrainTypeMappingMstCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<TrainTypeMappingMst> getTrainTypeMappingMstLastModifiedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<SegmentMst> getSegmentMstCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<TrainSegmentMst> getTrainSegmentMstCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<LinkMst> getLinkMstCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<LinkMst> getLinkMstLastModifiedBy();
+	boolean isSetDivisionId();
 
 	/**
 	 * <!-- begin-user-doc -->

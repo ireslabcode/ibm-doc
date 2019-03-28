@@ -535,7 +535,7 @@ public class OutlinkEngineImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getOutlinkEngine();
+		return CclmsPackage.Literals.OUTLINK_ENGINE;
 	}
 
 	/**

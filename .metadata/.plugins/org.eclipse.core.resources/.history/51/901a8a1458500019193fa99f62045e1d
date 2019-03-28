@@ -1,0 +1,16 @@
+package cclms.app.util;
+
+import ilog.odm.dom.ui.IloDomScenarioView;
+import ilog.odm.dom.ui.IloDomScenarioViewDescription;
+
+public class UserUtilService extends IloDomScenarioView{
+
+	public UserUtilService(IloDomScenarioViewDescription desc) {
+		super(desc);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	//IloApplicationContext app =
+
+}

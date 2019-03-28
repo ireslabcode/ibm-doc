@@ -1,0 +1,21 @@
+!SESSION 2019-03-26 17:46:30.152 -----------------------------------------------
+eclipse.buildId=unknown
+java.fullversion=JRE 1.7.0 IBM J9 2.6 Windows 7 amd64-64 Compressed References 20160406_298397 (JIT enabled, AOT enabled)
+J9VM - R26_Java726_SR9_20160406_0949_B298397
+JIT  - tr.r11_20160328_114192
+GC   - R26_Java726_SR9_20160406_0949_B298397_CMPRSS
+J9CL - 20160406_298397
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -clean -nl en_US -configuration D:\CCLMS\Import\workspace\workspace2\.metadata\workspace_oplrun
+
+!ENTRY org.eclipse.equinox.registry 2 0 2019-03-26 17:46:30.152
+!MESSAGE The extensions and extension-points from the bundle "ilog.views.eclipse.framework.runtime" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.equinox.registry 2 0 2019-03-26 17:46:30.152
+!MESSAGE The extensions and extension-points from the bundle "ilog.views.eclipse.chart.runtime" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.equinox.registry 2 0 2019-03-26 17:46:30.152
+!MESSAGE The extensions and extension-points from the bundle "ilog.views.eclipse.gantt.runtime" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY ilog.odms.ide.opllang.remote 1 0 2019-03-26 17:46:30.604
+!MESSAGE Run Copy of Copy of New Default Scenario in D:/CCLMS/Import/workspace/workspace2/CCLMS_opl

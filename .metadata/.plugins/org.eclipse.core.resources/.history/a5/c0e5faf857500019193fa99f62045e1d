@@ -1,0 +1,10 @@
+package cclms.app.util;
+
+import ilog.odm.service.IloApplicationContext;
+
+public class UserUtilService {
+	
+	
+	//IloApplicationContext app =
+
+}

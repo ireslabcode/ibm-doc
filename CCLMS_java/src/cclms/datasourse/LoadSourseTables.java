@@ -1,11 +1,14 @@
 package cclms.datasourse;
 
+import ilog.odm.datasvc.IloDataService;
 import ilog.odm.datasvc.IloDataServiceContext;
 import ilog.odm.datasvc.IloRow;
 import ilog.odm.datasvc.IloScenario;
 import ilog.odm.datasvc.IloScenarioUpdater;
 import ilog.odm.datasvc.IloTable;
 import ilog.odm.datasvc.IloTemplateInstance;
+import ilog.odm.datasvc.IloUser;
+import ilog.odm.service.IloApplicationContext;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,6 +23,8 @@ import cclms.app.query.QueryUtil;
 import cclms.app.scenario.updater.InputTableUpdater;
 import cclms.app.scenario.updater.PreProcessingInputTableUpdater;
 import cclms.app.scenario.updater.ScenarioUpdater;
+import cclms.app.util.UserUtilService;
+import cclms.common.util.QueryIdentifierRequest;
 import cclms.common.util.TableConstant;
 import cclms.connection.ConnectionProvider;
 
@@ -33,23 +38,26 @@ public void updateScenario(IloScenario scenario,
 		throws Exception {
 	
 			/*String zone = templateInstance.getStringValue("zone");*/
+			String lobby = templateInstance.getStringValue("lobby");
 			String tractiontype = templateInstance.getStringValue("tractiontype");
-			String station = templateInstance.getStringValue("station");
+			String traintype = templateInstance.getStringValue("traintype");
 			String trainfrequency = templateInstance.getStringValue("trainfrequency");
+			System.out.println("count :"+count);
+			System.out.println(lobby+""+tractiontype+" "+traintype+" "+" "+trainfrequency);
 			
 			
 			
-		    System.out.println("coount :"+count);
-			System.out.println(""+tractiontype+" "+station+" "+" "+trainfrequency);
+			
+			updateScenario(scenario, lobby, tractiontype,traintype,trainfrequency);
 			
 			
-			updateScenario(scenario, null, tractiontype,station,trainfrequency);
 			
+			 			
 }
 	
 
-public static void updateScenario(IloScenario scenario, String zone,
-		String tractiontype, String station, String trainfrequency) {
+public static void updateScenario(IloScenario scenario, String lobby,
+		String tractiontype, String traintype, String trainfrequency) {
 	//ResultSet resultSet = null;
 	//ResultSet stationResultSet = null;
 	ResultSet tractiontypeResultSet = null;
@@ -59,7 +67,7 @@ public static void updateScenario(IloScenario scenario, String zone,
 	
 	
 	
-	/* open this
+	// open this
 	
 	// --- scenario updater code----------
 	
@@ -109,11 +117,11 @@ public static void updateScenario(IloScenario scenario, String zone,
 	//InputTableUpdater.loadScenarioInputTables(resultSetMap, scenario);
 	
 	
-	open this */
+	//open this 
 	
 	
 	// open this for input table updater.
-	/*
+	//
 	
 	// Inutput table updater
 
@@ -126,12 +134,19 @@ public static void updateScenario(IloScenario scenario, String zone,
 		e.printStackTrace();
 	}
 	
-	*/
+	//
 	
 	
 	try {
 		List<String> inputTableList = TableConstant.getPreProcessingInputTableNameList();
-		PreProcessingInputTableUpdater.prepareResultSetMap(inputTableList,scenario);
+		QueryIdentifierRequest identifierRequest = new QueryIdentifierRequest();
+		identifierRequest.setSelectedLobby(lobby);
+		identifierRequest.setSelectedTractionType(tractiontype);
+		identifierRequest.setSelectedTrainType(traintype);
+		identifierRequest.setSelectedTrainFrequency(trainfrequency);
+		
+		
+		PreProcessingInputTableUpdater.prepareResultSetMapForPreProcess(inputTableList,scenario,identifierRequest);
 	} catch (ClassNotFoundException | SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();

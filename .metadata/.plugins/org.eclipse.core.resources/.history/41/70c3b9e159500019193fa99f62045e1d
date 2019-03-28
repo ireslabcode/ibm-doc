@@ -1,0 +1,14 @@
+package cclms.app.util;
+
+
+public class UserUtilService {
+	
+	public static void main(String args[]){
+		
+		IloDomScenarioViewClient
+	}
+	
+	
+	//IloApplicationContext app =
+
+}

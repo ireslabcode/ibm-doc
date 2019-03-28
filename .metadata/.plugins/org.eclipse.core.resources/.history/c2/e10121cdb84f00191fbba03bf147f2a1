@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oplm:IloOdmOplMapping xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:oplm="http://www.ibm.com/odme/oplmapping.ecore/1.0.0" xmi:id="_4KPKcEyGEemi64MgO_SJDA">
+  <appDataModel xmi:id="_4KYUYEyGEemi64MgO_SJDA">
+    <tables xmi:id="_4aS_sUyGEemi64MgO_SJDA" name="TRAIN_FREQUENCY_MST" appId="_9vInsEWGEem-r8R1JeZ1pQ"/>
+    <tables xmi:id="_4aS_skyGEemi64MgO_SJDA" name="TRACTION_MST" appId="_9vInt0WGEem-r8R1JeZ1pQ"/>
+    <tables xmi:id="_4aS_tEyGEemi64MgO_SJDA" name="PARAMETER_VALUE" appId="_JVyQo0cREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_tUyGEemi64MgO_SJDA" name="DIVISION_MST" appId="_JVCo0EcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_t0yGEemi64MgO_SJDA" name="USER_MST" appId="_JVfUwEcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_uEyGEemi64MgO_SJDA" name="KPI_MST" appId="_JWFLAEcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_uUyGEemi64MgO_SJDA" name="KPI_VALUE" appId="_JVyQgkcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_u0yGEemi64MgO_SJDA" name="TRAIN_TYPE_MST" appId="_JVyQS0cREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_vEyGEemi64MgO_SJDA" name="TRAIN_TYPE_MAPPING_MST" appId="_JVyQJkcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_vUyGEemi64MgO_SJDA" name="LINK_DETAIL" appId="_JVfU-kcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_v0yGEemi64MgO_SJDA" name="TRAIN_SEGMENT_MST" appId="_JVoe7kcREemk28-sn57p-Q"/>
+    <tables xmi:id="_4aS_wEyGEemi64MgO_SJDA" name="LINK_MST" appId="_JVyPsEcREemk28-sn57p-Q"/>
+    <tables xmi:id="_wgPBQEyIEemi64MgO_SJDA" name="SEGMENT_MST" appId="_JVoey0cREemk28-sn57p-Q"/>
+    <tables xmi:id="_YuaUYEyUEemi64MgO_SJDA" name="LOBBY_MST" appId="_IfCMNElOEemTqdnsDsubUQ"/>
+    <tables xmi:id="_sl6PwE-0Eemr2-kFk8XenA" name="TRAIN_MST" appId="_9vDvMEWGEem-r8R1JeZ1pQ"/>
+    <tables xmi:id="_NLU7YE-4Eem-ddQhuGgF4Q" name="DAY_MST_ENGINE" appId="_Y7o1FkyQEemi64MgO_SJDA"/>
+    <tables xmi:id="_N2YqkE-4Eem-ddQhuGgF4Q" name="LOBBY_MST_ENGINE" appId="_HA6YFEyUEemi64MgO_SJDA"/>
+    <tables xmi:id="_OeGx4E-4Eem-ddQhuGgF4Q" name="PARAMETER_MST" appId="_JVyQXUcREemk28-sn57p-Q"/>
+    <tables xmi:id="_O-hXUE-4Eem-ddQhuGgF4Q" name="STATION_MST" appId="_9vB6AEWGEem-r8R1JeZ1pQ"/>
+    <tables xmi:id="_PjLjkE-4Eem-ddQhuGgF4Q" name="SEGMENT_MST_ENGINE" appId="_3SwoiUyJEemi64MgO_SJDA"/>
+    <tables xmi:id="_P8WRgE-4Eem-ddQhuGgF4Q" name="TIME_TO_MIN_ENGINE" appId="_3SwokkyJEemi64MgO_SJDA"/>
+    <tables xmi:id="_Qmrn8E-4Eem-ddQhuGgF4Q" name="TRAIN_SEGMENT_ENGINE" appId="_ISqcIUyGEemi64MgO_SJDA"/>
+    <tables xmi:id="_UG7bkE-4Eem-ddQhuGgF4Q" name="USER_MST" appId="_N4Dhq0-tEemi64MgO_SJDA"/>
+    <tables xmi:id="_V1NiUE-4Eem-ddQhuGgF4Q" name="KPI_LINK_ENGINE" appId="_Y7o1s0yQEemi64MgO_SJDA"/>
+    <tables xmi:id="_WadkcE-4Eem-ddQhuGgF4Q" name="OUTLINK_ENGINE" appId="_Y7o1G0yQEemi64MgO_SJDA"/>
+    <tables xmi:id="_W80DkE-4Eem-ddQhuGgF4Q" name="LINK_DETAIL_ENGINE" appId="_Y7o1kUyQEemi64MgO_SJDA"/>
+  </appDataModel>
+  <mappingDefinition xmi:id="_4KiFYEyGEemi64MgO_SJDA"/>
+  <oplDataModel xmi:id="_4KYUYUyGEemi64MgO_SJDA"/>
+</oplm:IloOdmOplMapping>

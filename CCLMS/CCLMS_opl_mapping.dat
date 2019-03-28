@@ -33,7 +33,8 @@ segmentMaster from ODMRead(odm,"SEGMENT_MST_ENGINE/REGULAR; \
 ");
 stationMaster from ODMRead(odm,"STATION_MST/REGULAR; \
    STATION_ID:stationId, \
-   STATION_CODE:stationCode \
+   STATION_CODE:stationCode, \
+   STATION_NAME:stationName \
 ");
 timetoMinutes from ODMRead(odm,"TIME_TO_MIN_ENGINE/REGULAR; \
    TRAINID:trainid, \
@@ -52,8 +53,7 @@ timetoMinutes from ODMRead(odm,"TIME_TO_MIN_ENGINE/REGULAR; \
 trainMaster from ODMRead(odm,"TRAIN_MST/REGULAR; \
    TRAIN_ID:trainId, \
    TRAIN_NBR:trainNo, \
-   TRAIN_NAME:trainName, \
-   TRAIN_TYPE:trainType \
+   TRAIN_NAME:trainName \
 ");
 trainSegments from ODMRead(odm,"TRAIN_SEGMENT_ENGINE/REGULAR; \
    TRAINID:trainid, \
@@ -69,6 +69,11 @@ trainSegments from ODMRead(odm,"TRAIN_SEGMENT_ENGINE/REGULAR; \
    NIGHTFLAG:nightflag, \
    DAYID:dayid, \
    SPAREFLAG:spareflag \
+");
+segmentMst from ODMRead(odm,"SEGMENT_MST/REGULAR; \
+   SEGMENT_ID:segmentId, \
+   START_STATION_ID:startStationId.stationId, \
+   STOP_STATION_ID:stopStationId.stationId \
 ");
 kpiLinkEngine to ODMPublish(odm,"KPI_LINK_ENGINE/REGULAR; \
    KPI_ID:kpiId, \

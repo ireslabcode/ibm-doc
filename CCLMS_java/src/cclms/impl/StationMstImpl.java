@@ -49,10 +49,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cclms.impl.StationMstImpl#getStationCode <em>Station Code</em>}</li>
  *   <li>{@link cclms.impl.StationMstImpl#getStationName <em>Station Name</em>}</li>
  *   <li>{@link cclms.impl.StationMstImpl#getLobbyFlag <em>Lobby Flag</em>}</li>
- *   <li>{@link cclms.impl.StationMstImpl#getRefDivisionId <em>Ref Division Id</em>}</li>
- *   <li>{@link cclms.impl.StationMstImpl#getRefTrainMstTrainEndStn <em>Ref Train Mst Train End Stn</em>}</li>
- *   <li>{@link cclms.impl.StationMstImpl#getRefTrainMstTrainStartStn <em>Ref Train Mst Train Start Stn</em>}</li>
- *   <li>{@link cclms.impl.StationMstImpl#getRefUserMstLobbyId <em>Ref User Mst Lobby Id</em>}</li>
  *   <li>{@link cclms.impl.StationMstImpl#getRefLinkDetailFromStn <em>Ref Link Detail From Stn</em>}</li>
  *   <li>{@link cclms.impl.StationMstImpl#getRefLinkDetailToStn <em>Ref Link Detail To Stn</em>}</li>
  *   <li>{@link cclms.impl.StationMstImpl#getRefSegmentMstStartStationId <em>Ref Segment Mst Start Station Id</em>}</li>
@@ -165,46 +161,6 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 	protected String lobbyFlag = LOBBY_FLAG_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRefDivisionId() <em>Ref Division Id</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefDivisionId()
-	 * @generated
-	 * @ordered
-	 */
-	protected DivisionMst refDivisionId;
-
-	/**
-	 * The cached value of the '{@link #getRefTrainMstTrainEndStn() <em>Ref Train Mst Train End Stn</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefTrainMstTrainEndStn()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TrainMst> refTrainMstTrainEndStn;
-
-	/**
-	 * The cached value of the '{@link #getRefTrainMstTrainStartStn() <em>Ref Train Mst Train Start Stn</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefTrainMstTrainStartStn()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TrainMst> refTrainMstTrainStartStn;
-
-	/**
-	 * The cached value of the '{@link #getRefUserMstLobbyId() <em>Ref User Mst Lobby Id</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefUserMstLobbyId()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<UserMst> refUserMstLobbyId;
-
-	/**
 	 * The cached value of the '{@link #getRefLinkDetailFromStn() <em>Ref Link Detail From Stn</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -290,7 +246,7 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getStationMst();
+		return CclmsPackage.Literals.STATION_MST;
 	}
 
 	/**
@@ -473,128 +429,6 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DivisionMst getRefDivisionId() {
-		return refDivisionId;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefDivisionId(
-			DivisionMst newRefDivisionId, NotificationChain msgs) {
-		DivisionMst oldRefDivisionId = refDivisionId;
-		refDivisionId = newRefDivisionId;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource().getNotificationFactory()
-						.createNotification(this, Notification.SET,
-								CclmsPackage.STATION_MST__REF_DIVISION_ID,
-								oldRefDivisionId, newRefDivisionId);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.STATION_MST__REF_DIVISION_ID,
-						oldRefDivisionId, newRefDivisionId);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefDivisionId(DivisionMst newRefDivisionId) {
-		if (newRefDivisionId != refDivisionId) {
-			NotificationChain msgs = null;
-			if (refDivisionId != null)
-				msgs = ((InternalEObject) refDivisionId).eInverseRemove(this,
-						CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID,
-						DivisionMst.class, msgs);
-			if (newRefDivisionId != null)
-				msgs = ((InternalEObject) newRefDivisionId).eInverseAdd(this,
-						CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID,
-						DivisionMst.class, msgs);
-			msgs = basicSetRefDivisionId(newRefDivisionId, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory().createNotification(this,
-								Notification.SET,
-								CclmsPackage.STATION_MST__REF_DIVISION_ID,
-								newRefDivisionId, newRefDivisionId);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.STATION_MST__REF_DIVISION_ID,
-						newRefDivisionId, newRefDivisionId));
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<TrainMst> getRefTrainMstTrainEndStn() {
-		if (refTrainMstTrainEndStn == null) {
-			refTrainMstTrainEndStn = new IloDomObjectWithInverseEList<TrainMst>(
-					TrainMst.class, this,
-					CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_END_STN,
-					CclmsPackage.TRAIN_MST__REF_TRAIN_END_STN);
-		}
-		return refTrainMstTrainEndStn;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<TrainMst> getRefTrainMstTrainStartStn() {
-		if (refTrainMstTrainStartStn == null) {
-			refTrainMstTrainStartStn = new IloDomObjectWithInverseEList<TrainMst>(
-					TrainMst.class, this,
-					CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_START_STN,
-					CclmsPackage.TRAIN_MST__REF_TRAIN_START_STN);
-		}
-		return refTrainMstTrainStartStn;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<UserMst> getRefUserMstLobbyId() {
-		if (refUserMstLobbyId == null) {
-			refUserMstLobbyId = new IloDomObjectWithInverseEList<UserMst>(
-					UserMst.class, this,
-					CclmsPackage.STATION_MST__REF_USER_MST_LOBBY_ID,
-					CclmsPackage.USER_MST__REF_LOBBY_ID);
-		}
-		return refUserMstLobbyId;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public List<LinkDetail> getRefLinkDetailFromStn() {
 		if (refLinkDetailFromStn == null) {
 			refLinkDetailFromStn = new IloDomObjectWithInverseEList<LinkDetail>(
@@ -702,52 +536,6 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DivisionMst getDivisionId() {
-		DivisionMst obj = getRefDivisionId();
-		return isNullOrProxy(obj) ? null : obj;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDivisionId(DivisionMst obj) {
-		setRefDivisionId(obj);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<TrainMst> getTrainMstTrainEndStn() {
-		return getRefTrainMstTrainEndStn();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<TrainMst> getTrainMstTrainStartStn() {
-		return getRefTrainMstTrainStartStn();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<UserMst> getUserMstLobbyId() {
-		return getRefUserMstLobbyId();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public List<LinkDetail> getLinkDetailFromStn() {
 		return getRefLinkDetailFromStn();
 	}
@@ -825,21 +613,6 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.STATION_MST__REF_DIVISION_ID:
-			if (refDivisionId != null)
-				msgs = ((InternalEObject) refDivisionId).eInverseRemove(this,
-						CclmsPackage.DIVISION_MST__REF_STATION_MST_DIVISION_ID,
-						DivisionMst.class, msgs);
-			return basicSetRefDivisionId((DivisionMst) otherEnd, msgs);
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_END_STN:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefTrainMstTrainEndStn())
-					.basicAdd(otherEnd, msgs);
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_START_STN:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefTrainMstTrainStartStn())
-					.basicAdd(otherEnd, msgs);
-		case CclmsPackage.STATION_MST__REF_USER_MST_LOBBY_ID:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefUserMstLobbyId())
-					.basicAdd(otherEnd, msgs);
 		case CclmsPackage.STATION_MST__REF_LINK_DETAIL_FROM_STN:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefLinkDetailFromStn())
 					.basicAdd(otherEnd, msgs);
@@ -874,17 +647,6 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.STATION_MST__REF_DIVISION_ID:
-			return basicSetRefDivisionId(null, msgs);
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_END_STN:
-			return ((InternalEList<?>) getRefTrainMstTrainEndStn())
-					.basicRemove(otherEnd, msgs);
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_START_STN:
-			return ((InternalEList<?>) getRefTrainMstTrainStartStn())
-					.basicRemove(otherEnd, msgs);
-		case CclmsPackage.STATION_MST__REF_USER_MST_LOBBY_ID:
-			return ((InternalEList<?>) getRefUserMstLobbyId()).basicRemove(
-					otherEnd, msgs);
 		case CclmsPackage.STATION_MST__REF_LINK_DETAIL_FROM_STN:
 			return ((InternalEList<?>) getRefLinkDetailFromStn()).basicRemove(
 					otherEnd, msgs);
@@ -926,14 +688,6 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 			return getStationName();
 		case CclmsPackage.STATION_MST__LOBBY_FLAG:
 			return getLobbyFlag();
-		case CclmsPackage.STATION_MST__REF_DIVISION_ID:
-			return getRefDivisionId();
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_END_STN:
-			return getRefTrainMstTrainEndStn();
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_START_STN:
-			return getRefTrainMstTrainStartStn();
-		case CclmsPackage.STATION_MST__REF_USER_MST_LOBBY_ID:
-			return getRefUserMstLobbyId();
 		case CclmsPackage.STATION_MST__REF_LINK_DETAIL_FROM_STN:
 			return getRefLinkDetailFromStn();
 		case CclmsPackage.STATION_MST__REF_LINK_DETAIL_TO_STN:
@@ -972,24 +726,6 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 			return;
 		case CclmsPackage.STATION_MST__LOBBY_FLAG:
 			setLobbyFlag((String) newValue);
-			return;
-		case CclmsPackage.STATION_MST__REF_DIVISION_ID:
-			setRefDivisionId((DivisionMst) newValue);
-			return;
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_END_STN:
-			getRefTrainMstTrainEndStn().clear();
-			getRefTrainMstTrainEndStn().addAll(
-					(Collection<? extends TrainMst>) newValue);
-			return;
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_START_STN:
-			getRefTrainMstTrainStartStn().clear();
-			getRefTrainMstTrainStartStn().addAll(
-					(Collection<? extends TrainMst>) newValue);
-			return;
-		case CclmsPackage.STATION_MST__REF_USER_MST_LOBBY_ID:
-			getRefUserMstLobbyId().clear();
-			getRefUserMstLobbyId().addAll(
-					(Collection<? extends UserMst>) newValue);
 			return;
 		case CclmsPackage.STATION_MST__REF_LINK_DETAIL_FROM_STN:
 			getRefLinkDetailFromStn().clear();
@@ -1050,18 +786,6 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 		case CclmsPackage.STATION_MST__LOBBY_FLAG:
 			setLobbyFlag(LOBBY_FLAG_EDEFAULT);
 			return;
-		case CclmsPackage.STATION_MST__REF_DIVISION_ID:
-			setRefDivisionId((DivisionMst) null);
-			return;
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_END_STN:
-			getRefTrainMstTrainEndStn().clear();
-			return;
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_START_STN:
-			getRefTrainMstTrainStartStn().clear();
-			return;
-		case CclmsPackage.STATION_MST__REF_USER_MST_LOBBY_ID:
-			getRefUserMstLobbyId().clear();
-			return;
 		case CclmsPackage.STATION_MST__REF_LINK_DETAIL_FROM_STN:
 			getRefLinkDetailFromStn().clear();
 			return;
@@ -1106,16 +830,6 @@ public class StationMstImpl extends IloDomObjectImpl implements StationMst {
 		case CclmsPackage.STATION_MST__LOBBY_FLAG:
 			return LOBBY_FLAG_EDEFAULT == null ? lobbyFlag != null
 					: !LOBBY_FLAG_EDEFAULT.equals(lobbyFlag);
-		case CclmsPackage.STATION_MST__REF_DIVISION_ID:
-			return refDivisionId != null;
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_END_STN:
-			return refTrainMstTrainEndStn != null
-					&& !refTrainMstTrainEndStn.isEmpty();
-		case CclmsPackage.STATION_MST__REF_TRAIN_MST_TRAIN_START_STN:
-			return refTrainMstTrainStartStn != null
-					&& !refTrainMstTrainStartStn.isEmpty();
-		case CclmsPackage.STATION_MST__REF_USER_MST_LOBBY_ID:
-			return refUserMstLobbyId != null && !refUserMstLobbyId.isEmpty();
 		case CclmsPackage.STATION_MST__REF_LINK_DETAIL_FROM_STN:
 			return refLinkDetailFromStn != null
 					&& !refLinkDetailFromStn.isEmpty();

@@ -1,0 +1,15 @@
+package cclms.aap.csv;
+
+public class UserModel {
+	
+	
+	    private long id;
+	    private String userName;
+	    private String password;
+	    
+	    
+	    
+	    
+	    
+
+}

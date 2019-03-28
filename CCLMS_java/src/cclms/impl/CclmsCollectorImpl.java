@@ -31,6 +31,7 @@ import cclms.TrainSegmentEngine;
 import cclms.TrainSegmentMst;
 import cclms.TrainTypeMappingMst;
 import cclms.TrainTypeMst;
+import cclms.UserMstEngine;
 import cclms.UserMst;
 import cclms.UserRoleMst;
 import cclms.ZoneMst;
@@ -62,15 +63,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link cclms.impl.CclmsCollectorImpl#getZoneMst <em>Zone Mst</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getStationMst <em>Station Mst</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getTrainFrequencyMst <em>Train Frequency Mst</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getTractionMst <em>Traction Mst</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getTrainMst <em>Train Mst</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getParameterValue <em>Parameter Value</em>}</li>
- *   <li>{@link cclms.impl.CclmsCollectorImpl#getDivisionMst <em>Division Mst</em>}</li>
- *   <li>{@link cclms.impl.CclmsCollectorImpl#getUserRoleMst <em>User Role Mst</em>}</li>
- *   <li>{@link cclms.impl.CclmsCollectorImpl#getUserMst <em>User Mst</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getKpiMst <em>Kpi Mst</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getKpiValue <em>Kpi Value</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getParameterMst <em>Parameter Mst</em>}</li>
@@ -84,11 +81,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getTrainSegmentEngine <em>Train Segment Engine</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getSegmentMstEngine <em>Segment Mst Engine</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getTimeToMinEngine <em>Time To Min Engine</em>}</li>
- *   <li>{@link cclms.impl.CclmsCollectorImpl#getDayMstEngine <em>Day Mst Engine</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getKpiLinkEngine <em>Kpi Link Engine</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getLinkDetailEngine <em>Link Detail Engine</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getOutlinkEngine <em>Outlink Engine</em>}</li>
  *   <li>{@link cclms.impl.CclmsCollectorImpl#getLobbyMstEngine <em>Lobby Mst Engine</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getUserMst <em>User Mst</em>}</li>
+ *   <li>{@link cclms.impl.CclmsCollectorImpl#getDayMstEngine <em>Day Mst Engine</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,16 +102,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	 * @ordered
 	 */
 	protected int _booleanFlags = 0;
-
-	/**
-	 * The cached value of the '{@link #getZoneMst() <em>Zone Mst</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getZoneMst()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ZoneMst> zoneMst;
 
 	/**
 	 * The cached value of the '{@link #getStationMst() <em>Station Mst</em>}' containment reference list.
@@ -164,36 +152,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	 * @ordered
 	 */
 	protected EList<ParameterValue> parameterValue;
-
-	/**
-	 * The cached value of the '{@link #getDivisionMst() <em>Division Mst</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDivisionMst()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DivisionMst> divisionMst;
-
-	/**
-	 * The cached value of the '{@link #getUserRoleMst() <em>User Role Mst</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUserRoleMst()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<UserRoleMst> userRoleMst;
-
-	/**
-	 * The cached value of the '{@link #getUserMst() <em>User Mst</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUserMst()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<UserMst> userMst;
 
 	/**
 	 * The cached value of the '{@link #getKpiMst() <em>Kpi Mst</em>}' containment reference list.
@@ -326,16 +284,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	protected EList<TimeToMinEngine> timeToMinEngine;
 
 	/**
-	 * The cached value of the '{@link #getDayMstEngine() <em>Day Mst Engine</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDayMstEngine()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DayMstEngine> dayMstEngine;
-
-	/**
 	 * The cached value of the '{@link #getKpiLinkEngine() <em>Kpi Link Engine</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -376,6 +324,26 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	protected EList<LobbyMstEngine> lobbyMstEngine;
 
 	/**
+	 * The cached value of the '{@link #getUserMst() <em>User Mst</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUserMst()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<UserMst> userMst;
+
+	/**
+	 * The cached value of the '{@link #getDayMstEngine() <em>Day Mst Engine</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDayMstEngine()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DayMstEngine> dayMstEngine;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -391,20 +359,7 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getCclmsCollector();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<ZoneMst> getZoneMst() {
-		if (zoneMst == null) {
-			zoneMst = new IloDomObjectContainmentEList<ZoneMst>(ZoneMst.class,
-					this, CclmsPackage.CCLMS_COLLECTOR__ZONE_MST);
-		}
-		return zoneMst;
+		return CclmsPackage.Literals.CCLMS_COLLECTOR;
 	}
 
 	/**
@@ -475,47 +430,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 					CclmsPackage.CCLMS_COLLECTOR__PARAMETER_VALUE);
 		}
 		return parameterValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<DivisionMst> getDivisionMst() {
-		if (divisionMst == null) {
-			divisionMst = new IloDomObjectContainmentEList<DivisionMst>(
-					DivisionMst.class, this,
-					CclmsPackage.CCLMS_COLLECTOR__DIVISION_MST);
-		}
-		return divisionMst;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<UserRoleMst> getUserRoleMst() {
-		if (userRoleMst == null) {
-			userRoleMst = new IloDomObjectContainmentEList<UserRoleMst>(
-					UserRoleMst.class, this,
-					CclmsPackage.CCLMS_COLLECTOR__USER_ROLE_MST);
-		}
-		return userRoleMst;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<UserMst> getUserMst() {
-		if (userMst == null) {
-			userMst = new IloDomObjectContainmentEList<UserMst>(UserMst.class,
-					this, CclmsPackage.CCLMS_COLLECTOR__USER_MST);
-		}
-		return userMst;
 	}
 
 	/**
@@ -773,41 +687,12 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ZoneMst createZoneMst() {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (ZoneMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.createEObject(ZoneMst.class);
+	public List<UserMst> getUserMst() {
+		if (userMst == null) {
+			userMst = new IloDomObjectContainmentEList<UserMst>(UserMst.class,
+					this, CclmsPackage.CCLMS_COLLECTOR__USER_MST);
 		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ZoneMst createZoneMst(int index) {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (ZoneMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.createEObjectAt(ZoneMst.class, index);
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ZoneMst getFromZoneMst(int zoneId) {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (ZoneMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.getObjectByKey(ZoneMst.class, new Object[] { zoneId });
-		}
-		return null;
+		return userMst;
 	}
 
 	/**
@@ -1020,134 +905,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return (ParameterValue) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
 					.getObjectByKey(ParameterValue.class, new Object[] {
 							parameterId, linkId });
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DivisionMst createDivisionMst() {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (DivisionMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.createEObject(DivisionMst.class);
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DivisionMst createDivisionMst(int index) {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (DivisionMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.createEObjectAt(DivisionMst.class, index);
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DivisionMst getFromDivisionMst(int divisionId) {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (DivisionMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.getObjectByKey(DivisionMst.class,
-							new Object[] { divisionId });
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserRoleMst createUserRoleMst() {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (UserRoleMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.createEObject(UserRoleMst.class);
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserRoleMst createUserRoleMst(int index) {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (UserRoleMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.createEObjectAt(UserRoleMst.class, index);
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserRoleMst getFromUserRoleMst(int userRoleCd) {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (UserRoleMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.getObjectByKey(UserRoleMst.class,
-							new Object[] { userRoleCd });
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst createUserMst() {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (UserMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.createEObject(UserMst.class);
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst createUserMst(int index) {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (UserMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.createEObjectAt(UserMst.class, index);
-		}
-		return null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst getFromUserMst(int userId) {
-		if (eResource() != null
-				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
-			return (UserMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
-					.getObjectByKey(UserMst.class, new Object[] { userId });
 		}
 		return null;
 	}
@@ -1887,13 +1644,38 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public UserMst createUserMst() {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (UserMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObject(UserMst.class);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UserMst createUserMst(int index) {
+		if (eResource() != null
+				&& eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {
+			return (UserMst) ((ilog.odm.dom.impl.resource.IloDomResourceImpl) eResource())
+					.createEObjectAt(UserMst.class, index);
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.CCLMS_COLLECTOR__ZONE_MST:
-			return ((InternalEList<?>) getZoneMst())
-					.basicRemove(otherEnd, msgs);
 		case CclmsPackage.CCLMS_COLLECTOR__STATION_MST:
 			return ((InternalEList<?>) getStationMst()).basicRemove(otherEnd,
 					msgs);
@@ -1909,15 +1691,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 		case CclmsPackage.CCLMS_COLLECTOR__PARAMETER_VALUE:
 			return ((InternalEList<?>) getParameterValue()).basicRemove(
 					otherEnd, msgs);
-		case CclmsPackage.CCLMS_COLLECTOR__DIVISION_MST:
-			return ((InternalEList<?>) getDivisionMst()).basicRemove(otherEnd,
-					msgs);
-		case CclmsPackage.CCLMS_COLLECTOR__USER_ROLE_MST:
-			return ((InternalEList<?>) getUserRoleMst()).basicRemove(otherEnd,
-					msgs);
-		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
-			return ((InternalEList<?>) getUserMst())
-					.basicRemove(otherEnd, msgs);
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_MST:
 			return ((InternalEList<?>) getKpiMst()).basicRemove(otherEnd, msgs);
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_VALUE:
@@ -1956,9 +1729,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 		case CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE:
 			return ((InternalEList<?>) getTimeToMinEngine()).basicRemove(
 					otherEnd, msgs);
-		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
-			return ((InternalEList<?>) getDayMstEngine()).basicRemove(otherEnd,
-					msgs);
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
 			return ((InternalEList<?>) getKpiLinkEngine()).basicRemove(
 					otherEnd, msgs);
@@ -1971,6 +1741,12 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE:
 			return ((InternalEList<?>) getLobbyMstEngine()).basicRemove(
 					otherEnd, msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
+			return ((InternalEList<?>) getUserMst())
+					.basicRemove(otherEnd, msgs);
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			return ((InternalEList<?>) getDayMstEngine()).basicRemove(otherEnd,
+					msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1983,8 +1759,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case CclmsPackage.CCLMS_COLLECTOR__ZONE_MST:
-			return getZoneMst();
 		case CclmsPackage.CCLMS_COLLECTOR__STATION_MST:
 			return getStationMst();
 		case CclmsPackage.CCLMS_COLLECTOR__TRAIN_FREQUENCY_MST:
@@ -1995,12 +1769,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return getTrainMst();
 		case CclmsPackage.CCLMS_COLLECTOR__PARAMETER_VALUE:
 			return getParameterValue();
-		case CclmsPackage.CCLMS_COLLECTOR__DIVISION_MST:
-			return getDivisionMst();
-		case CclmsPackage.CCLMS_COLLECTOR__USER_ROLE_MST:
-			return getUserRoleMst();
-		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
-			return getUserMst();
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_MST:
 			return getKpiMst();
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_VALUE:
@@ -2027,8 +1795,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return getSegmentMstEngine();
 		case CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE:
 			return getTimeToMinEngine();
-		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
-			return getDayMstEngine();
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
 			return getKpiLinkEngine();
 		case CclmsPackage.CCLMS_COLLECTOR__LINK_DETAIL_ENGINE:
@@ -2037,6 +1803,10 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return getOutlinkEngine();
 		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE:
 			return getLobbyMstEngine();
+		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
+			return getUserMst();
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			return getDayMstEngine();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -2050,10 +1820,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case CclmsPackage.CCLMS_COLLECTOR__ZONE_MST:
-			getZoneMst().clear();
-			getZoneMst().addAll((Collection<? extends ZoneMst>) newValue);
-			return;
 		case CclmsPackage.CCLMS_COLLECTOR__STATION_MST:
 			getStationMst().clear();
 			getStationMst().addAll((Collection<? extends StationMst>) newValue);
@@ -2076,20 +1842,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			getParameterValue().clear();
 			getParameterValue().addAll(
 					(Collection<? extends ParameterValue>) newValue);
-			return;
-		case CclmsPackage.CCLMS_COLLECTOR__DIVISION_MST:
-			getDivisionMst().clear();
-			getDivisionMst().addAll(
-					(Collection<? extends DivisionMst>) newValue);
-			return;
-		case CclmsPackage.CCLMS_COLLECTOR__USER_ROLE_MST:
-			getUserRoleMst().clear();
-			getUserRoleMst().addAll(
-					(Collection<? extends UserRoleMst>) newValue);
-			return;
-		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
-			getUserMst().clear();
-			getUserMst().addAll((Collection<? extends UserMst>) newValue);
 			return;
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_MST:
 			getKpiMst().clear();
@@ -2150,11 +1902,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			getTimeToMinEngine().addAll(
 					(Collection<? extends TimeToMinEngine>) newValue);
 			return;
-		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
-			getDayMstEngine().clear();
-			getDayMstEngine().addAll(
-					(Collection<? extends DayMstEngine>) newValue);
-			return;
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
 			getKpiLinkEngine().clear();
 			getKpiLinkEngine().addAll(
@@ -2175,6 +1922,15 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			getLobbyMstEngine().addAll(
 					(Collection<? extends LobbyMstEngine>) newValue);
 			return;
+		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
+			getUserMst().clear();
+			getUserMst().addAll((Collection<? extends UserMst>) newValue);
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			getDayMstEngine().clear();
+			getDayMstEngine().addAll(
+					(Collection<? extends DayMstEngine>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -2187,9 +1943,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case CclmsPackage.CCLMS_COLLECTOR__ZONE_MST:
-			getZoneMst().clear();
-			return;
 		case CclmsPackage.CCLMS_COLLECTOR__STATION_MST:
 			getStationMst().clear();
 			return;
@@ -2204,15 +1957,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return;
 		case CclmsPackage.CCLMS_COLLECTOR__PARAMETER_VALUE:
 			getParameterValue().clear();
-			return;
-		case CclmsPackage.CCLMS_COLLECTOR__DIVISION_MST:
-			getDivisionMst().clear();
-			return;
-		case CclmsPackage.CCLMS_COLLECTOR__USER_ROLE_MST:
-			getUserRoleMst().clear();
-			return;
-		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
-			getUserMst().clear();
 			return;
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_MST:
 			getKpiMst().clear();
@@ -2253,9 +1997,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 		case CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE:
 			getTimeToMinEngine().clear();
 			return;
-		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
-			getDayMstEngine().clear();
-			return;
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
 			getKpiLinkEngine().clear();
 			return;
@@ -2267,6 +2008,12 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return;
 		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE:
 			getLobbyMstEngine().clear();
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
+			getUserMst().clear();
+			return;
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			getDayMstEngine().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -2280,8 +2027,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case CclmsPackage.CCLMS_COLLECTOR__ZONE_MST:
-			return zoneMst != null && !zoneMst.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__STATION_MST:
 			return stationMst != null && !stationMst.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__TRAIN_FREQUENCY_MST:
@@ -2292,12 +2037,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return trainMst != null && !trainMst.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__PARAMETER_VALUE:
 			return parameterValue != null && !parameterValue.isEmpty();
-		case CclmsPackage.CCLMS_COLLECTOR__DIVISION_MST:
-			return divisionMst != null && !divisionMst.isEmpty();
-		case CclmsPackage.CCLMS_COLLECTOR__USER_ROLE_MST:
-			return userRoleMst != null && !userRoleMst.isEmpty();
-		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
-			return userMst != null && !userMst.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_MST:
 			return kpiMst != null && !kpiMst.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_VALUE:
@@ -2325,8 +2064,6 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return segmentMstEngine != null && !segmentMstEngine.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__TIME_TO_MIN_ENGINE:
 			return timeToMinEngine != null && !timeToMinEngine.isEmpty();
-		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
-			return dayMstEngine != null && !dayMstEngine.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__KPI_LINK_ENGINE:
 			return kpiLinkEngine != null && !kpiLinkEngine.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__LINK_DETAIL_ENGINE:
@@ -2335,6 +2072,10 @@ public class CclmsCollectorImpl extends IloDomObjectImpl implements
 			return outlinkEngine != null && !outlinkEngine.isEmpty();
 		case CclmsPackage.CCLMS_COLLECTOR__LOBBY_MST_ENGINE:
 			return lobbyMstEngine != null && !lobbyMstEngine.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__USER_MST:
+			return userMst != null && !userMst.isEmpty();
+		case CclmsPackage.CCLMS_COLLECTOR__DAY_MST_ENGINE:
+			return dayMstEngine != null && !dayMstEngine.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

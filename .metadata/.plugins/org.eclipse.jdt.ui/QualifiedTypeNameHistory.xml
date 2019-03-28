@@ -15,7 +15,6 @@
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="cclms.scenario.updater.ScenarioUpdater"/>
 <fullyQualifiedTypeName name="cclms.table.properties.Lobby"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="ilog.odm.processingsvc.IloCustomTaskImplementation"/>
 <fullyQualifiedTypeName name="ilog.odm.datasvc.IloScenarioExporter"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
@@ -24,10 +23,21 @@
 <fullyQualifiedTypeName name="cclms.app.scenario.updater.InputTableUpdater"/>
 <fullyQualifiedTypeName name="cclms.app.query.QueryUtil"/>
 <fullyQualifiedTypeName name="cclms.aap.input.table.properties.SegmentMst"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="cclms.common.util.TableConstant"/>
 <fullyQualifiedTypeName name="cclms.aap.input.table.properties.TrainMst"/>
 <fullyQualifiedTypeName name="cclms.ParameterMst"/>
 <fullyQualifiedTypeName name="cclms.aap.input.table.properties.ParameterMst"/>
+<fullyQualifiedTypeName name="cclms.app.scenario.updater.PreProcessingInputTableUpdater"/>
+<fullyQualifiedTypeName name="cclms.aap.input.table.properties.TrainSegmentEngine"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="cclms.common.util.TrainSegmentEngineDto"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.beans.Statement"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="cclms.aap.input.table.properties.TimeToMinEngine"/>
+<fullyQualifiedTypeName name="cclms.common.util.QueryIdentifierRequest"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

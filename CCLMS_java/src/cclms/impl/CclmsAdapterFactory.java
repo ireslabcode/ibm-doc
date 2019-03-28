@@ -69,11 +69,6 @@ public class CclmsAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected CclmsSwitch<Adapter> modelSwitch = new CclmsSwitch<Adapter>() {
 		@Override
-		public Adapter caseZoneMst(ZoneMst object) {
-			return createZoneMstAdapter();
-		}
-
-		@Override
 		public Adapter caseStationMst(StationMst object) {
 			return createStationMstAdapter();
 		}
@@ -96,21 +91,6 @@ public class CclmsAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseParameterValue(ParameterValue object) {
 			return createParameterValueAdapter();
-		}
-
-		@Override
-		public Adapter caseDivisionMst(DivisionMst object) {
-			return createDivisionMstAdapter();
-		}
-
-		@Override
-		public Adapter caseUserRoleMst(UserRoleMst object) {
-			return createUserRoleMstAdapter();
-		}
-
-		@Override
-		public Adapter caseUserMst(UserMst object) {
-			return createUserMstAdapter();
 		}
 
 		@Override
@@ -179,11 +159,6 @@ public class CclmsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseDayMstEngine(DayMstEngine object) {
-			return createDayMstEngineAdapter();
-		}
-
-		@Override
 		public Adapter caseKpiLinkEngine(KpiLinkEngine object) {
 			return createKpiLinkEngineAdapter();
 		}
@@ -201,6 +176,16 @@ public class CclmsAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseLobbyMstEngine(LobbyMstEngine object) {
 			return createLobbyMstEngineAdapter();
+		}
+
+		@Override
+		public Adapter caseUserMst(UserMst object) {
+			return createUserMstAdapter();
+		}
+
+		@Override
+		public Adapter caseDayMstEngine(DayMstEngine object) {
+			return createDayMstEngineAdapter();
 		}
 
 		@Override
@@ -230,20 +215,6 @@ public class CclmsAdapterFactory extends AdapterFactoryImpl {
 	@Override
 	public Adapter createAdapter(Notifier target) {
 		return modelSwitch.doSwitch((EObject) target);
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link cclms.ZoneMst <em>Zone Mst</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cclms.ZoneMst
-	 * @generated
-	 */
-	public Adapter createZoneMstAdapter() {
-		return null;
 	}
 
 	/**
@@ -313,48 +284,6 @@ public class CclmsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createParameterValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link cclms.DivisionMst <em>Division Mst</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cclms.DivisionMst
-	 * @generated
-	 */
-	public Adapter createDivisionMstAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link cclms.UserRoleMst <em>User Role Mst</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cclms.UserRoleMst
-	 * @generated
-	 */
-	public Adapter createUserRoleMstAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link cclms.UserMst <em>User Mst</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see cclms.UserMst
-	 * @generated
-	 */
-	public Adapter createUserMstAdapter() {
 		return null;
 	}
 
@@ -607,6 +536,20 @@ public class CclmsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLobbyMstEngineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link cclms.UserMst <em>User Mst</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see cclms.UserMst
+	 * @generated
+	 */
+	public Adapter createUserMstAdapter() {
 		return null;
 	}
 

@@ -127,7 +127,7 @@ public class LobbyMstEngineImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getLobbyMstEngine();
+		return CclmsPackage.Literals.LOBBY_MST_ENGINE;
 	}
 
 	/**

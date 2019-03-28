@@ -69,20 +69,6 @@ public interface ParameterValue extends IloDomObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	UserMst getCreatedBy();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	void setCreatedBy(UserMst obj);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	LinkMst getLinkId();
 
 	/**

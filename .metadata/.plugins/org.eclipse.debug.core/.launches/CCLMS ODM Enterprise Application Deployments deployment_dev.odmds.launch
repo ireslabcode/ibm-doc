@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="opl.launchType">
+<stringAttribute key="opl.debugModel.ATTR_ELEMENT_ID" value="=\C\CLMSbO\DM Ent\e\r\p\ri\s\e A\p\plic\ati\onD\D\e\pl\oy\m\ent\sd\d\e\pl\oy\m\ent_\d\e\v.\o\d\m\d\s"/>
+<stringAttribute key="opl.debugModel.ATTR_PROJECT" value="CCLMS"/>
+<stringAttribute key="opl.debugModel.ATTR_RUN_CONFIG" value="deployment_dev.odmds"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/CCLMS"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+</launchConfiguration>

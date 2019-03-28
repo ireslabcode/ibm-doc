@@ -47,8 +47,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cclms.impl.ParameterMstImpl#getMinValue <em>Min Value</em>}</li>
  *   <li>{@link cclms.impl.ParameterMstImpl#getMaxValue <em>Max Value</em>}</li>
  *   <li>{@link cclms.impl.ParameterMstImpl#getRefParameterValueParameterId <em>Ref Parameter Value Parameter Id</em>}</li>
- *   <li>{@link cclms.impl.ParameterMstImpl#getRefCreatedBy <em>Ref Created By</em>}</li>
- *   <li>{@link cclms.impl.ParameterMstImpl#getRefLastModifiedBy <em>Ref Last Modified By</em>}</li>
  * </ul>
  * </p>
  *
@@ -231,26 +229,6 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 	protected EList<ParameterValue> refParameterValueParameterId;
 
 	/**
-	 * The cached value of the '{@link #getRefCreatedBy() <em>Ref Created By</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefCreatedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected UserMst refCreatedBy;
-
-	/**
-	 * The cached value of the '{@link #getRefLastModifiedBy() <em>Ref Last Modified By</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefLastModifiedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected UserMst refLastModifiedBy;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -266,7 +244,7 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getParameterMst();
+		return CclmsPackage.Literals.PARAMETER_MST;
 	}
 
 	/**
@@ -652,209 +630,8 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getRefCreatedBy() {
-		return refCreatedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefCreatedBy(UserMst newRefCreatedBy,
-			NotificationChain msgs) {
-		UserMst oldRefCreatedBy = refCreatedBy;
-		refCreatedBy = newRefCreatedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource().getNotificationFactory()
-						.createNotification(this, Notification.SET,
-								CclmsPackage.PARAMETER_MST__REF_CREATED_BY,
-								oldRefCreatedBy, newRefCreatedBy);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.PARAMETER_MST__REF_CREATED_BY,
-						oldRefCreatedBy, newRefCreatedBy);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefCreatedBy(UserMst newRefCreatedBy) {
-		if (newRefCreatedBy != refCreatedBy) {
-			NotificationChain msgs = null;
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_PARAMETER_MST_CREATED_BY,
-						UserMst.class, msgs);
-			if (newRefCreatedBy != null)
-				msgs = ((InternalEObject) newRefCreatedBy).eInverseAdd(this,
-						CclmsPackage.USER_MST__REF_PARAMETER_MST_CREATED_BY,
-						UserMst.class, msgs);
-			msgs = basicSetRefCreatedBy(newRefCreatedBy, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory().createNotification(this,
-								Notification.SET,
-								CclmsPackage.PARAMETER_MST__REF_CREATED_BY,
-								newRefCreatedBy, newRefCreatedBy);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.PARAMETER_MST__REF_CREATED_BY,
-						newRefCreatedBy, newRefCreatedBy));
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst getRefLastModifiedBy() {
-		return refLastModifiedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefLastModifiedBy(
-			UserMst newRefLastModifiedBy, NotificationChain msgs) {
-		UserMst oldRefLastModifiedBy = refLastModifiedBy;
-		refLastModifiedBy = newRefLastModifiedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource()
-						.getNotificationFactory()
-						.createNotification(
-								this,
-								Notification.SET,
-								CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY,
-								oldRefLastModifiedBy, newRefLastModifiedBy);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY,
-						oldRefLastModifiedBy, newRefLastModifiedBy);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefLastModifiedBy(UserMst newRefLastModifiedBy) {
-		if (newRefLastModifiedBy != refLastModifiedBy) {
-			NotificationChain msgs = null;
-			if (refLastModifiedBy != null)
-				msgs = ((InternalEObject) refLastModifiedBy)
-						.eInverseRemove(
-								this,
-								CclmsPackage.USER_MST__REF_PARAMETER_MST_LAST_MODIFIED_BY,
-								UserMst.class, msgs);
-			if (newRefLastModifiedBy != null)
-				msgs = ((InternalEObject) newRefLastModifiedBy)
-						.eInverseAdd(
-								this,
-								CclmsPackage.USER_MST__REF_PARAMETER_MST_LAST_MODIFIED_BY,
-								UserMst.class, msgs);
-			msgs = basicSetRefLastModifiedBy(newRefLastModifiedBy, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory()
-						.createNotification(
-								this,
-								Notification.SET,
-								CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY,
-								newRefLastModifiedBy, newRefLastModifiedBy);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY,
-						newRefLastModifiedBy, newRefLastModifiedBy));
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public List<ParameterValue> getParameterValueParameterId() {
 		return getRefParameterValueParameterId();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst getCreatedBy() {
-		UserMst obj = getRefCreatedBy();
-		return isNullOrProxy(obj) ? null : obj;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCreatedBy(UserMst obj) {
-		setRefCreatedBy(obj);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst getLastModifiedBy() {
-		UserMst obj = getRefLastModifiedBy();
-		return isNullOrProxy(obj) ? null : obj;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLastModifiedBy(UserMst obj) {
-		setRefLastModifiedBy(obj);
 	}
 
 	/**
@@ -879,20 +656,6 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 		case CclmsPackage.PARAMETER_MST__REF_PARAMETER_VALUE_PARAMETER_ID:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefParameterValueParameterId())
 					.basicAdd(otherEnd, msgs);
-		case CclmsPackage.PARAMETER_MST__REF_CREATED_BY:
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_PARAMETER_MST_CREATED_BY,
-						UserMst.class, msgs);
-			return basicSetRefCreatedBy((UserMst) otherEnd, msgs);
-		case CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY:
-			if (refLastModifiedBy != null)
-				msgs = ((InternalEObject) refLastModifiedBy)
-						.eInverseRemove(
-								this,
-								CclmsPackage.USER_MST__REF_PARAMETER_MST_LAST_MODIFIED_BY,
-								UserMst.class, msgs);
-			return basicSetRefLastModifiedBy((UserMst) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -909,10 +672,6 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 		case CclmsPackage.PARAMETER_MST__REF_PARAMETER_VALUE_PARAMETER_ID:
 			return ((InternalEList<?>) getRefParameterValueParameterId())
 					.basicRemove(otherEnd, msgs);
-		case CclmsPackage.PARAMETER_MST__REF_CREATED_BY:
-			return basicSetRefCreatedBy(null, msgs);
-		case CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY:
-			return basicSetRefLastModifiedBy(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -939,10 +698,6 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 			return getMaxValue();
 		case CclmsPackage.PARAMETER_MST__REF_PARAMETER_VALUE_PARAMETER_ID:
 			return getRefParameterValueParameterId();
-		case CclmsPackage.PARAMETER_MST__REF_CREATED_BY:
-			return getRefCreatedBy();
-		case CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY:
-			return getRefLastModifiedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -979,12 +734,6 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 			getRefParameterValueParameterId().addAll(
 					(Collection<? extends ParameterValue>) newValue);
 			return;
-		case CclmsPackage.PARAMETER_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) newValue);
-			return;
-		case CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY:
-			setRefLastModifiedBy((UserMst) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1018,12 +767,6 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 		case CclmsPackage.PARAMETER_MST__REF_PARAMETER_VALUE_PARAMETER_ID:
 			getRefParameterValueParameterId().clear();
 			return;
-		case CclmsPackage.PARAMETER_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) null);
-			return;
-		case CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY:
-			setRefLastModifiedBy((UserMst) null);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1053,10 +796,6 @@ public class ParameterMstImpl extends IloDomObjectImpl implements ParameterMst {
 		case CclmsPackage.PARAMETER_MST__REF_PARAMETER_VALUE_PARAMETER_ID:
 			return refParameterValueParameterId != null
 					&& !refParameterValueParameterId.isEmpty();
-		case CclmsPackage.PARAMETER_MST__REF_CREATED_BY:
-			return refCreatedBy != null;
-		case CclmsPackage.PARAMETER_MST__REF_LAST_MODIFIED_BY:
-			return refLastModifiedBy != null;
 		}
 		return super.eIsSet(featureID);
 	}

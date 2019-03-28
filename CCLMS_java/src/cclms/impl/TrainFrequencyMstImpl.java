@@ -41,7 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link cclms.impl.TrainFrequencyMstImpl#getTrainFrequencyCode <em>Train Frequency Code</em>}</li>
  *   <li>{@link cclms.impl.TrainFrequencyMstImpl#getDesc <em>Desc</em>}</li>
- *   <li>{@link cclms.impl.TrainFrequencyMstImpl#getRefTrainMstTrainFrequencyCd <em>Ref Train Mst Train Frequency Cd</em>}</li>
  *   <li>{@link cclms.impl.TrainFrequencyMstImpl#getRefLinkMstTrainFrequencyCd <em>Ref Link Mst Train Frequency Cd</em>}</li>
  * </ul>
  * </p>
@@ -109,16 +108,6 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 	protected String desc = DESC_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRefTrainMstTrainFrequencyCd() <em>Ref Train Mst Train Frequency Cd</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefTrainMstTrainFrequencyCd()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TrainMst> refTrainMstTrainFrequencyCd;
-
-	/**
 	 * The cached value of the '{@link #getRefLinkMstTrainFrequencyCd() <em>Ref Link Mst Train Frequency Cd</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -144,7 +133,7 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getTrainFrequencyMst();
+		return CclmsPackage.Literals.TRAIN_FREQUENCY_MST;
 	}
 
 	/**
@@ -266,22 +255,6 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<TrainMst> getRefTrainMstTrainFrequencyCd() {
-		if (refTrainMstTrainFrequencyCd == null) {
-			refTrainMstTrainFrequencyCd = new IloDomObjectWithInverseEList<TrainMst>(
-					TrainMst.class,
-					this,
-					CclmsPackage.TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD,
-					CclmsPackage.TRAIN_MST__REF_TRAIN_FREQUENCY_CD);
-		}
-		return refTrainMstTrainFrequencyCd;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public List<LinkMst> getRefLinkMstTrainFrequencyCd() {
 		if (refLinkMstTrainFrequencyCd == null) {
 			refLinkMstTrainFrequencyCd = new IloDomObjectWithInverseEList<LinkMst>(
@@ -291,15 +264,6 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 					CclmsPackage.LINK_MST__REF_TRAIN_FREQUENCY_CD);
 		}
 		return refLinkMstTrainFrequencyCd;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<TrainMst> getTrainMstTrainFrequencyCd() {
-		return getRefTrainMstTrainFrequencyCd();
 	}
 
 	/**
@@ -330,9 +294,6 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefTrainMstTrainFrequencyCd())
-					.basicAdd(otherEnd, msgs);
 		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_LINK_MST_TRAIN_FREQUENCY_CD:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefLinkMstTrainFrequencyCd())
 					.basicAdd(otherEnd, msgs);
@@ -349,9 +310,6 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD:
-			return ((InternalEList<?>) getRefTrainMstTrainFrequencyCd())
-					.basicRemove(otherEnd, msgs);
 		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_LINK_MST_TRAIN_FREQUENCY_CD:
 			return ((InternalEList<?>) getRefLinkMstTrainFrequencyCd())
 					.basicRemove(otherEnd, msgs);
@@ -371,8 +329,6 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 			return getTrainFrequencyCode();
 		case CclmsPackage.TRAIN_FREQUENCY_MST__DESC:
 			return getDesc();
-		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD:
-			return getRefTrainMstTrainFrequencyCd();
 		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_LINK_MST_TRAIN_FREQUENCY_CD:
 			return getRefLinkMstTrainFrequencyCd();
 		}
@@ -393,11 +349,6 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 			return;
 		case CclmsPackage.TRAIN_FREQUENCY_MST__DESC:
 			setDesc((String) newValue);
-			return;
-		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD:
-			getRefTrainMstTrainFrequencyCd().clear();
-			getRefTrainMstTrainFrequencyCd().addAll(
-					(Collection<? extends TrainMst>) newValue);
 			return;
 		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_LINK_MST_TRAIN_FREQUENCY_CD:
 			getRefLinkMstTrainFrequencyCd().clear();
@@ -422,9 +373,6 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 		case CclmsPackage.TRAIN_FREQUENCY_MST__DESC:
 			setDesc(DESC_EDEFAULT);
 			return;
-		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD:
-			getRefTrainMstTrainFrequencyCd().clear();
-			return;
 		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_LINK_MST_TRAIN_FREQUENCY_CD:
 			getRefLinkMstTrainFrequencyCd().clear();
 			return;
@@ -445,9 +393,6 @@ public class TrainFrequencyMstImpl extends IloDomObjectImpl implements
 		case CclmsPackage.TRAIN_FREQUENCY_MST__DESC:
 			return DESC_EDEFAULT == null ? desc != null : !DESC_EDEFAULT
 					.equals(desc);
-		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_TRAIN_MST_TRAIN_FREQUENCY_CD:
-			return refTrainMstTrainFrequencyCd != null
-					&& !refTrainMstTrainFrequencyCd.isEmpty();
 		case CclmsPackage.TRAIN_FREQUENCY_MST__REF_LINK_MST_TRAIN_FREQUENCY_CD:
 			return refLinkMstTrainFrequencyCd != null
 					&& !refLinkMstTrainFrequencyCd.isEmpty();

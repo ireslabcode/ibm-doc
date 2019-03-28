@@ -127,7 +127,7 @@ public class SegmentMstEngineImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getSegmentMstEngine();
+		return CclmsPackage.Literals.SEGMENT_MST_ENGINE;
 	}
 
 	/**

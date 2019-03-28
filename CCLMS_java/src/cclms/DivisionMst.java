@@ -117,27 +117,6 @@ public interface DivisionMst extends IloDomObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	ZoneMst getZoneId();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	void setZoneId(ZoneMst obj);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<UserMst> getUserMstDivisionId();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	CclmsCollector getCollector();
 
 } // DivisionMst

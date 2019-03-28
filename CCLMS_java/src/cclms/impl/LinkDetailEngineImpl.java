@@ -454,7 +454,7 @@ public class LinkDetailEngineImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getLinkDetailEngine();
+		return CclmsPackage.Literals.LINK_DETAIL_ENGINE;
 	}
 
 	/**

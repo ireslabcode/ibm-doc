@@ -4,81 +4,6 @@
   <eAnnotations source="ExtendedMetaData">
     <details key="odme.collector" value="CclmsCollector"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="ZoneMst">
-    <eAnnotations source="ExtendedMetaData">
-      <details key="odme.displayName" value="ZONE_MST"/>
-      <details key="odme.table" value="ZONE_MST"/>
-      <details key="odme.primarykey" value="ZONE_ID"/>
-      <details key="odme.columns" value="ZONE_ID,ZONE_CODE,ZONE_DESC"/>
-      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_STRING"/>
-    </eAnnotations>
-    <eOperations name="getDivisionMstZoneId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefDivisionMstZoneId();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//DivisionMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getUserMstZoneId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefUserMstZoneId();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//UserMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getCollector" eType="#//CclmsCollector">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return (CclmsCollector) eContainer();"/>
-      </eAnnotations>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zoneId" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" unsettable="true">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="ZONE_ID"/>
-        <details key="odme.column" value="ZONE_ID"/>
-        <details key="odme.keyPart" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zoneCode" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="ZONE_CODE"/>
-        <details key="odme.column" value="ZONE_CODE"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="zoneDesc" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="ZONE_DESC"/>
-        <details key="odme.column" value="ZONE_DESC"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefDivisionMstZoneId" upperBound="-1"
-        eType="#//DivisionMst" resolveProxies="false" eOpposite="#//DivisionMst/RefZoneId">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefUserMstZoneId" upperBound="-1"
-        eType="#//UserMst" resolveProxies="false" eOpposite="#//UserMst/RefZoneId">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StationMst">
     <eAnnotations source="ExtendedMetaData">
       <details key="odme.displayName" value="STATION_MST"/>
@@ -112,14 +37,6 @@
       </eAnnotations>
       <eGenericType eClassifier="#//List">
         <eTypeArguments eClassifier="#//TrainMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getUserMstLobbyId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefUserMstLobbyId();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//UserMst"/>
       </eGenericType>
     </eOperations>
     <eOperations name="getLinkDetailFromStn">
@@ -237,18 +154,6 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainMstTrainStartStn"
         upperBound="-1" eType="#//TrainMst" resolveProxies="false" eOpposite="#//TrainMst/RefTrainStartStn">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefUserMstLobbyId" upperBound="-1"
-        eType="#//UserMst" resolveProxies="false" eOpposite="#//UserMst/RefLobbyId">
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.displayName" value=""/>
       </eAnnotations>
@@ -701,20 +606,9 @@
       <details key="odme.displayName" value="PARAMETER_VALUE"/>
       <details key="odme.table" value="PARAMETER_VALUE"/>
       <details key="odme.primarykey" value="PARAMETER_ID,LINK_ID"/>
-      <details key="odme.columns" value="PARAMETER_ID,LINK_ID,VALUE,CREATED_BY"/>
-      <details key="odme.types" value="FIELD_INT,FIELD_INT,FIELD_DOUBLE,FIELD_INT"/>
+      <details key="odme.columns" value="PARAMETER_ID,LINK_ID,VALUE"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_INT,FIELD_DOUBLE"/>
     </eAnnotations>
-    <eOperations name="getCreatedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefCreatedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefCreatedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
-    </eOperations>
     <eOperations name="getLinkId" eType="#//LinkMst">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="LinkMst obj= getRefLinkId();return isNullOrProxy(obj)?null:obj;"/>
@@ -747,19 +641,6 @@
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.displayName" value="VALUE"/>
         <details key="odme.column" value="VALUE"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefCreatedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefParameterValueCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="CREATED_BY"/>
-        <details key="odme.columns" value="CREATED_BY"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefLinkId" eType="#//LinkMst"
@@ -796,8 +677,8 @@
       <details key="odme.displayName" value="DIVISION_MST"/>
       <details key="odme.table" value="DIVISION_MST"/>
       <details key="odme.primarykey" value="DIVISION_ID"/>
-      <details key="odme.columns" value="DIVISION_ID,DIVISION_CODE,DIVISION_DESC,ZONE_ID"/>
-      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_INT"/>
+      <details key="odme.columns" value="DIVISION_ID,DIVISION_CODE,DIVISION_DESC"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_STRING"/>
     </eAnnotations>
     <eOperations name="getStationMstDivisionId">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -805,25 +686,6 @@
       </eAnnotations>
       <eGenericType eClassifier="#//List">
         <eTypeArguments eClassifier="#//StationMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getZoneId" eType="#//ZoneMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="ZoneMst obj= getRefZoneId();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setZoneId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefZoneId(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//ZoneMst"/>
-    </eOperations>
-    <eOperations name="getUserMstDivisionId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefUserMstDivisionId();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//UserMst"/>
       </eGenericType>
     </eOperations>
     <eOperations name="getCollector" eType="#//CclmsCollector">
@@ -854,453 +716,6 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefStationMstDivisionId"
         upperBound="-1" eType="#//StationMst" resolveProxies="false" eOpposite="#//StationMst/RefDivisionId">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefZoneId" eType="#//ZoneMst"
-        resolveProxies="false" eOpposite="#//ZoneMst/RefDivisionMstZoneId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="ZONE_ID"/>
-        <details key="odme.columns" value="ZONE_ID"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefUserMstDivisionId" upperBound="-1"
-        eType="#//UserMst" resolveProxies="false" eOpposite="#//UserMst/RefDivisionId">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UserRoleMst">
-    <eAnnotations source="ExtendedMetaData">
-      <details key="odme.displayName" value="USER_ROLE_MST"/>
-      <details key="odme.table" value="USER_ROLE_MST"/>
-      <details key="odme.primarykey" value="USER_ROLE_CD"/>
-      <details key="odme.columns" value="USER_ROLE_CD,USER_ROLE"/>
-      <details key="odme.types" value="FIELD_INT,FIELD_STRING"/>
-    </eAnnotations>
-    <eOperations name="getUserMstUserRole">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefUserMstUserRole();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//UserMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getCollector" eType="#//CclmsCollector">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return (CclmsCollector) eContainer();"/>
-      </eAnnotations>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userRoleCd" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" unsettable="true">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="USER_ROLE_CD"/>
-        <details key="odme.column" value="USER_ROLE_CD"/>
-        <details key="odme.keyPart" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="USER_ROLE"/>
-        <details key="odme.column" value="USER_ROLE"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefUserMstUserRole" upperBound="-1"
-        eType="#//UserMst" resolveProxies="false" eOpposite="#//UserMst/RefUserRole">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UserMst">
-    <eAnnotations source="ExtendedMetaData">
-      <details key="odme.displayName" value="USER_MST"/>
-      <details key="odme.table" value="USER_MST"/>
-      <details key="odme.primarykey" value="USER_ID"/>
-      <details key="odme.columns" value="USER_ID,USER,USER_PWD,FIRST_NAME,LAST_NAME,ACTIVE,USER_ROLE,DIVISION_ID,ZONE_ID,EMAIL,LOBBY_ID"/>
-      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_STRING,FIELD_INT"/>
-    </eAnnotations>
-    <eOperations name="getParameterValueCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefParameterValueCreatedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//ParameterValue"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getDivisionId" eType="#//DivisionMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="DivisionMst obj= getRefDivisionId();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setDivisionId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefDivisionId(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//DivisionMst"/>
-    </eOperations>
-    <eOperations name="getLobbyId" eType="#//StationMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="StationMst obj= getRefLobbyId();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setLobbyId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefLobbyId(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//StationMst"/>
-    </eOperations>
-    <eOperations name="getUserRole" eType="#//UserRoleMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserRoleMst obj= getRefUserRole();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setUserRole">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefUserRole(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserRoleMst"/>
-    </eOperations>
-    <eOperations name="getZoneId" eType="#//ZoneMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="ZoneMst obj= getRefZoneId();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setZoneId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefZoneId(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//ZoneMst"/>
-    </eOperations>
-    <eOperations name="getKpiValueCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefKpiValueCreatedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//KpiValue"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getParameterMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefParameterMstCreatedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//ParameterMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getParameterMstLastModifiedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefParameterMstLastModifiedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//ParameterMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getTrainTypeMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefTrainTypeMstCreatedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//TrainTypeMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getTrainTypeMappingMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefTrainTypeMappingMstCreatedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//TrainTypeMappingMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getTrainTypeMappingMstLastModifiedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefTrainTypeMappingMstLastModifiedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//TrainTypeMappingMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getSegmentMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefSegmentMstCreatedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//SegmentMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getTrainSegmentMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefTrainSegmentMstCreatedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//TrainSegmentMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getLinkMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefLinkMstCreatedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//LinkMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getLinkMstLastModifiedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getRefLinkMstLastModifiedBy();"/>
-      </eAnnotations>
-      <eGenericType eClassifier="#//List">
-        <eTypeArguments eClassifier="#//LinkMst"/>
-      </eGenericType>
-    </eOperations>
-    <eOperations name="getCollector" eType="#//CclmsCollector">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return (CclmsCollector) eContainer();"/>
-      </eAnnotations>
-    </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userId" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" unsettable="true">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="USER_ID"/>
-        <details key="odme.column" value="USER_ID"/>
-        <details key="odme.keyPart" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="user" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="USER"/>
-        <details key="odme.column" value="USER"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userPwd" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="USER_PWD"/>
-        <details key="odme.column" value="USER_PWD"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="FIRST_NAME"/>
-        <details key="odme.column" value="FIRST_NAME"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="LAST_NAME"/>
-        <details key="odme.column" value="LAST_NAME"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="ACTIVE"/>
-        <details key="odme.column" value="ACTIVE"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="EMAIL"/>
-        <details key="odme.column" value="EMAIL"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefParameterValueCreatedBy"
-        upperBound="-1" eType="#//ParameterValue" resolveProxies="false" eOpposite="#//ParameterValue/RefCreatedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefDivisionId" eType="#//DivisionMst"
-        resolveProxies="false" eOpposite="#//DivisionMst/RefUserMstDivisionId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="DIVISION_ID"/>
-        <details key="odme.columns" value="DIVISION_ID"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefLobbyId" eType="#//StationMst"
-        resolveProxies="false" eOpposite="#//StationMst/RefUserMstLobbyId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="LOBBY_ID"/>
-        <details key="odme.columns" value="LOBBY_ID"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefUserRole" eType="#//UserRoleMst"
-        resolveProxies="false" eOpposite="#//UserRoleMst/RefUserMstUserRole">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="USER_ROLE"/>
-        <details key="odme.columns" value="USER_ROLE"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefZoneId" eType="#//ZoneMst"
-        resolveProxies="false" eOpposite="#//ZoneMst/RefUserMstZoneId">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="ZONE_ID"/>
-        <details key="odme.columns" value="ZONE_ID"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefKpiValueCreatedBy" upperBound="-1"
-        eType="#//KpiValue" resolveProxies="false" eOpposite="#//KpiValue/RefCreatedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefParameterMstCreatedBy"
-        upperBound="-1" eType="#//ParameterMst" resolveProxies="false" eOpposite="#//ParameterMst/RefCreatedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefParameterMstLastModifiedBy"
-        upperBound="-1" eType="#//ParameterMst" resolveProxies="false" eOpposite="#//ParameterMst/RefLastModifiedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainTypeMstCreatedBy"
-        upperBound="-1" eType="#//TrainTypeMst" resolveProxies="false" eOpposite="#//TrainTypeMst/RefCreatedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainTypeMappingMstCreatedBy"
-        upperBound="-1" eType="#//TrainTypeMappingMst" resolveProxies="false" eOpposite="#//TrainTypeMappingMst/RefCreatedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainTypeMappingMstLastModifiedBy"
-        upperBound="-1" eType="#//TrainTypeMappingMst" resolveProxies="false" eOpposite="#//TrainTypeMappingMst/RefLastModifiedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefSegmentMstCreatedBy"
-        upperBound="-1" eType="#//SegmentMst" resolveProxies="false" eOpposite="#//SegmentMst/RefCreatedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainSegmentMstCreatedBy"
-        upperBound="-1" eType="#//TrainSegmentMst" resolveProxies="false" eOpposite="#//TrainSegmentMst/RefCreatedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefLinkMstCreatedBy" upperBound="-1"
-        eType="#//LinkMst" resolveProxies="false" eOpposite="#//LinkMst/RefCreatedBy">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value=""/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefLinkMstLastModifiedBy"
-        upperBound="-1" eType="#//LinkMst" resolveProxies="false" eOpposite="#//LinkMst/RefLastModifiedBy">
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.displayName" value=""/>
       </eAnnotations>
@@ -1397,17 +812,6 @@
       </eAnnotations>
       <eParameters name="obj" eType="#//LinkMst"/>
     </eOperations>
-    <eOperations name="getCreatedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefCreatedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefCreatedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
-    </eOperations>
     <eOperations name="getCollector" eType="#//CclmsCollector">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return (CclmsCollector) eContainer();"/>
@@ -1418,6 +822,13 @@
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.displayName" value="VALUE"/>
         <details key="odme.column" value="VALUE"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdBy" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="CREATED_BY"/>
+        <details key="odme.column" value="CREATED_BY"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefKpiId" eType="#//KpiMst"
@@ -1448,27 +859,14 @@
         <details key="odme.keyPart" value="true"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefCreatedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefKpiValueCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="CREATED_BY"/>
-        <details key="odme.columns" value="CREATED_BY"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParameterMst">
     <eAnnotations source="ExtendedMetaData">
       <details key="odme.displayName" value="PARAMETER_MST"/>
       <details key="odme.table" value="PARAMETER_MST"/>
       <details key="odme.primarykey" value="PARAMETER_ID"/>
-      <details key="odme.columns" value="PARAMETER_ID,PARAMETER_DESC,UOM,GLOBAL_VALUE,MIN_VALUE,CREATED_BY,MAX_VALUE,LAST_MODIFIED_BY"/>
-      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_DOUBLE,FIELD_DOUBLE,FIELD_INT,FIELD_DOUBLE,FIELD_INT"/>
+      <details key="odme.columns" value="PARAMETER_ID,PARAMETER_DESC,UOM,GLOBAL_VALUE,MIN_VALUE,CREATED_BY,MAX_VALUE"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_DOUBLE,FIELD_DOUBLE,FIELD_INT,FIELD_DOUBLE"/>
     </eAnnotations>
     <eOperations name="getParameterValueParameterId">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1477,28 +875,6 @@
       <eGenericType eClassifier="#//List">
         <eTypeArguments eClassifier="#//ParameterValue"/>
       </eGenericType>
-    </eOperations>
-    <eOperations name="getCreatedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefCreatedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefCreatedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
-    </eOperations>
-    <eOperations name="getLastModifiedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefLastModifiedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setLastModifiedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefLastModifiedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
     </eOperations>
     <eOperations name="getCollector" eType="#//CclmsCollector">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1540,6 +916,13 @@
         <details key="odme.column" value="MIN_VALUE"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdBy" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="CREATED_BY"/>
+        <details key="odme.column" value="CREATED_BY"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         unsettable="true">
       <eAnnotations source="ExtendedMetaData">
@@ -1559,52 +942,15 @@
         <details key="suppressedIsSetVisibility" value="true"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefCreatedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefParameterMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="CREATED_BY"/>
-        <details key="odme.columns" value="CREATED_BY"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefLastModifiedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefParameterMstLastModifiedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="LAST_MODIFIED_BY"/>
-        <details key="odme.columns" value="LAST_MODIFIED_BY"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TrainTypeMst">
     <eAnnotations source="ExtendedMetaData">
       <details key="odme.displayName" value="TRAIN_TYPE_MST"/>
       <details key="odme.table" value="TRAIN_TYPE_MST"/>
       <details key="odme.primarykey" value="TRAIN_TYPE_CCLMS_ID"/>
-      <details key="odme.columns" value="TRAIN_TYPE_CCLMS_ID,TRAIN_TYPE_DESC,CREATED_BY"/>
-      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_INT"/>
+      <details key="odme.columns" value="TRAIN_TYPE_CCLMS_ID,TRAIN_TYPE_DESC"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING"/>
     </eAnnotations>
-    <eOperations name="getCreatedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefCreatedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefCreatedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
-    </eOperations>
     <eOperations name="getTrainTypeMappingMstTrainTypeCclms">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="return getRefTrainTypeMappingMstTrainTypeCclms();"/>
@@ -1641,19 +987,6 @@
         <details key="odme.column" value="TRAIN_TYPE_DESC"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefCreatedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefTrainTypeMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="CREATED_BY"/>
-        <details key="odme.columns" value="CREATED_BY"/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainTypeMappingMstTrainTypeCclms"
         upperBound="-1" eType="#//TrainTypeMappingMst" resolveProxies="false" eOpposite="#//TrainTypeMappingMst/RefTrainTypeCclms">
       <eAnnotations source="ExtendedMetaData">
@@ -1684,8 +1017,8 @@
       <details key="odme.displayName" value="TRAIN_TYPE_MAPPING_MST"/>
       <details key="odme.table" value="TRAIN_TYPE_MAPPING_MST"/>
       <details key="odme.primarykey" value="TRAIN_TYPE"/>
-      <details key="odme.columns" value="TRAIN_TYPE,TRAIN_TYPE_DESC,TRAIN_TYPE_CCLMS,LAST_MODIFIED_BY,CREATED_BY"/>
-      <details key="odme.types" value="FIELD_STRING,FIELD_STRING,FIELD_INT,FIELD_INT,FIELD_INT"/>
+      <details key="odme.columns" value="TRAIN_TYPE,TRAIN_TYPE_DESC,TRAIN_TYPE_CCLMS"/>
+      <details key="odme.types" value="FIELD_STRING,FIELD_STRING,FIELD_INT"/>
     </eAnnotations>
     <eOperations name="getTrainMstTrainType">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1694,28 +1027,6 @@
       <eGenericType eClassifier="#//List">
         <eTypeArguments eClassifier="#//TrainMst"/>
       </eGenericType>
-    </eOperations>
-    <eOperations name="getCreatedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefCreatedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefCreatedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
-    </eOperations>
-    <eOperations name="getLastModifiedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefLastModifiedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setLastModifiedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefLastModifiedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
     </eOperations>
     <eOperations name="getTrainTypeCclms" eType="#//TrainTypeMst">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -1758,32 +1069,6 @@
         <details key="suppressedGetVisibility" value="true"/>
         <details key="suppressedUnsetVisibility" value="true"/>
         <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefCreatedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefTrainTypeMappingMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="CREATED_BY"/>
-        <details key="odme.columns" value="CREATED_BY"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefLastModifiedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefTrainTypeMappingMstLastModifiedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="LAST_MODIFIED_BY"/>
-        <details key="odme.columns" value="LAST_MODIFIED_BY"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefTrainTypeCclms" eType="#//TrainTypeMst"
@@ -2019,20 +1304,9 @@
       <details key="odme.displayName" value="SEGMENT_MST"/>
       <details key="odme.table" value="SEGMENT_MST"/>
       <details key="odme.primarykey" value="SEGMENT_ID"/>
-      <details key="odme.columns" value="SEGMENT_ID,START_STATION_ID,STOP_STATION_ID,CREATED_BY"/>
-      <details key="odme.types" value="FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT"/>
+      <details key="odme.columns" value="SEGMENT_ID,START_STATION_ID,STOP_STATION_ID"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_INT,FIELD_INT"/>
     </eAnnotations>
-    <eOperations name="getCreatedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefCreatedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefCreatedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
-    </eOperations>
     <eOperations name="getStartStationId" eType="#//StationMst">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="StationMst obj= getRefStartStationId();return isNullOrProxy(obj)?null:obj;"/>
@@ -2074,19 +1348,6 @@
         <details key="odme.displayName" value="SEGMENT_ID"/>
         <details key="odme.column" value="SEGMENT_ID"/>
         <details key="odme.keyPart" value="true"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefCreatedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefSegmentMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="CREATED_BY"/>
-        <details key="odme.columns" value="CREATED_BY"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefStartStationId" eType="#//StationMst"
@@ -2136,17 +1397,6 @@
       <details key="odme.columns" value="TRAIN_SEG_ID,TRAIN_ID,SEGMENT_ID,CCLMS_TRAIN_TYPE,SIGN_ON_TIME,START_TIME,END_TIME,SIGN_OFF_TIME,RUNNING_DURATION,CHRONIC_DELAY_TIME,LOCO_CHANGE_STN,TRACTION_TYPE,ASSIGNED_LOBBY,DEPT_TYPE,SPARE_FLAG,DAYOFSERVICE,ACTUAL_KM,CREATED_BY"/>
       <details key="odme.types" value="FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_INT,FIELD_STRING,FIELD_STRING,FIELD_STRING,FIELD_DOUBLE,FIELD_INT"/>
     </eAnnotations>
-    <eOperations name="getCreatedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefCreatedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefCreatedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
-    </eOperations>
     <eOperations name="getLocoChangeStn" eType="#//StationMst">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="StationMst obj= getRefLocoChangeStn();return isNullOrProxy(obj)?null:obj;"/>
@@ -2290,17 +1540,11 @@
         <details key="odme.column" value="ACTUAL_KM"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefCreatedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefTrainSegmentMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdBy" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" unsettable="true">
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.displayName" value="CREATED_BY"/>
-        <details key="odme.columns" value="CREATED_BY"/>
+        <details key="odme.column" value="CREATED_BY"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefLocoChangeStn" eType="#//StationMst"
@@ -2401,17 +1645,6 @@
         <eTypeArguments eClassifier="#//LinkDetail"/>
       </eGenericType>
     </eOperations>
-    <eOperations name="getCreatedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefCreatedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefCreatedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
-    </eOperations>
     <eOperations name="getLobbyStnId" eType="#//StationMst">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="StationMst obj= getRefLobbyStnId();return isNullOrProxy(obj)?null:obj;"/>
@@ -2422,17 +1655,6 @@
         <details key="body" value="setRefLobbyStnId(obj);"/>
       </eAnnotations>
       <eParameters name="obj" eType="#//StationMst"/>
-    </eOperations>
-    <eOperations name="getLastModifiedBy" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="UserMst obj= getRefLastModifiedBy();return isNullOrProxy(obj)?null:obj;"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="setLastModifiedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="setRefLastModifiedBy(obj);"/>
-      </eAnnotations>
-      <eParameters name="obj" eType="#//UserMst"/>
     </eOperations>
     <eOperations name="getTractionType" eType="#//TractionMst">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -2500,6 +1722,20 @@
         <details key="odme.column" value="LOBBY_TYPE"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdBy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="CREATED_BY"/>
+        <details key="odme.column" value="CREATED_BY"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastModifiedBy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="LAST_MODIFIED_BY"/>
+        <details key="odme.column" value="LAST_MODIFIED_BY"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.displayName" value="LINK_STATUS"/>
@@ -2542,19 +1778,6 @@
         <details key="suppressedIsSetVisibility" value="true"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefCreatedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefLinkMstCreatedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="CREATED_BY"/>
-        <details key="odme.columns" value="CREATED_BY"/>
-      </eAnnotations>
-    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefLobbyStnId" eType="#//StationMst"
         resolveProxies="false" eOpposite="#//StationMst/RefLinkMstLobbyStnId">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -2566,19 +1789,6 @@
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.displayName" value="LOBBY_STN_ID"/>
         <details key="odme.columns" value="LOBBY_STN_ID"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="RefLastModifiedBy" eType="#//UserMst"
-        resolveProxies="false" eOpposite="#//UserMst/RefLinkMstLastModifiedBy">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="suppressedSetVisibility" value="true"/>
-        <details key="suppressedGetVisibility" value="true"/>
-        <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="suppressedIsSetVisibility" value="true"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.displayName" value="LAST_MODIFIED_BY"/>
-        <details key="odme.columns" value="LAST_MODIFIED_BY"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RefTractionType" eType="#//TractionMst"
@@ -3265,35 +2475,45 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UserMst">
+    <eAnnotations source="ExtendedMetaData">
+      <details key="odme.displayName" value="USER_MST"/>
+      <details key="odme.table" value="USER_MST"/>
+      <details key="odme.columns" value="USER_ID,USER,DIVISION_ID"/>
+      <details key="odme.types" value="FIELD_INT,FIELD_STRING,FIELD_INT"/>
+    </eAnnotations>
+    <eOperations name="getCollector" eType="#//CclmsCollector">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="return (CclmsCollector) eContainer();"/>
+      </eAnnotations>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="userId" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="USER_ID"/>
+        <details key="odme.column" value="USER_ID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="user" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="USER"/>
+        <details key="odme.column" value="USER"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="divisionId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        unsettable="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.displayName" value="DIVISION_ID"/>
+        <details key="odme.column" value="DIVISION_ID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="List" instanceClassName="java.util.List">
     <eTypeParameters name="T"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="java_sql_Date" instanceClassName="java.sql.Date"/>
   <eClassifiers xsi:type="ecore:EDataType" name="java_sql_Time" instanceClassName="java.sql.Time"/>
   <eClassifiers xsi:type="ecore:EClass" name="CclmsCollector" eSuperTypes="#//ilog_odm_dom_IloDomCollector">
-    <eOperations name="createZoneMst" eType="#//ZoneMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (ZoneMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(ZoneMst.class);&#xA;}&#xA;return null;"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.factory" value="ZoneMst"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="createZoneMst" eType="#//ZoneMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (ZoneMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(ZoneMst.class,index);&#xA;}&#xA;return null;"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.factory" value="ZoneMst"/>
-      </eAnnotations>
-      <eParameters name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
-    <eOperations name="getFromZoneMst" eType="#//ZoneMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (ZoneMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(ZoneMst.class,new Object[]{zoneId});&#xA;}&#xA;return null;"/>
-      </eAnnotations>
-      <eParameters name="zoneId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
     <eOperations name="createStationMst" eType="#//StationMst">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (StationMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(StationMst.class);&#xA;}&#xA;return null;"/>
@@ -3432,52 +2652,6 @@
         <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (DivisionMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(DivisionMst.class,new Object[]{divisionId});&#xA;}&#xA;return null;"/>
       </eAnnotations>
       <eParameters name="divisionId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
-    <eOperations name="createUserRoleMst" eType="#//UserRoleMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (UserRoleMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(UserRoleMst.class);&#xA;}&#xA;return null;"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.factory" value="UserRoleMst"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="createUserRoleMst" eType="#//UserRoleMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (UserRoleMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(UserRoleMst.class,index);&#xA;}&#xA;return null;"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.factory" value="UserRoleMst"/>
-      </eAnnotations>
-      <eParameters name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
-    <eOperations name="getFromUserRoleMst" eType="#//UserRoleMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (UserRoleMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(UserRoleMst.class,new Object[]{userRoleCd});&#xA;}&#xA;return null;"/>
-      </eAnnotations>
-      <eParameters name="userRoleCd" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
-    <eOperations name="createUserMst" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (UserMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(UserMst.class);&#xA;}&#xA;return null;"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.factory" value="UserMst"/>
-      </eAnnotations>
-    </eOperations>
-    <eOperations name="createUserMst" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (UserMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(UserMst.class,index);&#xA;}&#xA;return null;"/>
-      </eAnnotations>
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.factory" value="UserMst"/>
-      </eAnnotations>
-      <eParameters name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    </eOperations>
-    <eOperations name="getFromUserMst" eType="#//UserMst">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (UserMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).getObjectByKey(UserMst.class,new Object[]{userId});&#xA;}&#xA;return null;"/>
-      </eAnnotations>
-      <eParameters name="userId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
     <eOperations name="createKpiMst" eType="#//KpiMst">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -3891,12 +3065,23 @@
       </eAnnotations>
       <eParameters name="lobbyId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="zoneMst" upperBound="-1"
-        eType="#//ZoneMst" containment="true">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.collector" value="ZoneMst"/>
+    <eOperations name="createUserMst" eType="#//UserMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (UserMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObject(UserMst.class);&#xA;}&#xA;return null;"/>
       </eAnnotations>
-    </eStructuralFeatures>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="UserMst"/>
+      </eAnnotations>
+    </eOperations>
+    <eOperations name="createUserMst" eType="#//UserMst">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="body" value="if (eResource()!=null &amp;&amp; eResource() instanceof ilog.odm.dom.impl.resource.IloDomResourceImpl) {&#xA;return (UserMst)((ilog.odm.dom.impl.resource.IloDomResourceImpl)eResource()).createEObjectAt(UserMst.class,index);&#xA;}&#xA;return null;"/>
+      </eAnnotations>
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.factory" value="UserMst"/>
+      </eAnnotations>
+      <eParameters name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="stationMst" upperBound="-1"
         eType="#//StationMst" containment="true">
       <eAnnotations source="ExtendedMetaData">
@@ -3931,18 +3116,6 @@
         eType="#//DivisionMst" containment="true">
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.collector" value="DivisionMst"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="userRoleMst" upperBound="-1"
-        eType="#//UserRoleMst" containment="true">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.collector" value="UserRoleMst"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="userMst" upperBound="-1"
-        eType="#//UserMst" containment="true">
-      <eAnnotations source="ExtendedMetaData">
-        <details key="odme.collector" value="UserMst"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="kpiMst" upperBound="-1"
@@ -4051,6 +3224,12 @@
         eType="#//LobbyMstEngine" containment="true">
       <eAnnotations source="ExtendedMetaData">
         <details key="odme.collector" value="LobbyMstEngine"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="userMst" upperBound="-1"
+        eType="#//UserMst" containment="true">
+      <eAnnotations source="ExtendedMetaData">
+        <details key="odme.collector" value="UserMst"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

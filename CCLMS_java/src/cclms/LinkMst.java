@@ -194,18 +194,51 @@ public interface LinkMst extends IloDomObject {
 	List<LinkDetail> getLinkDetailLinkId();
 
 	/**
+	 * Returns the value of the '<em><b>Created By</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Created By</em>' attribute.
+	 * @see #isSetCreatedBy()
+	 * @see #unsetCreatedBy()
+	 * @see #setCreatedBy(int)
 	 * @generated
 	 */
-	UserMst getCreatedBy();
+	int getCreatedBy();
 
 	/**
+	 * Sets the value of the '{@link cclms.LinkMst#getCreatedBy <em>Created By</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Created By</em>' attribute.
+	 * @see #isSetCreatedBy()
+	 * @see #unsetCreatedBy()
+	 * @see #getCreatedBy()
 	 * @generated
 	 */
-	void setCreatedBy(UserMst obj);
+	void setCreatedBy(int value);
+
+	/**
+	 * Unsets the value of the '{@link cclms.LinkMst#getCreatedBy <em>Created By</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetCreatedBy()
+	 * @see #getCreatedBy()
+	 * @see #setCreatedBy(int)
+	 * @generated
+	 */
+	void unsetCreatedBy();
+
+	/**
+	 * Returns whether the value of the '{@link cclms.LinkMst#getCreatedBy <em>Created By</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Created By</em>' attribute is set.
+	 * @see #unsetCreatedBy()
+	 * @see #getCreatedBy()
+	 * @see #setCreatedBy(int)
+	 * @generated
+	 */
+	boolean isSetCreatedBy();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,18 +255,51 @@ public interface LinkMst extends IloDomObject {
 	void setLobbyStnId(StationMst obj);
 
 	/**
+	 * Returns the value of the '<em><b>Last Modified By</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Modified By</em>' attribute.
+	 * @see #isSetLastModifiedBy()
+	 * @see #unsetLastModifiedBy()
+	 * @see #setLastModifiedBy(int)
 	 * @generated
 	 */
-	UserMst getLastModifiedBy();
+	int getLastModifiedBy();
 
 	/**
+	 * Sets the value of the '{@link cclms.LinkMst#getLastModifiedBy <em>Last Modified By</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Modified By</em>' attribute.
+	 * @see #isSetLastModifiedBy()
+	 * @see #unsetLastModifiedBy()
+	 * @see #getLastModifiedBy()
 	 * @generated
 	 */
-	void setLastModifiedBy(UserMst obj);
+	void setLastModifiedBy(int value);
+
+	/**
+	 * Unsets the value of the '{@link cclms.LinkMst#getLastModifiedBy <em>Last Modified By</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetLastModifiedBy()
+	 * @see #getLastModifiedBy()
+	 * @see #setLastModifiedBy(int)
+	 * @generated
+	 */
+	void unsetLastModifiedBy();
+
+	/**
+	 * Returns whether the value of the '{@link cclms.LinkMst#getLastModifiedBy <em>Last Modified By</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Last Modified By</em>' attribute is set.
+	 * @see #unsetLastModifiedBy()
+	 * @see #getLastModifiedBy()
+	 * @see #setLastModifiedBy(int)
+	 * @generated
+	 */
+	boolean isSetLastModifiedBy();
 
 	/**
 	 * <!-- begin-user-doc -->

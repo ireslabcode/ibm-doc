@@ -1,0 +1,10 @@
+package cclms.app.util;
+
+import ilog.odm.studio.extensions.IloSessionExtension;
+
+public class UserUtilService  extends IloSessionExtension{
+	
+
+	public static void main(String args[]){}
+
+}

@@ -379,7 +379,7 @@ public class TimeToMinEngineImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getTimeToMinEngine();
+		return CclmsPackage.Literals.TIME_TO_MIN_ENGINE;
 	}
 
 	/**

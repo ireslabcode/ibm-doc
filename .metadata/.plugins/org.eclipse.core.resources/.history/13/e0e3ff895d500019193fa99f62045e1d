@@ -1,0 +1,36 @@
+package cclms.app.util;
+
+import ilog.odm.studio.extensions.IloSessionExtension;
+import ilog.odm.studio.views.IloODMApplication;
+
+public class UserUtilService  extends IloSessionExtension{
+	
+
+	public static void main(String args[]){
+		
+		IloApplicationContext applicationContext = new UserUtilService().getApplicationContext();
+		
+		IloODMApplication odmApplication = new UserUtilService().getODMApplication();
+		odmApplication.get
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*IloApplicationContext applicationContext = ctx.get
+		  IloDataService service2 = applicationContext.getService(IloDataService.class);
+		  IloUser currentUser = service2.getCurrentUser();
+		  System.out.println("currentUser.getName(): "+currentUser.getName());*/*/
+	}
+
+}

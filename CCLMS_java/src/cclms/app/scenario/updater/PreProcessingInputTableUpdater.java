@@ -1,8 +1,11 @@
 package cclms.app.scenario.updater;
 
+import ilog.odm.datasvc.IloDataService;
 import ilog.odm.datasvc.IloRow;
 import ilog.odm.datasvc.IloScenario;
 import ilog.odm.datasvc.IloTable;
+import ilog.odm.datasvc.IloUser;
+import ilog.odm.service.IloApplicationContext;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,10 +15,13 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import cclms.aap.input.table.properties.SegmentMstEngine;
 import cclms.aap.input.table.properties.TimeToMinEngine;
 import cclms.aap.input.table.properties.TrainMst;
 import cclms.aap.input.table.properties.TrainSegmentEngine;
 import cclms.app.query.QueryUtil;
+import cclms.app.util.UserUtilService;
+import cclms.common.util.QueryIdentifierRequest;
 import cclms.common.util.TableConstant;
 import cclms.common.util.TrainSegmentEngineDto;
 
@@ -246,7 +252,8 @@ public class PreProcessingInputTableUpdater {
 		 				  row.setIntValue(TrainSegmentEngine.DURATION, trainSegmentEngineDto.getDURATION());
 		                   row.setIntValue(TrainSegmentEngine.DISTANCE, trainSegmentEngineDto.getDISTANCE());
 		                   row.setIntValue(TrainSegmentEngine.NIGHTFLAG, trainSegmentEngineDto.getNIGHTFLAG());
-		                   row.setIntValue(TrainSegmentEngine.DAYID, trainSegmentEngineDto.getDAYID());            
+		                   row.setIntValue(TrainSegmentEngine.DAYID, trainSegmentEngineDto.getDAYID()); 
+		                   row.setIntValue(TrainSegmentEngine.SPAREFLAG, trainSegmentEngineDto.getSPAREFLAG());
 		                   loadTable.addRow(row);
 		 		    	
 		 		    	
@@ -261,7 +268,7 @@ public class PreProcessingInputTableUpdater {
 		        	 
 		         }else if (entry.getKey().equals(TableConstant.TIME_TO_MIN_ENGINE)) {
 		        	 
-		        	 System.out.println("TIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINE");
+		        	// System.out.println("TIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINE");
 		        	 
 		        	 
 
@@ -289,10 +296,117 @@ public class PreProcessingInputTableUpdater {
 		        				 
 		        				  row.setStringValue(TimeToMinEngine.SIGNOFFTIME, convertMinToHrs( resultSet.getInt(6)));
 		        				  row.setIntValue(TimeToMinEngine.SIGNOFFMINUTE, resultSet.getInt(6));
+		        				  
+		        				  row.setIntValue(TimeToMinEngine.DAYID, 99);
+		        				  row.setIntValue(TimeToMinEngine.SPAREFLAG, 0);
 		        				 
 		        				  loadTable.addRow(row);
 		        				 
 		        				// System.out.println("-->>"+resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
+		        			 }
+		        		 }
+		        	} catch (SQLException e) {
+						// TODO Handel the error 
+						e.printStackTrace();
+					}
+		        	 
+		         
+		        	 
+					
+				}else if (entry.getKey().equals(TableConstant.SEGMENT_MST_ENGINE)) {
+		        	 
+		        	// System.out.println("TIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINE");
+		        	 
+		        	 
+
+		        	
+		        	 
+		        	 try {
+		        		 ResultSet resultSet = entry.getValue();
+		        		 if(resultSet!=null){
+		        			 IloTable loadTable = scenario.getTable(TableConstant.APP+"."+TableConstant.SEGMENT_MST_ENGINE);
+	        				 loadTable.removeAllRows();
+		        			 while (resultSet.next()) {
+		        				 	        				 
+		        				  IloRow row = loadTable.makeNewRow();
+		        				  row.setIntValue(SegmentMstEngine.SEGMENTID, resultSet.getInt(3));
+		        				  row.setStringValue(SegmentMstEngine.TOSTATION, resultSet.getString(2));
+		        				 
+		        				  row.setStringValue(SegmentMstEngine.FROMSTATION, resultSet.getString(1));
+		        			
+		        				 
+		        				  loadTable.addRow(row);
+		        				 
+		        				//System.out.println("-->>"+resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
+		        			 }
+		        		 }
+		        	} catch (SQLException e) {
+						// TODO Handel the error 
+						e.printStackTrace();
+					}
+		        	 
+		         
+		        	 
+					
+				}else if (entry.getKey().equals(TableConstant.DAY_MST_ENGINE)) {
+		        	 
+		        	System.out.println("TIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINETIME_TO_MIN_ENGINE");
+		        	 
+		        	 
+
+		        	
+		        	 
+		        	 try {
+		        		 ResultSet resultSet = entry.getValue();
+		        		 if(resultSet!=null){
+		        			 IloTable loadTable = scenario.getTable(TableConstant.APP+"."+TableConstant.DAY_MST_ENGINE);
+	        				 loadTable.removeAllRows();
+		        			 while (resultSet.next()) {
+		        				 	        				 
+		        				 /* IloRow row = loadTable.makeNewRow();
+		        				  row.setIntValue(TimeToMinEngine.TRAINID, resultSet.getInt(1));
+		        				  row.setIntValue(TimeToMinEngine.SEGMENTID, resultSet.getInt(2));
+		        				 
+		        				  row.setStringValue(TimeToMinEngine.SIGNONTIME, convertMinToHrs( resultSet.getInt(3)));
+		        				  row.setIntValue(TimeToMinEngine.SIGNOMINUTE, resultSet.getInt(3));
+		        			
+		        				  row.setStringValue(TimeToMinEngine.STARTTIME, convertMinToHrs( resultSet.getInt(4)));
+		        				  row.setIntValue(TimeToMinEngine.STARTMINUTE, resultSet.getInt(4));
+		        				 
+		        				  row.setStringValue(TimeToMinEngine.ENDTIME, convertMinToHrs( resultSet.getInt(5)));
+		        				  row.setIntValue(TimeToMinEngine.ENDMINUTE, resultSet.getInt(5));
+		        				 
+		        				  row.setStringValue(TimeToMinEngine.SIGNOFFTIME, convertMinToHrs( resultSet.getInt(6)));
+		        				  row.setIntValue(TimeToMinEngine.SIGNOFFMINUTE, resultSet.getInt(6));
+		        				 
+		        				  loadTable.addRow(row);*/
+		        				 
+		        				//System.out.println("-->>"+resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
+		        				 IloRow row = loadTable.makeNewRow();
+		        				 
+		        				 String TestResult ="";
+		        				  
+		        				 try{
+		        					 
+		        				    IloApplicationContext applicationContext = new UserUtilService().getApplicationContext();
+		        			        IloDataService service = applicationContext.getService(IloDataService.class);
+		        					IloUser currentUser = service.getCurrentUser();
+		        					System.out.println("currentUser.getName(): "+currentUser.getName());
+		        					
+		        					TestResult = "user :"+currentUser.getName();
+		        					row.setStringValue("DAY_DESC", TestResult);
+		        					 loadTable.addRow(row);	
+		        				
+		        				 }catch(Exception e){
+		        					 TestResult = "error";
+		        					 row.setStringValue("DAY_DESC", "error message :"+e.toString());
+		        					 loadTable.addRow(row);
+		        				 }
+		        					
+		        				
+		        					 
+
+		        			 
 		        			 }
 		        		 }
 		        	} catch (SQLException e) {
@@ -394,6 +508,35 @@ public class PreProcessingInputTableUpdater {
 		loadScenarioInputTables(resultSetMap, scenario);
 		
 	}
+	
+	
+	
+	
+	
+public static  void prepareResultSetMapForPreProcess(List<String> inputTableList, IloScenario scenario, QueryIdentifierRequest identifierRequest) throws ClassNotFoundException, SQLException{
+		
+		
+		
+		Map<String, ResultSet> resultSetMap = new HashMap<>();
+		
+		for (String tabeName : inputTableList) {
+			
+			System.out.println(tabeName);
+			resultSetMap.put(tabeName,ScenarioUpdater.getTableBySqlQuery(QueryUtil.getQueryByTableNameForPreProcessing(tabeName,identifierRequest)));
+			
+		}
+		
+		loadScenarioInputTables(resultSetMap, scenario);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	private static boolean checkTime(int firstVal, int secondVal){

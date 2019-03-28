@@ -2,7 +2,88 @@
 
 <opl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" odmVersion="3.9 Patch Level 0" xsi:noNamespaceSchemaLocation="odm-optim.xsd">
   <modelProperties/>
-  <requirements/>
+  <requirements>
+    <folder>
+      <id>
+        <message>Periodic Rest</message>
+      </id>
+      <oplConstraint name="PeriodicRests">
+        <level>
+          <key>
+            <scriptArg value="s"/>
+          </key>
+          <explanation>
+            <message>for {0}</message>
+            <args>
+              <scriptArg value="s"/>
+            </args>
+          </explanation>
+          <relaxation>
+            <message>The value {0} does not respect the limit {1}.</message>
+            <args>
+              <constraintArg value="left"/>
+              <constraintArg value="right"/>
+            </args>
+          </relaxation>
+        </level>
+      </oplConstraint>
+    </folder>
+    <folder>
+      <id>
+        <message>Max Fortnight Duty</message>
+      </id>
+      <oplConstraint name="MaxFortnightDuty">
+        <level>
+          <key>
+            <scriptArg value="s"/>
+          </key>
+          <explanation>
+            <message>for {0}</message>
+            <args>
+              <scriptArg value="s"/>
+            </args>
+          </explanation>
+          <relaxation>
+            <message>The value {0} does not respect the limit {1}.</message>
+            <args>
+              <constraintArg value="left"/>
+              <constraintArg value="right"/>
+            </args>
+          </relaxation>
+        </level>
+      </oplConstraint>
+    </folder>
+  </requirements>
   <rules/>
-  <goals/>
+  <goals>
+    <dexpr name="OverallLinkLength">
+      <label>
+        <message>OverallLinkLength</message>
+      </label>
+    </dexpr>
+    <goal name="OverallLinkLength" display="OverallLinkLength" activeByDefault="true"/>
+    <dexpr name="TotalHomeRest">
+      <label>
+        <message>TotalHomeRest</message>
+      </label>
+    </dexpr>
+    <goal name="TotalHomeRest" display="TotalHomeRest" activeByDefault="true"/>
+    <dexpr name="TotalOutRest">
+      <label>
+        <message>TotalOutRest</message>
+      </label>
+      <level>
+        <key>
+          <scriptArg value="pr"/>
+        </key>
+        <label>
+          <message>for {0}</message>
+          <args>
+            <scriptArg value="pr"/>
+          </args>
+        </label>
+      </level>
+    </dexpr>
+    <goal name="TotalOutRest" display="TotalOutRest" activeByDefault="true"/>
+  </goals>
 </opl>

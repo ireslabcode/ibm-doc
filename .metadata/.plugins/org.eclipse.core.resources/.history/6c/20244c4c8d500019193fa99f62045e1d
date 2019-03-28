@@ -1,0 +1,59 @@
+package test;
+
+import ilog.odm.datasvc.IloDataException;
+import ilog.odm.datasvc.IloLock;
+import ilog.odm.datasvc.IloLockable;
+import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloScenarioLink;
+import ilog.odm.datasvc.IloWorkspace;
+import ilog.odm.datasvc.IloWorkspaceFolder;
+import ilog.odm.datasvc.IloWorkspaceItem;
+import ilog.odm.datasvc.internal.IloDataService;
+import ilog.odm.processingsvc.IloExecutionScope;
+import ilog.odm.processingsvc.IloSolveTaskController;
+import ilog.odm.processingsvc.scenario.IloScenarioProcessingService;
+import ilog.odm.service.internal.IloApplicationContext;
+import ilog.odm.studio.views.IloODMApplication;
+import ilog.odm.studio.workspacesvc.IloWorkspaceService;
+import ilog.odm.tasksvc.IloProgressMonitor;
+import ilog.odm.tasksvc.IloTask;
+import ilog.odm.tasksvc.IloTaskService;
+
+import java.util.ArrayList;
+
+public class ScenarioUtil {
+
+	
+
+	 /* public static void changeCurrentScenario(IloApplicationContext context, IloScenarioLink scenarioLink) {
+	    IloWorkspaceService workspaceService = context.getService(IloWorkspaceService.class);
+	    workspaceService.setKeyScenarioLink(IloWorkspaceService.CURRENT_KEY, scenarioLink);
+	    workspaceService.clearTag(IloWorkspaceService.SELECTED_TAG);
+	    workspaceService.addTag(scenarioLink, IloWorkspaceService.SELECTED_TAG);
+	  }
+
+	  public static void changeReferenceScenario(IloApplicationContext context, IloScenarioLink scenarioLink) {
+	    IloWorkspaceService workspaceService = context.getService(IloWorkspaceService.class);
+	    workspaceService.setKeyScenarioLink(IloWorkspaceService.REFERENCE_KEY, scenarioLink);
+	  }*/
+
+	 
+	
+	  // run all the given scenarios and wait for completion
+	 
+	  //--------------------
+	  // Solving One
+	  //--------------------
+
+	
+
+	 	  //--------------------
+	  // Scenario management
+	  //--------------------
+
+	 
+	
+	
+	  // returns the named workspace
+	
+}

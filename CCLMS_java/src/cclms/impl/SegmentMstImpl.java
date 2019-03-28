@@ -42,7 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cclms.impl.SegmentMstImpl#getSegmentId <em>Segment Id</em>}</li>
- *   <li>{@link cclms.impl.SegmentMstImpl#getRefCreatedBy <em>Ref Created By</em>}</li>
  *   <li>{@link cclms.impl.SegmentMstImpl#getRefStartStationId <em>Ref Start Station Id</em>}</li>
  *   <li>{@link cclms.impl.SegmentMstImpl#getRefStopStationId <em>Ref Stop Station Id</em>}</li>
  *   <li>{@link cclms.impl.SegmentMstImpl#getRefTrainSegmentMstSegmentId <em>Ref Train Segment Mst Segment Id</em>}</li>
@@ -91,16 +90,6 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 	protected static final int SEGMENT_ID_ESETFLAG = 1 << 0;
 
 	/**
-	 * The cached value of the '{@link #getRefCreatedBy() <em>Ref Created By</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefCreatedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected UserMst refCreatedBy;
-
-	/**
 	 * The cached value of the '{@link #getRefStartStationId() <em>Ref Start Station Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,7 +135,7 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getSegmentMst();
+		return CclmsPackage.Literals.SEGMENT_MST;
 	}
 
 	/**
@@ -220,83 +209,6 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 	 */
 	public boolean isSetSegmentId() {
 		return (_booleanFlags & SEGMENT_ID_ESETFLAG) != 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst getRefCreatedBy() {
-		return refCreatedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefCreatedBy(UserMst newRefCreatedBy,
-			NotificationChain msgs) {
-		UserMst oldRefCreatedBy = refCreatedBy;
-		refCreatedBy = newRefCreatedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource().getNotificationFactory()
-						.createNotification(this, Notification.SET,
-								CclmsPackage.SEGMENT_MST__REF_CREATED_BY,
-								oldRefCreatedBy, newRefCreatedBy);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.SEGMENT_MST__REF_CREATED_BY,
-						oldRefCreatedBy, newRefCreatedBy);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefCreatedBy(UserMst newRefCreatedBy) {
-		if (newRefCreatedBy != refCreatedBy) {
-			NotificationChain msgs = null;
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_SEGMENT_MST_CREATED_BY,
-						UserMst.class, msgs);
-			if (newRefCreatedBy != null)
-				msgs = ((InternalEObject) newRefCreatedBy).eInverseAdd(this,
-						CclmsPackage.USER_MST__REF_SEGMENT_MST_CREATED_BY,
-						UserMst.class, msgs);
-			msgs = basicSetRefCreatedBy(newRefCreatedBy, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory().createNotification(this,
-								Notification.SET,
-								CclmsPackage.SEGMENT_MST__REF_CREATED_BY,
-								newRefCreatedBy, newRefCreatedBy);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.SEGMENT_MST__REF_CREATED_BY,
-						newRefCreatedBy, newRefCreatedBy));
-			}
-		}
 	}
 
 	/**
@@ -481,25 +393,6 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getCreatedBy() {
-		UserMst obj = getRefCreatedBy();
-		return isNullOrProxy(obj) ? null : obj;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCreatedBy(UserMst obj) {
-		setRefCreatedBy(obj);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public StationMst getStartStationId() {
 		StationMst obj = getRefStartStationId();
 		return isNullOrProxy(obj) ? null : obj;
@@ -561,12 +454,6 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.SEGMENT_MST__REF_CREATED_BY:
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_SEGMENT_MST_CREATED_BY,
-						UserMst.class, msgs);
-			return basicSetRefCreatedBy((UserMst) otherEnd, msgs);
 		case CclmsPackage.SEGMENT_MST__REF_START_STATION_ID:
 			if (refStartStationId != null)
 				msgs = ((InternalEObject) refStartStationId)
@@ -599,8 +486,6 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.SEGMENT_MST__REF_CREATED_BY:
-			return basicSetRefCreatedBy(null, msgs);
 		case CclmsPackage.SEGMENT_MST__REF_START_STATION_ID:
 			return basicSetRefStartStationId(null, msgs);
 		case CclmsPackage.SEGMENT_MST__REF_STOP_STATION_ID:
@@ -622,8 +507,6 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 		switch (featureID) {
 		case CclmsPackage.SEGMENT_MST__SEGMENT_ID:
 			return getSegmentId();
-		case CclmsPackage.SEGMENT_MST__REF_CREATED_BY:
-			return getRefCreatedBy();
 		case CclmsPackage.SEGMENT_MST__REF_START_STATION_ID:
 			return getRefStartStationId();
 		case CclmsPackage.SEGMENT_MST__REF_STOP_STATION_ID:
@@ -645,9 +528,6 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 		switch (featureID) {
 		case CclmsPackage.SEGMENT_MST__SEGMENT_ID:
 			setSegmentId((Integer) newValue);
-			return;
-		case CclmsPackage.SEGMENT_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) newValue);
 			return;
 		case CclmsPackage.SEGMENT_MST__REF_START_STATION_ID:
 			setRefStartStationId((StationMst) newValue);
@@ -675,9 +555,6 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 		case CclmsPackage.SEGMENT_MST__SEGMENT_ID:
 			unsetSegmentId();
 			return;
-		case CclmsPackage.SEGMENT_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) null);
-			return;
 		case CclmsPackage.SEGMENT_MST__REF_START_STATION_ID:
 			setRefStartStationId((StationMst) null);
 			return;
@@ -701,8 +578,6 @@ public class SegmentMstImpl extends IloDomObjectImpl implements SegmentMst {
 		switch (featureID) {
 		case CclmsPackage.SEGMENT_MST__SEGMENT_ID:
 			return isSetSegmentId();
-		case CclmsPackage.SEGMENT_MST__REF_CREATED_BY:
-			return refCreatedBy != null;
 		case CclmsPackage.SEGMENT_MST__REF_START_STATION_ID:
 			return refStartStationId != null;
 		case CclmsPackage.SEGMENT_MST__REF_STOP_STATION_ID:

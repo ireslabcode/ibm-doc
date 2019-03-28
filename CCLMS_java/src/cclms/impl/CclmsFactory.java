@@ -31,6 +31,7 @@ import cclms.TrainSegmentEngine;
 import cclms.TrainSegmentMst;
 import cclms.TrainTypeMappingMst;
 import cclms.TrainTypeMst;
+import cclms.UserMstEngine;
 import cclms.UserMst;
 import cclms.UserRoleMst;
 import cclms.ZoneMst;
@@ -53,15 +54,6 @@ public interface CclmsFactory extends EFactory {
 	 * @generated
 	 */
 	CclmsFactory eINSTANCE = cclms.impl.CclmsFactoryImpl.init();
-
-	/**
-	 * Returns a new object of class '<em>Zone Mst</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Zone Mst</em>'.
-	 * @generated
-	 */
-	ZoneMst createZoneMst();
 
 	/**
 	 * Returns a new object of class '<em>Station Mst</em>'.
@@ -107,33 +99,6 @@ public interface CclmsFactory extends EFactory {
 	 * @generated
 	 */
 	ParameterValue createParameterValue();
-
-	/**
-	 * Returns a new object of class '<em>Division Mst</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Division Mst</em>'.
-	 * @generated
-	 */
-	DivisionMst createDivisionMst();
-
-	/**
-	 * Returns a new object of class '<em>User Role Mst</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>User Role Mst</em>'.
-	 * @generated
-	 */
-	UserRoleMst createUserRoleMst();
-
-	/**
-	 * Returns a new object of class '<em>User Mst</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>User Mst</em>'.
-	 * @generated
-	 */
-	UserMst createUserMst();
 
 	/**
 	 * Returns a new object of class '<em>Kpi Mst</em>'.
@@ -296,6 +261,15 @@ public interface CclmsFactory extends EFactory {
 	 * @generated
 	 */
 	LobbyMstEngine createLobbyMstEngine();
+
+	/**
+	 * Returns a new object of class '<em>User Mst</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>User Mst</em>'.
+	 * @generated
+	 */
+	UserMst createUserMst();
 
 	/**
 	 * Returns a new object of class '<em>Collector</em>'.

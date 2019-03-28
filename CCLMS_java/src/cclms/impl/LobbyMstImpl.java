@@ -112,7 +112,7 @@ public class LobbyMstImpl extends IloDomObjectImpl implements LobbyMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getLobbyMst();
+		return CclmsPackage.Literals.LOBBY_MST;
 	}
 
 	/**

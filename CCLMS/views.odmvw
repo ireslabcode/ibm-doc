@@ -32,43 +32,13 @@
         </view>
         <view id="TRAIN FREQUENCY MST" uuid="_f0IhoEWIEem-r8R1JeZ1pQ">
           <schemaView tableId="app.TRAIN_FREQUENCY_MST">
+            <columnDisplays>
+              <columnDisplay columnId="TRAIN_FREQUENCY_CODE" display="TRAIN_FREQUENCY_CODE"/>
+              <columnDisplay columnId="DESC" display="DESC"/>
+            </columnDisplays>
             <columnOrder>
               <column columnId="TRAIN_FREQUENCY_CODE"/>
               <column columnId="DESC"/>
-            </columnOrder>
-          </schemaView>
-        </view>
-        <view id="TRAIN MST" uuid="_f0hjMEWIEem-r8R1JeZ1pQ">
-          <schemaView tableId="app.TRAIN_MST">
-            <columnDisplays>
-              <columnDisplay columnId="TRAIN_ID" display="TRAIN_ID"/>
-              <columnDisplay columnId="TRAIN_NBR" display="TRAIN_NBR"/>
-              <columnDisplay columnId="TRAIN_NAME" display="TRAIN_NAME"/>
-              <columnDisplay columnId="TRAIN_START_STN" display="TRAIN_START_STN"/>
-              <columnDisplay columnId="TRAIN_END_STN" display="TRAIN_END_STN"/>
-              <columnDisplay columnId="TRAIN_FREQUENCY_CD" display="TRAIN_FREQUENCY_CD"/>
-              <columnDisplay columnId="TRAIN_SUB_TYPE" display="TRAIN_SUB_TYPE"/>
-              <columnDisplay columnId="TRAIN_RUN_TYPE" display="TRAIN_RUN_TYPE"/>
-              <columnDisplay columnId="RAKE_ID" display="RAKE_ID"/>
-              <columnDisplay columnId="DAY_OF_SERVICE" display="DAY_OF_SERVICE"/>
-              <columnDisplay columnId="VALID_FROM" display="VALID_FROM"/>
-              <columnDisplay columnId="VALID_TO" display="VALID_TO"/>
-              <columnDisplay columnId="BASE_TRACTION" display="BASE_TRACTION"/>
-            </columnDisplays>
-            <columnOrder>
-              <column columnId="TRAIN_ID"/>
-              <column columnId="TRAIN_NBR"/>
-              <column columnId="TRAIN_NAME"/>
-              <column columnId="TRAIN_START_STN"/>
-              <column columnId="TRAIN_END_STN"/>
-              <column columnId="TRAIN_FREQUENCY_CD"/>
-              <column columnId="TRAIN_SUB_TYPE"/>
-              <column columnId="TRAIN_RUN_TYPE"/>
-              <column columnId="RAKE_ID"/>
-              <column columnId="DAY_OF_SERVICE"/>
-              <column columnId="VALID_FROM"/>
-              <column columnId="VALID_TO"/>
-              <column columnId="BASE_TRACTION"/>
             </columnOrder>
           </schemaView>
         </view>
@@ -88,25 +58,35 @@
         </view>
         <view id="PARAMETER MST" uuid="_K63NUEoVEem16JPRbjk15w">
           <schemaView tableId="app.PARAMETER_MST">
+            <columnDisplays>
+              <columnDisplay columnId="PARAMETER_ID" display="PARAMETER_ID"/>
+              <columnDisplay columnId="PARAMETER_DESC" display="PARAMETER_DESC"/>
+              <columnDisplay columnId="UOM" display="UOM"/>
+              <columnDisplay columnId="GLOBAL_VALUE" display="GLOBAL_VALUE"/>
+              <columnDisplay columnId="MIN_VALUE" display="MIN_VALUE"/>
+              <columnDisplay columnId="MAX_VALUE" display="MAX_VALUE"/>
+            </columnDisplays>
             <columnOrder>
               <column columnId="PARAMETER_ID"/>
               <column columnId="PARAMETER_DESC"/>
               <column columnId="UOM"/>
               <column columnId="GLOBAL_VALUE"/>
               <column columnId="MIN_VALUE"/>
-              <column columnId="CREATED_BY"/>
               <column columnId="MAX_VALUE"/>
-              <column columnId="LAST_MODIFIED_BY"/>
             </columnOrder>
           </schemaView>
         </view>
         <view id="SEGMENT MST" uuid="_K7dqQEoVEem16JPRbjk15w">
           <schemaView tableId="app.SEGMENT_MST">
+            <columnDisplays>
+              <columnDisplay columnId="SEGMENT_ID" display="SEGMENT_ID"/>
+              <columnDisplay columnId="START_STATION_ID" display="START_STATION_ID"/>
+              <columnDisplay columnId="STOP_STATION_ID" display="STOP_STATION_ID"/>
+            </columnDisplays>
             <columnOrder>
               <column columnId="SEGMENT_ID"/>
               <column columnId="START_STATION_ID"/>
               <column columnId="STOP_STATION_ID"/>
-              <column columnId="CREATED_BY"/>
             </columnOrder>
           </schemaView>
         </view>
@@ -186,6 +166,51 @@
             </columnOrder>
           </schemaView>
         </view>
+        <view id="DAY MST ENGINE" uuid="_kFuGQE-GEemi64MgO_SJDA">
+          <schemaView tableId="app.DAY_MST_ENGINE">
+            <columnOrder>
+              <column columnId="DAY_ID"/>
+              <column columnId="DAY_DESC"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="LOBBY MST ENGINE" uuid="_kHZhQE-GEemi64MgO_SJDA">
+          <schemaView tableId="app.LOBBY_MST_ENGINE">
+            <columnOrder>
+              <column columnId="LOBBY_CODE"/>
+              <column columnId="LOBBY_NAME"/>
+              <column columnId="LOBBY_ID"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="SEGMENT MST ENGINE" uuid="_kI6kME-GEemi64MgO_SJDA">
+          <schemaView tableId="app.SEGMENT_MST_ENGINE">
+            <columnDisplays>
+              <columnDisplay columnId="FROMSTATION" display="FROMSTATION"/>
+              <columnDisplay columnId="TOSTATION" display="TOSTATION"/>
+              <columnDisplay columnId="SEGMENTID" display="SEGMENTID"/>
+            </columnDisplays>
+            <columnOrder>
+              <column columnId="FROMSTATION"/>
+              <column columnId="TOSTATION"/>
+              <column columnId="SEGMENTID"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="TRAIN MST" uuid="_yqBjwE-zEemr2-kFk8XenA">
+          <schemaView tableId="app.TRAIN_MST">
+            <columnDisplays>
+              <columnDisplay columnId="TRAIN_ID" display="TRAIN_ID"/>
+              <columnDisplay columnId="TRAIN_NBR" display="TRAIN_NBR"/>
+              <columnDisplay columnId="TRAIN_NAME" display="TRAIN_NAME"/>
+            </columnDisplays>
+            <columnOrder>
+              <column columnId="TRAIN_ID"/>
+              <column columnId="TRAIN_NBR"/>
+              <column columnId="TRAIN_NAME"/>
+            </columnOrder>
+          </schemaView>
+        </view>
       </folder>
       <folder id="Output">
         <view id="KPI MST" uuid="_OrrMgEoVEem16JPRbjk15w">
@@ -220,6 +245,28 @@
               <column columnId="RUNNING_DURATION"/>
               <column columnId="HQ_REST"/>
               <column columnId="OS_REST"/>
+            </columnOrder>
+          </schemaView>
+        </view>
+        <view id="OUTLINK ENGINE" uuid="_tJhN8E_GEemvlM15ttpSYw">
+          <schemaView tableId="app.OUTLINK_ENGINE">
+            <columnOrder>
+              <column columnId="DAYID"/>
+              <column columnId="SEQID"/>
+              <column columnId="PAIRINGID"/>
+              <column columnId="DUTYID"/>
+              <column columnId="TRAINID"/>
+              <column columnId="LEGID"/>
+              <column columnId="STARTLOC"/>
+              <column columnId="ENDLOC"/>
+              <column columnId="DUTYSIGNON"/>
+              <column columnId="STARTTIME"/>
+              <column columnId="ENDTIME"/>
+              <column columnId="DUTYSIGNOFF"/>
+              <column columnId="DURATION"/>
+              <column columnId="NIB"/>
+              <column columnId="SPAREFLAG"/>
+              <column columnId="SORTORDER"/>
             </columnOrder>
           </schemaView>
         </view>

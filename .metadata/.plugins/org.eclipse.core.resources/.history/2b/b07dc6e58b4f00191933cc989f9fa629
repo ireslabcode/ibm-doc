@@ -1,0 +1,9 @@
+package cclms.common.util;
+
+public class QueryIdentifierRequest {
+	private String selectedLobby;
+	
+	
+	
+
+}

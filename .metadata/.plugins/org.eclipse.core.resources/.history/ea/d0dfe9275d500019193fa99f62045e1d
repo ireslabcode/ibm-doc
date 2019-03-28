@@ -1,0 +1,14 @@
+package cclms.app.util;
+
+import ilog.odm.studio.extensions.IloSessionExtension;
+import ilog.odm.studio.views.IloODMApplication;
+
+public class UserUtilService  extends IloSessionExtension{
+	
+
+	public static void main(String args[]){
+		
+		IloODMApplication odmApplication = new UserUtilService().getODMApplication();
+	}
+
+}

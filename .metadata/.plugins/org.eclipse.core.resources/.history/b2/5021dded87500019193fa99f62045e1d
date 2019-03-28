@@ -1,0 +1,32 @@
+package cclms.datasourse;
+
+import ilog.odm.datasvc.IloDataException;
+import ilog.odm.datasvc.IloDataServiceContext;
+import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloScenarioEvent;
+import ilog.odm.datasvc.IloScenarioMigrator;
+import ilog.odm.datasvc.IloTableContainer;
+
+public class LoadSourseTables1 implements IloScenarioMigrator{
+
+	@Override
+	public void migrate(IloScenario scenario, IloTableContainer outputTables)
+			throws IloDataException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	@Deprecated
+	public void migrate(IloScenario scenario, IloTableContainer outputTables,
+			IloDataServiceContext dataService) throws IloDataException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+	
+
+}

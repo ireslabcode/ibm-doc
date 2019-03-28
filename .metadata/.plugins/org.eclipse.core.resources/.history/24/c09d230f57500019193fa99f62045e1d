@@ -1,0 +1,49 @@
+package cclms.datasourse;
+
+import java.util.Map;
+
+import ilog.odm.processingsvc.IloCustomTaskContext;
+import ilog.odm.processingsvc.IloCustomTaskImplementation;
+
+public class Test implements IloCustomTaskImplementation{
+
+	@Override
+	public void abort(IloCustomTaskContext ctx) {
+		// TODO Auto-generated method stub
+		System.out.println("ABORT");
+		
+	}
+
+	@Override
+	public void interaction(IloCustomTaskContext ctx, String name,
+			Map<String, String> parameters) {
+		// TODO Auto-generated method stub
+		System.out.println("INTERACTION");
+		
+	}
+
+	@Override
+	public boolean run(IloCustomTaskContext ctx) {
+		// TODO Auto-generated method stub
+		System.out.println("RUN-3");
+		return false;
+	}
+
+	@Override
+	public void setUp(IloCustomTaskContext ctx) {
+		// TODO Auto-generated method stub
+		System.out.println("SETUP-2");
+		
+	}
+
+	@Override
+	public void tearDown(IloCustomTaskContext ctx) {
+		// TODO Auto-generated method stub
+		System.out.println("TEARDOWN-4");
+		
+	}
+	
+	
+	
+
+}

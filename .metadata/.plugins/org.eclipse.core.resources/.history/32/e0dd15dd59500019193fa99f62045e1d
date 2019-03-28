@@ -1,0 +1,15 @@
+package cclms.app.util;
+
+import ilog.odm.service.IloApplicationContext;
+
+public class UserUtilService {
+	
+	public static void main(String args[]){
+		
+		IloDomScenarioViewClient
+	}
+	
+	
+	//IloApplicationContext app =
+
+}

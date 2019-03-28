@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+	<version>1.0</version>
+	<configs>
+		<config category="opl" default="true" name="Configuration1">
+		</config>
+		<config category="opl" default="false" name="Copy of Copy of New Default Scenario">
+			<ref name="Exported Scenarios/Copy of Copy of New Default Scenario.dat" type="data">
+			</ref>
+			<ref name="CCLMS.mod" type="model">
+			</ref>
+			<ref name="CCLMS_odm.ops" type="setting">
+			</ref>
+		</config>
+	</configs>
+	
+</project>

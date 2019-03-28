@@ -1,0 +1,43 @@
+package cclms.app.util;
+
+import javax.swing.JPanel;
+
+import ilog.odm.dom.ui.IloDomScenarioView;
+import ilog.odm.dom.ui.IloDomScenarioViewDescription;
+import ilog.odm.dom.ui.edit.IloDomEditModelManager;
+
+public class UserUtilService extends IloDomScenarioView{
+
+	public UserUtilService(IloDomScenarioViewDescription desc) {
+		super(desc);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	protected void activateModelManager(IloDomEditModelManager modelManager) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void disposeModelManager(IloDomEditModelManager modelManager) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void passivateModelManager(IloDomEditModelManager modelManager) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public JPanel getPanel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	//IloApplicationContext app =
+
+}

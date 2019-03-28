@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cclms.impl.ParameterValueImpl#getValue <em>Value</em>}</li>
- *   <li>{@link cclms.impl.ParameterValueImpl#getRefCreatedBy <em>Ref Created By</em>}</li>
  *   <li>{@link cclms.impl.ParameterValueImpl#getRefLinkId <em>Ref Link Id</em>}</li>
  *   <li>{@link cclms.impl.ParameterValueImpl#getRefParameterId <em>Ref Parameter Id</em>}</li>
  * </ul>
@@ -80,16 +79,6 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 	protected static final int VALUE_ESETFLAG = 1 << 0;
 
 	/**
-	 * The cached value of the '{@link #getRefCreatedBy() <em>Ref Created By</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefCreatedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected UserMst refCreatedBy;
-
-	/**
 	 * The cached value of the '{@link #getRefLinkId() <em>Ref Link Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -125,7 +114,7 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getParameterValue();
+		return CclmsPackage.Literals.PARAMETER_VALUE;
 	}
 
 	/**
@@ -198,83 +187,6 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 	 */
 	public boolean isSetValue() {
 		return (_booleanFlags & VALUE_ESETFLAG) != 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst getRefCreatedBy() {
-		return refCreatedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefCreatedBy(UserMst newRefCreatedBy,
-			NotificationChain msgs) {
-		UserMst oldRefCreatedBy = refCreatedBy;
-		refCreatedBy = newRefCreatedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource().getNotificationFactory()
-						.createNotification(this, Notification.SET,
-								CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY,
-								oldRefCreatedBy, newRefCreatedBy);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY,
-						oldRefCreatedBy, newRefCreatedBy);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefCreatedBy(UserMst newRefCreatedBy) {
-		if (newRefCreatedBy != refCreatedBy) {
-			NotificationChain msgs = null;
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_PARAMETER_VALUE_CREATED_BY,
-						UserMst.class, msgs);
-			if (newRefCreatedBy != null)
-				msgs = ((InternalEObject) newRefCreatedBy).eInverseAdd(this,
-						CclmsPackage.USER_MST__REF_PARAMETER_VALUE_CREATED_BY,
-						UserMst.class, msgs);
-			msgs = basicSetRefCreatedBy(newRefCreatedBy, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory().createNotification(this,
-								Notification.SET,
-								CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY,
-								newRefCreatedBy, newRefCreatedBy);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY,
-						newRefCreatedBy, newRefCreatedBy));
-			}
-		}
 	}
 
 	/**
@@ -440,25 +352,6 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getCreatedBy() {
-		UserMst obj = getRefCreatedBy();
-		return isNullOrProxy(obj) ? null : obj;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCreatedBy(UserMst obj) {
-		setRefCreatedBy(obj);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public LinkMst getLinkId() {
 		LinkMst obj = getRefLinkId();
 		return isNullOrProxy(obj) ? null : obj;
@@ -510,12 +403,6 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY:
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_PARAMETER_VALUE_CREATED_BY,
-						UserMst.class, msgs);
-			return basicSetRefCreatedBy((UserMst) otherEnd, msgs);
 		case CclmsPackage.PARAMETER_VALUE__REF_LINK_ID:
 			if (refLinkId != null)
 				msgs = ((InternalEObject) refLinkId).eInverseRemove(this,
@@ -543,8 +430,6 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY:
-			return basicSetRefCreatedBy(null, msgs);
 		case CclmsPackage.PARAMETER_VALUE__REF_LINK_ID:
 			return basicSetRefLinkId(null, msgs);
 		case CclmsPackage.PARAMETER_VALUE__REF_PARAMETER_ID:
@@ -563,8 +448,6 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 		switch (featureID) {
 		case CclmsPackage.PARAMETER_VALUE__VALUE:
 			return getValue();
-		case CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY:
-			return getRefCreatedBy();
 		case CclmsPackage.PARAMETER_VALUE__REF_LINK_ID:
 			return getRefLinkId();
 		case CclmsPackage.PARAMETER_VALUE__REF_PARAMETER_ID:
@@ -583,9 +466,6 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 		switch (featureID) {
 		case CclmsPackage.PARAMETER_VALUE__VALUE:
 			setValue((Double) newValue);
-			return;
-		case CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) newValue);
 			return;
 		case CclmsPackage.PARAMETER_VALUE__REF_LINK_ID:
 			setRefLinkId((LinkMst) newValue);
@@ -608,9 +488,6 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 		case CclmsPackage.PARAMETER_VALUE__VALUE:
 			unsetValue();
 			return;
-		case CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) null);
-			return;
 		case CclmsPackage.PARAMETER_VALUE__REF_LINK_ID:
 			setRefLinkId((LinkMst) null);
 			return;
@@ -631,8 +508,6 @@ public class ParameterValueImpl extends IloDomObjectImpl implements
 		switch (featureID) {
 		case CclmsPackage.PARAMETER_VALUE__VALUE:
 			return isSetValue();
-		case CclmsPackage.PARAMETER_VALUE__REF_CREATED_BY:
-			return refCreatedBy != null;
 		case CclmsPackage.PARAMETER_VALUE__REF_LINK_ID:
 			return refLinkId != null;
 		case CclmsPackage.PARAMETER_VALUE__REF_PARAMETER_ID:

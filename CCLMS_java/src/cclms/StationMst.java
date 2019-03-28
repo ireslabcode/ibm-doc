@@ -130,41 +130,6 @@ public interface StationMst extends IloDomObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	DivisionMst getDivisionId();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	void setDivisionId(DivisionMst obj);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<TrainMst> getTrainMstTrainEndStn();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<TrainMst> getTrainMstTrainStartStn();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	List<UserMst> getUserMstLobbyId();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	List<LinkDetail> getLinkDetailFromStn();
 
 	/**

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+	<version>3.8</version>
+	<odmapp>
+		<odmrelationalmodel path="relationalmodel.odmrm">
+		</odmrelationalmodel>
+		<odmapplicationdatamodel path="datamodel.odmadm">
+		</odmapplicationdatamodel>
+		<odmviews path="views.odmvw">
+		</odmviews>
+		<odmextensions path="extensions.odmext">
+		</odmextensions>
+		<odmdeployments>
+			<odmdeploymentsettings default="true" path="deployment_dev.odmds">
+			</odmdeploymentsettings>
+			<odmdeploymentsettings default="false" path="deployment_prod.odmds">
+			</odmdeploymentsettings>
+		</odmdeployments>
+		<odmdecisionprocessconfig path="tasks.odmdpc">
+		</odmdecisionprocessconfig>
+		<solveprocessconfig>
+			<odmoptim path="CCLMS_opl_optimmodel.odmom">
+			</odmoptim>
+			<odmmapping path="CCLMS_opl_mapping.dat">
+			</odmmapping>
+			<odmoplmapping path="CCLMS_opl_mapping.odmopl">
+			</odmoplmapping>
+			<javaproject project="CCLMS_java">
+			</javaproject>
+		</solveprocessconfig>
+	</odmapp>
+</project>

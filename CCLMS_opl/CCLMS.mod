@@ -1,10 +1,10 @@
 /*********************************************
  * OPL 12.6.3.0 Model
  * Author: cclms
- * Creation Date: Mar 22, 2019 at 3:12:57 PM
+ * Creation Date: Mar 26, 2019 at 4:47:54 PM
  *********************************************/
 include "CCLMS_odm.mod";
-
+execute{writeln("OPL Start");}
 //parameters
 int minConnectTime;// = 60;//minimum connection time between 2 trains
 int maxRunningDuty;// = 480;//maximum running duty time in single duty
@@ -82,7 +82,7 @@ execute initialize{
 	cplex.tilim = 720;  
 }
 
-{int} HomeStations = {1};// {l.lobbyid|l in lobbyMaster};//3:UMB,1:DHN
+{int} HomeStations = {221};// {l.lobbyid|l in lobbyMaster};//3:UMB,1:DHN
 int slackLength = ftoi(ceil((1/5)*card(trainSegments)));//to generalize the link length:14Dec18, RK
 int LinkLength = card(trainSegments) + slackLength;
 range SeqInd = 1..LinkLength;   //to index the order in which a leg would appear in roster from a homestation
@@ -751,80 +751,80 @@ execute writeoutput{
 						outlink.add(dl.leg.pos,dl.leg.pos,pr.p.pairingId,pd.duty.dutyId,dl.leg.t.trainid,dl.leg.t.legid,dl.leg.t.startLoc,dl.leg.t.endLoc,pd.duty.dutysignon,dl.leg.t.start,dl.leg.t.end,pd.duty.dutysignoff,dutyduration,0,dl.leg.t.spareflag,pr.p.P_startPos);
 						
 						//if a duty has more than 1 legs than
-						if(legcount>1){
-							if(tempcount==1){
-								outputLink.add(dl.leg.pos,dl.leg.pos,
-								trainMaster.get(dl.leg.t.trainid).trainNo,
-								segmentMaster.get(dl.leg.t.legid).fromStation,
-								segmentMaster.get(dl.leg.t.legid).toStation,
-								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).signontime,
-								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).startTime,
-								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).endTime,
-								"C",
-								dutyduration,
-								trainSegments.get(dl.leg.t.trainid,dl.leg.t.legid).distance,
-								0,
-								pr.p.P_startPos,
-								dl.leg.t.dayid,
-								dl.leg.t.spareflag);
-																							
-							}	
-							if(tempcount>1 && tempcount<legcount){
-								outputLink.add(dl.leg.pos,dl.leg.pos,
-								trainMaster.get(dl.leg.t.trainid).trainNo,
-								segmentMaster.get(dl.leg.t.legid).fromStation,
-								segmentMaster.get(dl.leg.t.legid).toStation,
-								"C",
-								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).startTime,
-								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).endTime,
-								"C",
-								dutyduration,
-								trainSegments.get(dl.leg.t.trainid,dl.leg.t.legid).distance,
-								0,
-								pr.p.P_startPos,
-								dl.leg.t.dayid,
-								dl.leg.t.spareflag);
-														
-							}	
-							if(tempcount==legcount)
-							{
-								outputLink.add(dl.leg.pos,dl.leg.pos,
-								trainMaster.get(dl.leg.t.trainid).trainNo,
-								segmentMaster.get(dl.leg.t.legid).fromStation,
-								segmentMaster.get(dl.leg.t.legid).toStation,
-								"C",
-								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).startTime,
-								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).endTime,
-								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).signoffTime,
-								dutyduration,
-								trainSegments.get(dl.leg.t.trainid,dl.leg.t.legid).distance,
-								0,
-								pr.p.P_startPos,
-								dl.leg.t.dayid,
-								dl.leg.t.spareflag);
-								
-								totaldutyduration = totaldutyduration+ dutyduration;				
-							}				
-						}
-						else
-						{
-							outputLink.add(dl.leg.pos,dl.leg.pos,
-							trainMaster.get(dl.leg.t.trainid).trainNo,
-							segmentMaster.get(dl.leg.t.legid).fromStation,
-							segmentMaster.get(dl.leg.t.legid).toStation,
-							timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).signontime,
-							timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).startTime,
-							timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).endTime,
-							timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).signoffTime,
-							dutyduration,
-							trainSegments.get(dl.leg.t.trainid,dl.leg.t.legid).distance,
-							0,
-							pr.p.P_startPos,
-							dl.leg.t.dayid,
-							dl.leg.t.spareflag);
-							
-							totaldutyduration = totaldutyduration+ dutyduration;
-         				}						        			
+//						if(legcount>1){
+//							if(tempcount==1){
+//								outputLink.add(dl.leg.pos,dl.leg.pos,
+//								trainMaster.get(dl.leg.t.trainid).trainNo,
+//								segmentMaster.get(dl.leg.t.legid).fromStation,
+//								segmentMaster.get(dl.leg.t.legid).toStation,
+//								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).signontime,
+//								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).startTime,
+//								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).endTime,
+//								"C",
+//								dutyduration,
+//								trainSegments.get(dl.leg.t.trainid,dl.leg.t.legid).distance,
+//								0,
+//								pr.p.P_startPos,
+//								dl.leg.t.dayid,
+//								dl.leg.t.spareflag);
+//																							
+//							}	
+//							if(tempcount>1 && tempcount<legcount){
+//								outputLink.add(dl.leg.pos,dl.leg.pos,
+//								trainMaster.get(dl.leg.t.trainid).trainNo,
+//								segmentMaster.get(dl.leg.t.legid).fromStation,
+//								segmentMaster.get(dl.leg.t.legid).toStation,
+//								"C",
+//								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).startTime,
+//								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).endTime,
+//								"C",
+//								dutyduration,
+//								trainSegments.get(dl.leg.t.trainid,dl.leg.t.legid).distance,
+//								0,
+//								pr.p.P_startPos,
+//								dl.leg.t.dayid,
+//								dl.leg.t.spareflag);
+//														
+//							}	
+//							if(tempcount==legcount)
+//							{
+//								outputLink.add(dl.leg.pos,dl.leg.pos,
+//								trainMaster.get(dl.leg.t.trainid).trainNo,
+//								segmentMaster.get(dl.leg.t.legid).fromStation,
+//								segmentMaster.get(dl.leg.t.legid).toStation,
+//								"C",
+//								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).startTime,
+//								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).endTime,
+//								timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).signoffTime,
+//								dutyduration,
+//								trainSegments.get(dl.leg.t.trainid,dl.leg.t.legid).distance,
+//								0,
+//								pr.p.P_startPos,
+//								dl.leg.t.dayid,
+//								dl.leg.t.spareflag);
+//								
+//								totaldutyduration = totaldutyduration+ dutyduration;				
+//							}				
+//						}
+//						else
+//						{
+//							outputLink.add(dl.leg.pos,dl.leg.pos,
+//							trainMaster.get(dl.leg.t.trainid).trainNo,
+//							segmentMaster.get(dl.leg.t.legid).fromStation,
+//							segmentMaster.get(dl.leg.t.legid).toStation,
+//							timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).signontime,
+//							timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).startTime,
+//							timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).endTime,
+//							timetoMinutes.get(dl.leg.t.trainid,dl.leg.t.legid).signoffTime,
+//							dutyduration,
+//							trainSegments.get(dl.leg.t.trainid,dl.leg.t.legid).distance,
+//							0,
+//							pr.p.P_startPos,
+//							dl.leg.t.dayid,
+//							dl.leg.t.spareflag);
+//							
+//							totaldutyduration = totaldutyduration+ dutyduration;
+//         				}						        			
         			}    		 			
      			}    		  
    			}
@@ -835,7 +835,7 @@ execute writeoutput{
    		var restRowStart = Opl.maxl((pr.p.P_signoff-1440),0);
 // 		outlink.add(pr.prPos,pr.p.pairingId,0,0,0,0,0,0,0,0,0,restDuration,pr.NIB);
    		outlink.add(pr.prPos,pr.prPos,pr.p.pairingId,0,0,0,0,0,0,0,0,0,restDuration,pr.NIB,0,pr.p.P_startPos);
-   		outputLink.add(pr.prPos,pr.prPos,"HQ Rest"," "," "," "," "," "," ",restDuration,0,pr.NIB,pr.p.P_startPos,dl.leg.t.dayid,dl.leg.t.spareflag);
+//   		outputLink.add(pr.prPos,pr.prPos,"HQ Rest"," "," "," "," "," "," ",restDuration,0,pr.NIB,pr.p.P_startPos,dl.leg.t.dayid,dl.leg.t.spareflag);
 
  	}   
  }   

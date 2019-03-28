@@ -1,0 +1,10 @@
+package cclms.datasourse;
+
+import ilog.odm.datasvc.IloScenarioUpdater;
+
+public class LoadSourseTables1 implements IloScenarioUpdater{
+	
+	
+	
+
+}

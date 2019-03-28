@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/CCLMS_java/src/cclms/app/scenario/updater/PreProcessingInputTableUpdater.java"/>
+<listEntry value="/CCLMS_java/src/cclms/app/query/QueryUtil.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="cclms.app.scenario.updater.PreProcessingInputTableUpdater"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="cclms.app.query.QueryUtil"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CCLMS_java"/>
 </launchConfiguration>

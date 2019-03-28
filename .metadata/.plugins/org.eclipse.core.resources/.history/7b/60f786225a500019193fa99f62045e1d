@@ -1,0 +1,16 @@
+package cclms.app.util;
+
+import ilog.odm.dom.ui.IloDomScenarioViewClient;
+
+
+public class UserUtilService extends IloDomScenarioViewClient<IloDomCollector>{
+	
+	public static void main(String args[]){
+		
+		//IloDomScenarioViewClient<IloDomCollector> client = new IloDomScenarioViewClient<IloDomCollector>();
+	}
+	
+	
+	//IloApplicationContext app =
+
+}

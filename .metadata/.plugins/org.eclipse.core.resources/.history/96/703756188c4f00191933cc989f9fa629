@@ -1,0 +1,11 @@
+package cclms.common.util;
+
+public class QueryIdentifierRequest {
+	private String selectedLobby;
+	private String selectedTractionType;
+	private String selectedTrainType;
+	private String selectedTrainFrequency;
+	
+	
+
+}

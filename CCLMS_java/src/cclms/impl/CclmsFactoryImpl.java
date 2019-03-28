@@ -89,8 +89,6 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case CclmsPackage.ZONE_MST:
-			return (EObject) createZoneMst();
 		case CclmsPackage.STATION_MST:
 			return (EObject) createStationMst();
 		case CclmsPackage.TRAIN_FREQUENCY_MST:
@@ -101,12 +99,6 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 			return (EObject) createTrainMst();
 		case CclmsPackage.PARAMETER_VALUE:
 			return (EObject) createParameterValue();
-		case CclmsPackage.DIVISION_MST:
-			return (EObject) createDivisionMst();
-		case CclmsPackage.USER_ROLE_MST:
-			return (EObject) createUserRoleMst();
-		case CclmsPackage.USER_MST:
-			return (EObject) createUserMst();
 		case CclmsPackage.KPI_MST:
 			return (EObject) createKpiMst();
 		case CclmsPackage.KPI_VALUE:
@@ -133,8 +125,6 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 			return (EObject) createSegmentMstEngine();
 		case CclmsPackage.TIME_TO_MIN_ENGINE:
 			return (EObject) createTimeToMinEngine();
-		case CclmsPackage.DAY_MST_ENGINE:
-			return (EObject) createDayMstEngine();
 		case CclmsPackage.KPI_LINK_ENGINE:
 			return (EObject) createKpiLinkEngine();
 		case CclmsPackage.LINK_DETAIL_ENGINE:
@@ -143,6 +133,10 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 			return (EObject) createOutlinkEngine();
 		case CclmsPackage.LOBBY_MST_ENGINE:
 			return (EObject) createLobbyMstEngine();
+		case CclmsPackage.USER_MST:
+			return (EObject) createUserMst();
+		case CclmsPackage.DAY_MST_ENGINE:
+			return (EObject) createDayMstEngine();
 		case CclmsPackage.CCLMS_COLLECTOR:
 			return (EObject) createCclmsCollector();
 		case CclmsPackage.ILOG_ODM_DOM_ILO_DOM_COLLECTOR:
@@ -163,8 +157,6 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 		switch (eDataType.getClassifierID()) {
 		case CclmsPackage.LIST:
 			return createListFromString(eDataType, initialValue);
-		case CclmsPackage.JAVA_SQL_DATE:
-			return createjava_sql_DateFromString(eDataType, initialValue);
 		case CclmsPackage.JAVA_SQL_TIME:
 			return createjava_sql_TimeFromString(eDataType, initialValue);
 		default:
@@ -183,25 +175,12 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 		switch (eDataType.getClassifierID()) {
 		case CclmsPackage.LIST:
 			return convertListToString(eDataType, instanceValue);
-		case CclmsPackage.JAVA_SQL_DATE:
-			return convertjava_sql_DateToString(eDataType, instanceValue);
 		case CclmsPackage.JAVA_SQL_TIME:
 			return convertjava_sql_TimeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '"
 					+ eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ZoneMst createZoneMst() {
-
-		ZoneMstImpl zoneMst = new ZoneMstImpl();
-		return zoneMst;
 	}
 
 	/**
@@ -257,39 +236,6 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 
 		ParameterValueImpl parameterValue = new ParameterValueImpl();
 		return parameterValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DivisionMst createDivisionMst() {
-
-		DivisionMstImpl divisionMst = new DivisionMstImpl();
-		return divisionMst;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserRoleMst createUserRoleMst() {
-
-		UserRoleMstImpl userRoleMst = new UserRoleMstImpl();
-		return userRoleMst;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst createUserMst() {
-
-		UserMstImpl userMst = new UserMstImpl();
-		return userMst;
 	}
 
 	/**
@@ -495,6 +441,17 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public UserMst createUserMst() {
+
+		UserMstImpl userMst = new UserMstImpl();
+		return userMst;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CclmsCollector createCclmsCollector() {
 
 		CclmsCollectorImpl cclmsCollector = new CclmsCollectorImpl();
@@ -528,26 +485,6 @@ public class CclmsFactoryImpl extends IloDomFactoryImpl implements
 	 */
 	public String convertListToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date createjava_sql_DateFromString(EDataType eDataType,
-			String initialValue) {
-		return (Date) super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertjava_sql_DateToString(EDataType eDataType,
-			Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

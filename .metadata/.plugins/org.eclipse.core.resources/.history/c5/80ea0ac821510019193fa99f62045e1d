@@ -1,0 +1,40 @@
+package cclms.app.util;
+
+import ilog.odm.dom.IloDomCollector;
+import ilog.odm.dom.ui.IloDomScenarioViewClient;
+
+public class UserUtilService  extends /*IloSessionExtension*/ IloDomScenarioViewClient<IloDomCollector>{
+	//IloDomScenarioViewClient<Collector extends IloDomCollector>
+
+	public static void main(String args[]){
+		
+       // IloApplicationContext applicationContext = new UserUtilService().getApplicationContext();
+      //  IloDataService service = applicationContext.getService(IloDataService.class);
+		//IloUser currentUser = service.getCurrentUser();
+		//System.out.println("currentUser.getName(): "+currentUser.getName());
+		
+		
+		//IloODMApplication odmApplication = new UserUtilService().getODMApplication();
+		//odmApplication.get
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*IloApplicationContext applicationContext = ctx.get
+		  IloDataService service2 = applicationContext.getService(IloDataService.class);
+		  IloUser currentUser = service2.getCurrentUser();
+		  System.out.println("currentUser.getName(): "+currentUser.getName());*/
+	}
+
+}

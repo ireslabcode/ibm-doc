@@ -1,0 +1,28 @@
+package cclms.aap.input.table.properties;
+
+public class UserMst {
+	
+	public static final String USER_ID = "USER_ID";
+	public static final String USER ="USER";
+	public static final String USER_PWD ="USER_PWD";
+	public static final String FIRST_NAME ="FIRST_NAME";
+	public static final String LAST_NAME ="LAST_NAME";
+	public static final String ACTIVE ="ACTIVE";
+	public static final String USER_ROLE ="USER_ROLE";
+	public static final String DIVISION_ID ="DIVISION_ID";
+	public static final String ZONE_ID ="ZONE_ID";
+	public static final String EMAIL ="EMAIL";
+	public static final String LOBBY_ID ="LOBBY_ID";
+  /*USER_ID	
+  USER	
+  USER_PWD	
+  FIRST_NAME	
+  LAST_NAME	
+  ACTIVE	
+  USER_ROLE	
+  DIVISION_ID	
+  ZONE_ID	
+  EMAIL	
+  LOBBY_ID	*/
+
+}

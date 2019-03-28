@@ -1,16 +1,17 @@
-#Fri Mar 15 16:30:23 IST 2019
+#Tue Mar 26 15:46:25 IST 2019
 rulergrid.gridlinestyle=6
 print.margin.bottom=0.5
 print.margin.top=0.5
 print.page.height=11.0
 print.usePortrait=true
-rulergrid.gridlinecolor=12632256
+viewport.y=84
 print.margin.left=0.5
+rulergrid.gridlinecolor=12632256
 rulergrid.gridspacing=0.125
-rulergrid.rulerunit=0
 print.margin.right=0.5
-rulergrid.gridlevel=true
+rulergrid.rulerunit=0
 print.page.size=Letter
+rulergrid.gridlevel=true
 print.useInches=true
-print.page.width=8.5
 zoom=1.0
+print.page.width=8.5

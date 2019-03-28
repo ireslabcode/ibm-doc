@@ -36,16 +36,6 @@ public interface CclmsCollector extends IloDomObject, IloDomCollector {
 	static final IloDomConfiguration CONFIGURATION = null;
 
 	/**
-	 * Returns the value of the '<em><b>Zone Mst</b></em>' containment reference list.
-	 * The list contents are of type {@link cclms.ZoneMst}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Zone Mst</em>' containment reference list.
-	 * @generated
-	 */
-	List<ZoneMst> getZoneMst();
-
-	/**
 	 * Returns the value of the '<em><b>Station Mst</b></em>' containment reference list.
 	 * The list contents are of type {@link cclms.StationMst}.
 	 * <!-- begin-user-doc -->
@@ -94,36 +84,6 @@ public interface CclmsCollector extends IloDomObject, IloDomCollector {
 	 * @generated
 	 */
 	List<ParameterValue> getParameterValue();
-
-	/**
-	 * Returns the value of the '<em><b>Division Mst</b></em>' containment reference list.
-	 * The list contents are of type {@link cclms.DivisionMst}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Division Mst</em>' containment reference list.
-	 * @generated
-	 */
-	List<DivisionMst> getDivisionMst();
-
-	/**
-	 * Returns the value of the '<em><b>User Role Mst</b></em>' containment reference list.
-	 * The list contents are of type {@link cclms.UserRoleMst}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Role Mst</em>' containment reference list.
-	 * @generated
-	 */
-	List<UserRoleMst> getUserRoleMst();
-
-	/**
-	 * Returns the value of the '<em><b>User Mst</b></em>' containment reference list.
-	 * The list contents are of type {@link cclms.UserMst}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>User Mst</em>' containment reference list.
-	 * @generated
-	 */
-	List<UserMst> getUserMst();
 
 	/**
 	 * Returns the value of the '<em><b>Kpi Mst</b></em>' containment reference list.
@@ -306,25 +266,14 @@ public interface CclmsCollector extends IloDomObject, IloDomCollector {
 	List<LobbyMstEngine> getLobbyMstEngine();
 
 	/**
+	 * Returns the value of the '<em><b>User Mst</b></em>' containment reference list.
+	 * The list contents are of type {@link cclms.UserMst}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>User Mst</em>' containment reference list.
 	 * @generated
 	 */
-	ZoneMst createZoneMst();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	ZoneMst createZoneMst(int index);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	ZoneMst getFromZoneMst(int zoneId);
+	List<UserMst> getUserMst();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -430,69 +379,6 @@ public interface CclmsCollector extends IloDomObject, IloDomCollector {
 	 * @generated
 	 */
 	ParameterValue getFromParameterValue(int parameterId, int linkId);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	DivisionMst createDivisionMst();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	DivisionMst createDivisionMst(int index);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	DivisionMst getFromDivisionMst(int divisionId);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	UserRoleMst createUserRoleMst();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	UserRoleMst createUserRoleMst(int index);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	UserRoleMst getFromUserRoleMst(int userRoleCd);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	UserMst createUserMst();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	UserMst createUserMst(int index);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	UserMst getFromUserMst(int userId);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -854,5 +740,19 @@ public interface CclmsCollector extends IloDomObject, IloDomCollector {
 	 * @generated
 	 */
 	LobbyMstEngine getFromLobbyMstEngine(int lobbyId);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	UserMst createUserMst();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	UserMst createUserMst(int index);
 
 } // CclmsCollector

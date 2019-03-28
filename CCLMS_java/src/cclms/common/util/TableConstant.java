@@ -19,6 +19,7 @@ public class TableConstant {
 	public static final String SEGMENT_MST = "SEGMENT_MST";
 	public static final String PARAMETER_MST = "PARAMETER_MST";
 	public static final String TRAIN_MST = "TRAIN_MST";
+	public static final String USER_MST = "USER_MST";
 	
 	// output table information.
 	public static final String KPI_MST ="KPI_MST";
@@ -28,6 +29,8 @@ public class TableConstant {
 	
 	public static final String TRAIN_SEGMENT_ENGINE = "TRAIN_SEGMENT_ENGINE";
 	public static final String TIME_TO_MIN_ENGINE ="TIME_TO_MIN_ENGINE";
+	public static final String SEGMENT_MST_ENGINE = "SEGMENT_MST_ENGINE";
+	public static final String DAY_MST_ENGINE ="DAY_MST_ENGINE";
 	
 	
 
@@ -43,6 +46,7 @@ public class TableConstant {
 		inputTableNameList.add("STATION_MST");
 		inputTableNameList.add("TRAIN_FREQUENCY_MST");
 		inputTableNameList.add("PARAMETER_MST");
+		inputTableNameList.add("USER_MST");
 		return inputTableNameList;
 	}
 	
@@ -52,6 +56,9 @@ public static List<String> getPreProcessingInputTableNameList(){
 		List<String> inputTableNameList = new ArrayList<>();
 		inputTableNameList.add("TRAIN_SEGMENT_ENGINE");
 		inputTableNameList.add("TIME_TO_MIN_ENGINE");
+		inputTableNameList.add("SEGMENT_MST_ENGINE");
+		inputTableNameList.add("DAY_MST_ENGINE");
+		
 		return inputTableNameList;
 	}
 

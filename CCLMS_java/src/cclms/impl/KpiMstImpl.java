@@ -152,7 +152,7 @@ public class KpiMstImpl extends IloDomObjectImpl implements KpiMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getKpiMst();
+		return CclmsPackage.Literals.KPI_MST;
 	}
 
 	/**

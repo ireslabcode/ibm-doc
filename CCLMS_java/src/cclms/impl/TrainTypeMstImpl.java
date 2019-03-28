@@ -43,7 +43,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link cclms.impl.TrainTypeMstImpl#getTrainTypeCclmsId <em>Train Type Cclms Id</em>}</li>
  *   <li>{@link cclms.impl.TrainTypeMstImpl#getTrainTypeDesc <em>Train Type Desc</em>}</li>
- *   <li>{@link cclms.impl.TrainTypeMstImpl#getRefCreatedBy <em>Ref Created By</em>}</li>
  *   <li>{@link cclms.impl.TrainTypeMstImpl#getRefTrainTypeMappingMstTrainTypeCclms <em>Ref Train Type Mapping Mst Train Type Cclms</em>}</li>
  *   <li>{@link cclms.impl.TrainTypeMstImpl#getRefLinkMstTrainTypeCd <em>Ref Link Mst Train Type Cd</em>}</li>
  * </ul>
@@ -111,16 +110,6 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 	protected String trainTypeDesc = TRAIN_TYPE_DESC_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRefCreatedBy() <em>Ref Created By</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefCreatedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected UserMst refCreatedBy;
-
-	/**
 	 * The cached value of the '{@link #getRefTrainTypeMappingMstTrainTypeCclms() <em>Ref Train Type Mapping Mst Train Type Cclms</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -156,7 +145,7 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getTrainTypeMst();
+		return CclmsPackage.Literals.TRAIN_TYPE_MST;
 	}
 
 	/**
@@ -279,83 +268,6 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getRefCreatedBy() {
-		return refCreatedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefCreatedBy(UserMst newRefCreatedBy,
-			NotificationChain msgs) {
-		UserMst oldRefCreatedBy = refCreatedBy;
-		refCreatedBy = newRefCreatedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource().getNotificationFactory()
-						.createNotification(this, Notification.SET,
-								CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY,
-								oldRefCreatedBy, newRefCreatedBy);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY,
-						oldRefCreatedBy, newRefCreatedBy);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefCreatedBy(UserMst newRefCreatedBy) {
-		if (newRefCreatedBy != refCreatedBy) {
-			NotificationChain msgs = null;
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_TRAIN_TYPE_MST_CREATED_BY,
-						UserMst.class, msgs);
-			if (newRefCreatedBy != null)
-				msgs = ((InternalEObject) newRefCreatedBy).eInverseAdd(this,
-						CclmsPackage.USER_MST__REF_TRAIN_TYPE_MST_CREATED_BY,
-						UserMst.class, msgs);
-			msgs = basicSetRefCreatedBy(newRefCreatedBy, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory().createNotification(this,
-								Notification.SET,
-								CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY,
-								newRefCreatedBy, newRefCreatedBy);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY,
-						newRefCreatedBy, newRefCreatedBy));
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public List<TrainTypeMappingMst> getRefTrainTypeMappingMstTrainTypeCclms() {
 		if (refTrainTypeMappingMstTrainTypeCclms == null) {
 			refTrainTypeMappingMstTrainTypeCclms = new IloDomObjectWithInverseEList<TrainTypeMappingMst>(
@@ -380,25 +292,6 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 					CclmsPackage.LINK_MST__REF_TRAIN_TYPE_CD);
 		}
 		return refLinkMstTrainTypeCd;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst getCreatedBy() {
-		UserMst obj = getRefCreatedBy();
-		return isNullOrProxy(obj) ? null : obj;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCreatedBy(UserMst obj) {
-		setRefCreatedBy(obj);
 	}
 
 	/**
@@ -438,12 +331,6 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY:
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_TRAIN_TYPE_MST_CREATED_BY,
-						UserMst.class, msgs);
-			return basicSetRefCreatedBy((UserMst) otherEnd, msgs);
 		case CclmsPackage.TRAIN_TYPE_MST__REF_TRAIN_TYPE_MAPPING_MST_TRAIN_TYPE_CCLMS:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefTrainTypeMappingMstTrainTypeCclms())
 					.basicAdd(otherEnd, msgs);
@@ -463,8 +350,6 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY:
-			return basicSetRefCreatedBy(null, msgs);
 		case CclmsPackage.TRAIN_TYPE_MST__REF_TRAIN_TYPE_MAPPING_MST_TRAIN_TYPE_CCLMS:
 			return ((InternalEList<?>) getRefTrainTypeMappingMstTrainTypeCclms())
 					.basicRemove(otherEnd, msgs);
@@ -487,8 +372,6 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 			return getTrainTypeCclmsId();
 		case CclmsPackage.TRAIN_TYPE_MST__TRAIN_TYPE_DESC:
 			return getTrainTypeDesc();
-		case CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY:
-			return getRefCreatedBy();
 		case CclmsPackage.TRAIN_TYPE_MST__REF_TRAIN_TYPE_MAPPING_MST_TRAIN_TYPE_CCLMS:
 			return getRefTrainTypeMappingMstTrainTypeCclms();
 		case CclmsPackage.TRAIN_TYPE_MST__REF_LINK_MST_TRAIN_TYPE_CD:
@@ -511,9 +394,6 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 			return;
 		case CclmsPackage.TRAIN_TYPE_MST__TRAIN_TYPE_DESC:
 			setTrainTypeDesc((String) newValue);
-			return;
-		case CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) newValue);
 			return;
 		case CclmsPackage.TRAIN_TYPE_MST__REF_TRAIN_TYPE_MAPPING_MST_TRAIN_TYPE_CCLMS:
 			getRefTrainTypeMappingMstTrainTypeCclms().clear();
@@ -543,9 +423,6 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 		case CclmsPackage.TRAIN_TYPE_MST__TRAIN_TYPE_DESC:
 			setTrainTypeDesc(TRAIN_TYPE_DESC_EDEFAULT);
 			return;
-		case CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) null);
-			return;
 		case CclmsPackage.TRAIN_TYPE_MST__REF_TRAIN_TYPE_MAPPING_MST_TRAIN_TYPE_CCLMS:
 			getRefTrainTypeMappingMstTrainTypeCclms().clear();
 			return;
@@ -569,8 +446,6 @@ public class TrainTypeMstImpl extends IloDomObjectImpl implements TrainTypeMst {
 		case CclmsPackage.TRAIN_TYPE_MST__TRAIN_TYPE_DESC:
 			return TRAIN_TYPE_DESC_EDEFAULT == null ? trainTypeDesc != null
 					: !TRAIN_TYPE_DESC_EDEFAULT.equals(trainTypeDesc);
-		case CclmsPackage.TRAIN_TYPE_MST__REF_CREATED_BY:
-			return refCreatedBy != null;
 		case CclmsPackage.TRAIN_TYPE_MST__REF_TRAIN_TYPE_MAPPING_MST_TRAIN_TYPE_CCLMS:
 			return refTrainTypeMappingMstTrainTypeCclms != null
 					&& !refTrainTypeMappingMstTrainTypeCclms.isEmpty();

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deploymentSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odm-deploymentsettings.xsd" odmVersion="3.9 Patch Level 0">
+  <serviceInitHook javaClass="cclms.app.util.ServiceHook"/>
+  <repository multiUser="false" concurrencyMode="exclusive">
+    <connection>
+      <JDBCDriverClass name="org.apache.derby.jdbc.EmbeddedDriver"/>
+      <JDBCURL>jdbc:derby:directory:$ODM_APP_DIR/odmrepository</JDBCURL>
+    </connection>
+    <managerClass name="ilog.odm.datasvc.persist.derby.IloEmbeddedDerbyRepositoryManagerFactory"/>
+  </repository>
+  <security/>
+  <deployment todir="deploy" filename="CCLMS.odmapp">
+    <classpath>
+      <classpathentry path="..\CCLMS_java\lib\CCLMSJava.jar"/>
+    </classpath>
+  </deployment>
+  <dbconnections/>
+  <scenarioSources>
+  
+         <scenarioSource id="Default" inAdd="true" inReplace="true" >
+      <template>
+        <message>Default</message>
+        <args/>
+      </template>
+      <customSource javaClass="cclms.datasourse.LoadSourseTables"/>
+    </scenarioSource>
+    
+  
+  
+    <scenarioSource id="DOM JavaSource" inAdd="true" inReplace="true">    
+      <template>
+        <message>[DOM] Select Lobby{0} Traction {1} Train Type {2} Train Frequency {3}</message>
+        <args>
+          <arg type="string" id="lobby" defaultValue="none" display="Lobby" nullable="false">
+            <possibleValues tableColId="LOBBY_CODE" tableId="app.LOBBY_MST"/>
+          </arg>
+          <arg type="string" id="tractiontype" defaultValue="none" display="Traction Type" nullable="false">
+            <possibleValues tableColId="TRACTION_DESC" tableId="app.TRACTION_MST"/>
+          </arg>
+          <arg type="string" id="traintype" defaultValue="none" display="Train Type" nullable="false">
+            <possibleValues tableColId="TRAIN_TYPE_DESC" tableId="app.TRAIN_TYPE_MST"/>
+          </arg>
+          <arg type="string" id="trainfrequency" defaultValue="none" display="Train Frequency" nullable="false">
+            <possibleValues tableColId="DESC" tableId="app.TRAIN_FREQUENCY_MST"/>
+          </arg>
+        </args>
+      </template>
+     <customSource javaClass="cclms.datasourse.LoadSourseTables"/>
+    </scenarioSource>
+  </scenarioSources>
+  <scenarioExporters>
+    <scenarioExporter id="exportToDB2">
+      <template>
+        <message>Export production schedule to DB2 database</message>
+        <args/>
+      </template>
+      <customExporter javaClass="cclms.app.export.DB2Exporter"/>
+    </scenarioExporter>
+  </scenarioExporters>
+  <scenarioCheckers>
+    <scenarioChecker javaClass="cclms.app.datavalidation.RulesChecker"/>
+  </scenarioCheckers>
+</deploymentSettings>

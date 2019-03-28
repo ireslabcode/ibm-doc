@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<odmdpc:IloDecisionProcessConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:odmdpc="http://www.ibm.com/odme/odmdpc.ecore/1.0.0" xmi:id="_SiA6QEl4EemcHKmXrzKoRQ">
+  <tasks xsi:type="odmdpc:IloRelationalJavaTaskConfig" xmi:id="_XiMPkEl4EemcHKmXrzKoRQ" name="TestTask" description="" controllerClass="ilog.odm.processingsvc.impl.IloScenarioCustomTaskControllerImpl" inputOutputClass="ilog.odm.processingsvc.impl.IloScenarioCustomInputOutputImpl" executionControllerClass="ilog.odm.processingsvc.impl.IloScenarioCustomTaskExecutionControllerImpl" runnable="true" implementationClass="cclms.datasourse.Test">
+    <inputTables>app.LOBBY_MST</inputTables>
+    <inputTables>app.TRACTION_MST</inputTables>
+    <inputTables>app.TRAIN_FREQUENCY_MST</inputTables>
+    <inputTables>app.TRAIN_TYPE_MST</inputTables>
+  </tasks>
+  <tasks xsi:type="odmdpc:IloSolveTaskConfig" xmi:id="_zSW80E-4Eem-ddQhuGgF4Q" name="Solve" description="" controllerClass="ilog.odm.processingsvc.impl.IloSolveTaskControllerImpl" inputOutputClass="ilog.odm.processingsvc.impl.IloSolveInputOutputImpl" executionControllerClass="ilog.odm.processingsvc.impl.IloSolveTaskExecutionControllerImpl" runnable="true" optimizationModelFile="CCLMS_opl_optimmodel.odmom" mappingFile="CCLMS_opl_mapping.odmopl" runtimeMappingFile="CCLMS_opl_mapping.dat" oplProject="CCLMS_opl" oplSettingsFile="CCLMS_odm.ops" oplMainModelFile="CCLMS.mod" oplOdmModelFile="CCLMS_odm.mod"/>
+  <tasks xsi:type="odmdpc:IloFindGoalBoundsTaskConfig" xmi:id="_zSW80U-4Eem-ddQhuGgF4Q" name="FindGoalBounds" description="" controllerClass="ilog.odm.processingsvc.impl.IloFindGoalBoundsTaskControllerImpl" inputOutputClass="ilog.odm.processingsvc.impl.IloFindGoalBoundsInputOutputImpl" executionControllerClass="ilog.odm.processingsvc.impl.IloFindGoalBoundsTaskExecutionControllerImpl" runnable="true" optimizationModelFile="CCLMS_opl_optimmodel.odmom" mappingFile="CCLMS_opl_mapping.odmopl" runtimeMappingFile="CCLMS_opl_mapping.dat" oplProject="CCLMS_opl" oplSettingsFile="CCLMS_odm.ops" oplMainModelFile="CCLMS.mod" oplOdmModelFile="CCLMS_odm.mod"/>
+</odmdpc:IloDecisionProcessConfiguration>

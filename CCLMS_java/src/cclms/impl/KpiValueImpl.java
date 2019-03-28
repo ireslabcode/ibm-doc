@@ -31,9 +31,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link cclms.impl.KpiValueImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link cclms.impl.KpiValueImpl#getCreatedBy <em>Created By</em>}</li>
  *   <li>{@link cclms.impl.KpiValueImpl#getRefKpiId <em>Ref Kpi Id</em>}</li>
  *   <li>{@link cclms.impl.KpiValueImpl#getRefLinkId <em>Ref Link Id</em>}</li>
- *   <li>{@link cclms.impl.KpiValueImpl#getRefCreatedBy <em>Ref Created By</em>}</li>
  * </ul>
  * </p>
  *
@@ -79,6 +79,35 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 	protected static final int VALUE_ESETFLAG = 1 << 0;
 
 	/**
+	 * The default value of the '{@link #getCreatedBy() <em>Created By</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreatedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CREATED_BY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCreatedBy() <em>Created By</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreatedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected int createdBy = CREATED_BY_EDEFAULT;
+
+	/**
+	 * The flag representing whether the Created By attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CREATED_BY_ESETFLAG = 1 << 1;
+
+	/**
 	 * The cached value of the '{@link #getRefKpiId() <em>Ref Kpi Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -99,16 +128,6 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 	protected LinkMst refLinkId;
 
 	/**
-	 * The cached value of the '{@link #getRefCreatedBy() <em>Ref Created By</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefCreatedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected UserMst refCreatedBy;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -124,7 +143,7 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getKpiValue();
+		return CclmsPackage.Literals.KPI_VALUE;
 	}
 
 	/**
@@ -358,83 +377,6 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getRefCreatedBy() {
-		return refCreatedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefCreatedBy(UserMst newRefCreatedBy,
-			NotificationChain msgs) {
-		UserMst oldRefCreatedBy = refCreatedBy;
-		refCreatedBy = newRefCreatedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource().getNotificationFactory()
-						.createNotification(this, Notification.SET,
-								CclmsPackage.KPI_VALUE__REF_CREATED_BY,
-								oldRefCreatedBy, newRefCreatedBy);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.KPI_VALUE__REF_CREATED_BY,
-						oldRefCreatedBy, newRefCreatedBy);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefCreatedBy(UserMst newRefCreatedBy) {
-		if (newRefCreatedBy != refCreatedBy) {
-			NotificationChain msgs = null;
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_KPI_VALUE_CREATED_BY,
-						UserMst.class, msgs);
-			if (newRefCreatedBy != null)
-				msgs = ((InternalEObject) newRefCreatedBy).eInverseAdd(this,
-						CclmsPackage.USER_MST__REF_KPI_VALUE_CREATED_BY,
-						UserMst.class, msgs);
-			msgs = basicSetRefCreatedBy(newRefCreatedBy, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory().createNotification(this,
-								Notification.SET,
-								CclmsPackage.KPI_VALUE__REF_CREATED_BY,
-								newRefCreatedBy, newRefCreatedBy);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.KPI_VALUE__REF_CREATED_BY,
-						newRefCreatedBy, newRefCreatedBy));
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public KpiMst getKpiId() {
 		KpiMst obj = getRefKpiId();
 		return isNullOrProxy(obj) ? null : obj;
@@ -473,9 +415,8 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getCreatedBy() {
-		UserMst obj = getRefCreatedBy();
-		return isNullOrProxy(obj) ? null : obj;
+	public int getCreatedBy() {
+		return createdBy;
 	}
 
 	/**
@@ -483,8 +424,63 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCreatedBy(UserMst obj) {
-		setRefCreatedBy(obj);
+	public void setCreatedBy(int newCreatedBy) {
+		int oldCreatedBy = createdBy;
+		createdBy = newCreatedBy;
+		boolean oldCreatedByESet = (_booleanFlags & CREATED_BY_ESETFLAG) != 0;
+		_booleanFlags |= CREATED_BY_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.KPI_VALUE__CREATED_BY,
+								oldCreatedBy, createdBy, !oldCreatedByESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.KPI_VALUE__CREATED_BY, oldCreatedBy,
+						createdBy, !oldCreatedByESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCreatedBy() {
+		int oldCreatedBy = createdBy;
+		boolean oldCreatedByESet = (_booleanFlags & CREATED_BY_ESETFLAG) != 0;
+		createdBy = CREATED_BY_EDEFAULT;
+		_booleanFlags &= ~CREATED_BY_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.UNSET,
+								CclmsPackage.KPI_VALUE__CREATED_BY,
+								oldCreatedBy, CREATED_BY_EDEFAULT,
+								oldCreatedByESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.UNSET,
+						CclmsPackage.KPI_VALUE__CREATED_BY, oldCreatedBy,
+						CREATED_BY_EDEFAULT, oldCreatedByESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCreatedBy() {
+		return (_booleanFlags & CREATED_BY_ESETFLAG) != 0;
 	}
 
 	/**
@@ -517,12 +513,6 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 						CclmsPackage.LINK_MST__REF_KPI_VALUE_LINK_ID,
 						LinkMst.class, msgs);
 			return basicSetRefLinkId((LinkMst) otherEnd, msgs);
-		case CclmsPackage.KPI_VALUE__REF_CREATED_BY:
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_KPI_VALUE_CREATED_BY,
-						UserMst.class, msgs);
-			return basicSetRefCreatedBy((UserMst) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -540,8 +530,6 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 			return basicSetRefKpiId(null, msgs);
 		case CclmsPackage.KPI_VALUE__REF_LINK_ID:
 			return basicSetRefLinkId(null, msgs);
-		case CclmsPackage.KPI_VALUE__REF_CREATED_BY:
-			return basicSetRefCreatedBy(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -556,12 +544,12 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 		switch (featureID) {
 		case CclmsPackage.KPI_VALUE__VALUE:
 			return getValue();
+		case CclmsPackage.KPI_VALUE__CREATED_BY:
+			return getCreatedBy();
 		case CclmsPackage.KPI_VALUE__REF_KPI_ID:
 			return getRefKpiId();
 		case CclmsPackage.KPI_VALUE__REF_LINK_ID:
 			return getRefLinkId();
-		case CclmsPackage.KPI_VALUE__REF_CREATED_BY:
-			return getRefCreatedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -577,14 +565,14 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 		case CclmsPackage.KPI_VALUE__VALUE:
 			setValue((Double) newValue);
 			return;
+		case CclmsPackage.KPI_VALUE__CREATED_BY:
+			setCreatedBy((Integer) newValue);
+			return;
 		case CclmsPackage.KPI_VALUE__REF_KPI_ID:
 			setRefKpiId((KpiMst) newValue);
 			return;
 		case CclmsPackage.KPI_VALUE__REF_LINK_ID:
 			setRefLinkId((LinkMst) newValue);
-			return;
-		case CclmsPackage.KPI_VALUE__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -601,14 +589,14 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 		case CclmsPackage.KPI_VALUE__VALUE:
 			unsetValue();
 			return;
+		case CclmsPackage.KPI_VALUE__CREATED_BY:
+			unsetCreatedBy();
+			return;
 		case CclmsPackage.KPI_VALUE__REF_KPI_ID:
 			setRefKpiId((KpiMst) null);
 			return;
 		case CclmsPackage.KPI_VALUE__REF_LINK_ID:
 			setRefLinkId((LinkMst) null);
-			return;
-		case CclmsPackage.KPI_VALUE__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -624,12 +612,12 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 		switch (featureID) {
 		case CclmsPackage.KPI_VALUE__VALUE:
 			return isSetValue();
+		case CclmsPackage.KPI_VALUE__CREATED_BY:
+			return isSetCreatedBy();
 		case CclmsPackage.KPI_VALUE__REF_KPI_ID:
 			return refKpiId != null;
 		case CclmsPackage.KPI_VALUE__REF_LINK_ID:
 			return refLinkId != null;
-		case CclmsPackage.KPI_VALUE__REF_CREATED_BY:
-			return refCreatedBy != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -648,6 +636,11 @@ public class KpiValueImpl extends IloDomObjectImpl implements KpiValue {
 		result.append(" (value: ");
 		if ((_booleanFlags & VALUE_ESETFLAG) != 0)
 			result.append(value);
+		else
+			result.append("<unset>");
+		result.append(", createdBy: ");
+		if ((_booleanFlags & CREATED_BY_ESETFLAG) != 0)
+			result.append(createdBy);
 		else
 			result.append("<unset>");
 		result.append(')');

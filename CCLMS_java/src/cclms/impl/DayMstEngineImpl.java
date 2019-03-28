@@ -105,7 +105,7 @@ public class DayMstEngineImpl extends IloDomObjectImpl implements DayMstEngine {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getDayMstEngine();
+		return CclmsPackage.Literals.DAY_MST_ENGINE;
 	}
 
 	/**

@@ -30,6 +30,7 @@ tuple TSegmentMaster {
 
 tuple TStationMaster {
   string stationCode;
+  string stationName;
   key int stationId;
 };
 
@@ -52,7 +53,6 @@ tuple TTrainMaster {
   string trainNo;
   key int trainId;
   string trainName;
-  string trainType;
 };
 
 tuple TTrainSegments {
@@ -78,6 +78,13 @@ tuple TTrainSegments {
 {TTimetoMinutes} timetoMinutes = ...;
 {TTrainMaster} trainMaster = ...;
 {TTrainSegments} trainSegments = ...;
+
+tuple TSegmentMst {
+  key int segmentId;
+  TStationMaster startStationId;
+  TStationMaster stopStationId;
+};
+{TSegmentMst} segmentMst with startStationId in stationMaster, stopStationId in stationMaster = ...;
 
 // Output
 

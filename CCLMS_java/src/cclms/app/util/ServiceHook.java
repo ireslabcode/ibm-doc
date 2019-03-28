@@ -1,17 +1,25 @@
 package cclms.app.util;
 
+import ilog.odm.datasvc.IloDataService;
 import ilog.odm.datasvc.IloLock;
 import ilog.odm.datasvc.IloLockable;
 import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloUser;
 import ilog.odm.processingsvc.IloProcessingService;
 import ilog.odm.processingsvc.action.IloPostProcessSolveJobOutputs;
 import ilog.odm.processingsvc.action.IloPrepareJobSubmission;
+import ilog.odm.service.IloApplicationContext;
 import ilog.odm.service.IloService;
 import ilog.odm.service.IloServiceInitHook;
 
 public class ServiceHook extends IloServiceInitHook {
   @Override
   public void postInitialize(IloService service) {
+	  /*IloApplicationContext applicationContext = getApplicationContext();
+	  IloDataService service2 = applicationContext.getService(IloDataService.class);
+	  IloUser currentUser = service2.getCurrentUser();
+	  System.out.println("currentUser.getName(): "+currentUser.getName());*/
+
     if (service instanceof IloProcessingService) {
       // Post processing
       ((IloProcessingService)service).registerServiceHook(IloPostProcessSolveJobOutputs.class,

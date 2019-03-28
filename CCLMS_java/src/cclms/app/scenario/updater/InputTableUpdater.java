@@ -173,6 +173,33 @@ public class InputTableUpdater {
 						e.printStackTrace();
 					}
 		        	 
+		         }else if(entry.getKey().equals(TableConstant.USER_MST)){
+		        	 //TRAIN_MST
+		        	 
+		        	 try {
+		        		 ResultSet resultSet = entry.getValue();
+		        		 if(resultSet!=null){
+		        			 IloTable loadTable = scenario.getTable(TableConstant.APP+"."+TableConstant.USER_MST);
+	        				 loadTable.removeAllRows();
+		        			 while (resultSet.next()) {
+		        				 	        				 
+		        				/* IloRow row = loadTable.makeNewRow();
+		        				  row.setIntValue(ParameterMst.PARAMETER_ID, resultSet.getInt(1));
+		        				  row.setStringValue(ParameterMst.PARAMETER_DESC, resultSet.getString(2));
+		        				  row.setStringValue(ParameterMst.UOM, resultSet.getString(3));
+		        				  row.setDoubleValue(ParameterMst.GLOBAL_VALUE, resultSet.getDouble(4));
+		        				  row.setDoubleValue(ParameterMst.MIN_VALUE, resultSet.getDouble(5));
+		        				  row.setDoubleValue(ParameterMst.MAX_VALUE, resultSet.getDouble(6));
+		        				  loadTable.addRow(row);
+		        				 */
+		        				 //System.out.println("p-->>"+resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
+		        			 }
+		        		 }
+		        	} catch (SQLException e) {
+						// TODO Handel the error 
+						e.printStackTrace();
+					}
+		        	 
 		         }
 		         
 		 
@@ -213,7 +240,7 @@ public class InputTableUpdater {
 	
 	
 	public static void main(String args[]){
-System.out.println("-->"+QueryUtil.getQueryByTableName("TRACTION_MST"));
+//System.out.println("-->"+QueryUtil.getQueryByTableName("TRACTION_MST"));
 	}
 
 }

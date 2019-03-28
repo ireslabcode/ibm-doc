@@ -50,13 +50,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link cclms.impl.LinkMstImpl#getScenarioId <em>Scenario Id</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getLinkName <em>Link Name</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getLobbyType <em>Lobby Type</em>}</li>
+ *   <li>{@link cclms.impl.LinkMstImpl#getCreatedBy <em>Created By</em>}</li>
+ *   <li>{@link cclms.impl.LinkMstImpl#getLastModifiedBy <em>Last Modified By</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getLinkStatus <em>Link Status</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getRefParameterValueLinkId <em>Ref Parameter Value Link Id</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getRefKpiValueLinkId <em>Ref Kpi Value Link Id</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getRefLinkDetailLinkId <em>Ref Link Detail Link Id</em>}</li>
- *   <li>{@link cclms.impl.LinkMstImpl#getRefCreatedBy <em>Ref Created By</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getRefLobbyStnId <em>Ref Lobby Stn Id</em>}</li>
- *   <li>{@link cclms.impl.LinkMstImpl#getRefLastModifiedBy <em>Ref Last Modified By</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getRefTractionType <em>Ref Traction Type</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getRefTrainFrequencyCd <em>Ref Train Frequency Cd</em>}</li>
  *   <li>{@link cclms.impl.LinkMstImpl#getRefTrainTypeCd <em>Ref Train Type Cd</em>}</li>
@@ -174,6 +174,64 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	protected String lobbyType = LOBBY_TYPE_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getCreatedBy() <em>Created By</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreatedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CREATED_BY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCreatedBy() <em>Created By</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreatedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected int createdBy = CREATED_BY_EDEFAULT;
+
+	/**
+	 * The flag representing whether the Created By attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CREATED_BY_ESETFLAG = 1 << 2;
+
+	/**
+	 * The default value of the '{@link #getLastModifiedBy() <em>Last Modified By</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastModifiedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LAST_MODIFIED_BY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getLastModifiedBy() <em>Last Modified By</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastModifiedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected int lastModifiedBy = LAST_MODIFIED_BY_EDEFAULT;
+
+	/**
+	 * The flag representing whether the Last Modified By attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LAST_MODIFIED_BY_ESETFLAG = 1 << 3;
+
+	/**
 	 * The default value of the '{@link #getLinkStatus() <em>Link Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -224,16 +282,6 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	protected EList<LinkDetail> refLinkDetailLinkId;
 
 	/**
-	 * The cached value of the '{@link #getRefCreatedBy() <em>Ref Created By</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefCreatedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected UserMst refCreatedBy;
-
-	/**
 	 * The cached value of the '{@link #getRefLobbyStnId() <em>Ref Lobby Stn Id</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,16 +290,6 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	 * @ordered
 	 */
 	protected StationMst refLobbyStnId;
-
-	/**
-	 * The cached value of the '{@link #getRefLastModifiedBy() <em>Ref Last Modified By</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRefLastModifiedBy()
-	 * @generated
-	 * @ordered
-	 */
-	protected UserMst refLastModifiedBy;
 
 	/**
 	 * The cached value of the '{@link #getRefTractionType() <em>Ref Traction Type</em>}' reference.
@@ -299,7 +337,7 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getLinkMst();
+		return CclmsPackage.Literals.LINK_MST;
 	}
 
 	/**
@@ -598,83 +636,6 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getRefCreatedBy() {
-		return refCreatedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefCreatedBy(UserMst newRefCreatedBy,
-			NotificationChain msgs) {
-		UserMst oldRefCreatedBy = refCreatedBy;
-		refCreatedBy = newRefCreatedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource().getNotificationFactory()
-						.createNotification(this, Notification.SET,
-								CclmsPackage.LINK_MST__REF_CREATED_BY,
-								oldRefCreatedBy, newRefCreatedBy);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.LINK_MST__REF_CREATED_BY, oldRefCreatedBy,
-						newRefCreatedBy);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefCreatedBy(UserMst newRefCreatedBy) {
-		if (newRefCreatedBy != refCreatedBy) {
-			NotificationChain msgs = null;
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_LINK_MST_CREATED_BY,
-						UserMst.class, msgs);
-			if (newRefCreatedBy != null)
-				msgs = ((InternalEObject) newRefCreatedBy).eInverseAdd(this,
-						CclmsPackage.USER_MST__REF_LINK_MST_CREATED_BY,
-						UserMst.class, msgs);
-			msgs = basicSetRefCreatedBy(newRefCreatedBy, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory().createNotification(this,
-								Notification.SET,
-								CclmsPackage.LINK_MST__REF_CREATED_BY,
-								newRefCreatedBy, newRefCreatedBy);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.LINK_MST__REF_CREATED_BY, newRefCreatedBy,
-						newRefCreatedBy));
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public StationMst getRefLobbyStnId() {
 		return refLobbyStnId;
 	}
@@ -743,85 +704,6 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 				eNotify(new ENotificationImpl(this, Notification.SET,
 						CclmsPackage.LINK_MST__REF_LOBBY_STN_ID,
 						newRefLobbyStnId, newRefLobbyStnId));
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UserMst getRefLastModifiedBy() {
-		return refLastModifiedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefLastModifiedBy(
-			UserMst newRefLastModifiedBy, NotificationChain msgs) {
-		UserMst oldRefLastModifiedBy = refLastModifiedBy;
-		refLastModifiedBy = newRefLastModifiedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource().getNotificationFactory()
-						.createNotification(this, Notification.SET,
-								CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY,
-								oldRefLastModifiedBy, newRefLastModifiedBy);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY,
-						oldRefLastModifiedBy, newRefLastModifiedBy);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefLastModifiedBy(UserMst newRefLastModifiedBy) {
-		if (newRefLastModifiedBy != refLastModifiedBy) {
-			NotificationChain msgs = null;
-			if (refLastModifiedBy != null)
-				msgs = ((InternalEObject) refLastModifiedBy).eInverseRemove(
-						this,
-						CclmsPackage.USER_MST__REF_LINK_MST_LAST_MODIFIED_BY,
-						UserMst.class, msgs);
-			if (newRefLastModifiedBy != null)
-				msgs = ((InternalEObject) newRefLastModifiedBy).eInverseAdd(
-						this,
-						CclmsPackage.USER_MST__REF_LINK_MST_LAST_MODIFIED_BY,
-						UserMst.class, msgs);
-			msgs = basicSetRefLastModifiedBy(newRefLastModifiedBy, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory().createNotification(this,
-								Notification.SET,
-								CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY,
-								newRefLastModifiedBy, newRefLastModifiedBy);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY,
-						newRefLastModifiedBy, newRefLastModifiedBy));
 			}
 		}
 	}
@@ -1097,9 +979,8 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getCreatedBy() {
-		UserMst obj = getRefCreatedBy();
-		return isNullOrProxy(obj) ? null : obj;
+	public int getCreatedBy() {
+		return createdBy;
 	}
 
 	/**
@@ -1107,8 +988,63 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCreatedBy(UserMst obj) {
-		setRefCreatedBy(obj);
+	public void setCreatedBy(int newCreatedBy) {
+		int oldCreatedBy = createdBy;
+		createdBy = newCreatedBy;
+		boolean oldCreatedByESet = (_booleanFlags & CREATED_BY_ESETFLAG) != 0;
+		_booleanFlags |= CREATED_BY_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.LINK_MST__CREATED_BY,
+								oldCreatedBy, createdBy, !oldCreatedByESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.LINK_MST__CREATED_BY, oldCreatedBy,
+						createdBy, !oldCreatedByESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCreatedBy() {
+		int oldCreatedBy = createdBy;
+		boolean oldCreatedByESet = (_booleanFlags & CREATED_BY_ESETFLAG) != 0;
+		createdBy = CREATED_BY_EDEFAULT;
+		_booleanFlags &= ~CREATED_BY_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.UNSET,
+								CclmsPackage.LINK_MST__CREATED_BY,
+								oldCreatedBy, CREATED_BY_EDEFAULT,
+								oldCreatedByESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.UNSET,
+						CclmsPackage.LINK_MST__CREATED_BY, oldCreatedBy,
+						CREATED_BY_EDEFAULT, oldCreatedByESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCreatedBy() {
+		return (_booleanFlags & CREATED_BY_ESETFLAG) != 0;
 	}
 
 	/**
@@ -1135,9 +1071,8 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getLastModifiedBy() {
-		UserMst obj = getRefLastModifiedBy();
-		return isNullOrProxy(obj) ? null : obj;
+	public int getLastModifiedBy() {
+		return lastModifiedBy;
 	}
 
 	/**
@@ -1145,8 +1080,66 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastModifiedBy(UserMst obj) {
-		setRefLastModifiedBy(obj);
+	public void setLastModifiedBy(int newLastModifiedBy) {
+		int oldLastModifiedBy = lastModifiedBy;
+		lastModifiedBy = newLastModifiedBy;
+		boolean oldLastModifiedByESet = (_booleanFlags & LAST_MODIFIED_BY_ESETFLAG) != 0;
+		_booleanFlags |= LAST_MODIFIED_BY_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.LINK_MST__LAST_MODIFIED_BY,
+								oldLastModifiedBy, lastModifiedBy,
+								!oldLastModifiedByESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.LINK_MST__LAST_MODIFIED_BY,
+						oldLastModifiedBy, lastModifiedBy,
+						!oldLastModifiedByESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetLastModifiedBy() {
+		int oldLastModifiedBy = lastModifiedBy;
+		boolean oldLastModifiedByESet = (_booleanFlags & LAST_MODIFIED_BY_ESETFLAG) != 0;
+		lastModifiedBy = LAST_MODIFIED_BY_EDEFAULT;
+		_booleanFlags &= ~LAST_MODIFIED_BY_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.UNSET,
+								CclmsPackage.LINK_MST__LAST_MODIFIED_BY,
+								oldLastModifiedBy, LAST_MODIFIED_BY_EDEFAULT,
+								oldLastModifiedByESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.UNSET,
+						CclmsPackage.LINK_MST__LAST_MODIFIED_BY,
+						oldLastModifiedBy, LAST_MODIFIED_BY_EDEFAULT,
+						oldLastModifiedByESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetLastModifiedBy() {
+		return (_booleanFlags & LAST_MODIFIED_BY_ESETFLAG) != 0;
 	}
 
 	/**
@@ -1234,25 +1227,12 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 		case CclmsPackage.LINK_MST__REF_LINK_DETAIL_LINK_ID:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getRefLinkDetailLinkId())
 					.basicAdd(otherEnd, msgs);
-		case CclmsPackage.LINK_MST__REF_CREATED_BY:
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy).eInverseRemove(this,
-						CclmsPackage.USER_MST__REF_LINK_MST_CREATED_BY,
-						UserMst.class, msgs);
-			return basicSetRefCreatedBy((UserMst) otherEnd, msgs);
 		case CclmsPackage.LINK_MST__REF_LOBBY_STN_ID:
 			if (refLobbyStnId != null)
 				msgs = ((InternalEObject) refLobbyStnId).eInverseRemove(this,
 						CclmsPackage.STATION_MST__REF_LINK_MST_LOBBY_STN_ID,
 						StationMst.class, msgs);
 			return basicSetRefLobbyStnId((StationMst) otherEnd, msgs);
-		case CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY:
-			if (refLastModifiedBy != null)
-				msgs = ((InternalEObject) refLastModifiedBy).eInverseRemove(
-						this,
-						CclmsPackage.USER_MST__REF_LINK_MST_LAST_MODIFIED_BY,
-						UserMst.class, msgs);
-			return basicSetRefLastModifiedBy((UserMst) otherEnd, msgs);
 		case CclmsPackage.LINK_MST__REF_TRACTION_TYPE:
 			if (refTractionType != null)
 				msgs = ((InternalEObject) refTractionType).eInverseRemove(this,
@@ -1298,12 +1278,8 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 		case CclmsPackage.LINK_MST__REF_LINK_DETAIL_LINK_ID:
 			return ((InternalEList<?>) getRefLinkDetailLinkId()).basicRemove(
 					otherEnd, msgs);
-		case CclmsPackage.LINK_MST__REF_CREATED_BY:
-			return basicSetRefCreatedBy(null, msgs);
 		case CclmsPackage.LINK_MST__REF_LOBBY_STN_ID:
 			return basicSetRefLobbyStnId(null, msgs);
-		case CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY:
-			return basicSetRefLastModifiedBy(null, msgs);
 		case CclmsPackage.LINK_MST__REF_TRACTION_TYPE:
 			return basicSetRefTractionType(null, msgs);
 		case CclmsPackage.LINK_MST__REF_TRAIN_FREQUENCY_CD:
@@ -1330,6 +1306,10 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 			return getLinkName();
 		case CclmsPackage.LINK_MST__LOBBY_TYPE:
 			return getLobbyType();
+		case CclmsPackage.LINK_MST__CREATED_BY:
+			return getCreatedBy();
+		case CclmsPackage.LINK_MST__LAST_MODIFIED_BY:
+			return getLastModifiedBy();
 		case CclmsPackage.LINK_MST__LINK_STATUS:
 			return getLinkStatus();
 		case CclmsPackage.LINK_MST__REF_PARAMETER_VALUE_LINK_ID:
@@ -1338,12 +1318,8 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 			return getRefKpiValueLinkId();
 		case CclmsPackage.LINK_MST__REF_LINK_DETAIL_LINK_ID:
 			return getRefLinkDetailLinkId();
-		case CclmsPackage.LINK_MST__REF_CREATED_BY:
-			return getRefCreatedBy();
 		case CclmsPackage.LINK_MST__REF_LOBBY_STN_ID:
 			return getRefLobbyStnId();
-		case CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY:
-			return getRefLastModifiedBy();
 		case CclmsPackage.LINK_MST__REF_TRACTION_TYPE:
 			return getRefTractionType();
 		case CclmsPackage.LINK_MST__REF_TRAIN_FREQUENCY_CD:
@@ -1375,6 +1351,12 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 		case CclmsPackage.LINK_MST__LOBBY_TYPE:
 			setLobbyType((String) newValue);
 			return;
+		case CclmsPackage.LINK_MST__CREATED_BY:
+			setCreatedBy((Integer) newValue);
+			return;
+		case CclmsPackage.LINK_MST__LAST_MODIFIED_BY:
+			setLastModifiedBy((Integer) newValue);
+			return;
 		case CclmsPackage.LINK_MST__LINK_STATUS:
 			setLinkStatus((String) newValue);
 			return;
@@ -1393,14 +1375,8 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 			getRefLinkDetailLinkId().addAll(
 					(Collection<? extends LinkDetail>) newValue);
 			return;
-		case CclmsPackage.LINK_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) newValue);
-			return;
 		case CclmsPackage.LINK_MST__REF_LOBBY_STN_ID:
 			setRefLobbyStnId((StationMst) newValue);
-			return;
-		case CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY:
-			setRefLastModifiedBy((UserMst) newValue);
 			return;
 		case CclmsPackage.LINK_MST__REF_TRACTION_TYPE:
 			setRefTractionType((TractionMst) newValue);
@@ -1435,6 +1411,12 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 		case CclmsPackage.LINK_MST__LOBBY_TYPE:
 			setLobbyType(LOBBY_TYPE_EDEFAULT);
 			return;
+		case CclmsPackage.LINK_MST__CREATED_BY:
+			unsetCreatedBy();
+			return;
+		case CclmsPackage.LINK_MST__LAST_MODIFIED_BY:
+			unsetLastModifiedBy();
+			return;
 		case CclmsPackage.LINK_MST__LINK_STATUS:
 			setLinkStatus(LINK_STATUS_EDEFAULT);
 			return;
@@ -1447,14 +1429,8 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 		case CclmsPackage.LINK_MST__REF_LINK_DETAIL_LINK_ID:
 			getRefLinkDetailLinkId().clear();
 			return;
-		case CclmsPackage.LINK_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) null);
-			return;
 		case CclmsPackage.LINK_MST__REF_LOBBY_STN_ID:
 			setRefLobbyStnId((StationMst) null);
-			return;
-		case CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY:
-			setRefLastModifiedBy((UserMst) null);
 			return;
 		case CclmsPackage.LINK_MST__REF_TRACTION_TYPE:
 			setRefTractionType((TractionMst) null);
@@ -1487,6 +1463,10 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 		case CclmsPackage.LINK_MST__LOBBY_TYPE:
 			return LOBBY_TYPE_EDEFAULT == null ? lobbyType != null
 					: !LOBBY_TYPE_EDEFAULT.equals(lobbyType);
+		case CclmsPackage.LINK_MST__CREATED_BY:
+			return isSetCreatedBy();
+		case CclmsPackage.LINK_MST__LAST_MODIFIED_BY:
+			return isSetLastModifiedBy();
 		case CclmsPackage.LINK_MST__LINK_STATUS:
 			return LINK_STATUS_EDEFAULT == null ? linkStatus != null
 					: !LINK_STATUS_EDEFAULT.equals(linkStatus);
@@ -1498,12 +1478,8 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 		case CclmsPackage.LINK_MST__REF_LINK_DETAIL_LINK_ID:
 			return refLinkDetailLinkId != null
 					&& !refLinkDetailLinkId.isEmpty();
-		case CclmsPackage.LINK_MST__REF_CREATED_BY:
-			return refCreatedBy != null;
 		case CclmsPackage.LINK_MST__REF_LOBBY_STN_ID:
 			return refLobbyStnId != null;
-		case CclmsPackage.LINK_MST__REF_LAST_MODIFIED_BY:
-			return refLastModifiedBy != null;
 		case CclmsPackage.LINK_MST__REF_TRACTION_TYPE:
 			return refTractionType != null;
 		case CclmsPackage.LINK_MST__REF_TRAIN_FREQUENCY_CD:
@@ -1539,6 +1515,16 @@ public class LinkMstImpl extends IloDomObjectImpl implements LinkMst {
 		result.append(linkName);
 		result.append(", lobbyType: ");
 		result.append(lobbyType);
+		result.append(", createdBy: ");
+		if ((_booleanFlags & CREATED_BY_ESETFLAG) != 0)
+			result.append(createdBy);
+		else
+			result.append("<unset>");
+		result.append(", lastModifiedBy: ");
+		if ((_booleanFlags & LAST_MODIFIED_BY_ESETFLAG) != 0)
+			result.append(lastModifiedBy);
+		else
+			result.append("<unset>");
 		result.append(", linkStatus: ");
 		result.append(linkStatus);
 		result.append(')');

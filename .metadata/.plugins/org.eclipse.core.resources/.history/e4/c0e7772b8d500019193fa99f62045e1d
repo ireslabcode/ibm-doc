@@ -1,0 +1,120 @@
+package test;
+
+import ilog.odm.datasvc.IloDataException;
+import ilog.odm.datasvc.IloLock;
+import ilog.odm.datasvc.IloLockable;
+import ilog.odm.datasvc.IloScenario;
+import ilog.odm.datasvc.IloScenarioLink;
+import ilog.odm.datasvc.IloWorkspace;
+import ilog.odm.datasvc.IloWorkspaceFolder;
+import ilog.odm.datasvc.IloWorkspaceItem;
+import ilog.odm.datasvc.internal.IloDataService;
+import ilog.odm.processingsvc.IloExecutionScope;
+import ilog.odm.processingsvc.IloSolveTaskController;
+import ilog.odm.processingsvc.scenario.IloScenarioProcessingService;
+import ilog.odm.service.internal.IloApplicationContext;
+import ilog.odm.studio.views.IloODMApplication;
+import ilog.odm.studio.workspacesvc.IloWorkspaceService;
+import ilog.odm.tasksvc.IloProgressMonitor;
+import ilog.odm.tasksvc.IloTask;
+import ilog.odm.tasksvc.IloTaskService;
+
+import java.util.ArrayList;
+
+public class ScenarioUtil {
+
+	
+
+	 /* public static void changeCurrentScenario(IloApplicationContext context, IloScenarioLink scenarioLink) {
+	    IloWorkspaceService workspaceService = context.getService(IloWorkspaceService.class);
+	    workspaceService.setKeyScenarioLink(IloWorkspaceService.CURRENT_KEY, scenarioLink);
+	    workspaceService.clearTag(IloWorkspaceService.SELECTED_TAG);
+	    workspaceService.addTag(scenarioLink, IloWorkspaceService.SELECTED_TAG);
+	  }
+
+	  public static void changeReferenceScenario(IloApplicationContext context, IloScenarioLink scenarioLink) {
+	    IloWorkspaceService workspaceService = context.getService(IloWorkspaceService.class);
+	    workspaceService.setKeyScenarioLink(IloWorkspaceService.REFERENCE_KEY, scenarioLink);
+	  }*/
+
+	 
+	
+	  // run all the given scenarios and wait for completion
+	 
+	  //--------------------
+	  // Solving One
+	  //--------------------
+
+	
+
+	 	  //--------------------
+	  // Scenario management
+	  //--------------------
+
+	 
+	
+	
+	  // returns the named workspace
+	  public static IloWorkspace getWorkspace(IloDataService service, String name) {
+	    for (IloWorkspace work : service.getWorkspaces()) {
+	      if (work.getName().equals(name)) return work;
+	    }
+	    return null;
+	  }
+
+	  public static IloWorkspaceFolder getRootWorkspaceFolder(IloDataService data, String name) {
+	    for (IloWorkspace work : data.getWorkspaces()) {
+	      IloWorkspaceFolder folder = getSubFolder(work, name);
+	      if (folder != null) return folder;
+	    }
+	    return null;
+	  }
+
+	  public static IloWorkspaceFolder getSubFolder(IloWorkspaceFolder parent, String name) {
+	    for (IloWorkspaceItem item : parent.getChildren()) {
+	      if (item instanceof IloWorkspaceFolder) {
+	        IloWorkspaceFolder folder = (IloWorkspaceFolder) item;
+	        if (folder.getName().equals(name)) return folder;
+	      }
+	    }
+	    return null;
+	  }
+
+	  // returns the scenario's folder
+	  public static IloWorkspaceFolder getWorkspaceFolder(IloDataService service, IloScenario sc) {
+	    for (IloWorkspace work : service.getWorkspaces()) {
+	      IloWorkspaceFolder found = getWorkspaceFolder(work, sc);
+	      if (found != null) return found;
+	    }
+	    return null;
+	  }
+
+	  // return the workspace containing the given scenario
+	  public static IloWorkspaceFolder getWorkspaceFolder(IloWorkspaceFolder parent, IloScenario sc) {
+	    for (IloWorkspaceItem item : parent.getChildren()) {
+	      if (item instanceof IloScenarioLink) {
+	        IloScenarioLink link = (IloScenarioLink) item;
+	        if (link.getScenario() == sc) return parent;
+	      }
+	      if (item instanceof IloWorkspaceFolder) {
+	        IloWorkspaceFolder folder = (IloWorkspaceFolder) item;
+	        IloWorkspaceFolder found = getWorkspaceFolder(folder, sc);
+	        if (found != null) return found;
+	      }
+	    }
+	    return null;
+	  }
+
+	  // name must be unique in the given folder
+	  public static String getUniqueName(IloWorkspaceFolder folder, String originalName) {
+	    int count = 0;
+	    String name = originalName;
+	    IloScenarioLink link = getScenario(folder, name);
+	    while (link != null) {
+	      count++;
+	      name = originalName + " (" + count + ")";
+	      link = getScenario(folder, name);
+	    }
+	    return name;
+	  }
+}

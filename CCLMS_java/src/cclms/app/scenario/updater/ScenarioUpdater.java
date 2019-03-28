@@ -127,6 +127,7 @@ public static void loadScenarioTablesTrainTypeMst(Map<String, ResultSet> resultS
 	        				  IloRow row = loadTable.makeNewRow();
 	        				  row.setIntValue(TrainTypeMst.TRAIN_TYPE_CCLMS_ID, resultSet.getInt(1));
 	        				  row.setStringValue(TrainTypeMst.TRAIN_TYPE_DESC, resultSet.getString(2));
+	        				  //row.setIntValue(TrainTypeMst.CREATED_BY, resultSet.getInt(3));
 	        				  loadTable.addRow(row);
 	        				//  System.out.println("-->"+resultSet.getInt(1)+" "+resultSet.getString(2));
 	        				 // System.out.println("TRAIN_TYPE_MST UPDATED.");

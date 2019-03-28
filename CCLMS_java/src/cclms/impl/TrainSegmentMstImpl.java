@@ -44,7 +44,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link cclms.impl.TrainSegmentMstImpl#getSpareFlag <em>Spare Flag</em>}</li>
  *   <li>{@link cclms.impl.TrainSegmentMstImpl#getDayofservice <em>Dayofservice</em>}</li>
  *   <li>{@link cclms.impl.TrainSegmentMstImpl#getActualKm <em>Actual Km</em>}</li>
- *   <li>{@link cclms.impl.TrainSegmentMstImpl#getRefCreatedBy <em>Ref Created By</em>}</li>
+ *   <li>{@link cclms.impl.TrainSegmentMstImpl#getCreatedBy <em>Created By</em>}</li>
  *   <li>{@link cclms.impl.TrainSegmentMstImpl#getRefLocoChangeStn <em>Ref Loco Change Stn</em>}</li>
  *   <li>{@link cclms.impl.TrainSegmentMstImpl#getRefSegmentId <em>Ref Segment Id</em>}</li>
  *   <li>{@link cclms.impl.TrainSegmentMstImpl#getRefAssignedLobby <em>Ref Assigned Lobby</em>}</li>
@@ -388,14 +388,33 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 	protected static final int ACTUAL_KM_ESETFLAG = 1 << 8;
 
 	/**
-	 * The cached value of the '{@link #getRefCreatedBy() <em>Ref Created By</em>}' reference.
+	 * The default value of the '{@link #getCreatedBy() <em>Created By</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRefCreatedBy()
+	 * @see #getCreatedBy()
 	 * @generated
 	 * @ordered
 	 */
-	protected UserMst refCreatedBy;
+	protected static final int CREATED_BY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCreatedBy() <em>Created By</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreatedBy()
+	 * @generated
+	 * @ordered
+	 */
+	protected int createdBy = CREATED_BY_EDEFAULT;
+
+	/**
+	 * The flag representing whether the Created By attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CREATED_BY_ESETFLAG = 1 << 9;
 
 	/**
 	 * The cached value of the '{@link #getRefLocoChangeStn() <em>Ref Loco Change Stn</em>}' reference.
@@ -463,7 +482,7 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getTrainSegmentMst();
+		return CclmsPackage.Literals.TRAIN_SEGMENT_MST;
 	}
 
 	/**
@@ -1253,87 +1272,6 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getRefCreatedBy() {
-		return refCreatedBy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRefCreatedBy(UserMst newRefCreatedBy,
-			NotificationChain msgs) {
-		UserMst oldRefCreatedBy = refCreatedBy;
-		refCreatedBy = newRefCreatedBy;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification;
-			if (getDomResource() != null) {
-				notification = getDomResource().getNotificationFactory()
-						.createNotification(this, Notification.SET,
-								CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY,
-								oldRefCreatedBy, newRefCreatedBy);
-			} else {
-				notification = new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY,
-						oldRefCreatedBy, newRefCreatedBy);
-			}
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefCreatedBy(UserMst newRefCreatedBy) {
-		if (newRefCreatedBy != refCreatedBy) {
-			NotificationChain msgs = null;
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy)
-						.eInverseRemove(
-								this,
-								CclmsPackage.USER_MST__REF_TRAIN_SEGMENT_MST_CREATED_BY,
-								UserMst.class, msgs);
-			if (newRefCreatedBy != null)
-				msgs = ((InternalEObject) newRefCreatedBy)
-						.eInverseAdd(
-								this,
-								CclmsPackage.USER_MST__REF_TRAIN_SEGMENT_MST_CREATED_BY,
-								UserMst.class, msgs);
-			msgs = basicSetRefCreatedBy(newRefCreatedBy, msgs);
-			if (msgs != null) {
-				msgs.dispatch();
-				if (getDomResource() != null)
-					getDomResource().getNotificationFactory().release(msgs);
-			}
-		} else if (eNotificationRequired()) {
-			if (getDomResource() != null) {
-				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
-						.getNotificationFactory().createNotification(this,
-								Notification.SET,
-								CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY,
-								newRefCreatedBy, newRefCreatedBy);
-				eNotify(notif);
-				getDomResource().getNotificationFactory().release(notif);
-			} else {
-				eNotify(new ENotificationImpl(this, Notification.SET,
-						CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY,
-						newRefCreatedBy, newRefCreatedBy));
-			}
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public StationMst getRefLocoChangeStn() {
 		return refLocoChangeStn;
 	}
@@ -1750,9 +1688,8 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserMst getCreatedBy() {
-		UserMst obj = getRefCreatedBy();
-		return isNullOrProxy(obj) ? null : obj;
+	public int getCreatedBy() {
+		return createdBy;
 	}
 
 	/**
@@ -1760,8 +1697,63 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCreatedBy(UserMst obj) {
-		setRefCreatedBy(obj);
+	public void setCreatedBy(int newCreatedBy) {
+		int oldCreatedBy = createdBy;
+		createdBy = newCreatedBy;
+		boolean oldCreatedByESet = (_booleanFlags & CREATED_BY_ESETFLAG) != 0;
+		_booleanFlags |= CREATED_BY_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.SET,
+								CclmsPackage.TRAIN_SEGMENT_MST__CREATED_BY,
+								oldCreatedBy, createdBy, !oldCreatedByESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.SET,
+						CclmsPackage.TRAIN_SEGMENT_MST__CREATED_BY,
+						oldCreatedBy, createdBy, !oldCreatedByESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetCreatedBy() {
+		int oldCreatedBy = createdBy;
+		boolean oldCreatedByESet = (_booleanFlags & CREATED_BY_ESETFLAG) != 0;
+		createdBy = CREATED_BY_EDEFAULT;
+		_booleanFlags &= ~CREATED_BY_ESETFLAG;
+		if (eNotificationRequired()) {
+			if (getDomResource() != null) {
+				ilog.odm.dom.impl.resource.IloDomNotificationImpl notif = getDomResource()
+						.getNotificationFactory().createNotification(this,
+								Notification.UNSET,
+								CclmsPackage.TRAIN_SEGMENT_MST__CREATED_BY,
+								oldCreatedBy, CREATED_BY_EDEFAULT,
+								oldCreatedByESet);
+				eNotify(notif);
+				getDomResource().getNotificationFactory().release(notif);
+			} else {
+				eNotify(new ENotificationImpl(this, Notification.UNSET,
+						CclmsPackage.TRAIN_SEGMENT_MST__CREATED_BY,
+						oldCreatedBy, CREATED_BY_EDEFAULT, oldCreatedByESet));
+			}
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetCreatedBy() {
+		return (_booleanFlags & CREATED_BY_ESETFLAG) != 0;
 	}
 
 	/**
@@ -1877,14 +1869,6 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 	public NotificationChain eInverseAdd(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY:
-			if (refCreatedBy != null)
-				msgs = ((InternalEObject) refCreatedBy)
-						.eInverseRemove(
-								this,
-								CclmsPackage.USER_MST__REF_TRAIN_SEGMENT_MST_CREATED_BY,
-								UserMst.class, msgs);
-			return basicSetRefCreatedBy((UserMst) otherEnd, msgs);
 		case CclmsPackage.TRAIN_SEGMENT_MST__REF_LOCO_CHANGE_STN:
 			if (refLocoChangeStn != null)
 				msgs = ((InternalEObject) refLocoChangeStn)
@@ -1936,8 +1920,6 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY:
-			return basicSetRefCreatedBy(null, msgs);
 		case CclmsPackage.TRAIN_SEGMENT_MST__REF_LOCO_CHANGE_STN:
 			return basicSetRefLocoChangeStn(null, msgs);
 		case CclmsPackage.TRAIN_SEGMENT_MST__REF_SEGMENT_ID:
@@ -1984,8 +1966,8 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 			return getDayofservice();
 		case CclmsPackage.TRAIN_SEGMENT_MST__ACTUAL_KM:
 			return getActualKm();
-		case CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY:
-			return getRefCreatedBy();
+		case CclmsPackage.TRAIN_SEGMENT_MST__CREATED_BY:
+			return getCreatedBy();
 		case CclmsPackage.TRAIN_SEGMENT_MST__REF_LOCO_CHANGE_STN:
 			return getRefLocoChangeStn();
 		case CclmsPackage.TRAIN_SEGMENT_MST__REF_SEGMENT_ID:
@@ -2044,8 +2026,8 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 		case CclmsPackage.TRAIN_SEGMENT_MST__ACTUAL_KM:
 			setActualKm((Double) newValue);
 			return;
-		case CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) newValue);
+		case CclmsPackage.TRAIN_SEGMENT_MST__CREATED_BY:
+			setCreatedBy((Integer) newValue);
 			return;
 		case CclmsPackage.TRAIN_SEGMENT_MST__REF_LOCO_CHANGE_STN:
 			setRefLocoChangeStn((StationMst) newValue);
@@ -2110,8 +2092,8 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 		case CclmsPackage.TRAIN_SEGMENT_MST__ACTUAL_KM:
 			unsetActualKm();
 			return;
-		case CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY:
-			setRefCreatedBy((UserMst) null);
+		case CclmsPackage.TRAIN_SEGMENT_MST__CREATED_BY:
+			unsetCreatedBy();
 			return;
 		case CclmsPackage.TRAIN_SEGMENT_MST__REF_LOCO_CHANGE_STN:
 			setRefLocoChangeStn((StationMst) null);
@@ -2167,8 +2149,8 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 					: !DAYOFSERVICE_EDEFAULT.equals(dayofservice);
 		case CclmsPackage.TRAIN_SEGMENT_MST__ACTUAL_KM:
 			return isSetActualKm();
-		case CclmsPackage.TRAIN_SEGMENT_MST__REF_CREATED_BY:
-			return refCreatedBy != null;
+		case CclmsPackage.TRAIN_SEGMENT_MST__CREATED_BY:
+			return isSetCreatedBy();
 		case CclmsPackage.TRAIN_SEGMENT_MST__REF_LOCO_CHANGE_STN:
 			return refLocoChangeStn != null;
 		case CclmsPackage.TRAIN_SEGMENT_MST__REF_SEGMENT_ID:
@@ -2243,6 +2225,11 @@ public class TrainSegmentMstImpl extends IloDomObjectImpl implements
 		result.append(", actualKm: ");
 		if ((_booleanFlags & ACTUAL_KM_ESETFLAG) != 0)
 			result.append(actualKm);
+		else
+			result.append("<unset>");
+		result.append(", createdBy: ");
+		if ((_booleanFlags & CREATED_BY_ESETFLAG) != 0)
+			result.append(createdBy);
 		else
 			result.append("<unset>");
 		result.append(')');

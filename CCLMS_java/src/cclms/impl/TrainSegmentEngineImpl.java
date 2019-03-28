@@ -445,7 +445,7 @@ public class TrainSegmentEngineImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getTrainSegmentEngine();
+		return CclmsPackage.Literals.TRAIN_SEGMENT_ENGINE;
 	}
 
 	/**

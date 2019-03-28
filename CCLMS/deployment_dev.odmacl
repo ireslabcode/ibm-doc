@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AccessController>
+
+  <permissions>
+    <!-- ================================================== 
+         Application Execution                            
+    -->
+    <permissionGroup name="ODMApplicationUser">
+      <permission>
+        <domain>application</domain>
+        <operations>
+          <operation>execute</operation>
+        </operations>
+      </permission>
+    </permissionGroup>
+
+    <!-- ==================================================
+         Planner Core Operations                                
+    -->
+    <permissionGroup name="PlannerCoreOperationsGroup">
+      <permission>
+        <domain>workspace</domain>
+        <operations>
+          <operation>create</operation>
+          <operation>read</operation>
+          <operation>update</operation>
+          <operation>delete</operation>
+          <operation>create_item</operation>
+          <operation>read_item</operation>
+          <operation>update_item</operation>
+          <operation>delete_item</operation>
+        </operations>
+      </permission>
+      </permissionGroup>
+
+    <!-- ================================================== 
+         Planner UI Operations 
+    -->
+    <permissionGroup name="PlannerUIOperationsGroup">
+      <permission>
+        <domain>ui.view</domain>
+        <operations>
+          <operation>read</operation>
+          <operation>update</operation>
+        </operations>
+      </permission>
+
+      <permission>
+        <domain>ui.action</domain>
+        <operations>
+          <operation>*</operation>
+        </operations>
+      </permission>
+    </permissionGroup>
+
+    <!-- ==================================================
+         Reviewer Core Operations                                
+    -->
+    <permissionGroup name="ReviewerCoreOperationsGroup">
+      <permission>
+        <domain>workspace</domain>
+        <operations>
+          <operation>read</operation>
+          <operation>read_item</operation>
+        </operations>
+      </permission>
+     </permissionGroup>
+
+    <!-- ==================================================
+         Reviewer UI Operations                                
+    -->
+    <permissionGroup name="ReviewerUIOperationsGroup">
+      <permission>
+        <domain>ui.view</domain>
+        <operations>
+          <operation>read</operation>
+        </operations>
+      </permission>
+
+      <permission>
+        <domain>ui.action</domain>
+        <operations>
+          <operation>*</operation>
+        </operations>
+      </permission>
+
+      <!-- hidden unwanted permissions, will override previous permissions with same matching -->
+      <permission access="denied">
+        <domain>ui.action</domain>
+        <operations>
+          <operation>ui.job.CancelAnotherUsersOptimization</operation>
+          <operation>ui.job.CancelWaitingOptimization</operation>
+          <operation>ui.job.FindGoalBounds</operation>
+          <operation>ui.job.ShowOngoingOptimizationProgress</operation>
+          <operation>ui.job.Solve</operation>
+          <operation>ui.job.CheckData</operation>
+          <operation>ui.scenario.CleanScenarioOutput</operation>
+          <operation>ui.scenario.RevertScenario</operation>
+          <operation>ui.scenario.SaveAllScenarios</operation>
+          <operation>ui.scenario.SaveScenario</operation>
+          <operation>ui.view.rule.AddRuleFolder</operation>
+          <operation>ui.view.rule.RenameItem</operation>
+          <operation>ui.view.shared.RemoveRelatedRows</operation>
+          <operation>ui.view.table.AddRow</operation>
+          <operation>ui.view.table.ClearCell</operation>
+          <operation>ui.view.table.DeleteRow</operation>
+          <operation>ui.workspace.CopyScenario</operation>
+          <operation>ui.workspace.DuplicateScenario</operation>
+          <operation>ui.workspace.ImportScenarioSet</operation>
+          <operation>ui.workspace.InsertScenarioLink</operation>
+          <operation>ui.workspace.NewBaseScenario</operation>
+          <operation>ui.workspace.NewScenarioFolder</operation>
+          <operation>ui.workspace.NewWorkspace</operation>
+          <operation>ui.workspace.PermanentLockScenario</operation>
+          <operation>ui.workspace.RenameItem</operation>
+          <operation>ui.workspace.SessionLockScenario</operation>
+          <operation>ui.dashboard.new</operation>
+          <operation>ui.dashboard.newGroup</operation>
+          <operation>ui.dashboard.remove</operation>
+          <operation>ui.dashboard.rename</operation>
+          <operation>ui.dashboard.restore</operation>
+          <operation>ui.dashboard.importLayout</operation>
+          <operation>ui.dashboard.exportLayout</operation>
+          <operation>ui.dashboard.showInToolbar</operation>
+          <operation>ui.dashboard.showInMenu</operation>
+        </operations>
+      </permission>
+
+      <!-- disabled unwanted permissions, will override previous permissions with same matching -->
+      <permission access="disabled">
+        <domain>ui.action</domain>
+        <operations>
+          <operation>Cut</operation>
+          <operation>Paste</operation>
+          <operation>Delete</operation>
+          <operation>ui.admin.AdminTool</operation>
+          <operation>ui.admin.RecycleBin</operation>
+          </operations>
+      </permission>
+    </permissionGroup>
+
+  </permissions>
+
+  <!-- ==================================================
+       Roles definitions                                
+  -->
+  <roles>
+    <role name="Planner">
+      <permissions>
+        <permissionGroup name="ODMApplicationUser" />
+        <permissionGroup name="PlannerCoreOperationsGroup" />
+        <permissionGroup name="PlannerUIOperationsGroup" />
+      </permissions>
+    </role>
+
+    <role name="Reviewer">
+      <permissions>
+        <permissionGroup name="ODMApplicationUser" />
+        <permissionGroup name="ReviewerCoreOperationsGroup" />
+        <permissionGroup name="ReviewerUIOperationsGroup" />
+      </permissions>
+    </role>
+
+  </roles>
+
+</AccessController>

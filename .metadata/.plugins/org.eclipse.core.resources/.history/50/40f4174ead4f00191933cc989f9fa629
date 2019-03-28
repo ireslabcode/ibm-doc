@@ -1,0 +1,1817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.7.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DB2Model="http:///com/ibm/db/models/db2/db2.ecore" xmlns:LUW="http:///com/ibm/db/models/db2/luw.ecore" xmlns:SQLAccessControl="http:///org/eclipse/datatools/modelbase/sql/accesscontrol.ecore" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore">
+  <LUW:LUWDatabase xmi:id="_NuvygE-tEemi64MgO_SJDA" name="CCLMS" vendor="DB2 UDB" version="V9.1" schemas="_N35ugE-tEemi64MgO_SJDA" authorizationIds="_N4Dh6E-tEemi64MgO_SJDA" federated="true">
+    <eAnnotations xmi:id="_NuvygU-tEemi64MgO_SJDA" source="ConnectionURI">
+      <details xmi:id="_Nuvygk-tEemi64MgO_SJDA" key="ConnectionKey" value="CCLMS"/>
+    </eAnnotations>
+  </LUW:LUWDatabase>
+  <DB2Model:DB2Schema xmi:id="_N35ugE-tEemi64MgO_SJDA" name="CCLMS" tables="_N35ugU-tEemi64MgO_SJDA _N35uiE-tEemi64MgO_SJDA _N35utk-tEemi64MgO_SJDA _N4Df1E-tEemi64MgO_SJDA _N4Df20-tEemi64MgO_SJDA _N4Df4E-tEemi64MgO_SJDA _N4Df_E-tEemi64MgO_SJDA _N4DgA0-tEemi64MgO_SJDA _N4DgCE-tEemi64MgO_SJDA _N4DgKk-tEemi64MgO_SJDA _N4DgMU-tEemi64MgO_SJDA _N4DgOU-tEemi64MgO_SJDA _N4DgWU-tEemi64MgO_SJDA _N4Dgc0-tEemi64MgO_SJDA _N4DglU-tEemi64MgO_SJDA _N4Dgn0-tEemi64MgO_SJDA _N4Dgpk-tEemi64MgO_SJDA _N4Dgq0-tEemi64MgO_SJDA _N4Dguk-tEemi64MgO_SJDA _N4Dgwk-tEemi64MgO_SJDA _N4DgzU-tEemi64MgO_SJDA _N4Dg2k-tEemi64MgO_SJDA _N4Dg40-tEemi64MgO_SJDA _N4Dg_k-tEemi64MgO_SJDA _N4DhHU-tEemi64MgO_SJDA _N35wjE-tEemi64MgO_SJDA _N35wXE-tEemi64MgO_SJDA _N35wc0-tEemi64MgO_SJDA _N35wmk-tEemi64MgO_SJDA _N4Dfv0-tEemi64MgO_SJDA _N35u10-tEemi64MgO_SJDA _N4DhI0-tEemi64MgO_SJDA _N4DhMU-tEemi64MgO_SJDA _N4DhOk-tEemi64MgO_SJDA _N35vEU-tEemi64MgO_SJDA _N4DhSU-tEemi64MgO_SJDA _N35vMk-tEemi64MgO_SJDA _N4DfzU-tEemi64MgO_SJDA _N4Dfxk-tEemi64MgO_SJDA _N35vV0-tEemi64MgO_SJDA _N35vaU-tEemi64MgO_SJDA _N35wtU-tEemi64MgO_SJDA _N4DfgE-tEemi64MgO_SJDA _N35vjk-tEemi64MgO_SJDA _N35vsU-tEemi64MgO_SJDA _N4Dhq0-tEemi64MgO_SJDA _N35wEU-tEemi64MgO_SJDA _N4Dhfk-tEemi64MgO_SJDA _N4Dhsk-tEemi64MgO_SJDA _N4Dh20-tEemi64MgO_SJDA" database="_NuvygE-tEemi64MgO_SJDA" owner="_N4Dh6E-tEemi64MgO_SJDA"/>
+  <LUW:LUWTable xmi:id="_N35ugU-tEemi64MgO_SJDA" name="IN_DIV_LINK_KPI" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35ugk-tEemi64MgO_SJDA" name="LINK_NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35ug0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="30"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uhE-tEemi64MgO_SJDA" name="KPI_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35uhU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uhk-tEemi64MgO_SJDA" name="VALUE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N35uh0-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35uiE-tEemi64MgO_SJDA" name="PLANNING_DATA" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uiU-tEemi64MgO_SJDA" name="TRAIN_SEG_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35uik-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35ui0-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35ujE-tEemi64MgO_SJDA" name="TRAIN_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35ujU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35ujk-tEemi64MgO_SJDA" name="SEGMENT_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35uj0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35ukE-tEemi64MgO_SJDA" name="CCLMS_TRAIN_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35ukU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35ukk-tEemi64MgO_SJDA" name="SIGN_ON_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35uk0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35ulE-tEemi64MgO_SJDA" name="START_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35ulU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35ulk-tEemi64MgO_SJDA" name="END_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35ul0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35umE-tEemi64MgO_SJDA" name="SIGN_OFF_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35umU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35umk-tEemi64MgO_SJDA" name="RUNNING_DURATION">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35um0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35unE-tEemi64MgO_SJDA" name="CHRONIC_DELAY_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35unU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35unk-tEemi64MgO_SJDA" name="LOCO_CHANGE_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35un0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uoE-tEemi64MgO_SJDA" name="TRACTION_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35uoU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uok-tEemi64MgO_SJDA" name="ASSIGNED_LOBBY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35uo0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35upE-tEemi64MgO_SJDA" name="DEPT_TYPE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35upU-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35upk-tEemi64MgO_SJDA" name="SPARE_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35up0-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uqE-tEemi64MgO_SJDA" name="DAYOFSERVICE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35uqU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uqk-tEemi64MgO_SJDA" name="ACTUAL_KM">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N35uq0-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35urE-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false" defaultValue="CURRENT TIMESTAMP">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35urU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35urk-tEemi64MgO_SJDA" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35ur0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35usE-tEemi64MgO_SJDA" name="LAST_MODIEFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35usU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35usk-tEemi64MgO_SJDA" name="LAST_MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35us0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35utE-tEemi64MgO_SJDA" name="NIGHT_DUTY_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35utU-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35utk-tEemi64MgO_SJDA" name="PARAMETER_VALUE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35ut0-tEemi64MgO_SJDA" name="PARAMETER_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35uuE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uuU-tEemi64MgO_SJDA" name="LINK_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35uuk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uu0-tEemi64MgO_SJDA" name="VALUE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N35uvE-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uvU-tEemi64MgO_SJDA" name="CREATE_DATE">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35uvk-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35uv0-tEemi64MgO_SJDA" name="CREATED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35uwE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35uwU-tEemi64MgO_SJDA" name="PARAMETER_VAL_CPK" members="_N35ut0-tEemi64MgO_SJDA _N35uuU-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35uwk-tEemi64MgO_SJDA" name="CREATE_USR_FK" members="_N35uv0-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35uw0-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35uxE-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35uxU-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35uxk-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35ux0-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35uyE-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35uyU-tEemi64MgO_SJDA" name="LINK_ID_FK" members="_N35uuU-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35wMU-tEemi64MgO_SJDA" referencedTable="_N35wEU-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35uyk-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35uy0-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
+        <details xmi:id="_N35uzE-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35uzU-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35uzk-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35uz0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35u0E-tEemi64MgO_SJDA" name="PARAMETER_ID_FK" members="_N35ut0-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35vSE-tEemi64MgO_SJDA" referencedTable="_N35vMk-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35u0U-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35u0k-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
+        <details xmi:id="_N35u00-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35u1E-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35u1U-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35u1k-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35u10-tEemi64MgO_SJDA" name="USER_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35uwk-tEemi64MgO_SJDA _N35vK0-tEemi64MgO_SJDA _N35vSU-tEemi64MgO_SJDA _N35vUE-tEemi64MgO_SJDA _N35vYk-tEemi64MgO_SJDA _N35veU-tEemi64MgO_SJDA _N35vgE-tEemi64MgO_SJDA _N35vnE-tEemi64MgO_SJDA _N35v4E-tEemi64MgO_SJDA _N35v7k-tEemi64MgO_SJDA _N35wMk-tEemi64MgO_SJDA _N35wQE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u2E-tEemi64MgO_SJDA" name="USER_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35u2U-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35u2k-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u20-tEemi64MgO_SJDA" name="USER" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35u3E-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u3U-tEemi64MgO_SJDA" name="USER_PWD">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35u3k-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="15"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u30-tEemi64MgO_SJDA" name="FIRST_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35u4E-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="25"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u4U-tEemi64MgO_SJDA" name="LAST_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35u4k-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="25"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u40-tEemi64MgO_SJDA" name="CREATE_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35u5E-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u5U-tEemi64MgO_SJDA" name="MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35u5k-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u50-tEemi64MgO_SJDA" name="ACTIVE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35u6E-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u6U-tEemi64MgO_SJDA" name="USER_ROLE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35u6k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u60-tEemi64MgO_SJDA" name="DIVISION_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35u7E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u7U-tEemi64MgO_SJDA" name="ZONE_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35u7k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u70-tEemi64MgO_SJDA" name="EMAIL">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35u8E-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="25"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35u8U-tEemi64MgO_SJDA" name="LOBBY_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35u8k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_N35u80-tEemi64MgO_SJDA" name="USERNAME_UNIQ" members="_N35u20-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35u9E-tEemi64MgO_SJDA" name="USER_ID_PK" members="_N35u2E-tEemi64MgO_SJDA" ForeignKey="_N35uwk-tEemi64MgO_SJDA _N35vK0-tEemi64MgO_SJDA _N35vSU-tEemi64MgO_SJDA _N35vUE-tEemi64MgO_SJDA _N35vYk-tEemi64MgO_SJDA _N35veU-tEemi64MgO_SJDA _N35vgE-tEemi64MgO_SJDA _N35vnE-tEemi64MgO_SJDA _N35v4E-tEemi64MgO_SJDA _N35v7k-tEemi64MgO_SJDA _N35wMk-tEemi64MgO_SJDA _N35wQE-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35u9U-tEemi64MgO_SJDA" name="DIVISION_FK" members="_N35u60-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35wa0-tEemi64MgO_SJDA" referencedTable="_N35wXE-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35u9k-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35u90-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35u-E-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35u-U-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35u-k-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35u-0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35u_E-tEemi64MgO_SJDA" name="STATION_FK" members="_N35u8U-tEemi64MgO_SJDA" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35u_U-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35u_k-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35u_0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vAE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vAU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vAk-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vA0-tEemi64MgO_SJDA" name="USER_ROLE_FK" members="_N35u6U-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N4DfxU-tEemi64MgO_SJDA" referencedTable="_N4Dfv0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vBE-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vBU-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vBk-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vB0-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vCE-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vCU-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vCk-tEemi64MgO_SJDA" name="ZONE_FK" members="_N35u7U-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35wmU-tEemi64MgO_SJDA" referencedTable="_N35wjE-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vC0-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vDE-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vDU-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vDk-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vD0-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vEE-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35vEU-tEemi64MgO_SJDA" name="KPI_VALUE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vEk-tEemi64MgO_SJDA" name="KPI_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vE0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vFE-tEemi64MgO_SJDA" name="LINK_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vFU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vFk-tEemi64MgO_SJDA" name="VALUE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N35vF0-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vGE-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35vGU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vGk-tEemi64MgO_SJDA" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vG0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35vHE-tEemi64MgO_SJDA" name="COMPOSITE_KPI_VAL" members="_N35vEk-tEemi64MgO_SJDA _N35vFE-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vHU-tEemi64MgO_SJDA" name="KPI_FK" members="_N35vEk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N4DhSE-tEemi64MgO_SJDA" referencedTable="_N4DhOk-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vHk-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vH0-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
+        <details xmi:id="_N35vIE-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vIU-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vIk-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vI0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vJE-tEemi64MgO_SJDA" name="LINK_ID_FK" members="_N35vFE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35wMU-tEemi64MgO_SJDA" referencedTable="_N35wEU-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vJU-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vJk-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
+        <details xmi:id="_N35vJ0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vKE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vKU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vKk-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vK0-tEemi64MgO_SJDA" name="USER_FK" members="_N35vGk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vLE-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vLU-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vLk-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vL0-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vME-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vMU-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35vMk-tEemi64MgO_SJDA" name="PARAMETER_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35u0E-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vM0-tEemi64MgO_SJDA" name="PARAMETER_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vNE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35vNU-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vNk-tEemi64MgO_SJDA" name="PARAMETER_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35vN0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vOE-tEemi64MgO_SJDA" name="UOM" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35vOU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vOk-tEemi64MgO_SJDA" name="GLOBAL_VALUE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N35vO0-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vPE-tEemi64MgO_SJDA" name="MIN_VALUE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N35vPU-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vPk-tEemi64MgO_SJDA" name="MAX_VALUE">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N35vP0-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vQE-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35vQU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vQk-tEemi64MgO_SJDA" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vQ0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vRE-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35vRU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vRk-tEemi64MgO_SJDA" name="LAST_MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vR0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35vSE-tEemi64MgO_SJDA" name="PARAMETER_ID_PK" members="_N35vM0-tEemi64MgO_SJDA" ForeignKey="_N35u0E-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vSU-tEemi64MgO_SJDA" name="CREATE_USR_FK" members="_N35vQk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vSk-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vS0-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vTE-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vTU-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vTk-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vT0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vUE-tEemi64MgO_SJDA" name="MOD_USR_FK" members="_N35vRk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vUU-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vUk-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vU0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vVE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vVU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vVk-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35vV0-tEemi64MgO_SJDA" name="TRAIN_TYPE_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35vh0-tEemi64MgO_SJDA _N35wVU-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vWE-tEemi64MgO_SJDA" name="TRAIN_TYPE_CCLMS_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vWU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35vWk-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vW0-tEemi64MgO_SJDA" name="TRAIN_TYPE_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35vXE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vXU-tEemi64MgO_SJDA" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vXk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vX0-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35vYE-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35vYU-tEemi64MgO_SJDA" name="TRAIN_TYPE_CCLMS_PK" members="_N35vWE-tEemi64MgO_SJDA" ForeignKey="_N35vh0-tEemi64MgO_SJDA _N35wVU-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vYk-tEemi64MgO_SJDA" name="CREATE_USR_FK" members="_N35vXU-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vY0-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vZE-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vZU-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vZk-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vZ0-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vaE-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35vaU-tEemi64MgO_SJDA" name="TRAIN_TYPE_MAPPING_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N4DfuE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vak-tEemi64MgO_SJDA" name="TRAIN_TYPE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35va0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vbE-tEemi64MgO_SJDA" name="TRAIN_TYPE_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35vbU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vbk-tEemi64MgO_SJDA" name="TRAIN_TYPE_CCLMS">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vb0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vcE-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35vcU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vck-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35vc0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vdE-tEemi64MgO_SJDA" name="LAST_MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vdU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vdk-tEemi64MgO_SJDA" name="CREATED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vd0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35veE-tEemi64MgO_SJDA" name="TRAIN_TYPE_PK" members="_N35vak-tEemi64MgO_SJDA" ForeignKey="_N4DfuE-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35veU-tEemi64MgO_SJDA" name="CREATE_USR_FK" members="_N35vdk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vek-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35ve0-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vfE-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vfU-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vfk-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vf0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vgE-tEemi64MgO_SJDA" name="MOD_USR_FK" members="_N35vdE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vgU-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vgk-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vg0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vhE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vhU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vhk-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vh0-tEemi64MgO_SJDA" name="TRAIN_TYPE_CCLMS_FK" members="_N35vbk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35vYU-tEemi64MgO_SJDA" referencedTable="_N35vV0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35viE-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35viU-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vik-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vi0-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vjE-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vjU-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35vjk-tEemi64MgO_SJDA" name="SEGMENT_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35v9U-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vj0-tEemi64MgO_SJDA" name="SEGMENT_ID" nullable="false" generationType="BY_DEFAULT">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vkE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35vkU-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vkk-tEemi64MgO_SJDA" name="START_STATION_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vk0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vlE-tEemi64MgO_SJDA" name="STOP_STATION_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vlU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vlk-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false" defaultValue="CURRENT TIMESTAMP">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35vl0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vmE-tEemi64MgO_SJDA" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vmU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_N35vmk-tEemi64MgO_SJDA" name="UNIQUE_SEGMENT" members="_N35vkk-tEemi64MgO_SJDA _N35vlE-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35vm0-tEemi64MgO_SJDA" name="PK_SEGMENT_ID" members="_N35vj0-tEemi64MgO_SJDA" ForeignKey="_N35v9U-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vnE-tEemi64MgO_SJDA" name="CREATE_USR_FK" members="_N35vmE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vnU-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vnk-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vn0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35voE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35voU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vok-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vo0-tEemi64MgO_SJDA" name="START_STN_FK" members="_N35vkk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vpE-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vpU-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vpk-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vp0-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vqE-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vqU-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35vqk-tEemi64MgO_SJDA" name="STOP_STN_FK" members="_N35vlE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35vq0-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35vrE-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35vrU-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35vrk-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35vr0-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35vsE-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35vsU-tEemi64MgO_SJDA" name="TRAIN_SEGMENT_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vsk-tEemi64MgO_SJDA" name="TRAIN_SEG_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vs0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35vtE-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vtU-tEemi64MgO_SJDA" name="TRAIN_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vtk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vt0-tEemi64MgO_SJDA" name="SEGMENT_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vuE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vuU-tEemi64MgO_SJDA" name="CCLMS_TRAIN_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vuk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vu0-tEemi64MgO_SJDA" name="SIGN_ON_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vvE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vvU-tEemi64MgO_SJDA" name="START_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vvk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vv0-tEemi64MgO_SJDA" name="END_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vwE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vwU-tEemi64MgO_SJDA" name="SIGN_OFF_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vwk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vw0-tEemi64MgO_SJDA" name="RUNNING_DURATION">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vxE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vxU-tEemi64MgO_SJDA" name="CHRONIC_DELAY_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vxk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vx0-tEemi64MgO_SJDA" name="LOCO_CHANGE_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vyE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vyU-tEemi64MgO_SJDA" name="TRACTION_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vyk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vy0-tEemi64MgO_SJDA" name="ASSIGNED_LOBBY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35vzE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vzU-tEemi64MgO_SJDA" name="DEPT_TYPE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35vzk-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35vz0-tEemi64MgO_SJDA" name="SPARE_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35v0E-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35v0U-tEemi64MgO_SJDA" name="DAYOFSERVICE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35v0k-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35v00-tEemi64MgO_SJDA" name="ACTUAL_KM">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N35v1E-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35v1U-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false" defaultValue="CURRENT TIMESTAMP">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35v1k-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35v10-tEemi64MgO_SJDA" name="CREATED_BY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35v2E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35v2U-tEemi64MgO_SJDA" name="LAST_MODIEFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35v2k-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35v20-tEemi64MgO_SJDA" name="LAST_MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35v3E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35v3U-tEemi64MgO_SJDA" name="NIGHT_DUTY_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35v3k-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35v30-tEemi64MgO_SJDA" name="TRAIN_SEG__ID_PK" members="_N35vsk-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35v4E-tEemi64MgO_SJDA" name="CREATE_USR_FK" members="_N35v10-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35v4U-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35v4k-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35v40-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35v5E-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35v5U-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35v5k-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35v50-tEemi64MgO_SJDA" name="LOCO_CHG_STN_FK" members="_N35vx0-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35v6E-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35v6U-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35v6k-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35v60-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35v7E-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35v7U-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35v7k-tEemi64MgO_SJDA" name="MOD_USR_FK" members="_N35v20-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35v70-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35v8E-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35v8U-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35v8k-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35v80-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35v9E-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35v9U-tEemi64MgO_SJDA" name="SEGMENT_ID_FK" members="_N35vt0-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35vm0-tEemi64MgO_SJDA" referencedTable="_N35vjk-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35v9k-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35v90-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35v-E-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35v-U-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35v-k-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35v-0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35v_E-tEemi64MgO_SJDA" name="STATION_FK" members="_N35vy0-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35v_U-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35v_k-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35v_0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wAE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wAU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wAk-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wA0-tEemi64MgO_SJDA" name="TRACTION_FK" members="_N35vyU-tEemi64MgO_SJDA" uniqueConstraint="_N4DfzE-tEemi64MgO_SJDA" referencedTable="_N4Dfxk-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wBE-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wBU-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wBk-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wB0-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wCE-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wCU-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wCk-tEemi64MgO_SJDA" name="TRAIN_ID_FK" members="_N35vtU-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N4Dfok-tEemi64MgO_SJDA" referencedTable="_N4DfgE-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wC0-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wDE-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wDU-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wDk-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wD0-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wEE-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35wEU-tEemi64MgO_SJDA" name="LINK_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35uyU-tEemi64MgO_SJDA _N35vJE-tEemi64MgO_SJDA _N35w5U-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wEk-tEemi64MgO_SJDA" name="LINK_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wE0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35wFE-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wFU-tEemi64MgO_SJDA" name="SCENARIO_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wFk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wF0-tEemi64MgO_SJDA" name="LINK_NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wGE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wGU-tEemi64MgO_SJDA" name="LOBBY_STN_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wGk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wG0-tEemi64MgO_SJDA" name="LOBBY_TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wHE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wHU-tEemi64MgO_SJDA" name="TRACTION_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wHk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wH0-tEemi64MgO_SJDA" name="TRAIN_TYPE_CD">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wIE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wIU-tEemi64MgO_SJDA" name="TRAIN_FREQUENCY_CD" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wIk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wI0-tEemi64MgO_SJDA" name="CREATE_DATE">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wJE-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wJU-tEemi64MgO_SJDA" name="CREATED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wJk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wJ0-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wKE-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wKU-tEemi64MgO_SJDA" name="LAST_MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wKk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wK0-tEemi64MgO_SJDA" name="LINK_STATUS">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wLE-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wLU-tEemi64MgO_SJDA" name="APPROVAL_DATE">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wLk-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wL0-tEemi64MgO_SJDA" name="APPROVAL_COMMENT">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wME-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35wMU-tEemi64MgO_SJDA" name="LINK_ID_PK" members="_N35wEk-tEemi64MgO_SJDA" ForeignKey="_N35uyU-tEemi64MgO_SJDA _N35vJE-tEemi64MgO_SJDA _N35w5U-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wMk-tEemi64MgO_SJDA" name="CREATE_USR_FK" members="_N35wJU-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wM0-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wNE-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wNU-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wNk-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wN0-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wOE-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wOU-tEemi64MgO_SJDA" name="LOBBY_FK" members="_N35wGU-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wOk-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wO0-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wPE-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wPU-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wPk-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wP0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wQE-tEemi64MgO_SJDA" name="MOD_USR_FK" members="_N35wKU-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35u9E-tEemi64MgO_SJDA" referencedTable="_N35u10-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wQU-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wQk-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wQ0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wRE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wRU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wRk-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wR0-tEemi64MgO_SJDA" name="TRACTION_FK" members="_N35wHU-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N4DfzE-tEemi64MgO_SJDA" referencedTable="_N4Dfxk-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wSE-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wSU-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wSk-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wS0-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wTE-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wTU-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wTk-tEemi64MgO_SJDA" name="TRAIN_FREQ_FK" members="_N35wIU-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N4Df00-tEemi64MgO_SJDA" referencedTable="_N4DfzU-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wT0-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wUE-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wUU-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wUk-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wU0-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wVE-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wVU-tEemi64MgO_SJDA" name="TRAIN_TYPE_FK" members="_N35wH0-tEemi64MgO_SJDA" uniqueConstraint="_N35vYU-tEemi64MgO_SJDA" referencedTable="_N35vV0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wVk-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wV0-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wWE-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wWU-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wWk-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wW0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35wXE-tEemi64MgO_SJDA" name="DIVISION_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35whU-tEemi64MgO_SJDA _N35u9U-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wXU-tEemi64MgO_SJDA" name="DIVISION_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wXk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35wX0-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wYE-tEemi64MgO_SJDA" name="DIVISION_CODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wYU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="4"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wYk-tEemi64MgO_SJDA" name="DIVISION_DESC">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wY0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wZE-tEemi64MgO_SJDA" name="ZONE_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wZU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wZk-tEemi64MgO_SJDA" name="CREATE_DATE_TS" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wZ0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35waE-tEemi64MgO_SJDA" name="MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35waU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_N35wak-tEemi64MgO_SJDA" name="DIV_CODE_UNIQ" members="_N35wYE-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35wa0-tEemi64MgO_SJDA" name="DIVISION_PK" members="_N35wXU-tEemi64MgO_SJDA" ForeignKey="_N35whU-tEemi64MgO_SJDA _N35u9U-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wbE-tEemi64MgO_SJDA" name="ZONE_FK" members="_N35wZE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35wmU-tEemi64MgO_SJDA" referencedTable="_N35wjE-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wbU-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wbk-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wb0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wcE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wcU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wck-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35wc0-tEemi64MgO_SJDA" name="STATION_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35wp0-tEemi64MgO_SJDA _N35wrk-tEemi64MgO_SJDA _N35u_E-tEemi64MgO_SJDA _N35w3k-tEemi64MgO_SJDA _N35w7E-tEemi64MgO_SJDA _N4Dfo0-tEemi64MgO_SJDA _N4Dfqk-tEemi64MgO_SJDA _N35vo0-tEemi64MgO_SJDA _N35vqk-tEemi64MgO_SJDA _N35v50-tEemi64MgO_SJDA _N35v_E-tEemi64MgO_SJDA _N35wOU-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wdE-tEemi64MgO_SJDA" name="STATION_ID" nullable="false" generationType="BY_DEFAULT">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wdU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35wdk-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wd0-tEemi64MgO_SJDA" name="STATION_CODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35weE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35weU-tEemi64MgO_SJDA" name="STATION_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wek-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="150"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35we0-tEemi64MgO_SJDA" name="DIVISION_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wfE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wfU-tEemi64MgO_SJDA" name="LOBBY_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wfk-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wf0-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wgE-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wgU-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wgk-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_N35wg0-tEemi64MgO_SJDA" name="STN_CODE_UNIQ" members="_N35wd0-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35whE-tEemi64MgO_SJDA" name="STATION_PK" members="_N35wdE-tEemi64MgO_SJDA" ForeignKey="_N35wp0-tEemi64MgO_SJDA _N35wrk-tEemi64MgO_SJDA _N35u_E-tEemi64MgO_SJDA _N35w3k-tEemi64MgO_SJDA _N35w7E-tEemi64MgO_SJDA _N4Dfo0-tEemi64MgO_SJDA _N4Dfqk-tEemi64MgO_SJDA _N35vo0-tEemi64MgO_SJDA _N35vqk-tEemi64MgO_SJDA _N35v50-tEemi64MgO_SJDA _N35v_E-tEemi64MgO_SJDA _N35wOU-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35whU-tEemi64MgO_SJDA" name="DIVISION_FK" members="_N35we0-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35wa0-tEemi64MgO_SJDA" referencedTable="_N35wXE-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35whk-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wh0-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wiE-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wiU-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wik-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wi0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35wjE-tEemi64MgO_SJDA" name="ZONE_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35wbE-tEemi64MgO_SJDA _N35vCk-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wjU-tEemi64MgO_SJDA" name="ZONE_ID" nullable="false" generationType="BY_DEFAULT">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wjk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35wj0-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wkE-tEemi64MgO_SJDA" name="ZONE_CODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wkU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="4"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wkk-tEemi64MgO_SJDA" name="ZONE_DESC">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wk0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wlE-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false" defaultValue="CURRENT TIMESTAMP">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wlU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wlk-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS" defaultValue="CURRENT TIMESTAMP">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wl0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_N35wmE-tEemi64MgO_SJDA" name="ZONE_CODE_UNIQ" members="_N35wkE-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N35wmU-tEemi64MgO_SJDA" name="ZONE_ID_PK" members="_N35wjU-tEemi64MgO_SJDA" ForeignKey="_N35wbE-tEemi64MgO_SJDA _N35vCk-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35wmk-tEemi64MgO_SJDA" name="SIS_LOBBY_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wm0-tEemi64MgO_SJDA" name="SNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wnE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N35wnU-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wnk-tEemi64MgO_SJDA" name="BASE_LOBBY_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wn0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35woE-tEemi64MgO_SJDA" name="SIS_LOBBY_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35woU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wok-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wo0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wpE-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wpU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_N35wpk-tEemi64MgO_SJDA" name="BASE_SIS_UNIQ" members="_N35wnk-tEemi64MgO_SJDA _N35woE-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wp0-tEemi64MgO_SJDA" name="BASE_LOBBY_FK" members="_N35wnk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wqE-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wqU-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wqk-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wq0-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35wrE-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wrU-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35wrk-tEemi64MgO_SJDA" name="SIS_LOBBY_FK" members="_N35woE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35wr0-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35wsE-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35wsU-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35wsk-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35ws0-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35wtE-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N35wtU-tEemi64MgO_SJDA" name="LINK_DETAIL" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wtk-tEemi64MgO_SJDA" name="LINK_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wt0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wuE-tEemi64MgO_SJDA" name="CREW_NO">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wuU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wuk-tEemi64MgO_SJDA" name="DAY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wu0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wvE-tEemi64MgO_SJDA" name="TRAIN_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wvU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wvk-tEemi64MgO_SJDA" name="FROM_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wv0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wwE-tEemi64MgO_SJDA" name="TO_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wwU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wwk-tEemi64MgO_SJDA" name="SIGN_ON_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35ww0-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wxE-tEemi64MgO_SJDA" name="DEPARTURE_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wxU-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wxk-tEemi64MgO_SJDA" name="ARRIVAL_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wx0-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wyE-tEemi64MgO_SJDA" name="SIGN_OFF_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N35wyU-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wyk-tEemi64MgO_SJDA" name="OS_ALLOWANCE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35wy0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wzE-tEemi64MgO_SJDA" name="EARNED_KM">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N35wzU-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35wzk-tEemi64MgO_SJDA" name="PERIODIC_REST_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35wz0-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35w0E-tEemi64MgO_SJDA" name="SPARE_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35w0U-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35w0k-tEemi64MgO_SJDA" name="NIGHT_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N35w00-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35w1E-tEemi64MgO_SJDA" name="SORT_ORDER">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35w1U-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35w1k-tEemi64MgO_SJDA" name="DUTY_DURATION">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35w10-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35w2E-tEemi64MgO_SJDA" name="RUNNING_DURATION">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35w2U-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35w2k-tEemi64MgO_SJDA" name="HQ_REST">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35w20-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N35w3E-tEemi64MgO_SJDA" name="OS_REST">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N35w3U-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35w3k-tEemi64MgO_SJDA" name="FROM_STN_FK" members="_N35wvk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35w30-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35w4E-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35w4U-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35w4k-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35w40-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35w5E-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35w5U-tEemi64MgO_SJDA" name="LINK_ID_FK" members="_N35wtk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35wMU-tEemi64MgO_SJDA" referencedTable="_N35wEU-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35w5k-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35w50-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35w6E-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35w6U-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35w6k-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35w60-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35w7E-tEemi64MgO_SJDA" name="TO_STN_FK" members="_N35wwE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35w7U-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35w7k-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35w70-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35w8E-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35w8U-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35w8k-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N35w80-tEemi64MgO_SJDA" name="TRAIN_ID_FK" members="_N35wvE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N4Dfok-tEemi64MgO_SJDA" referencedTable="_N4DfgE-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N35w9E-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N35w9U-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N35w9k-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N35w90-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N35w-E-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N35w-U-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DfgE-tEemi64MgO_SJDA" name="TRAIN_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35w80-tEemi64MgO_SJDA _N35wCk-tEemi64MgO_SJDA _N4DhpE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DfgU-tEemi64MgO_SJDA" name="TRAIN_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dfgk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N4Dfg0-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DfhE-tEemi64MgO_SJDA" name="TRAIN_NBR" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DfhU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfhk-tEemi64MgO_SJDA" name="TRAIN_NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dfh0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DfiE-tEemi64MgO_SJDA" name="TRAIN_TYPE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DfiU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfik-tEemi64MgO_SJDA" name="TRAIN_START_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dfi0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DfjE-tEemi64MgO_SJDA" name="TRAIN_END_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DfjU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfjk-tEemi64MgO_SJDA" name="TRAIN_FREQUENCY_CD" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dfj0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DfkE-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false" defaultValue="CURRENT TIMESTAMP">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DfkU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfkk-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4Dfk0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DflE-tEemi64MgO_SJDA" name="TRAIN_SUB_TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DflU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dflk-tEemi64MgO_SJDA" name="TRAIN_RUN_TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dfl0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DfmE-tEemi64MgO_SJDA" name="RAKE_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DfmU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfmk-tEemi64MgO_SJDA" name="DAY_OF_SERVICE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dfm0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DfnE-tEemi64MgO_SJDA" name="VALID_FROM">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_N4DfnU-tEemi64MgO_SJDA" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfnk-tEemi64MgO_SJDA" name="VALID_TO">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_N4Dfn0-tEemi64MgO_SJDA" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DfoE-tEemi64MgO_SJDA" name="BASE_TRACTION">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DfoU-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4Dfok-tEemi64MgO_SJDA" name="TRAIN_ID_PK" members="_N4DfgU-tEemi64MgO_SJDA" ForeignKey="_N35w80-tEemi64MgO_SJDA _N35wCk-tEemi64MgO_SJDA _N4DhpE-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N4Dfo0-tEemi64MgO_SJDA" name="DEST_STN_FK" members="_N4DfjE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N4DfpE-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N4DfpU-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N4Dfpk-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N4Dfp0-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N4DfqE-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N4DfqU-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N4Dfqk-tEemi64MgO_SJDA" name="ORIG_STN_FK" members="_N4Dfik-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35whE-tEemi64MgO_SJDA" referencedTable="_N35wc0-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N4Dfq0-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N4DfrE-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N4DfrU-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N4Dfrk-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N4Dfr0-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N4DfsE-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N4DfsU-tEemi64MgO_SJDA" name="TRAIN_FREQ_FK" members="_N4Dfjk-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N4Df00-tEemi64MgO_SJDA" referencedTable="_N4DfzU-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N4Dfsk-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N4Dfs0-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N4DftE-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N4DftU-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N4Dftk-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N4Dft0-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N4DfuE-tEemi64MgO_SJDA" name="TRAIN_TYPE_FK" members="_N4DfiE-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N35veE-tEemi64MgO_SJDA" referencedTable="_N35vaU-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N4DfuU-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N4Dfuk-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="false"/>
+        <details xmi:id="_N4Dfu0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N4DfvE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N4DfvU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N4Dfvk-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dfv0-tEemi64MgO_SJDA" name="USER_ROLE_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35vA0-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DfwE-tEemi64MgO_SJDA" name="USER_ROLE_CD" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DfwU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N4Dfwk-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfw0-tEemi64MgO_SJDA" name="USER_ROLE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DfxE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4DfxU-tEemi64MgO_SJDA" name="USER_ROLE_FK" members="_N4DfwE-tEemi64MgO_SJDA" ForeignKey="_N35vA0-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dfxk-tEemi64MgO_SJDA" name="TRACTION_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35wA0-tEemi64MgO_SJDA _N35wR0-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfx0-tEemi64MgO_SJDA" name="TRACTION_TYPE" nullable="false" generationType="BY_DEFAULT">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DfyE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N4DfyU-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfyk-tEemi64MgO_SJDA" name="TRACTION_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dfy0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="15"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4DfzE-tEemi64MgO_SJDA" name="PK_TRACTION_MST" members="_N4Dfx0-tEemi64MgO_SJDA" ForeignKey="_N35wA0-tEemi64MgO_SJDA _N35wR0-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DfzU-tEemi64MgO_SJDA" name="TRAIN_FREQUENCY_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N4DfsU-tEemi64MgO_SJDA _N35wTk-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dfzk-tEemi64MgO_SJDA" name="TRAIN_FREQUENCY_CODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dfz0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N4Df0E-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df0U-tEemi64MgO_SJDA" name="DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Df0k-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4Df00-tEemi64MgO_SJDA" name="TRAIN_FREQ_CD_PK" members="_N4Dfzk-tEemi64MgO_SJDA" ForeignKey="_N4DfsU-tEemi64MgO_SJDA _N35wTk-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Df1E-tEemi64MgO_SJDA" name="LOBBY_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df1U-tEemi64MgO_SJDA" name="LOBBY_CODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Df1k-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df10-tEemi64MgO_SJDA" name="LOBBY_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Df2E-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="150"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df2U-tEemi64MgO_SJDA" name="LOBBY_ID">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Df2k-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Df20-tEemi64MgO_SJDA" name="IN_CMS_ZONE_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df3E-tEemi64MgO_SJDA" name="ZONE_CODE_C" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Df3U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="5"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df3k-tEemi64MgO_SJDA" name="ZONE_NAME_V">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Df30-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="60"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Df4E-tEemi64MgO_SJDA" name="TRAIN_SEGMENT_ENGINE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df4U-tEemi64MgO_SJDA" name="TRAINID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df4k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df40-tEemi64MgO_SJDA" name="LEGID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df5E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df5U-tEemi64MgO_SJDA" name="STARTLOC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df5k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df50-tEemi64MgO_SJDA" name="ENDLOC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df6E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df6U-tEemi64MgO_SJDA" name="SIGNON" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df6k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df60-tEemi64MgO_SJDA" name="START" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df7E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df7U-tEemi64MgO_SJDA" name="END" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df7k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df70-tEemi64MgO_SJDA" name="SIGNOFF" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df8E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df8U-tEemi64MgO_SJDA" name="DURATION" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df8k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df80-tEemi64MgO_SJDA" name="DISTANCE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df9E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df9U-tEemi64MgO_SJDA" name="NIGHTFLAG" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df9k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df90-tEemi64MgO_SJDA" name="DAYID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df-E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df-U-tEemi64MgO_SJDA" name="SPAREFLAG" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Df-k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4Df-0-tEemi64MgO_SJDA" name="TRAIN_SEGMENT_PK_ENG" enforced="false" members="_N4Df4U-tEemi64MgO_SJDA _N4Df40-tEemi64MgO_SJDA _N4Df90-tEemi64MgO_SJDA _N4Df-U-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Df_E-tEemi64MgO_SJDA" name="IN_CMS_DIVISION_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df_U-tEemi64MgO_SJDA" name="DIV_CODE_C" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Df_k-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="4"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Df_0-tEemi64MgO_SJDA" name="DIV_NAME_V">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgAE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgAU-tEemi64MgO_SJDA" name="ZONE_CODE_C">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgAk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DgA0-tEemi64MgO_SJDA" name="DAY_MST_ENGINE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgBE-tEemi64MgO_SJDA" name="DAY_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgBU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgBk-tEemi64MgO_SJDA" name="DAY_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgB0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DgCE-tEemi64MgO_SJDA" name="OUTLINK_ENGINE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgCU-tEemi64MgO_SJDA" name="DAYID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgCk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgC0-tEemi64MgO_SJDA" name="SEQID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgDE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgDU-tEemi64MgO_SJDA" name="PAIRINGID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgDk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgD0-tEemi64MgO_SJDA" name="DUTYID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgEE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgEU-tEemi64MgO_SJDA" name="TRAINID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgEk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgE0-tEemi64MgO_SJDA" name="LEGID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgFE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgFU-tEemi64MgO_SJDA" name="STARTLOC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgFk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgF0-tEemi64MgO_SJDA" name="ENDLOC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgGE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgGU-tEemi64MgO_SJDA" name="DUTYSIGNON" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgGk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgG0-tEemi64MgO_SJDA" name="STARTTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgHE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgHU-tEemi64MgO_SJDA" name="ENDTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgHk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgH0-tEemi64MgO_SJDA" name="DUTYSIGNOFF" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgIE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgIU-tEemi64MgO_SJDA" name="DURATION" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgIk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgI0-tEemi64MgO_SJDA" name="NIB" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgJE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgJU-tEemi64MgO_SJDA" name="SPAREFLAG" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgJk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgJ0-tEemi64MgO_SJDA" name="SORTORDER" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgKE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4DgKU-tEemi64MgO_SJDA" name="OUTLINK_ENGINE_PK" enforced="false" members="_N4DgCU-tEemi64MgO_SJDA _N4DgC0-tEemi64MgO_SJDA _N4DgDU-tEemi64MgO_SJDA _N4DgD0-tEemi64MgO_SJDA _N4DgEU-tEemi64MgO_SJDA _N4DgE0-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DgKk-tEemi64MgO_SJDA" name="IN_CMS_LOBBY_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgK0-tEemi64MgO_SJDA" name="ZONE_CODE_C" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgLE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="4"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgLU-tEemi64MgO_SJDA" name="DIV_CODE_C">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgLk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgL0-tEemi64MgO_SJDA" name="LOBBY_CODE_C">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgME-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DgMU-tEemi64MgO_SJDA" name="SEGMENT_MST_ENGINE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgMk-tEemi64MgO_SJDA" name="FROMSTATION" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgM0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgNE-tEemi64MgO_SJDA" name="TOSTATION" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgNU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgNk-tEemi64MgO_SJDA" name="SEGMENTID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgN0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4DgOE-tEemi64MgO_SJDA" name="SEGMENT_MST_ENG_PK" enforced="false" members="_N4DgNk-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DgOU-tEemi64MgO_SJDA" name="CLIENT_CREDENTIALS" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgOk-tEemi64MgO_SJDA" name="CREDENTIAL_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgO0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgPE-tEemi64MgO_SJDA" name="ACCESS_TOKEN_VALIDITY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgPU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgPk-tEemi64MgO_SJDA" name="ADDITIONAL_INFORMATION">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgP0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgQE-tEemi64MgO_SJDA" name="AUTHORITIES" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgQU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgQk-tEemi64MgO_SJDA" name="CLIENT_API_KEY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgQ0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgRE-tEemi64MgO_SJDA" name="CLIENT_API_SECRET" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgRU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgRk-tEemi64MgO_SJDA" name="CLIENT_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgR0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgSE-tEemi64MgO_SJDA" name="CREATED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgSU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgSk-tEemi64MgO_SJDA" name="CREATED_DATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DgS0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgTE-tEemi64MgO_SJDA" name="GRANT_TYPES" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgTU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgTk-tEemi64MgO_SJDA" name="MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgT0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgUE-tEemi64MgO_SJDA" name="MODIFIED_DATE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DgUU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgUk-tEemi64MgO_SJDA" name="RESOURCE_IDS" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgU0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgVE-tEemi64MgO_SJDA" name="SCOPES" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgVU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgVk-tEemi64MgO_SJDA" name="STATUS" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgV0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4DgWE-tEemi64MgO_SJDA" name="SQL190309110020170" members="_N4DgOk-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DgWU-tEemi64MgO_SJDA" name="TIME_TO_MIN_ENGINE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgWk-tEemi64MgO_SJDA" name="TRAINID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgW0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgXE-tEemi64MgO_SJDA" name="SEGMENTID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgXU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgXk-tEemi64MgO_SJDA" name="SIGNONTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgX0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgYE-tEemi64MgO_SJDA" name="SIGNOMINUTE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgYU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgYk-tEemi64MgO_SJDA" name="STARTTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgY0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgZE-tEemi64MgO_SJDA" name="STARTMINUTE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgZU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgZk-tEemi64MgO_SJDA" name="ENDTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgZ0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgaE-tEemi64MgO_SJDA" name="ENDMINUTE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgaU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgak-tEemi64MgO_SJDA" name="SIGNOFFTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dga0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgbE-tEemi64MgO_SJDA" name="SIGNOFFMINUTE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgbU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgbk-tEemi64MgO_SJDA" name="DAYID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dgb0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgcE-tEemi64MgO_SJDA" name="SPAREFLAG" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgcU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4Dgck-tEemi64MgO_SJDA" name="TIME_TO_MIN_ENGINE_PK" enforced="false" members="_N4DgWk-tEemi64MgO_SJDA _N4DgXE-tEemi64MgO_SJDA _N4Dgbk-tEemi64MgO_SJDA _N4DgcE-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dgc0-tEemi64MgO_SJDA" name="LINK_DETAIL_ENGINE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgdE-tEemi64MgO_SJDA" name="DAYNAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgdU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgdk-tEemi64MgO_SJDA" name="SEQID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dgd0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgeE-tEemi64MgO_SJDA" name="TRAINNO" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgeU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgek-tEemi64MgO_SJDA" name="FROMSTATION" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dge0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgfE-tEemi64MgO_SJDA" name="TOSTATION" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgfU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgfk-tEemi64MgO_SJDA" name="SIGNONTIME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dgf0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DggE-tEemi64MgO_SJDA" name="DEPARTURETIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DggU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dggk-tEemi64MgO_SJDA" name="ARRIVALTIME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dgg0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DghE-tEemi64MgO_SJDA" name="SIGNOFFTIME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DghU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dghk-tEemi64MgO_SJDA" name="DUTYDURTION" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dgh0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgiE-tEemi64MgO_SJDA" name="DUTYMINUTES" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgiU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgik-tEemi64MgO_SJDA" name="DISTANCE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dgi0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgjE-tEemi64MgO_SJDA" name="NIB" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgjU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgjk-tEemi64MgO_SJDA" name="SORTORDER" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dgj0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgkE-tEemi64MgO_SJDA" name="DAYID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgkU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgkk-tEemi64MgO_SJDA" name="SPAREFLAG" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dgk0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4DglE-tEemi64MgO_SJDA" name="LINK_DETAIL_ENGINE_PK" enforced="false" members="_N4DgeE-tEemi64MgO_SJDA _N4Dgek-tEemi64MgO_SJDA _N4DgfE-tEemi64MgO_SJDA _N4DgkE-tEemi64MgO_SJDA _N4Dgkk-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DglU-tEemi64MgO_SJDA" name="KPI_LINK_ENGINE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dglk-tEemi64MgO_SJDA" name="KPI_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dgl0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgmE-tEemi64MgO_SJDA" name="KPI_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgmU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="250"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgmk-tEemi64MgO_SJDA" name="KPI_VALUE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N4Dgm0-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgnE-tEemi64MgO_SJDA" name="UOM">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgnU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4Dgnk-tEemi64MgO_SJDA" name="KPI_LINK_ENGINE_PK" enforced="false" members="_N4Dglk-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dgn0-tEemi64MgO_SJDA" name="OAUTH_REFRESH_TOKEN" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgoE-tEemi64MgO_SJDA" name="TOKEN_ID">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgoU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="250"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgok-tEemi64MgO_SJDA" name="TOKEN" lobLogged="false">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_N4Dgo0-tEemi64MgO_SJDA" name="BLOB" primitiveType="BINARY_LARGE_OBJECT" length="1048576"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgpE-tEemi64MgO_SJDA" name="AUTHENTICATION" lobLogged="false">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_N4DgpU-tEemi64MgO_SJDA" name="BLOB" primitiveType="BINARY_LARGE_OBJECT" length="1048576"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dgpk-tEemi64MgO_SJDA" name="IN_CMS_SISTER_LOBBY" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgp0-tEemi64MgO_SJDA" name="BASE_LOBBY_V" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgqE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgqU-tEemi64MgO_SJDA" name="SIS_LOBBY_V">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dgqk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dgq0-tEemi64MgO_SJDA" name="OAUTH_ACCESS_TOKEN" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgrE-tEemi64MgO_SJDA" name="TOKEN_ID">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgrU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="250"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgrk-tEemi64MgO_SJDA" name="TOKEN" lobLogged="false">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_N4Dgr0-tEemi64MgO_SJDA" name="BLOB" primitiveType="BINARY_LARGE_OBJECT" length="2048576"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgsE-tEemi64MgO_SJDA" name="AUTHENTICATION_ID">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgsU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="250"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgsk-tEemi64MgO_SJDA" name="USER_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dgs0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="250"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgtE-tEemi64MgO_SJDA" name="CLIENT_ID">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgtU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="250"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgtk-tEemi64MgO_SJDA" name="AUTHENTICATION" lobLogged="false">
+      <containedType xsi:type="SQLDataTypes:BinaryStringDataType" xmi:id="_N4Dgt0-tEemi64MgO_SJDA" name="BLOB" primitiveType="BINARY_LARGE_OBJECT" length="2048576"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DguE-tEemi64MgO_SJDA" name="REFRESH_TOKEN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DguU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="250"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dguk-tEemi64MgO_SJDA" name="LOBBY_MST_ENGINE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgu0-tEemi64MgO_SJDA" name="LOBBY_CODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgvE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgvU-tEemi64MgO_SJDA" name="LOBBY_NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dgvk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgv0-tEemi64MgO_SJDA" name="LOBBY_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DgwE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4DgwU-tEemi64MgO_SJDA" name="LOBBY_MST_ENGINE_PK" enforced="false" members="_N4Dgv0-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dgwk-tEemi64MgO_SJDA" name="IN_CMS_STATION_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgw0-tEemi64MgO_SJDA" name="STTN_CODE_C" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgxE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgxU-tEemi64MgO_SJDA" name="DIV_CODE_C">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dgxk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgx0-tEemi64MgO_SJDA" name="STTN_FULL_NAME_V">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DgyE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="150"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DgyU-tEemi64MgO_SJDA" name="STTN_WORKING_ZONE_CODE_V">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dgyk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgy0-tEemi64MgO_SJDA" name="LAST_UPDATE_TIME_D">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DgzE-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DgzU-tEemi64MgO_SJDA" name="IN_DIV_CREW_POINTS" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dgzk-tEemi64MgO_SJDA" name="TRAIN_NO">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dgz0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg0E-tEemi64MgO_SJDA" name="FROM_STTN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg0U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg0k-tEemi64MgO_SJDA" name="TO_STTN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg00-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg1E-tEemi64MgO_SJDA" name="TRAIN_TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg1U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg1k-tEemi64MgO_SJDA" name="TRACTION">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg10-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg2E-tEemi64MgO_SJDA" name="LOBBY_CODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg2U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dg2k-tEemi64MgO_SJDA" name="IN_DIV_GUARD_CHG_PTS" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg20-tEemi64MgO_SJDA" name="TRAIN_NO">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg3E-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg3U-tEemi64MgO_SJDA" name="FROM_STTN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg3k-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg30-tEemi64MgO_SJDA" name="TO_STTN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg4E-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg4U-tEemi64MgO_SJDA" name="LOBBY_CODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg4k-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dg40-tEemi64MgO_SJDA" name="IN_SAT_TRAIN_MASTER" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg5E-tEemi64MgO_SJDA" name="MAVTRAINNUMBER">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg5U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg5k-tEemi64MgO_SJDA" name="MAVTRAINNAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg50-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg6E-tEemi64MgO_SJDA" name="MADVALIDFROM">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_N4Dg6U-tEemi64MgO_SJDA" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg6k-tEemi64MgO_SJDA" name="MADVALIDTO">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="_N4Dg60-tEemi64MgO_SJDA" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg7E-tEemi64MgO_SJDA" name="MAVTRAINTYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg7U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg7k-tEemi64MgO_SJDA" name="MAVORIG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg70-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg8E-tEemi64MgO_SJDA" name="MAVDSTN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg8U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg8k-tEemi64MgO_SJDA" name="MACTRTNTYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg80-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg9E-tEemi64MgO_SJDA" name="MAVDAYSOFSRVC">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg9U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg9k-tEemi64MgO_SJDA" name="MAVTRAINTYPERUNTIME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg90-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg-E-tEemi64MgO_SJDA" name="MAVTRAINSUBTYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dg-U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg-k-tEemi64MgO_SJDA" name="MANTRAINID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dg-0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg_E-tEemi64MgO_SJDA" name="MANRAKEID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dg_U-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dg_k-tEemi64MgO_SJDA" name="IN_SAT_TRAIN_TIMETABLE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dg_0-tEemi64MgO_SJDA" name="MANSEQNUMBER">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhAE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhAU-tEemi64MgO_SJDA" name="MAVSTTNCODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhAk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhA0-tEemi64MgO_SJDA" name="MAVBLCKSCTN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhBE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhBU-tEemi64MgO_SJDA" name="MAVBLCKBUSYDAYS">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhBk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhB0-tEemi64MgO_SJDA" name="MANPTTARVLTIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhCE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhCU-tEemi64MgO_SJDA" name="MANPTTDPRTTIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhCk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhC0-tEemi64MgO_SJDA" name="MANPTTDAYOFRUN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhDE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhDU-tEemi64MgO_SJDA" name="MANARVLTIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhDk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhD0-tEemi64MgO_SJDA" name="MANDPRTTIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhEE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhEU-tEemi64MgO_SJDA" name="MANDAYOFRUN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhEk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhE0-tEemi64MgO_SJDA" name="MACTRTNCHNG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhFE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhFU-tEemi64MgO_SJDA" name="MACCREWCHNG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhFk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhF0-tEemi64MgO_SJDA" name="MACLOCOCHANGE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhGE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhGU-tEemi64MgO_SJDA" name="MANTRAINID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhGk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhG0-tEemi64MgO_SJDA" name="MAVTRAINNUMBER">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhHE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DhHU-tEemi64MgO_SJDA" name="IN_SAT_TRAIN_TYPE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhHk-tEemi64MgO_SJDA" name="MAVTRANTYPECODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhH0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhIE-tEemi64MgO_SJDA" name="MAVTRANTYPEDESC">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhIU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:UniqueConstraint" xmi:id="_N4DhIk-tEemi64MgO_SJDA" name="SAT_TRAIN_TYPE_UNIQUE" members="_N4DhHk-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DhI0-tEemi64MgO_SJDA" name="BLK_STN_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhJE-tEemi64MgO_SJDA" name="MAVBLCKSCTN" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhJU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="30"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhJk-tEemi64MgO_SJDA" name="MAVFROMSTTNCODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhJ0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhKE-tEemi64MgO_SJDA" name="MAVTOSTTNCODE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhKU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhKk-tEemi64MgO_SJDA" name="MANINTRDIST">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N4DhK0-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhLE-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false" defaultValue="CURRENT TIMESTAMP">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhLU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhLk-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhL0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4DhME-tEemi64MgO_SJDA" name="BLK_STN_PK" members="_N4DhJE-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DhMU-tEemi64MgO_SJDA" name="IN_SAT_BLOCKSTN" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhMk-tEemi64MgO_SJDA" name="MAVBLCKSCTN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhM0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhNE-tEemi64MgO_SJDA" name="MAVFROMSTTNCODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhNU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhNk-tEemi64MgO_SJDA" name="MAVTOSTTNCODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhN0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhOE-tEemi64MgO_SJDA" name="MANINTRDIST">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N4DhOU-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DhOk-tEemi64MgO_SJDA" name="KPI_MST" schema="_N35ugE-tEemi64MgO_SJDA" referencingForeignKeys="_N35vHU-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhO0-tEemi64MgO_SJDA" name="KPI_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhPE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+      <identitySpecifier xsi:type="DB2Model:DB2IdentitySpecifier" xmi:id="_N4DhPU-tEemi64MgO_SJDA" startValue="1" increment="1" minimum="1" maximum="2147483647"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhPk-tEemi64MgO_SJDA" name="KPI_DESC" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhP0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhQE-tEemi64MgO_SJDA" name="UOM" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhQU-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhQk-tEemi64MgO_SJDA" name="CREATE_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhQ0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhRE-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhRU-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhRk-tEemi64MgO_SJDA" name="LAST_MODIFIED_BY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhR0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4DhSE-tEemi64MgO_SJDA" name="KPI_PK" members="_N4DhO0-tEemi64MgO_SJDA" ForeignKey="_N35vHU-tEemi64MgO_SJDA"/>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4DhSU-tEemi64MgO_SJDA" name="TRAIN_SEGMENT_PLANNING" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhSk-tEemi64MgO_SJDA" name="TRAIN_SEG_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhS0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhTE-tEemi64MgO_SJDA" name="TRAIN_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhTU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhTk-tEemi64MgO_SJDA" name="SEGMENT_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhT0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhUE-tEemi64MgO_SJDA" name="CCLMS_TRAIN_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhUU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhUk-tEemi64MgO_SJDA" name="DAY_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhU0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhVE-tEemi64MgO_SJDA" name="TRAIN_FREQUENCY_CD">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhVU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhVk-tEemi64MgO_SJDA" name="SIGN_ON_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhV0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhWE-tEemi64MgO_SJDA" name="SIGN_ON_TIME_HRS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhWU-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhWk-tEemi64MgO_SJDA" name="START_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhW0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhXE-tEemi64MgO_SJDA" name="START_TIME_HRS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhXU-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhXk-tEemi64MgO_SJDA" name="END_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhX0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhYE-tEemi64MgO_SJDA" name="END_TIME_HRS">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhYU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhYk-tEemi64MgO_SJDA" name="SIGN_OFF_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhY0-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhZE-tEemi64MgO_SJDA" name="RUNNING_DURATION">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhZU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhZk-tEemi64MgO_SJDA" name="SIGN_OFF_TIME_HRS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhZ0-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhaE-tEemi64MgO_SJDA" name="START_STATION_CD">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhaU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhak-tEemi64MgO_SJDA" name="END_STATION_CD">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dha0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhbE-tEemi64MgO_SJDA" name="CHRONIC_DELAY_TIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhbU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhbk-tEemi64MgO_SJDA" name="LOCO_CHANGE_STN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dhb0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhcE-tEemi64MgO_SJDA" name="TRACTION_TYPE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhcU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhck-tEemi64MgO_SJDA" name="ASSIGNED_LOBBY" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dhc0-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhdE-tEemi64MgO_SJDA" name="DEPT_TYPE" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhdU-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhdk-tEemi64MgO_SJDA" name="SPARE_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dhd0-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DheE-tEemi64MgO_SJDA" name="ACTUAL_KM">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N4DheU-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhek-tEemi64MgO_SJDA" name="CREATE_DATE" nullable="false" defaultValue="CURRENT TIMESTAMP">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4Dhe0-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhfE-tEemi64MgO_SJDA" name="NIGHT_DUTY_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhfU-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dhfk-tEemi64MgO_SJDA" name="TRAIN_TIMETABLE_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhf0-tEemi64MgO_SJDA" name="MANSEQNUMBER" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhgE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhgU-tEemi64MgO_SJDA" name="MAVSTTNCODE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dhgk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhg0-tEemi64MgO_SJDA" name="MAVBLCKSCTN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhhE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhhU-tEemi64MgO_SJDA" name="MAVBLCKBUSYDAYS">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dhhk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="40"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhh0-tEemi64MgO_SJDA" name="MANPTTARVLTIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhiE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhiU-tEemi64MgO_SJDA" name="MANPTTDPRTTIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dhik-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhi0-tEemi64MgO_SJDA" name="MANPTTDAYOFRUN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhjE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhjU-tEemi64MgO_SJDA" name="MANARVLTIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dhjk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhj0-tEemi64MgO_SJDA" name="MANDPRTTIME">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhkE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhkU-tEemi64MgO_SJDA" name="MANDAYOFRUN">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dhkk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhk0-tEemi64MgO_SJDA" name="MACTRTNCHNG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhlE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhlU-tEemi64MgO_SJDA" name="MACCREWCHNG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dhlk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhl0-tEemi64MgO_SJDA" name="MACLOCOCHANGE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhmE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhmU-tEemi64MgO_SJDA" name="MANTRAINID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dhmk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhm0-tEemi64MgO_SJDA" name="MAVTRAINNUMBER">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhnE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhnU-tEemi64MgO_SJDA" name="CREATE_DATE">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4Dhnk-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhn0-tEemi64MgO_SJDA" name="LAST_MODIFIED_TS">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhoE-tEemi64MgO_SJDA" name="TIMESTAMP" primitiveType="TIMESTAMP"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhoU-tEemi64MgO_SJDA" name="TRAIN_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dhok-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_N4Dho0-tEemi64MgO_SJDA" name="TRAIN_TT_PK" members="_N4DhoU-tEemi64MgO_SJDA _N4Dhf0-tEemi64MgO_SJDA"/>
+    <constraints xsi:type="SQLConstraints:ForeignKey" xmi:id="_N4DhpE-tEemi64MgO_SJDA" name="TRAIN_ID_FK" members="_N4DhoU-tEemi64MgO_SJDA" onDelete="RESTRICT" uniqueConstraint="_N4Dfok-tEemi64MgO_SJDA" referencedTable="_N4DfgE-tEemi64MgO_SJDA">
+      <eAnnotations xmi:id="_N4DhpU-tEemi64MgO_SJDA" source="FK_MODELING_RELATIONSHIP">
+        <details xmi:id="_N4Dhpk-tEemi64MgO_SJDA" key="FK_IS_IDENTIFYING_RELATIONSHIP" value="true"/>
+        <details xmi:id="_N4Dhp0-tEemi64MgO_SJDA" key="FK_CHILD_MULTIPLICITY" value="*"/>
+        <details xmi:id="_N4DhqE-tEemi64MgO_SJDA" key="FK_CHILD_ROLE_NAME" value=""/>
+        <details xmi:id="_N4DhqU-tEemi64MgO_SJDA" key="FK_PARENT_MULTIPLICITY" value="0..1"/>
+        <details xmi:id="_N4Dhqk-tEemi64MgO_SJDA" key="FK_PARENT_ROLE_NAME" value=""/>
+      </eAnnotations>
+    </constraints>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dhq0-tEemi64MgO_SJDA" name="USER_MST_ENGINE" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhrE-tEemi64MgO_SJDA" name="USER_ID" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhrU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhrk-tEemi64MgO_SJDA" name="USER" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dhr0-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="250"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhsE-tEemi64MgO_SJDA" name="DIVISION_ID">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhsU-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dhsk-tEemi64MgO_SJDA" name="IN_DIV_CREW_LINK" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhs0-tEemi64MgO_SJDA" name="LINK_NAME" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhtE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="30"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhtU-tEemi64MgO_SJDA" name="CREW_NO">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dhtk-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dht0-tEemi64MgO_SJDA" name="DAY">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhuE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhuU-tEemi64MgO_SJDA" name="TRAIN_NBR">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dhuk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhu0-tEemi64MgO_SJDA" name="FROM_STN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhvE-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhvU-tEemi64MgO_SJDA" name="TO_STN">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dhvk-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhv0-tEemi64MgO_SJDA" name="SIGN_ON_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhwE-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhwU-tEemi64MgO_SJDA" name="DEPARTURE_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4Dhwk-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhw0-tEemi64MgO_SJDA" name="ARRIVAL_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4DhxE-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhxU-tEemi64MgO_SJDA" name="SIGN_OFF_TIME">
+      <containedType xsi:type="SQLDataTypes:TimeDataType" xmi:id="_N4Dhxk-tEemi64MgO_SJDA" name="TIME" primitiveType="TIME"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhx0-tEemi64MgO_SJDA" name="OS_ALLOWANCE">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4DhyE-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhyU-tEemi64MgO_SJDA" name="EARNED_KM">
+      <containedType xsi:type="SQLDataTypes:ApproximateNumericDataType" xmi:id="_N4Dhyk-tEemi64MgO_SJDA" name="DOUBLE" primitiveType="DOUBLE_PRECISION"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhy0-tEemi64MgO_SJDA" name="PERIODIC_REST_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4DhzE-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4DhzU-tEemi64MgO_SJDA" name="SPARE_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dhzk-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dhz0-tEemi64MgO_SJDA" name="NIGHT_FLAG">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dh0E-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh0U-tEemi64MgO_SJDA" name="SORT_ORDER">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dh0k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh00-tEemi64MgO_SJDA" name="DUTY_DURATON">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dh1E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh1U-tEemi64MgO_SJDA" name="RUNNING_DURATION">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dh1k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh10-tEemi64MgO_SJDA" name="HQ_REST">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dh2E-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh2U-tEemi64MgO_SJDA" name="OS_REST">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_N4Dh2k-tEemi64MgO_SJDA" name="INTEGER" primitiveType="INTEGER"/>
+    </columns>
+  </LUW:LUWTable>
+  <LUW:LUWTable xmi:id="_N4Dh20-tEemi64MgO_SJDA" name="IN_DIV_LINK_MST" schema="_N35ugE-tEemi64MgO_SJDA" partitionMode=" ">
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh3E-tEemi64MgO_SJDA" name="LOBBY">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dh3U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh3k-tEemi64MgO_SJDA" name="LINK_NAME">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dh30-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="30"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh4E-tEemi64MgO_SJDA" name="LINK_FREQ">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dh4U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh4k-tEemi64MgO_SJDA" name="LINK_TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dh40-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="20"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh5E-tEemi64MgO_SJDA" name="TRACTION">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dh5U-tEemi64MgO_SJDA" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="10"/>
+    </columns>
+    <columns xsi:type="LUW:LUWColumn" xmi:id="_N4Dh5k-tEemi64MgO_SJDA" name="DEPT_TYPE">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_N4Dh50-tEemi64MgO_SJDA" name="CHAR"/>
+    </columns>
+  </LUW:LUWTable>
+  <SQLAccessControl:User xmi:id="_N4Dh6E-tEemi64MgO_SJDA" name="SYSIBM" ownedSchema="_N35ugE-tEemi64MgO_SJDA" Database="_NuvygE-tEemi64MgO_SJDA"/>
+</xmi:XMI>

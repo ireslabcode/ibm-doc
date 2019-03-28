@@ -89,13 +89,6 @@ public interface TrainFrequencyMst extends IloDomObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	List<TrainMst> getTrainMstTrainFrequencyCd();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	List<LinkMst> getLinkMstTrainFrequencyCd();
 
 	/**

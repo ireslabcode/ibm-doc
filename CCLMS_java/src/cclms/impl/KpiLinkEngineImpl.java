@@ -157,7 +157,7 @@ public class KpiLinkEngineImpl extends IloDomObjectImpl implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return CclmsPackage.eINSTANCE.getKpiLinkEngine();
+		return CclmsPackage.Literals.KPI_LINK_ENGINE;
 	}
 
 	/**

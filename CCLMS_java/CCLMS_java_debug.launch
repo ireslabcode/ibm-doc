@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/CCLMS_java"/>
+<listEntry value="/CCLMS_java/src/cclms/aap/csv/CsvFileReader.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
-<listEntry value="4"/>
+<listEntry value="1"/>
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.debug.ui.CONSIDER_INHERITED_MAIN" value="true"/>
 <booleanAttribute key="org.eclipse.jdt.debug.ui.INCLUDE_EXTERNAL_JARS" value="true"/>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ilog.oplodm.service.IloOplOdmLauncher"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="cclms.aap.csv.CsvFileReader"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;${resource_loc:/CCLMS/deploy/CCLMS.odmapp}&quot;"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="CCLMS_java"/>
 <booleanAttribute key="org.eclipse.jdt.launching.STOP_IN_MAIN" value="true"/>
